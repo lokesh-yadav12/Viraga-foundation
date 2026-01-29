@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Heart } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Heart, MapPin, Mail, Phone } from 'lucide-react';
 
 interface LinkItem {
 	label: string;
@@ -19,11 +19,11 @@ const Footer: React.FC = () => {
 	);
 
 	useEffect(() => {
-		const newParticles = Array.from({ length: 15 }, (_, i) => ({
+		const newParticles = Array.from({ length: 20 }, (_, i) => ({
 			id: i,
 			left: `${Math.random() * 100}%`,
-			delay: `${Math.random() * 6}s`,
-			duration: `${Math.random() * 4 + 4}s`,
+			delay: `${Math.random() * 5}s`,
+			duration: `${Math.random() * 3 + 5}s`,
 		}));
 		setParticles(newParticles);
 	}, []);
@@ -50,52 +50,71 @@ const Footer: React.FC = () => {
 	];
 
 	return (
-		<div className=" flex flex-col text-white">
-			{/* Main Content */}
-			{/* <main className="flex-1 bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 flex items-center justify-center p-8">
-        <div className="text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">Your Content Here</h1>
-          <p className="text-xl md:text-2xl opacity-90">Scroll down to see the footer</p>
-        </div>
-      </main> */}
-
+		<div className="flex flex-col text-white">
 			{/* Footer */}
 			<footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-				{/* Animated Top Border */}
-				<div className="absolute top-0 left-0 w-full h-0.5 overflow-hidden">
-					<div className="absolute w-full h-full bg-gradient-to-r from-transparent via-orange-500 to-transparent animate-slide-line" />
+				{/* Animated Wave Background */}
+				<div className="absolute inset-0 opacity-10">
+					<svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
+						<path
+							fill="url(#wave-gradient)"
+							fillOpacity="1"
+							d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,106.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+							className="animate-wave"
+						/>
+						<defs>
+							<linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+								<stop offset="0%" stopColor="#f97316" />
+								<stop offset="100%" stopColor="#ea580c" />
+							</linearGradient>
+						</defs>
+					</svg>
 				</div>
+
+				{/* Animated Glow Orbs */}
+				<div className="absolute top-10 left-10 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl animate-pulse-slow" />
+				<div className="absolute bottom-10 right-10 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
 
 				{/* Floating Particles */}
 				{particles.map((particle) => (
 					<div
 						key={particle.id}
-						className="absolute w-1 h-1 bg-orange-500/50 rounded-full animate-float"
+						className="absolute w-1.5 h-1.5 bg-orange-500/40 rounded-full animate-float-up"
 						style={{
 							left: particle.left,
+							bottom: '0',
 							animationDelay: particle.delay,
 							animationDuration: particle.duration,
 						}}
 					/>
 				))}
 
+				{/* Top Border Wave */}
+				<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60 animate-shimmer" />
+
 				{/* Footer Content */}
-				<div className="relative max-w-7xl mx-auto  pt-12 pb-4">
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-6">
-						{/* Logo Section */}
-						<div className="sm:px-12 space-y-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-							<div className="flex items-center gap-4">
-								<div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/30 transition-transform hover:rotate-12 hover:scale-110 duration-500">
-									<Heart className="w-8 h-8 text-white" />
-								</div>
-								<div>
-									<h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-										Viraga Foundation
-									</h3>
-									<p className="text-sm text-slate-400">Regd. No. 273/2022</p>
+				<div className="relative max-w-7xl mx-auto px-6 pt-16 pb-8">
+					{/* Main Grid */}
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+						{/* About Section */}
+						<div className="lg:col-span-1 space-y-6 animate-fade-slide-up" style={{ animationDelay: '0.1s' }}>
+							<div className="group">
+								<div className="flex items-center gap-4 mb-4">
+									<div className="relative">
+										<div className="absolute inset-0 bg-orange-500 rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+										<div className="relative w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+											<Heart className="w-7 h-7 text-white animate-pulse-soft" />
+										</div>
+									</div>
+									<div>
+										<h3 className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+											Viraga Foundation
+										</h3>
+										<p className="text-xs text-slate-400 font-medium">Regd. No. 273/2022</p>
+									</div>
 								</div>
 							</div>
-							<p className="text-white leading-relaxed text-md">
+							<p className="text-slate-300 leading-relaxed text-sm">
 								VIRAGA FOUNDATION was established on November 25, 2020, by a group of dedicated
 								individuals inspired by the timeless teachings of Swami Vivekananda. Our journey began
 								with a vision to serve humanity with compassion, and our foundation was graciously
@@ -104,144 +123,211 @@ const Footer: React.FC = () => {
 						</div>
 
 						{/* Quick Links */}
-						<div className="sm:grid sm:grid-cols-2 sm:gap-0 gap-8">
-							<div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-								<h3 className="text-lg font-semibold mb-6 relative pb-3">
-									QUICK LINKS
-									<span className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full" />
-								</h3>
-								<ul className="space-y-3">
-									{quickLinks.map((link, index) => (
-										<li key={index} className="group">
-											<a
-												href={link.href}
-												className="flex items-center gap-3 text-white hover:text-orange-500 transition-all duration-300 group-hover:translate-x-2"
-											>
-												<ArrowRight className="w-4 h-4 text-orange-500 transition-transform group-hover:translate-x-1" />
-												<span>{link.label}</span>
-											</a>
-										</li>
-									))}
-								</ul>
+						<div className="animate-fade-slide-up" style={{ animationDelay: '0.2s' }}>
+							<div className="inline-block mb-6">
+								<h3 className="text-xl font-bold text-white mb-2">QUICK LINKS</h3>
+								<div className="h-1 w-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full animate-expand" />
 							</div>
-
-							{/* Social Links */}
-							<div className="animate-fade-in-up sm:py-0 py-8" style={{ animationDelay: '0.3s' }}>
-								<h3 className="text-lg font-semibold mb-3 relative pb-3">
-									FOLLOW US
-									<span className="absolute bottom-0 left-0 w-12 h-1  rounded-full" />
-								</h3>
-								<div className="flex flex-wrap gap-4">
-									{socialLinks.map((social, index) => (
+							<ul className="space-y-3">
+								{quickLinks.map((link, index) => (
+									<li key={index} className="group">
 										<a
-											key={index}
-											href={social.href}
-											aria-label={social.label}
-											className={`w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-orange-500/40 ${social.color}`}
+											href={link.href}
+											className="flex items-center gap-3 text-slate-300 hover:text-orange-500 transition-all duration-300 group-hover:translate-x-2"
 										>
-											{social.icon}
+											<div className="w-6 h-6 rounded-lg bg-slate-800/50 flex items-center justify-center group-hover:bg-orange-500/20 transition-all duration-300">
+												<ArrowRight className="w-4 h-4 text-orange-500 transition-transform group-hover:translate-x-1" />
+											</div>
+											<span className="font-medium">{link.label}</span>
 										</a>
-									))}
-								</div>
+									</li>
+								))}
+							</ul>
+						</div>
+
+						{/* Social Links */}
+						<div className="animate-fade-slide-up" style={{ animationDelay: '0.3s' }}>
+							<div className="inline-block mb-6">
+								<h3 className="text-xl font-bold text-white mb-2">CONNECT WITH US</h3>
+								<div className="h-1 w-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full animate-expand" />
+							</div>
+							<p className="text-slate-400 text-sm mb-6">
+								Follow us on social media to stay updated with our latest activities and initiatives.
+							</p>
+							<div className="flex flex-wrap gap-3">
+								{socialLinks.map((social, index) => (
+									<a
+										key={index}
+										href={social.href}
+										aria-label={social.label}
+										className={`group relative w-12 h-12 bg-slate-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-500/50 ${social.color}`}
+										style={{ animationDelay: `${index * 0.1}s` }}
+									>
+										<div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-600/0 group-hover:from-orange-500/20 group-hover:to-orange-600/20 rounded-xl transition-all duration-300" />
+										{social.icon}
+									</a>
+								))}
 							</div>
 						</div>
 					</div>
 
+					{/* Divider
+					<div className="relative my-8">
+						<div className="absolute inset-0 flex items-center">
+							<div className="w-full border-t border-slate-700/50" />
+						</div>
+						<div className="relative flex justify-center">
+							<span className="bg-slate-900 px-4 py-2 rounded-full">
+								<Heart className="w-5 h-5 text-orange-500 animate-pulse-soft" />
+							</span>
+						</div>
+					</div> */}
+
 					{/* Footer Bottom */}
-					<div className="sm:mt-6 mt-8 sm:pt-8 pt-8 pb-0 mb-0 border-t border-white/10">
-						<div className="flex flex-col  justify-between items-center gap-4 text-sm text-slate-400">
-							<div>© Copyright 2026. All Rights Reserved.</div>
-							<div className="sm:text-lg text-md flex flex-row items-center justify-center sm:gap-2">
-								<div>Built with ❤️ by Elite8Digital</div>
+					<div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+						<div className="text-slate-400 text-center md:text-left animate-fade-in" style={{ animationDelay: '0.4s' }}>
+							<p className="font-medium">© Copyright 2026. All Rights Reserved.</p>
+						</div>
+						<div className="flex flex-col sm:flex-row items-center gap-2 text-slate-400 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+							<span className="text-sm">Built with</span>
+							<Heart className="w-4 h-4 text-orange-500 animate-pulse-soft" />
+							<span className="text-sm">by</span>
+							<div className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 rounded-full backdrop-blur-sm hover:bg-slate-800 transition-all duration-300">
+								<span className="text-orange-500 font-semibold">Elite8Digital</span>
 								<img
 									src="/elite8digital-nav.png"
-									alt="Viraga Foundation"
-									className="sm:h-12 sm:w-20 h-12 w-16"
+									alt="Elite8Digital"
+									className="h-6 w-10 object-contain"
 								/>
-								{/* {' '} */}
-								{/* <a
-									href="#"
-									className="text-orange-500 hover:text-orange-400 font-semibold transition-colors"
-								>
-									Star Themes
-								</a>{' '}
-								and{' '}
-								<a
-									href="#"
-									className="text-orange-500 hover:text-orange-400 font-semibold transition-colors"
-								>
-									WordPress
-								</a> */}
 							</div>
 						</div>
 					</div>
 				</div>
+
+				{/* Custom Styles */}
+				<style>{`
+					@keyframes fade-slide-up {
+						from {
+							opacity: 0;
+							transform: translateY(40px);
+						}
+						to {
+							opacity: 1;
+							transform: translateY(0);
+						}
+					}
+
+					@keyframes fade-in {
+						from {
+							opacity: 0;
+						}
+						to {
+							opacity: 1;
+						}
+					}
+
+					@keyframes float-up {
+						0% {
+							transform: translateY(0) translateX(0) scale(0);
+							opacity: 0;
+						}
+						10% {
+							opacity: 1;
+							transform: scale(1);
+						}
+						90% {
+							opacity: 0.6;
+						}
+						100% {
+							transform: translateY(-100vh) translateX(50px) scale(0);
+							opacity: 0;
+						}
+					}
+
+					@keyframes wave {
+						0%, 100% {
+							transform: translateX(0);
+						}
+						50% {
+							transform: translateX(-25%);
+						}
+					}
+
+					@keyframes shimmer {
+						0% {
+							transform: translateX(-100%);
+						}
+						100% {
+							transform: translateX(100%);
+						}
+					}
+
+					@keyframes pulse-slow {
+						0%, 100% {
+							opacity: 0.05;
+							transform: scale(1);
+						}
+						50% {
+							opacity: 0.15;
+							transform: scale(1.1);
+						}
+					}
+
+					@keyframes pulse-soft {
+						0%, 100% {
+							opacity: 0.8;
+							transform: scale(1);
+						}
+						50% {
+							opacity: 1;
+							transform: scale(1.1);
+						}
+					}
+
+					@keyframes expand {
+						from {
+							width: 0;
+						}
+						to {
+							width: 4rem;
+						}
+					}
+
+					.animate-fade-slide-up {
+						animation: fade-slide-up 0.8s ease-out forwards;
+						opacity: 0;
+					}
+
+					.animate-fade-in {
+						animation: fade-in 0.8s ease-out forwards;
+						opacity: 0;
+					}
+
+					.animate-float-up {
+						animation: float-up 8s infinite;
+					}
+
+					.animate-wave {
+						animation: wave 8s ease-in-out infinite;
+					}
+
+					.animate-shimmer {
+						animation: shimmer 3s infinite;
+					}
+
+					.animate-pulse-slow {
+						animation: pulse-slow 4s ease-in-out infinite;
+					}
+
+					.animate-pulse-soft {
+						animation: pulse-soft 2s ease-in-out infinite;
+					}
+
+					.animate-expand {
+						animation: expand 0.6s ease-out forwards;
+					}
+				`}</style>
 			</footer>
-
-			{/* <style>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes slide-line {
-          0%, 100% {
-            transform: translateX(-100%);
-          }
-          50% {
-            transform: translateX(100%);
-          }
-        }
-
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0) translateX(0);
-            opacity: 0;
-          }
-          10% {
-            opacity: 1;
-          }
-          90% {
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(-100vh) translateX(100px);
-            opacity: 0;
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 1s ease-in;
-        }
-
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease forwards;
-          opacity: 0;
-        }
-
-        .animate-slide-line {
-          animation: slide-line 3s infinite;
-        }
-
-        .animate-float {
-          animation: float 6s infinite;
-        }
-      `}</style> */}
 		</div>
 	);
 };

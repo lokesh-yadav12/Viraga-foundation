@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-
+import img1 from '../assets/viraganew.png'
 const AboutLogo = () => {
   return (
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative h-[70vh] md:h-[70vh] overflow-hidden">
+      <section className="relative h-[70vh] md:h-[90vh] overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
           alt="Service and spirituality"
@@ -28,13 +28,13 @@ const AboutLogo = () => {
       </section>
 
       {/* ================= LOGO SECTION ================= */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-12 md:py-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 sm:p-8 md:p-12 rounded-3xl shadow-xl text-center"
+          className="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 sm:p-8 md:p-8 rounded-3xl shadow-xl text-center"
         >
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-gray-900">
             The Meaning Behind Our Logo
@@ -45,9 +45,9 @@ const AboutLogo = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            src="/logo.png" 
+            src={img1}
             alt="Viraga Foundation Logo"
-            className="mx-auto w-48 sm:w-56 md:w-64 mb-8 sm:mb-10 drop-shadow-2xl"
+            className="mx-auto w-48 sm:w-56 md:w-64 mb-1 sm:mb-1 drop-shadow-2xl"
           />
 
           <p className="text-base sm:text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto">

@@ -211,7 +211,7 @@ const DonationsPage = () => {
 								whileInView={{ y: 0, opacity: 1 }}
 								viewport={{ once: true }}
 								transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-								className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-purple-100"
+								className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-8 shadow-xl border-2 border-purple-100"
 							>
 								{/* Bank Header */}
 								<div className="mb-6">
@@ -260,7 +260,7 @@ const DonationsPage = () => {
 								</motion.div>
 
 								{/* Payment Options */}
-								<div className="border-t border-gray-200 pt-6">
+								{/* <div className="border-t border-gray-200 pt-6">
 									<div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12">
 										<div className="text-center">
 											<div className="mb-2">
@@ -301,7 +301,7 @@ const DonationsPage = () => {
 											<p className="text-xs text-gray-600 max-w-[140px] sm:max-w-[120px] mx-auto">UNIFIED PAYMENTS INTERFACE</p>
 										</div>
 									</div>
-								</div>
+								</div> */}
 							</motion.div>
 						</div>
 					</motion.div>
@@ -349,14 +349,14 @@ const DonationsPage = () => {
 					transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
 					className="absolute bottom-0 left-1/4"
 				>
-					<Heart className="w-6 h-6 text-pink-400 opacity-50" />
+					{/* <Heart className="w-6 h-6 text-pink-400 opacity-50" /> */}
 				</motion.div>
 				<motion.div
 					animate={{ y: [-100, 0] }}
 					transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
 					className="absolute bottom-0 right-1/4"
 				>
-					<Heart className="w-8 h-8 text-purple-400 opacity-50" />
+					{/* <Heart className="w-8 h-8 text-purple-400 opacity-50" /> */}
 				</motion.div>
 			</div>
 		</div>

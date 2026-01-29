@@ -72,15 +72,15 @@ const YearlyReportsPage = () => {
 						isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 					}`}
 				>
-					<div className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl max-w-4xl w-full">
+					<div className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-3xl p-4 sm:p-6 lg:p-10 shadow-2xl max-w-4xl w-full">
 						<div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
 							<div className="flex-shrink-0">
-								<div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-									<FileText className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-white" />
+								<div className="w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+									<FileText className="w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20	 text-white" />
 								</div>
 							</div>
 							<div className="text-center md:text-left">
-								<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+								<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2">
 									AUDIT
 								</h2>
 								<p className="text-white/90 text-sm sm:text-base lg:text-lg max-w-md">
