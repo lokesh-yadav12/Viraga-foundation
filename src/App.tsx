@@ -14,11 +14,11 @@ import ContactPage from './pages/ContactPage';
 import DonationsPage from './pages/DonationsPage';
 import YearlyReportsPage from './pages/YearlyReportsPage';
 import ActivitiesPage from './pages/ActivitiesPage';
-import Year2024 from './pages/Activities/Year2024';
-import Year2023 from './pages/Activities/Year2023';
-import Year2022 from './pages/Activities/Year2022';
-import Year2025 from './pages/Activities/Year2025';
-import Year2021 from './pages/Activities/Year2021';
+import Year2024 from './pages/Activities/YearTfour';
+import Year2023 from './pages/Activities/YearTthree';
+import Year2022 from './pages/Activities/YearTtwo';
+import Year2025 from './pages/Activities/YearTfive';
+import Year2021 from './pages/Activities/YearTone';
 
 
 // 🧭 Lazy-loaded pages
