@@ -1,9 +1,7 @@
 import { Routes, Route, Outlet } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import MainLayout from './components/layout/MainLayout';
-// import Portfolio from './pages/Portfolio';
 import AboutUs from './pages/About';
-// import ContactSection from './pages/LetsTalk';
 import 'remixicon/fonts/remixicon.css';
 import ScrollToTop from './components/layout/ScrollToTop';
 import WhoWeAre from './pages/WhoWeAre';
@@ -19,6 +17,8 @@ import ActivitiesPage from './pages/ActivitiesPage';
 import Year2024 from './pages/Activities/Year2024';
 import Year2023 from './pages/Activities/Year2023';
 import Year2022 from './pages/Activities/Year2022';
+import Year2025 from './pages/Activities/Year2025';
+import Year2021 from './pages/Activities/Year2021';
 
 
 // 🧭 Lazy-loaded pages
@@ -62,10 +62,11 @@ function App() {
 					<Route path="donation" element={<DonationsPage />} />
 					<Route path="yearly-reports" element={<YearlyReportsPage />} />
 					<Route path="activities/*" element={<ActivitiesPage />} />
+					<Route path="/activities/2025-2026" element={<Year2025 />} />
 					<Route path="/activities/2024-2025" element={<Year2024 />} />
 					<Route path="/activities/2023-2024" element={<Year2023 />} />
 					<Route path="/activities/2022-2023" element={<Year2022 />} />
-
+					<Route path="/activities/2020-2021" element={<Year2021 />} />
 
 					{/* 🚫 Catch-all for invalid routes */}
 					{/* <Route path="*" element={<Navigate to="/404" replace />} /> */}

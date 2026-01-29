@@ -17,7 +17,7 @@ const ActivitiesPage = () => {
 			{
 			year: '2025-2026',
 			image: img1,
-			link: '/activities/2024-2025'
+			link: '/activities/2025-2026'
 		},
 		{
 			year: '2024-2025',
