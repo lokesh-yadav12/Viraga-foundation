@@ -128,7 +128,7 @@ const Year2024: React.FC = () => {
 								<iframe
 									width="800"
 									height="400"
-									src="https://www.youtube.com/embed/OXNX5cS9EaU"
+									src="https://www.youtube.com/embed/kjNa5jbG9TU"
 									title="viraga"
 									frameBorder={0}
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

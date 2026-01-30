@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Sparkles } from 'lucide-react';
 import bgpic from '../assets/bgpic.jpg'
 import img1 from '.././assets/image1.png'
@@ -41,11 +42,6 @@ const ActivitiesPage = () => {
 			link: '/activities/2020-2021'
 		}
 	];
-
-	const handleActivityClick = (link: string): void => {
-		// Navigate to activity detail page
-		window.location.href = link;
-	};
 
 	return (
 		<div className="min-h-screen bg-white  relative overflow-hidden">
@@ -198,9 +194,9 @@ const ActivitiesPage = () => {
 							onMouseEnter={() => setHoveredIndex(index)}
 							onMouseLeave={() => setHoveredIndex(null)}
 						>
-							<div
-								onClick={() => handleActivityClick(activity.link)}
-								className="group cursor-pointer"
+							<Link
+								to={activity.link}
+								className="group cursor-pointer block"
 							>
 								{/* Image Card */}
 								<div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 bg-white transform hover:-translate-y-2">
@@ -253,7 +249,7 @@ const ActivitiesPage = () => {
 									</h3>
 									<div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 								</div>
-							</div>
+							</Link>
 						</div>
 					))}
 				</div>
@@ -279,7 +275,7 @@ const ActivitiesPage = () => {
 					</div>
 				</div>
 
-				{/* Second Row - 1 Card (Left Aligned) */}
+				{/* Second Row - 2 Cards (Left Aligned) */}
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mt-10 sm:mt-12 lg:mt-16">
 					{activities.slice(3, 5).map((activity, index) => (
 						<div
@@ -288,12 +284,12 @@ const ActivitiesPage = () => {
 								isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 							}`}
 							style={{ transitionDelay: `${(index + 4) * 150}ms` }}
-							onMouseEnter={() => setHoveredIndex(3)}
+							onMouseEnter={() => setHoveredIndex(index + 3)}
 							onMouseLeave={() => setHoveredIndex(null)}
 						>
-							<div
-								onClick={() => handleActivityClick(activity.link)}
-								className="group cursor-pointer"
+							<Link
+								to={activity.link}
+								className="group cursor-pointer block"
 							>
 								{/* Image Card */}
 								<div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 bg-white transform hover:-translate-y-2">
@@ -331,7 +327,7 @@ const ActivitiesPage = () => {
 									</div>
 
 									{/* Floating Sparkles on Hover */}
-									{hoveredIndex === 3 && (
+									{hoveredIndex === index + 3 && (
 										<>
 											<Sparkles className="absolute top-4 right-4 w-5 h-5 text-pink-400 animate-pulse z-20" />
 											<Sparkles className="absolute bottom-4 left-4 w-4 h-4 text-purple-400 animate-ping z-20" />
@@ -346,7 +342,7 @@ const ActivitiesPage = () => {
 									</h3>
 									<div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 								</div>
-							</div>
+							</Link>
 						</div>
 					))}
 				</div>
@@ -503,3 +499,6 @@ const ActivitiesPage = () => {
 };
 
 export default ActivitiesPage;
+
+
+
