@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Download, ZoomIn, ZoomOut } from 'lucide-react';
 import img1 from '../../assets/cele1.png';
+import bgpic from '../../assets/bgpic.jpg';
+import e1 from '../../assets/e1.png';
+import e2 from '../../assets/e2.png';
+import e3 from '../../assets/e3.png';		
+import e4 from '../../assets/e4.png';
+import e5 from '../../assets/e5.png';
+import e6 from '../../assets/e6.png';
+import e7 from '../../assets/e7.png';
+import e8 from '../../assets/e8.png';
+import e9 from '../../assets/e9.png';
 interface GalleryImage {
 	id: number;
 	src: string;
@@ -13,15 +23,15 @@ const Year2022: React.FC = () => {
 
 	// Gallery images - replace with your actual image imports
 	const galleryImages: GalleryImage[] = [
-		{ id: 1, src: '/api/placeholder/800/600', alt: 'Food distribution event' },
-		{ id: 2, src: '/api/placeholder/800/600', alt: 'Children receiving gifts' },
-		{ id: 3, src: '/api/placeholder/800/600', alt: 'Community gathering' },
-		{ id: 4, src: '/api/placeholder/800/600', alt: 'Volunteers with children' },
-		{ id: 5, src: '/api/placeholder/800/600', alt: 'Distribution of clothes' },
-		{ id: 6, src: '/api/placeholder/800/600', alt: 'Fresh fruits distribution' },
-		{ id: 7, src: '/api/placeholder/800/600', alt: 'Children receiving items' },
-		{ id: 8, src: '/api/placeholder/800/600', alt: 'Clothing donation' },
-		{ id: 9, src: '/api/placeholder/800/600', alt: 'Packed items ready for distribution' },
+		{ id: 1, src: e1, alt: 'Food distribution event' },
+		{ id: 2, src: e2, alt: 'Children receiving gifts' },
+		{ id: 3, src: e3, alt: 'Community gathering' },
+		{ id: 4, src: e4, alt: 'Volunteers with children' },
+		{ id: 5, src: e5, alt: 'Distribution of clothes' },
+		{ id: 6, src: e6, alt: 'Fresh fruits distribution' },
+		{ id: 7, src: e7, alt: 'Children receiving items' },
+		{ id: 8, src: e8, alt: 'Clothing donation' },
+		{ id: 9, src: e9, alt: 'Packed items ready for distribution' },
 	];
 
 	const openLightbox = (index: number) => {
@@ -35,18 +45,18 @@ const Year2022: React.FC = () => {
 	};
 
 	const goToPrevious = () => {
-		if (selectedImageIndex !== null) {
-			setSelectedImageIndex((selectedImageIndex - 1 + galleryImages.length) % galleryImages.length);
-			setZoom(1);
-		}
-	};
+	if (selectedImageIndex !== null) {
+		setSelectedImageIndex((selectedImageIndex - 1 + galleryImages.length) % galleryImages.length);
+		setZoom(1);
+	}
+};
 
-	const goToNext = () => {
-		if (selectedImageIndex !== null) {
-			setSelectedImageIndex((selectedImageIndex + 1) % galleryImages.length);
-			setZoom(1);
-		}
-	};
+const goToNext = () => {
+	if (selectedImageIndex !== null) {
+		setSelectedImageIndex((selectedImageIndex + 1) % galleryImages.length);
+		setZoom(1);
+	}
+};
 
 	const handleZoomIn = () => {
 		setZoom((prev) => Math.min(prev + 0.25, 3));
@@ -98,19 +108,19 @@ const Year2022: React.FC = () => {
 		<div className="w-full bg-gray-50">
 			{/* Hero Section */}
 			<div
-				className="relative w-full h-96 bg-cover bg-center flex items-center justify-center"
+				className="relative w-full h-[70vh] sm:h-[80vh] bg-cover bg-center flex items-center justify-center"
 				style={{
-					backgroundImage: `url('https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=1920')`,
+					backgroundImage: `url('${bgpic}')`,
 				}}
 			>
 				<div className="text-center">
-					<h1 className="text-white text-7xl font-bold tracking-wider drop-shadow-2xl mb-2">2022-2023</h1>
+					<h1 className="text-white text-4xl sm:text-6xl font-bold tracking-wider drop-shadow-2xl mb-2">2022-2023</h1>
 					<div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
 				</div>
 			</div>
 
 			{/* Main Content Section */}
-			<div className="max-w-7xl mx-auto px-6 py-16">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 				{/* Food Donation Program */}
 				<div className="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-16">
 					<div className="prose prose-lg max-w-none">
@@ -260,96 +270,97 @@ const Year2022: React.FC = () => {
 			</div>
 
 			{/* Enhanced Lightbox Modal */}
-			{selectedImageIndex !== null && (
-				<div
-					className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center"
-					onClick={closeLightbox}
-				>
-					{/* Close Button */}
-					<button
-						className="absolute top-4 right-4 md:top-8 md:right-8 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-2"
-						onClick={closeLightbox}
-					>
-						<X size={32} />
-					</button>
+			{/* Enhanced Lightbox Modal */}
+{selectedImageIndex !== null && (
+	<div
+		className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center"
+		onClick={closeLightbox}
+	>
+		{/* Close Button */}
+		<button
+			className="absolute top-4 right-4 md:top-8 md:right-8 text-white hover:text-gray-300 transition-colors z-20 bg-black/70 rounded-full p-2"
+			onClick={closeLightbox}
+		>
+			<X size={32} />
+		</button>
 
-					{/* Image Counter */}
-					<div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-lg font-semibold bg-black/50 px-4 py-2 rounded-full">
-						{selectedImageIndex + 1} / {galleryImages.length}
-					</div>
+		{/* Image Counter */}
+		<div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-lg font-semibold bg-black/70 px-4 py-2 rounded-full z-20">
+			{selectedImageIndex + 1} / {galleryImages.length}
+		</div>
 
-					{/* Control Buttons */}
-					<div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4 bg-black/50 px-6 py-3 rounded-full">
-						<button
-							onClick={(e) => {
-								e.stopPropagation();
-								handleZoomOut();
-							}}
-							className="text-white hover:text-orange-400 transition-colors"
-							title="Zoom Out"
-						>
-							<ZoomOut size={24} />
-						</button>
-						<button
-							onClick={(e) => {
-								e.stopPropagation();
-								handleZoomIn();
-							}}
-							className="text-white hover:text-orange-400 transition-colors"
-							title="Zoom In"
-						>
-							<ZoomIn size={24} />
-						</button>
-						<button
-							onClick={(e) => {
-								e.stopPropagation();
-								handleDownload();
-							}}
-							className="text-white hover:text-orange-400 transition-colors"
-							title="Download"
-						>
-							<Download size={24} />
-						</button>
-					</div>
+		{/* Control Buttons */}
+		<div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4 bg-black/70 px-6 py-3 rounded-full z-20">
+			<button
+				onClick={(e) => {
+					e.stopPropagation();
+					handleZoomOut();
+				}}
+				className="text-white hover:text-orange-400 transition-colors"
+				title="Zoom Out"
+			>
+				<ZoomOut size={24} />
+			</button>
+			<button
+				onClick={(e) => {
+					e.stopPropagation();
+					handleZoomIn();
+				}}
+				className="text-white hover:text-orange-400 transition-colors"
+				title="Zoom In"
+			>
+				<ZoomIn size={24} />
+			</button>
+			<button
+				onClick={(e) => {
+					e.stopPropagation();
+					handleDownload();
+				}}
+				className="text-white hover:text-orange-400 transition-colors"
+				title="Download"
+			>
+				<Download size={24} />
+			</button>
+		</div>
 
-					{/* Previous Button */}
-					<button
-						className="absolute left-4 md:left-8 text-white hover:text-orange-400 transition-colors bg-black/50 rounded-full p-3"
-						onClick={(e) => {
-							e.stopPropagation();
-							goToPrevious();
-						}}
-					>
-						<ChevronLeft size={40} />
-					</button>
+		{/* Previous Button */}
+		<button
+			className="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 text-white transition-colors bg-black/40 rounded-full p-1 sm:p-3 z-20 hover:bg-orange-500 hover:scale-110"
+			onClick={(e) => {
+				e.stopPropagation();
+				goToPrevious();
+			}}
+		>
+			<ChevronLeft size={40} />
+		</button>
 
-					{/* Next Button */}
-					<button
-						className="absolute right-4 md:right-8 text-white hover:text-orange-400 transition-colors bg-black/50 rounded-full p-3"
-						onClick={(e) => {
-							e.stopPropagation();
-							goToNext();
-						}}
-					>
-						<ChevronRight size={40} />
-					</button>
+		{/* Next Button */}
+		<button
+			className="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 text-white transition-colors bg-black/40 rounded-full p-1 sm:p-3 z-20 hover:bg-orange-500 hover:scale-110"
+			onClick={(e) => {
+				e.stopPropagation();
+				goToNext();
+			}}
+		>
+			<ChevronRight size={40} />
+		</button>
 
-					{/* Image */}
-					<div className="max-w-7xl max-h-[90vh] p-4 overflow-auto" onClick={(e) => e.stopPropagation()}>
-						<img
-							src={galleryImages[selectedImageIndex].src}
-							alt={galleryImages[selectedImageIndex].alt}
-							className="max-w-full max-h-full object-contain transition-transform duration-300"
-							style={{ transform: `scale(${zoom})` }}
-						/>
-					</div>
+		{/* Image */}
+		<div className="max-w-7xl max-h-[80vh] p-4 overflow-auto z-10" onClick={(e) => e.stopPropagation()}>
+			<img
+				src={galleryImages[selectedImageIndex].src}
+				alt={galleryImages[selectedImageIndex].alt}
+				className="max-w-full max-h-full object-contain transition-transform duration-300"
+				style={{ transform: `scale(${zoom})` }}
+			/>
+		</div>
 
-					{/* Image Caption */}
-					<div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white text-center bg-black/50 px-6 py-2 rounded-full max-w-md">
-						{galleryImages[selectedImageIndex].alt}
-					</div>
-				</div>
-			)}
+		{/* Image Caption */}
+		<div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white text-center bg-black/70 px-6 py-2 rounded-full max-w-md z-20">
+			{galleryImages[selectedImageIndex].alt}
+		</div>
+	</div>
+)}
 		</div>
 	);
 };

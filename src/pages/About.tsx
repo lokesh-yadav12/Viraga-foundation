@@ -1,22 +1,22 @@
 import { motion } from "framer-motion";
-
+import bgpic from '../assets/bgpic.jpg';
 const AboutUs = () => {
   return (
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
       <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb"
+          src={bgpic}
           alt="NGO community service"
           className="h-full w-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/60 flex items-center">
+        <div className="absolute inset-0  flex items-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="mx-auto max-w-5xl px-4 sm:px-6 text-white"
+            className="mx-auto max-w-5xl px-4 text-center sm:px-6 text-white"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">About Us</h1>
             <p className="text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed">

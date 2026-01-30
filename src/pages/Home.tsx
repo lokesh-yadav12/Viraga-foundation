@@ -28,23 +28,7 @@ const Home = () => {
       <InfoCards/>
       <EducationProgrammeSection/>
       {/* <ViragaFoundation/> */}
-      {/* <LetsWork /> */}
-      {/* <div className="flex justify-center items-center py-16">
-        <Clients />
-        
-      </div> */}
-      {/* Show ServicesMobile on small screens, Services on md and above */}
-      {/* <div className="md:hidden">
-        <ServicesMobile />
-      </div>
-      <div className="hidden md:block">
-        <Services />
-      </div>
-      <ProjectTimeline/> */}
-      {/* <UsVsOthers/> */}
-      {/* <TestimonialScroll />
-      <FAQSection /> */}
-      {/* <ProcessSection /> */}
+     
     </div>
   )
 }

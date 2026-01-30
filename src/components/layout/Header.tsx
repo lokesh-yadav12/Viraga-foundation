@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Phone, Menu, X, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import vira from '../../assets/Viraga_Foundation_logo_cropped.png'
 
 const Navbar: React.FC = () => {
@@ -133,10 +134,10 @@ const Navbar: React.FC = () => {
                                     
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex items-center space-x-1">
-                  <a href="/" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
+                  <Link to="/" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
                     HOME
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
-                  </a>
+                  </Link>
                   
                   <div className="relative group">
                     <button className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 flex items-center gap-1.5 relative">
@@ -146,38 +147,38 @@ const Navbar: React.FC = () => {
                     </button>
                     <div className="absolute left-0 mt-2 w-56 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100 overflow-hidden">
                       <div className="py-2">
-                        <a href="/about" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                        <Link to="/about" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
                           About Us
-                        </a>
-                        <a href="/objectives" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                        </Link>
+                        <Link to="/objectives" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
                           Objectives
-                        </a>
-                        <a href="/about-logo" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                        </Link>
+                        <Link to="/about-logo" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
                           About Logo
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
 
-                  <a href="/activities" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
+                  <Link to="/activities" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
                     ACTIVITIES
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
-                  </a>
-                  <a href="/administration" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
+                  </Link>
+                  <Link to="/administration" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
                     ADMINISTRATION
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
-                  </a>
-                  <a href="/donation" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
+                  </Link>
+                  <Link to="/donation" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
                     DONATIONS
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
-                  </a>
-                  <a href="/yearly-reports" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
+                  </Link>
+                  <Link to="/yearly-reports" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
                     YEARLY REPORTS
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
-                  </a>
-                  <a href="/contactPage" className="ml-2 px-5 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold text-sm tracking-wide rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  </Link>
+                  <Link to="/contactPage" className="ml-2 px-5 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold text-sm tracking-wide rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
                     CONTACT US
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -195,9 +196,9 @@ const Navbar: React.FC = () => {
                 <div className="px-6 pt-12 pb-2">
                   {/* Close button in front of HOME */}
                   <div className="flex items-center justify-between mb-2">
-                    <a href="/" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                    <Link to="/" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
                       HOME
-                    </a>
+                    </Link>
                     <button 
                       className="text-orange-700 p-2"
                       onClick={() => setIsMobileMenuOpen(false)}
@@ -216,28 +217,28 @@ const Navbar: React.FC = () => {
                     </button>
                     {isOrgDropdownOpen && (
                       <div className="pl-4">
-                        <a href="/about" className="block py-2 text-gray-600 hover:text-orange-500">About Us</a>
-                        <a href="/objectives" className="block py-2 text-gray-600 hover:text-orange-500">Objectives</a>
-                        <a href="/about-logo" className="block py-2 text-gray-600 hover:text-orange-500">About Logo</a>
+                        <Link to="/about" className="block py-2 text-gray-600 hover:text-orange-500">About Us</Link>
+                        <Link to="/objectives" className="block py-2 text-gray-600 hover:text-orange-500">Objectives</Link>
+                        <Link to="/about-logo" className="block py-2 text-gray-600 hover:text-orange-500">About Logo</Link>
                       </div>
                     )}
                   </div>
 
-                  <a href="/activities" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                  <Link to="/activities" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
                     ACTIVITIES
-                  </a>
-                  <a href="/administration" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                  </Link>
+                  <Link to="/administration" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
                     ADMINISTRATION
-                  </a>
-                  <a href="/donation" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                  </Link>
+                  <Link to="/donation" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
                     DONATIONS
-                  </a>
-                  <a href="/yearly-reports" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                  </Link>
+                  <Link to="/yearly-reports" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
                     YEARLY REPORTS
-                  </a>
-                  <a href="/contactPage" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                  </Link>
+                  <Link to="/contactPage" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
                     CONTACT US
-                  </a>
+                  </Link>
                 </div>
                 </div>
               )}

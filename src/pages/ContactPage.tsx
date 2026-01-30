@@ -1,14 +1,15 @@
+import bgpic from '../assets/bgpic.jpg'
 const ContactPage = () => {
   return (
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative h-[60vh] w-full">
+      <section className="relative h-[70vh] sm:h-[90vh] w-full">
         <img
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+          src={bgpic}
           alt="Contact Us"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
             CONTACT US
           </h1>
@@ -22,7 +23,7 @@ const ContactPage = () => {
             VIRAGA FOUNDATION
           </h2>
 
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg text-gray-700 font-bold leading-relaxed">
             Plot No.8, Road No.2, Sector-V,
             <br />
             Lotus Land Mark, Ayodhyanagar,

@@ -1,118 +1,96 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import pic1 from '../../assets/vibrant1.png';
 
 const EducationProgrammeSection = () => {
-  return (
-    <section className="relative overflow-hidden bg-white py-20">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          
-          {/* IMAGE SIDE */}
-          <motion.div
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1509062522246-3755977927d7"
-              alt="Education programme"
-              className="rounded-2xl shadow-2xl"
-            />
+	const navigate = useNavigate();
 
-            {/* Floating Heading */}
-            <motion.h2
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.7 }}
-              viewport={{ once: true }}
-              className="absolute left-6 top-6 max-w-xs text-xl sm:text-4xl font-extrabold uppercase leading-tight text-white drop-shadow-lg"
-            >
-              Vibrant Futures <br /> Transforming Lives
-            </motion.h2>
-          </motion.div>
+	const handleClick = () => {
+		navigate('/vibrantfuture');
+	};
 
-          {/* CONTENT SIDE */}
-          <motion.div
-            initial={{ opacity: 0, x: 80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <h3 className="mb-6 text-3xl font-bold text-blue-900">
-              Points on Education Programme
-            </h3>
+	return (
+		<section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-12 sm:py-20 lg:py-32">
+			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+				<div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12">
+					{/* IMAGE SIDE */}
+					<motion.div
+						initial={{ opacity: 0, x: -80 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 0.8, ease: 'easeOut' }}
+						viewport={{ once: true, margin: "-100px" }}
+						className="relative cursor-pointer group order-2 lg:order-1"
+						onClick={handleClick}
+					>
+						<div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-500" />
+						<img
+							src={pic1}
+							alt="Education programme"
+							className="relative rounded-2xl shadow-2xl transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-3xl w-full h-auto"
+						/>
+					</motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-lg leading-relaxed text-gray-700"
-            >
-              We are initiating an education-based programme focused on
-              enhancing learning opportunities and empowering students through
-              equitable access to high-quality education, regardless of their
-              socio-economic backgrounds.
-            </motion.p>
+					{/* CONTENT SIDE */}
+					<motion.div
+						initial={{ opacity: 0, x: 80 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+						viewport={{ once: true, margin: "-100px" }}
+						className="order-1 lg:order-2"
+					>
+						<div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 border border-gray-200 hover:shadow-2xl transition-shadow duration-500">
+							<motion.h1
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6, delay: 0.3 }}
+								viewport={{ once: true }}
+								className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-600 mb-3 tracking-wide"
+							>
+								— TRANSFORMING LIVES
+							</motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mt-4 text-lg leading-relaxed text-gray-700"
-            >
-              Our initiative aspires to build a brighter future by fostering an
-              inclusive learning environment that nurtures talent, encourages
-              creativity, and instills a lifelong love for knowledge.
-            </motion.p>
+							<motion.h2
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6, delay: 0.4 }}
+								viewport={{ once: true }}
+								className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-blue-900 mb-4 sm:mb-6 tracking-tight"
+							>
+								POINTS ON EDUCATION PROGRAMME
+							</motion.h2>
 
-            {/* POINTS */}
-            <motion.ul
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={{
-                hidden: {},
-                visible: {
-                  transition: {
-                    staggerChildren: 0.15,
-                  },
-                },
-              }}
-              className="mt-8 space-y-4"
-            >
-              {[
-                "Equitable access to quality education",
-                "Support for underprivileged students",
-                "Holistic learning beyond academics",
-                "Creativity, innovation, and critical thinking",
-                "Mentorship and long-term guidance",
-              ].map((point) => (
-                <motion.li
-                  key={point}
-                  variants={{
-                    hidden: { opacity: 0, x: 30 },
-                    visible: { opacity: 1, x: 0 },
-                  }}
-                  transition={{ duration: 0.5 }}
-                  className="flex items-start gap-3 text-lg text-gray-800"
-                >
-                  <span className="mt-1 h-3 w-3 rounded-full bg-blue-700"></span>
-                  {point}
-                </motion.li>
-              ))}
-            </motion.ul>
-          </motion.div>
-        </div>
-      </div>
+							<motion.p
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6, delay: 0.5 }}
+								viewport={{ once: true }}
+								className="text-gray-600 leading-relaxed text-sm sm:text-base lg:text-lg"
+							>
+								We are initiating project on the education based programme which enhancing educational
+								opportunities and empower the students through equitable access to high-quality education,
+								irrespective of their socio-economic backgrounds. We aspire to create a brighter future for
+								these young minds by fostering a learning environment that nurtures their talents, inspires
+								creativity, and instills a lifelong love of knowledge.
+							</motion.p>
 
-      {/* Decorative Gradient */}
-      {/* <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-blue-100 blur-3xl" />
-      <div className="pointer-events-none absolute -left-40 -bottom-40 h-[500px] w-[500px] rounded-full bg-orange-100 blur-3xl" /> */}
-    </section>
-  );
+							<motion.button
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6, delay: 0.6 }}
+								viewport={{ once: true }}
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								onClick={handleClick}
+								className="mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
+							>
+								Learn More
+							</motion.button>
+						</div>
+					</motion.div>
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default EducationProgrammeSection;

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Calendar, Sparkles } from 'lucide-react';
+import bgpic from '../assets/bgpic.jpg'
 import img1 from '.././assets/image1.png'
 import img2 from '.././assets/orphan1.png'
 import img3 from '.././assets/level3.png'
@@ -72,55 +73,55 @@ const ActivitiesPage = () => {
 			</div>
 
 			{/* Hero Section */}
-			<div className="relative h-[90vh] overflow-hidden">
+			<div className="relative h-[70vh] sm:h-[80vh] overflow-hidden">
 				{/* Background Image with Parallax */}
 				<div
-					className="absolute inset-0 bg-cover bg-center transform scale-110 animate-ken-burns"
+					className="absolute inset-0 bg-cover bg-center transform scale-110 "
 					style={{
 						backgroundImage:
-							'url("https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=1920&h=600&fit=crop")',
+							'url("' + bgpic + '")',
 					}}
 				/>
 				
 				{/* Multi-layered Gradients */}
-				<div className="absolute inset-0 bg-gradient-to-br from-purple-900/60 via-pink-900/50 to-orange-900/40" />
+				{/* <div className="absolute inset-0 " />
 				<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-				
+				 */}
 				{/* Animated Grid Pattern */}
-				<div className="absolute inset-0 opacity-10" style={{
+				{/* <div className="absolute inset-0 opacity-10" style={{
 					backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
 					backgroundSize: '50px 50px'
-				}} />
+				}} /> */}
 
 				{/* Floating Decorative Elements */}
-				<div className="absolute top-20 left-10 w-20 h-20 border-2 border-white/20 rounded-full animate-float-rotate" />
+				{/* <div className="absolute top-20 left-10 w-20 h-20 border-2 border-white/20 rounded-full animate-float-rotate" />
 				<div className="absolute bottom-32 right-16 w-16 h-16 border-2 border-pink-400/30 rotate-45 animate-float-bounce" />
-				<div className="absolute top-1/3 right-1/4 w-12 h-12 border-2 border-purple-400/30 rounded-lg animate-spin-slow" />
+				<div className="absolute top-1/3 right-1/4 w-12 h-12 border-2 border-purple-400/30 rounded-lg animate-spin-slow" /> */}
 
 				{/* Hero Content */}
 				<div className="absolute inset-0 flex items-center justify-center">
 					<div className="text-center space-y-6 px-4">
 						{/* Animated Badge */}
 						<div 
-							className={`inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white text-sm font-medium transition-all duration-1000 ${
+							className={`inline-flex items-center gap-2 px-5 py-2.5 sm:mt-8 mb-8 sm:mb-0 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white text-sm font-medium transition-all duration-1000 ${
 								isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
 							}`}
 						>
-							<Sparkles className="w-4 h-4 text-pink-400 animate-pulse" />
+							<Sparkles className="w-4 h-4 text-pink-400 hidden sm:visible animate-pulse" />
 							<span>Our Journey of Service</span>
 						</div>
 
 						{/* Main Title */}
 						<h1
-							className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold transition-all duration-1000 transform ${
+							className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold transition-all duration-1000 transform ${
 								isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-10 opacity-0 scale-95'
 							}`}
 							style={{ transitionDelay: '0.2s' }}
 						>
-							<span className="block text-white mb-2 drop-shadow-2xl">
+							<span className="block text-white sm:mb-2 drop-shadow-2xl">
 								ACTIVITIES
 							</span>
-							<span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-orange-400 animate-gradient-x">
+							<span className="block text-transparent bg-clip-text text-white animate-gradient-x">
 								Timeline
 							</span>
 						</h1>

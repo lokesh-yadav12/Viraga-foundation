@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import pic1 from '../../assets/orphan1.png'; // Replace with your actual image paths
-// import pic2 from '../../assets/orphanage2.jpg';
-// import pic3 from '../../assets/orphanage3.jpg';
-// import pic4 from '../../assets/orphanage4.jpg';
-// import pic5 from '../../assets/orphanage5.jpg';
-// import pic6 from '../../assets/orphanage6.jpg';
-
+import bgpic from '../../assets/bgpic.jpg'
+import do1 from '../../assets/do1.png';
+import do2 from '../../assets/do2.png';
+import do3 from '../../assets/do3.png';
+import do4 from '../../assets/do4.png';
+import do5 from '../../assets/do5.png';
+import do6 from '../../assets/do6.png';
+import do7 from '../../assets/do7.png';
 interface ImageData {
   src: string;
   alt: string;
@@ -17,28 +18,32 @@ const Year2023: React.FC = () => {
 
   const images: ImageData[] = [
     {
-      src: pic1,
+      src: do1,
       alt: 'Orphanage Image 1',
     },
     {
-      src: pic1,
+      src: do2,
       alt: 'Orphanage Image 2',
     },
     {
-      src: pic1,
+      src: do3,
       alt: 'Orphanage Image 3',
     },
     {
-      src: pic1,
+      src: do4,
       alt: 'Orphanage Image 4',
     },
     {
-      src: pic1,
+      src: do5,
       alt: 'Orphanage Image 5',
     },
     {
-      src: pic1,
+      src: do6,
       alt: 'Orphanage Image 6',
+    },
+     {
+      src: do7,
+      alt: 'Orphanage Image 7',
     },
   ];
 
@@ -86,13 +91,13 @@ const Year2023: React.FC = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section with Background Image */}
       <div
-        className="relative h-[400px] flex items-center justify-center overflow-hidden bg-cover bg-center"
+        className="relative h-[70vh] sm:h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=1920')`,
+          backgroundImage: `url('${bgpic}')`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-400/60 via-purple-400/60 to-pink-300/60"></div>
-        <h1 className="relative text-6xl md:text-8xl font-bold text-white tracking-tight drop-shadow-2xl">
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-pink-400/60 via-purple-400/60 to-pink-300/60"></div> */}
+        <h1 className="relative text-4xl md:text-7xl font-bold text-white tracking-tight drop-shadow-2xl">
           2023-2024
         </h1>
       </div>

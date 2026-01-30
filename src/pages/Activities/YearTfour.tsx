@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import bgpic from '../../assets/bgpic.jpg';
 import pic1 from '../../assets/image1.png';
 import pic2 from '../../assets/image2.png';
 import hero from '../../assets/hero4.mp4';
+import vi1 from '../../assets/vi1.png';
+import vi2 from '../../assets/vi2.png';
+import vi3 from '../../assets/vi3.png';
 interface ImageData {
 	src: string;
 	alt: string;
@@ -22,15 +26,15 @@ const Year2024: React.FC = () => {
 			alt: 'Distribution Image 2',
 		},
 		{
-			src: pic1,
+			src: vi1,
 			alt: 'Distribution Image 3',
 		},
 		{
-			src: pic2,
+			src: vi2,
 			alt: 'Distribution Image 4',
 		},
 		{
-			src: pic1,
+			src: vi3,
 			alt: 'Distribution Image 5',
 		},
 		{
@@ -94,49 +98,53 @@ const Year2024: React.FC = () => {
 	};
 
 	return (
-		<div className="min-h-screen bg-white">
+		<div className="min-h-screen bg-white ">
 			{/* Hero Section */}
 			<div
-        className="relative h-[400px] flex items-center justify-center overflow-hidden bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=1920')`,
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-400/60 via-purple-400/60 to-pink-300/60"></div>
-        <h1 className="relative text-6xl md:text-8xl font-bold text-white tracking-tight drop-shadow-2xl">
-          2024-2025
-        </h1>
-      </div>
+				className="relative h-[70vh] sm:h-[90vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
+				style={{
+					backgroundImage: `url('${bgpic}')`,
+				}}
+			>
+				{/* <div className="absolute inset-0 bg-gradient-to-r from-pink-400/60 via-purple-400/60 to-pink-300/60"></div> */}
+				<h1 className="relative text-4xl md:text-6xl font-bold text-white tracking-tight drop-shadow-2xl">
+					2024-2025
+				</h1>
+			</div>
 
 			{/* Main Content Container */}
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 py-12">
 				{/* Video Section */}
 				{/* Video Section */}
-				<section className="mb-1">
-					<h2 className="text-2xl font-bold text-black mb-8">
+				<section className="mb-16">
+					<h2 className="text-2xl md:text-3xl font-bold text-red-800 mb-8">
 						Food Distribution Provisions Cloths - 15-09-2024
 					</h2>
 
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-						{/* Video Container */}
-						<div>
-							
-
-							<div className="relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl">
-								<video className="w-full h-full object-cover" controls preload="metadata">
-									<source src={hero} type="video/mp4" />
-									Your browser does not support the video tag.
-								</video>
+					<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+						{/* Video Container - 2/3 width */}
+						<div className="lg:col-span-2 w-full">
+							<div className="relative overflow-hidden rounded-xl shadow-2xl aspect-video bg-black">
+								<iframe
+									width="800"
+									height="400"
+									src="https://www.youtube.com/embed/OXNX5cS9EaU"
+									title="viraga"
+									frameBorder={0}
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									referrerPolicy="strict-origin-when-cross-origin"
+									allowFullScreen
+								/>
 							</div>
 						</div>
 
-						{/* Text Content */}
-						<div className="space-y-4 text-gray-700">
-							<h3 className="text-2xl font-bold text-gray-900 leading-tight">
+						{/* Text Content - 1/3 width */}
+						<div className="lg:col-span-1 space-y-4 text-gray-700">
+							<h3 className="text-xl font-bold text-gray-900 leading-tight">
 								Flood Relief Assistance – Distribution of Provisions, Clothing & Vegetables by Viraga
 								Foundation
 							</h3>
-							<p className="text-justify leading-relaxed">
+							<p className="text-justify leading-relaxed text-md">
 								On <span className="font-semibold text-gray-900">August 31, 2024</span>, severe floods
 								caused by the <span className="font-semibold text-gray-900">Budameru River</span>{' '}
 								submerged several homes in the{' '}
@@ -146,31 +154,34 @@ const Year2024: React.FC = () => {
 								support to <span className="font-semibold text-gray-900">14 affected families</span>,
 								ensuring they received essential relief materials.
 							</p>
-							<p className="text-justify leading-relaxed">
-								As part of the initiative, the foundation{' '}
-								<span className="font-semibold text-gray-900">distributed 27 types of provisions</span>,
-								including{' '}
-								<span className="font-semibold text-gray-900">
-									grains, pulses, cooking essentials, and fresh vegetables
-								</span>
-								, along with{' '}
-								<span className="font-semibold text-gray-900">sarees, lungis, tshirt and blankets</span>{' '}
-								to provide comfort and warmth to the affected individuals. Additionally,{' '}
-								<span className="font-semibold text-gray-900">fancy items</span> were also distributed
-								to help families regain a sense of normalcy.
-							</p>
-							{/* <p className="text-justify leading-relaxed">
-								This relief effort reflects{' '}
-								<span className="font-semibold text-gray-900">
-									Viraga Foundation's commitment to humanitarian aid
-								</span>
-								, providing timely support to those impacted by natural disasters. By offering essential
-								supplies and care, the foundation continues to stand with communities in need, fostering
-								resilience and hope during challenging times.
-							</p> */}
 						</div>
 					</div>
 				</section>
+
+				<div>
+					<p className="text-justify leading-relaxed text-sm">
+						As part of the initiative, the foundation{' '}
+						<span className="font-semibold text-gray-900">distributed 27 types of provisions</span>,
+						including{' '}
+						<span className="font-semibold text-gray-900">
+							grains, pulses, cooking essentials, and fresh vegetables
+						</span>
+						, along with{' '}
+						<span className="font-semibold text-gray-900">sarees, lungis, t-shirts and blankets</span> to
+						provide comfort and warmth to the affected individuals. Additionally,{' '}
+						<span className="font-semibold text-gray-900">fancy items</span> were also distributed to help
+						families regain a sense of normalcy.
+					</p>
+					<p className="text-justify leading-relaxed text-sm">
+						This relief effort reflects{' '}
+						<span className="font-semibold text-gray-900">
+							Viraga Foundation's commitment to humanitarian aid
+						</span>
+						, providing timely support to those impacted by natural disasters. By offering essential
+						supplies and care, the foundation continues to stand with communities in need, fostering
+						resilience and hope during challenging times.
+					</p>
+				</div>
 
 				{/* Mathematics Section */}
 				<section className="mb-16 mt-12">

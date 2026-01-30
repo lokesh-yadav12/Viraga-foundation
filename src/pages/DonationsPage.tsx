@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { HandHeart, Copy, Check, Heart, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
-
+import bgpic from '../assets/bgpic.jpg'
 const DonationsPage = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const [copiedField, setCopiedField] = useState('');
@@ -35,20 +35,20 @@ const DonationsPage = () => {
 	];
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
+		<div className="min-h-screen bg-gradient-to-br from-purple-50 md:px-6 via-pink-50 to-orange-50">
 			{/* Hero Section */}
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="relative h-64 sm:h-80 lg:h-96 bg-cover bg-center flex items-center justify-center overflow-hidden"
+				className="relative h-[70vh] sm:h-[80vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
 				style={{
 					backgroundImage:
-						'url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&h=600&fit=crop")',
+						'url("' + bgpic + '")',
 				}}
 			>
-				<div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 via-pink-500/50 to-orange-500/50"></div>
-				<div className="absolute inset-0 backdrop-blur-sm"></div>
+				<div className="absolute inset-0 "></div>
+				<div className="absolute inset-0 "></div>
 				<motion.div
 					initial={{ y: 40, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}

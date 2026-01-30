@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
 import img1 from '../assets/viraganew.png'
+import bgpic from '../assets/bgpic.jpg'
 const AboutLogo = () => {
   return (
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
       <section className="relative h-[70vh] md:h-[90vh] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+          src={bgpic}
           alt="Service and spirituality"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/60 flex items-center">
+        <div className="absolute inset-0 bg-black/30 flex items-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,7 +48,7 @@ const AboutLogo = () => {
             transition={{ duration: 0.6 }}
             src={img1}
             alt="Viraga Foundation Logo"
-            className="mx-auto w-48 sm:w-56 md:w-64 mb-1 sm:mb-1 drop-shadow-2xl"
+            className="mx-auto w-48 sm:w-60 md:w-68 mb-1 sm:mb-1 drop-shadow-2xl"
           />
 
           <p className="text-base sm:text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto">

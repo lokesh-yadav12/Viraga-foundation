@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import bgpic from '../assets/bgpic.jpg'
 const objectives = [
   {
     icon: "🌿",
@@ -56,16 +56,16 @@ const Objectives = () => {
   return (
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative h-[80vh] overflow-hidden">
+      <section className="relative h-[70vh] sm:h-[80vh] overflow-hidden">
         <motion.img
           initial={{ scale: 1.2 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          src="https://images.unsplash.com/photo-1509099836639-18ba1795216d"
+          src={bgpic}
           alt="NGO service work"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/60 flex items-center">
+        <div className="absolute inset-0  flex items-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}

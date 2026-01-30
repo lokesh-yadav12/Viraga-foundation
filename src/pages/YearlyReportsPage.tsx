@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FileText, Download } from 'lucide-react';
-
+import bgpic from '../assets/bgpic.jpg'
 const YearlyReportsPage = () => {
 	const [isVisible, setIsVisible] = useState(false);
 
@@ -48,15 +48,15 @@ const YearlyReportsPage = () => {
 		<div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
 			{/* Hero Section */}
 			<div
-				className="relative h-64 sm:h-80 lg:h-96 bg-cover bg-center flex items-center justify-center overflow-hidden"
+				className="relative h-[70vh] sm:h-[80vh] lg:h-[80vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
 				style={{
 					backgroundImage:
-						'url("https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=1920&h=600&fit=crop")',
+						'url("' + bgpic + '")',
 				}}
 			>
-				<div className="absolute inset-0 bg-gradient-to-b from-pink-300/60 to-purple-300/60"></div>
+				<div className="absolute inset-0 "></div>
 				<h1
-					className={`relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-wider transition-all duration-1000 transform ${
+					className={`relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center font-bold text-white tracking-wider transition-all duration-1000 transform ${
 						isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 					}`}
 				>
