@@ -205,12 +205,12 @@ const Navbar: React.FC = () => {
                     >
                       HOME
                     </Link>
-                    <button 
+                    {/* <button 
                       className="text-orange-700 p-2"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <X size={28} />
-                    </button>
+                    </button> */}
                   </div>
                   
                   <div>
