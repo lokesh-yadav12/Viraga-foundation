@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
-import { FileText, Download } from 'lucide-react';
-import bgpic from '../assets/bgpic.jpg'
+import { Download } from 'lucide-react';
+import bgpic from '../assets/bgpic.jpg';
+import pdf1 from '../files/Financial-Statements-FY-24-25.pdf';
+import pdf2 from '../files/Audit-Report-F.Y-23-24.pdf';
+import pdf3 from '../files/Audit-Report-F.Y-23-24 (1).pdf';
+import pdf4 from '../files/Financials-F.Y-23-24.pdf';
+import pdf5 from '../files/Audit-Report_Signed_2022-23-FY.pdf';
+import pdf6 from '../files/Financials_Signed_2022-23-FY.pdf';
+import auditIllustration from '../assets/audit.png';
 const YearlyReportsPage = () => {
 	const [isVisible, setIsVisible] = useState(false);
 
@@ -13,35 +20,35 @@ const YearlyReportsPage = () => {
 			year: '2024-2025',
 			auditReport: {
 				label: 'Audit Report F.Y 24-25',
-				file: '/pdfs/audit-report-2024-25.pdf' // Replace with your actual file path
+				file: pdf2, // Replace with your actual file path
 			},
 			financials: {
 				label: 'Financials 2024-25 FY',
-				file: '/pdfs/financials-2024-25.pdf' // Replace with your actual file path
-			}
+				file: pdf1, // Replace with your actual file path
+			},
 		},
 		{
 			year: '2023-2024',
 			auditReport: {
 				label: 'Audit Report F.Y 23-24',
-				file: '/pdfs/audit-report-2023-24.pdf'
+				file: pdf3,
 			},
 			financials: {
 				label: 'Financials 2023-24 FY',
-				file: '/pdfs/financials-2023-24.pdf'
-			}
+				file: pdf4,
+			},
 		},
 		{
 			year: '2022-2023',
 			auditReport: {
 				label: 'Audit Report 2022-23 FY',
-				file: '/pdfs/audit-report-2022-23.pdf'
+				file: pdf5,
 			},
 			financials: {
 				label: 'Financials 2022-23 FY',
-				file: '/pdfs/financials-2022-23.pdf'
-			}
-		}
+				file: pdf6,
+			},
+		},
 	];
 
 	return (
@@ -50,8 +57,7 @@ const YearlyReportsPage = () => {
 			<div
 				className="relative h-[70vh] sm:h-[80vh] lg:h-[80vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
 				style={{
-					backgroundImage:
-						'url("' + bgpic + '")',
+					backgroundImage: 'url("' + bgpic + '")',
 				}}
 			>
 				<div className="absolute inset-0 "></div>
@@ -72,7 +78,7 @@ const YearlyReportsPage = () => {
 						isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 					}`}
 				>
-					<div className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-3xl p-4 sm:p-6 lg:p-10 shadow-2xl max-w-4xl w-full">
+					{/* <div className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-3xl p-4 sm:p-6 lg:p-10 shadow-2xl max-w-4xl w-full">
 						<div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
 							<div className="flex-shrink-0">
 								<div className="w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
@@ -80,15 +86,16 @@ const YearlyReportsPage = () => {
 								</div>
 							</div>
 							<div className="text-center md:text-left">
-								<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2">
-									AUDIT
-								</h2>
+								<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2">AUDIT</h2>
 								<p className="text-white/90 text-sm sm:text-base lg:text-lg max-w-md">
-									Transparency and accountability in every report. Access our comprehensive financial audits and yearly statements.
+									Transparency and accountability in every report. Access our comprehensive financial
+									audits and yearly statements.
 								</p>
 							</div>
 						</div>
-					</div>
+					</div> */}
+					<img src={auditIllustration} alt="Audit Illustration" className="w-40 h-40 sm:w-60 sm:h-60 lg:w-[500px] rounded-md lg:h-80"/>
+					
 				</div>
 
 				{/* Reports Tables */}
@@ -209,7 +216,8 @@ const YearlyReportsPage = () => {
 				>
 					<div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 sm:p-8 border border-blue-200">
 						<p className="text-gray-700 text-sm sm:text-base lg:text-lg">
-							All reports are available in PDF format. Click on the links to view or download the documents.
+							All reports are available in PDF format. Click on the links to view or download the
+							documents.
 							<br />
 							For any queries regarding the reports, please contact us.
 						</p>

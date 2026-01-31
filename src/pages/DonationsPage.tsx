@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { HandHeart, Copy, Check, Heart, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import bgpic from '../assets/bgpic.jpg'
+import upi from '../assets/upi.png';
 const DonationsPage = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const [copiedField, setCopiedField] = useState('');
@@ -213,8 +214,9 @@ const DonationsPage = () => {
 								transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
 								className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-8 shadow-xl border-2 border-purple-100"
 							>
+								<img src={upi} alt="UPI QR Code" className="w-full h-full object-contain mb-4" />
 								{/* Bank Header */}
-								<div className="mb-6">
+								{/* <div className="mb-6">
 									<div className="bg-gradient-to-r from-red-600 to-red-700 rounded-xl p-4 sm:p-6 mb-4">
 										<div className="flex items-center justify-center gap-3 mb-3">
 											<div className="bg-white rounded-lg p-2">
@@ -231,18 +233,18 @@ const DonationsPage = () => {
 											Swachh Bharat
 										</div>
 									</div>
-								</div>
+								</div> */}
 
 								{/* Foundation Name */}
-								<h3 className="text-center text-xl sm:text-2xl font-bold text-gray-800 mb-2">
+								{/* <h3 className="text-center text-xl sm:text-2xl font-bold text-gray-800 mb-2">
 									VIRAGA FOUNDATION
 								</h3>
 								<p className="text-center text-xs sm:text-sm text-gray-700 mb-6 break-all px-2">
 									QR19492940941-0036@unionbankofindia
-								</p>
+								</p> */}
 
 								{/* QR Code */}
-								<motion.div
+								{/* <motion.div
 									initial={{ scale: 0.9, opacity: 0 }}
 									whileInView={{ scale: 1, opacity: 1 }}
 									viewport={{ once: true }}
@@ -257,7 +259,7 @@ const DonationsPage = () => {
 											loading="lazy"
 										/>
 									</div>
-								</motion.div>
+								</motion.div> */}
 
 								{/* Payment Options */}
 								{/* <div className="border-t border-gray-200 pt-6">

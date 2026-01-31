@@ -60,10 +60,10 @@ const StatCard: React.FC<StatCardProps> = ({ number, label, description, delay =
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="text-2xl md:text-3xl lg:text-4xl font-black text-orange-500 leading-none mb-2">
+      <div className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-500 leading-none mb-2">
         {isVisible ? count : 0}+
       </div>
-      <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-orange-500 uppercase tracking-wide mb-3">
+      <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-500 uppercase tracking-wide mb-3">
         {label}
       </div>
       <p className="text-sm md:text-base lg:text-lg text-gray-700 max-w-xs leading-relaxed px-2">
@@ -101,7 +101,7 @@ const OurImpact: React.FC = () => {
     <div className="w-full  sm:max-h-screen bg-gray-100 py-16 md:py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-center text-gray-900 mb-10 md:mb-24 uppercase tracking-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-center text-orange-600 mb-10 md:mb-24 uppercase tracking-tight">
           OUR IMPACT
         </h1>
 
