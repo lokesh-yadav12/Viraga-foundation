@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import vira from '../../assets/Viraga_Foundation_logo_cropped.png'
+import vira from '../../assets/Vira.png'
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -120,7 +120,7 @@ const Navbar: React.FC = () => {
       {/* Main Navigation - Absolute positioning to overlay hero */}
       <div className="absolute top-0 left-0 right-0 z-50 px-4 lg:px-8 py-4 sm:mt-16 mt-40">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white/95 backdrop-blur-md shadow-2xl rounded-3xl border border-gray-100">
+          <div className="bg-white/95 backdrop-blur-md shadow-2xl rounded-3xl border border-gray-100 relative">
             <div className="px-6">
               <div className="flex items-center justify-between py-0">
                 {/* Logo */}
@@ -190,28 +190,17 @@ const Navbar: React.FC = () => {
                 </button>
               </div>
 
-              {/* Mobile Menu */}
-             
-              {/* Mobile Menu */}
+              {/* Mobile Menu - Overlay */}
               {isMobileMenuOpen && (
-               <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg rounded-b-3xl">
+               <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg rounded-b-3xl z-50">
                 <div className="px-6 py-4">
-                  {/* Close button in front of HOME */}
-                  <div className="flex items-center justify-between mb-2">
-                    <Link 
-                      to="/" 
-                      className="block py-2 text-gray-700 hover:text-orange-500 font-medium"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      HOME
-                    </Link>
-                    {/* <button 
-                      className="text-orange-700 p-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <X size={28} />
-                    </button> */}
-                  </div>
+                  <Link 
+                    to="/" 
+                    className="block py-2 text-gray-700 hover:text-orange-500 font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    HOME
+                  </Link>
                   
                   <div>
                     <button 
