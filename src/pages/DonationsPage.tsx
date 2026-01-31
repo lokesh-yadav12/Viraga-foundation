@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { HandHeart, Copy, Check, Heart, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
-import bgpic from '../assets/bgpic.jpg'
+import bgpic from '../assets/donation2.png'
 import upi from '../assets/upi.png';
 const DonationsPage = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -39,31 +39,33 @@ const DonationsPage = () => {
 		<div className="min-h-screen bg-gradient-to-br from-purple-50 md:px-6 via-pink-50 to-orange-50">
 			{/* Hero Section */}
 			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ duration: 1 }}
-				className="relative h-[70vh] sm:h-[80vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
-				style={{
-					backgroundImage:
-						'url("' + bgpic + '")',
-				}}
-			>
-				<div className="absolute inset-0 "></div>
-				<div className="absolute inset-0 "></div>
-				<motion.div
-					initial={{ y: 40, opacity: 0 }}
-					animate={{ y: 0, opacity: 1 }}
-					transition={{ duration: 0.8, delay: 0.3 }}
-					className="relative text-center px-4"
-				>
-					<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-wider mb-4">
-						DONATIONS
-					</h1>
-					<p className="text-white text-lg sm:text-xl md:text-2xl font-light">
-						Every contribution creates ripples of hope
-					</p>
-				</motion.div>
-			</motion.div>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+  className="relative h-[70vh] sm:h-[80vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
+  style={{
+    backgroundImage: `url(${bgpic})`,
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  {/* Content */}
+  <motion.div
+    initial={{ y: 40, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.8, delay: 0.3 }}
+    className="relative text-center px-4"
+  >
+    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-200 tracking-wider mb-4">
+      DONATIONS
+    </h1>
+    <p className="text-gray-300 text-lg sm:text-xl md:text-2xl font-light">
+      Every contribution creates ripples of hope
+    </p>
+  </motion.div>
+</motion.div>
+
 
 			{/* Main Content */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">

@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
 								<div className="flex items-center gap-3  mb-2 transform transition-all duration-500 hover:scale-105">
 									<div className="relative flex-shrink-0">
 										<div className="absolute inset-0  rounded-2xl  transition-all duration-500" />
-										<img src={logo} alt="Viraga Foundation Logo" className="h-32 pl-2 sm:pl-0 w-68 object-contain relative z-10 drop-shadow-2xl" />
+										<img src={logo} alt="Viraga Foundation Logo" className="h-32 pl-2 sm:pl-4 w-68 object-contain relative z-10 drop-shadow-2xl" />
 									</div>
 								</div>
 							</div>
@@ -186,8 +186,8 @@ const Footer: React.FC = () => {
 							<div className="text-slate-400 text-center animate-fade-in" style={{ animationDelay: '0.7s' }}>
 								<p className="font-medium flex items-center flex-wrap justify-center text-base sm:text-lg gap-2">
 									<span>© 2026</span>
-									<span className="text-orange-500 font-bold">VIRAGA FOUNDATION</span>
-									<span className="text-green-500">🍀</span>
+									<span className="text-orange-500 font-bold">VIRAGA FOUNDATION.</span>
+									<span className="text-green-500"></span>
 									<span>All rights reserved.</span>
 								</p>
 							</div>

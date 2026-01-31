@@ -60,7 +60,7 @@ const StatCard: React.FC<StatCardProps> = ({ number, label, description, delay =
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-500 leading-none mb-2">
+      <div className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-800 leading-none mb-2">
         {isVisible ? count : 0}+
       </div>
       <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-500 uppercase tracking-wide mb-3">
@@ -76,17 +76,17 @@ const StatCard: React.FC<StatCardProps> = ({ number, label, description, delay =
 const OurImpact: React.FC = () => {
   const stats = [
     {
-      number: '5',
+      number: '1',
       label: 'LAC',
       description: 'children and their families are impacted every year',
     },
     {
-      number: '200',
+      number: '50',
       label: 'VILLAGES',
       description: 'and slums are reached out to across the country',
     },
     {
-      number: '40',
+      number: '20',
       label: 'PROJECTS',
       description: 'focused on education, healthcare, and women empowerment',
     },
@@ -98,7 +98,7 @@ const OurImpact: React.FC = () => {
   ];
 
   return (
-    <div className="w-full  sm:max-h-screen bg-gray-100 py-16 md:py-16 px-4">
+    <div className="w-full  sm:max-h-screen bg-white py-16 md:py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-center text-orange-600 mb-10 md:mb-24 uppercase tracking-tight">

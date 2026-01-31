@@ -4,9 +4,12 @@ import InfoCards from '@/components/home/InfoCards';
 import OurImpact from '@/components/home/OurImpact';
 import SubscribeModal from '@/components/ui/SubscribeModal'
 import { useState,useEffect } from "react";
-
+import AllInfo from '@/components/home/AllInfo';
+import DonationCTA from '@/components/home/DonationCTA';
+import ContactCTA from '@/components/home/ContactCTA';
+import ImageGallery from '@/components/home/ImageGallery';
 const Home = () => {
-  const [showModal, setShowModal] = useState(true);
+//   const [showModal, setShowModal] = useState(true);
 	const [showSubscribeModal, setShowSubscribeModal] = useState(false);
 
 	useEffect(() => {
@@ -42,8 +45,12 @@ const Home = () => {
      
       <HeroSection />
       <OurImpact/>
+	  <AllInfo/>
+	  <ImageGallery/>
       <InfoCards/>
+	  <DonationCTA/>
       <EducationProgrammeSection/>
+	  <ContactCTA/>
       {/* <ViragaFoundation/> */}
      
     </div>

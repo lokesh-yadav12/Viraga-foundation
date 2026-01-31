@@ -72,7 +72,7 @@ const SubscribeModal = ({ onClose, isOpen }: SubscribeModalProps) => {
 	if (!isOpen) return null;
 
 	return (
-		<div className={`fixed inset-0 z-50 h-[80vh] sm:h-[90vh] mt-16 sm:mt-0 flex items-center justify-center p-2 px-2 transition-opacity duration-300 ${
+		<div className={`fixed inset-0 z-50 h-screen mt-16 sm:mt-0 flex items-center justify-center p-2 px-2 transition-opacity duration-300 ${
 			showModal ? 'opacity-100' : 'opacity-0'
 		}`}>
 			{/* Backdrop */}
