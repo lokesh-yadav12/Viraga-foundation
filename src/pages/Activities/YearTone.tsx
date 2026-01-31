@@ -13,6 +13,13 @@ import inception6 from '../../assets/i6.png';
 import inception7 from '../../assets/i7.png';
 import inception8 from '../../assets/i8.png';
 import inception9 from '../../assets/i9.png';
+import inception10 from '../../assets/i10.png';
+import inception11 from '../../assets/i11.png';
+import inception12 from '../../assets/i12.png';
+import inception13 from '../../assets/i13.png';
+import inception14 from '../../assets/i14.png';
+import inception15 from '../../assets/i15.png';
+// import inception16 from '../../assets/i16.png';
 
 // Food Donation Feb 7 Images
 import feb7_1 from '../../assets/f1.png';
@@ -23,8 +30,14 @@ import feb21_1 from '../../assets/p1.png';
 import feb21_2 from '../../assets/p1.png';
 import feb21_3 from '../../assets/p2.png';
 import feb21_4 from '../../assets/p3.png';
-import feb21_5 from '../../assets/feb21_5.png';
-import feb21_6 from '../../assets/feb21_6.png';
+ import feb21_5 from '../../assets/p4.png';
+ import feb21_6 from '../../assets/p5.png';
+ import feb21_7 from '../../assets/p6.png';
+ import feb21_8 from '../../assets/p7.png';
+ import feb21_9 from '../../assets/p8.png';
+ import feb21_10 from '../../assets/p9.png';
+ import feb21_11 from '../../assets/p10.png';
+ import feb21_12 from '../../assets/p11.png';
 
 // Food Donation Feb 25 Images
 import feb25_1 from '../../assets/fd1.png';
@@ -33,6 +46,14 @@ import feb25_3 from '../../assets/fd2.png';
 import feb25_4 from '../../assets/fd3.png';
 import feb25_5 from '../../assets/fd4.png';
 import feb25_6 from '../../assets/fd5.png';
+import feb25_7 from '../../assets/fd6.png';
+import feb25_8 from '../../assets/fd7.png';
+import feb25_9 from '../../assets/fd8.png';
+import feb25_10 from '../../assets/fd9.png';
+import feb25_11 from '../../assets/fd10.png';
+import feb25_12 from '../../assets/fd11.png';
+
+
 // Food Donation Nov 29 Images
 import nov29_1 from '../../assets/l1.png';
 import nov29_2 from '../../assets/l2.png';
@@ -40,6 +61,14 @@ import nov29_3 from '../../assets/l3.png';
 import nov29_4 from '../../assets/l4.png';
 import nov29_5 from '../../assets/l5.png';
 import nov29_6 from '../../assets/l6.png';
+import nov29_7 from '../../assets/l7.png';
+import nov29_8 from '../../assets/l8.png';
+import nov29_9 from '../../assets/l9.png';
+import nov29_10 from '../../assets/l10.png';
+import nov29_11 from '../../assets/l11.png';
+import nov29_12 from '../../assets/l12.png';
+import nov29_13 from '../../assets/l13.png';
+import nov29_14 from '../../assets/l14.png';
 
 interface GalleryImage {
 	id: number;
@@ -63,6 +92,12 @@ const Year2021: React.FC = () => {
 		{ id: 7, src: inception7, alt: 'Volunteers at event' },
 		{ id: 8, src: inception8, alt: 'Foundation founders portrait' },
 		{ id: 9, src: inception9, alt: 'Inauguration speech' },
+		{ id: 10, src: inception10, alt: 'Ceremonial lamp lighting' },
+		{ id: 11, src: inception11, alt: 'Group discussion' },
+		{ id: 12, src: inception12, alt: 'Event attendees' },
+		{ id: 13, src: inception13, alt: 'Foundation logo unveiling' },
+		{ id: 14, src: inception14, alt: 'Volunteer activities' },
+		{ id: 15, src: inception15, alt: 'Closing ceremony' },
 	];
 
 	// Food Donation Feb 7 Gallery
@@ -78,8 +113,14 @@ const Year2021: React.FC = () => {
 		{ id: 2, src: feb21_2, alt: 'Volunteers with recipients' },
 		{ id: 3, src: feb21_3, alt: 'Foundation founders portrait' },
 		{ id: 4, src: feb21_4, alt: 'Serving meals to elderly' },
-		// { id: 5, src: feb21_5, alt: 'Community gathering' },
-		// { id: 6, src: feb21_6, alt: 'Meal distribution' },
+		{ id: 5, src: feb21_5, alt: 'Community gathering' },
+		{ id: 6, src: feb21_6, alt: 'Meal distribution' },
+		{ id: 7, src: feb21_7, alt: 'Volunteers in action' },
+		{ id: 8, src: feb21_8, alt: 'Happy recipients' },
+		{ id: 9, src: feb21_9, alt: 'Group interaction' },
+		{ id: 10, src: feb21_10, alt: 'Food distribution ceremony' },
+		{ id: 11, src: feb21_11, alt: 'Volunteers with recipients' },
+		{ id: 12, src: feb21_12, alt: 'Foundation founders portrait' },
 	];
 
 	// Food Donation Feb 25 Gallery
@@ -90,6 +131,12 @@ const Year2021: React.FC = () => {
 		{ id: 4, src: feb25_4, alt: 'Food service activity' },
 		{ id: 5, src: feb25_5, alt: 'Care and support' },
 		{ id: 6, src: feb25_6, alt: 'Group interaction' },
+		{ id: 7, src: feb25_7, alt: 'Meal distribution' },
+		{ id: 8, src: feb25_8, alt: 'Volunteers in action' },
+		{ id: 9, src: feb25_9, alt: 'Happy residents' },
+		{ id: 10, src: feb25_10, alt: 'Community gathering' },
+		{ id: 11, src: feb25_11, alt: 'Serving meals to elderly' },
+		
 	];
 
 	// Food Donation Nov 29 Gallery
@@ -100,6 +147,14 @@ const Year2021: React.FC = () => {
 		{ id: 4, src: nov29_4, alt: 'Foundation banner' },
 		{ id: 5, src: nov29_5, alt: 'Prepared food' },
 		{ id: 6, src: nov29_6, alt: 'Mission location' },
+		{ id: 7, src: nov29_7, alt: 'Volunteers at mission' },
+		{ id: 8, src: nov29_8, alt: 'Distributing food' },
+		{ id: 9, src: nov29_9, alt: 'Serving meals' },
+		{ id: 10, src: nov29_10, alt: 'Group photo' },
+		{ id: 11, src: nov29_11, alt: 'Happy recipients' },
+		{ id: 12, src: nov29_12, alt: 'Community gathering' },
+		{ id: 13, src: nov29_13, alt: 'Volunteers in action' },
+		{ id: 14, src: nov29_14, alt: 'Closing ceremony' },
 	];
 
 	const openLightbox = (index: number, gallery: GalleryImage[]) => {

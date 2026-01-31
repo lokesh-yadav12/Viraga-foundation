@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Heart, MapPin, Mail, Phone } from 'lucide-react';
+import logo from '../../assets/vira1.png';
 
 interface LinkItem {
 	label: string;
@@ -19,7 +20,7 @@ const Footer: React.FC = () => {
 	);
 
 	useEffect(() => {
-		const newParticles = Array.from({ length: 20 }, (_, i) => ({
+		const newParticles = Array.from({ length: 15 }, (_, i) => ({
 			id: i,
 			left: `${Math.random() * 100}%`,
 			delay: `${Math.random() * 5}s`,
@@ -53,24 +54,6 @@ const Footer: React.FC = () => {
 		<div className="flex flex-col text-white">
 			{/* Footer */}
 			<footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-				{/* Animated Wave Background */}
-				<div className="absolute inset-0 opacity-10">
-					<svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
-						<path
-							fill="url(#wave-gradient)"
-							fillOpacity="1"
-							d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,106.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-							className="animate-wave"
-						/>
-						<defs>
-							<linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-								<stop offset="0%" stopColor="#f97316" />
-								<stop offset="100%" stopColor="#ea580c" />
-							</linearGradient>
-						</defs>
-					</svg>
-				</div>
-
 				{/* Animated Glow Orbs */}
 				<div className="absolute top-10 left-10 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl animate-pulse-slow" />
 				<div className="absolute bottom-10 right-10 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
@@ -89,32 +72,29 @@ const Footer: React.FC = () => {
 					/>
 				))}
 
-				{/* Top Border Wave */}
-				<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60 animate-shimmer" />
+				{/* Top Border */}
+				<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60" />
 
 				{/* Footer Content */}
-				<div className="relative max-w-7xl mx-auto px-6 pt-16 pb-8">
+				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-6 sm:pb-8">
 					{/* Main Grid */}
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
 						{/* About Section */}
-						<div className="lg:col-span-1 space-y-6 animate-fade-slide-up" style={{ animationDelay: '0.1s' }}>
+						<div className="sm:col-span-2 lg:col-span-2 space-y-4 sm:space-y-6 animate-fade-slide-up" style={{ animationDelay: '0.1s' }}>
 							<div className="group">
-								<div className="flex items-center gap-4 mb-4">
-									<div className="relative">
-										<div className="absolute inset-0 bg-orange-500 rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
-										<div className="relative w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
-											<Heart className="w-7 h-7 text-white animate-pulse-soft" />
-										</div>
+								<div className="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-4">
+									<div className="relative flex-shrink-0">
+										<img src={logo} alt="Viraga Foundation Logo" className="h-40 w-80 object-contain" />
 									</div>
-									<div>
-										<h3 className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+									{/* <div>
+										<h3 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
 											Viraga Foundation
 										</h3>
-										<p className="text-xs text-slate-400 font-medium">Regd. No. 273/2022</p>
-									</div>
+										<p className="text-xs sm:text-sm text-slate-400 font-medium">Regd. No. 273/2022</p>
+									</div> */}
 								</div>
 							</div>
-							<p className="text-slate-300 leading-relaxed text-sm">
+							<p className="text-slate-300 leading-relaxed text-sm sm:text-base">
 								VIRAGA FOUNDATION was established on November 25, 2020, by a group of dedicated
 								individuals inspired by the timeless teachings of Swami Vivekananda. Our journey began
 								with a vision to serve humanity with compassion, and our foundation was graciously
@@ -124,21 +104,21 @@ const Footer: React.FC = () => {
 
 						{/* Quick Links */}
 						<div className="animate-fade-slide-up" style={{ animationDelay: '0.2s' }}>
-							<div className="inline-block mb-6">
-								<h3 className="text-xl font-bold text-white mb-2">QUICK LINKS</h3>
-								<div className="h-1 w-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full animate-expand" />
+							<div className="inline-block mb-4 sm:mb-6">
+								<h3 className="text-lg sm:text-xl font-bold text-white mb-2">QUICK LINKS</h3>
+								<div className="h-1 w-12 sm:w-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full animate-expand" />
 							</div>
-							<ul className="space-y-3">
+							<ul className="space-y-2 sm:space-y-3">
 								{quickLinks.map((link, index) => (
 									<li key={index} className="group">
 										<a
 											href={link.href}
-											className="flex items-center gap-3 text-slate-300 hover:text-orange-500 transition-all duration-300 group-hover:translate-x-2"
+											className="flex items-center gap-2 sm:gap-3 text-slate-300 hover:text-orange-500 transition-all duration-300 group-hover:translate-x-2"
 										>
-											<div className="w-6 h-6 rounded-lg bg-slate-800/50 flex items-center justify-center group-hover:bg-orange-500/20 transition-all duration-300">
-												<ArrowRight className="w-4 h-4 text-orange-500 transition-transform group-hover:translate-x-1" />
+											<div className="w-5 h-5 sm:w-6 sm:h-6 rounded-lg bg-slate-800/50 flex items-center justify-center group-hover:bg-orange-500/20 transition-all duration-300 flex-shrink-0">
+												<ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 transition-transform group-hover:translate-x-1" />
 											</div>
-											<span className="font-medium">{link.label}</span>
+											<span className="font-medium text-sm sm:text-base">{link.label}</span>
 										</a>
 									</li>
 								))}
@@ -147,20 +127,20 @@ const Footer: React.FC = () => {
 
 						{/* Social Links */}
 						<div className="animate-fade-slide-up" style={{ animationDelay: '0.3s' }}>
-							<div className="inline-block mb-6">
-								<h3 className="text-xl font-bold text-white mb-2">CONNECT WITH US</h3>
-								<div className="h-1 w-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full animate-expand" />
+							<div className="inline-block mb-4 sm:mb-6">
+								<h3 className="text-lg sm:text-xl font-bold text-white mb-2">CONNECT WITH US</h3>
+								<div className="h-1 w-12 sm:w-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full animate-expand" />
 							</div>
-							<p className="text-slate-400 text-sm mb-6">
+							<p className="text-slate-400 text-xs sm:text-sm mb-4 sm:mb-6">
 								Follow us on social media to stay updated with our latest activities and initiatives.
 							</p>
-							<div className="flex flex-wrap gap-3">
+							<div className="flex flex-wrap gap-2 sm:gap-3">
 								{socialLinks.map((social, index) => (
 									<a
 										key={index}
 										href={social.href}
 										aria-label={social.label}
-										className={`group relative w-12 h-12 bg-slate-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-500/50 ${social.color}`}
+										className={`group relative w-10 h-10 sm:w-12 sm:h-12 bg-slate-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-500/50 ${social.color}`}
 										style={{ animationDelay: `${index * 0.1}s` }}
 									>
 										<div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-600/0 group-hover:from-orange-500/20 group-hover:to-orange-600/20 rounded-xl transition-all duration-300" />
@@ -171,33 +151,21 @@ const Footer: React.FC = () => {
 						</div>
 					</div>
 
-					{/* Divider
-					<div className="relative my-8">
-						<div className="absolute inset-0 flex items-center">
-							<div className="w-full border-t border-slate-700/50" />
-						</div>
-						<div className="relative flex justify-center">
-							<span className="bg-slate-900 px-4 py-2 rounded-full">
-								<Heart className="w-5 h-5 text-orange-500 animate-pulse-soft" />
-							</span>
-						</div>
-					</div> */}
-
 					{/* Footer Bottom */}
-					<div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
-						<div className="text-slate-400 text-center md:text-left animate-fade-in" style={{ animationDelay: '0.4s' }}>
+					<div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-slate-700/50 text-xs sm:text-sm">
+						<div className="text-slate-400 text-center sm:text-left animate-fade-in" style={{ animationDelay: '0.4s' }}>
 							<p className="font-medium">© Copyright 2026. All Rights Reserved.</p>
 						</div>
-						<div className="flex flex-col sm:flex-row items-center gap-2 text-slate-400 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-							<span className="text-sm">Built with</span>
-							<Heart className="w-4 h-4 text-orange-500 animate-pulse-soft" />
-							<span className="text-sm">by</span>
-							<div className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 rounded-full backdrop-blur-sm hover:bg-slate-800 transition-all duration-300">
-								<span className="text-orange-500 font-semibold">Elite8Digital</span>
+						<div className="flex  sm:flex-row items-center gap-2 text-slate-400 animate-fade-in" >
+							<span className="text-xs sm:text-sm">Built with</span>
+							<Heart className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 animate-pulse-soft" />
+							<span className="text-xs sm:text-sm">by</span>
+							<div className="flex items-center gap-1 px-1 sm:px-3 py-1 sm:py-1.5  rounded-full  hover:bg-slate-800 transition-all duration-300">
+								{/* <span className="text-orange-500 font-semibold text-xs sm:text-sm">Elite8Digital</span> */}
 								<img
 									src="/elite8digital-nav.png"
 									alt="Elite8Digital"
-									className="h-6 w-10 object-contain"
+									className="h-8 w-8 sm:h-16 sm:w-12 object-contain"
 								/>
 							</div>
 						</div>
@@ -244,24 +212,6 @@ const Footer: React.FC = () => {
 						}
 					}
 
-					@keyframes wave {
-						0%, 100% {
-							transform: translateX(0);
-						}
-						50% {
-							transform: translateX(-25%);
-						}
-					}
-
-					@keyframes shimmer {
-						0% {
-							transform: translateX(-100%);
-						}
-						100% {
-							transform: translateX(100%);
-						}
-					}
-
 					@keyframes pulse-slow {
 						0%, 100% {
 							opacity: 0.05;
@@ -305,14 +255,6 @@ const Footer: React.FC = () => {
 
 					.animate-float-up {
 						animation: float-up 8s infinite;
-					}
-
-					.animate-wave {
-						animation: wave 8s ease-in-out infinite;
-					}
-
-					.animate-shimmer {
-						animation: shimmer 3s infinite;
 					}
 
 					.animate-pulse-slow {

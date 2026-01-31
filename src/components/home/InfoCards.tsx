@@ -30,13 +30,13 @@ const cards = [
 
 const InfoCards = () => {
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+    <div className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-12 bg-gray-200">
       {/* Header */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-8 sm:mb-12 lg:mb-16"
+        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-orange-500 text-center mb-8 sm:mb-12 lg:mb-16"
       >
         Get to Know about us
       </motion.h2>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+//import { ChevronLeft, ChevronRight } from 'lucide-react';
 import img1 from '../../assets/do1.png'
 import img2 from '../../assets/i4.png'
 import img3 from '../../assets/f2.png';

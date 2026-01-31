@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Sparkles } from 'lucide-react';
-import bgpic from '../assets/bgpic.jpg'
-import img1 from '.././assets/image1.png'
-import img2 from '.././assets/orphan1.png'
-import img3 from '.././assets/level3.png'
-import img4 from '.././assets/level4.png'
+import bgpic from '../assets/bgpic.jpg';
+import img1 from '.././assets/image1.png';
+import img2 from '.././assets/orphan1.png';
+import img3 from '.././assets/level3.png';
+import img4 from '.././assets/level4.png';
 
 const ActivitiesPage = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -16,31 +16,31 @@ const ActivitiesPage = () => {
 	}, []);
 
 	const activities = [
-			{
-			year: '2025-2026',
-			image: img1,
-			link: '/activities/2025-2026'
-		},
+		// 	{
+		// 	year: '2025-2026',
+		// 	image: img1,
+		// 	link: '/activities/2025-2026'
+		// },
 		{
 			year: '2024-2025',
 			image: img1,
-			link: '/activities/2024-2025'
+			link: '/activities/2024-2025',
 		},
 		{
 			year: '2023-2024',
 			image: img2,
-			link: '/activities/2023-2024'
+			link: '/activities/2023-2024',
 		},
 		{
 			year: '2022-2023',
 			image: img3,
-			link: '/activities/2022-2023'
+			link: '/activities/2022-2023',
 		},
 		{
 			year: '2020-2021',
 			image: img4,
-			link: '/activities/2020-2021'
-		}
+			link: '/activities/2020-2021',
+		},
 	];
 
 	return (
@@ -48,7 +48,10 @@ const ActivitiesPage = () => {
 			{/* Animated Background Elements */}
 			<div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
 				<div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-float-slow" />
-				<div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-pink-500/5 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '2s' }} />
+				<div
+					className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-pink-500/5 rounded-full blur-3xl animate-float-slow"
+					style={{ animationDelay: '2s' }}
+				/>
 				<div className="absolute top-1/2 left-1/2 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl animate-pulse-slow" />
 			</div>
 
@@ -62,7 +65,7 @@ const ActivitiesPage = () => {
 							left: `${Math.random() * 100}%`,
 							top: `${Math.random() * 100}%`,
 							animationDelay: `${Math.random() * 5}s`,
-							animationDuration: `${Math.random() * 10 + 10}s`
+							animationDuration: `${Math.random() * 10 + 10}s`,
 						}}
 					/>
 				))}
@@ -74,11 +77,10 @@ const ActivitiesPage = () => {
 				<div
 					className="absolute inset-0 bg-cover bg-center transform scale-110 "
 					style={{
-						backgroundImage:
-							'url("' + bgpic + '")',
+						backgroundImage: 'url("' + bgpic + '")',
 					}}
 				/>
-				
+
 				{/* Multi-layered Gradients */}
 				{/* <div className="absolute inset-0 " />
 				<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
@@ -98,7 +100,7 @@ const ActivitiesPage = () => {
 				<div className="absolute inset-0 flex items-center justify-center">
 					<div className="text-center space-y-6 px-4">
 						{/* Animated Badge */}
-						<div 
+						<div
 							className={`inline-flex items-center gap-2 px-5 py-2.5 sm:mt-8 mb-8 sm:mb-0 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white text-sm font-medium transition-all duration-1000 ${
 								isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
 							}`}
@@ -114,9 +116,7 @@ const ActivitiesPage = () => {
 							}`}
 							style={{ transitionDelay: '0.2s' }}
 						>
-							<span className="block text-white sm:mb-2 drop-shadow-2xl">
-								ACTIVITIES
-							</span>
+							<span className="block text-white sm:mb-2 drop-shadow-2xl">ACTIVITIES</span>
 							<span className="block text-transparent bg-clip-text text-white animate-gradient-x">
 								Timeline
 							</span>
@@ -131,42 +131,14 @@ const ActivitiesPage = () => {
 						>
 							Explore our journey of compassion, dedication, and community service through the years
 						</p>
-
-						{/* Decorative Lines */}
-						{/* <div 
-							className={`flex items-center justify-center gap-3 transition-all duration-1000 ${
-								isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-							}`}
-							style={{ transitionDelay: '0.6s' }}
-						>
-							<div className="h-1 w-16 bg-gradient-to-r from-transparent via-pink-400 to-purple-400 rounded-full" />
-							<div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-							<div className="h-1 w-16 bg-gradient-to-r from-purple-400 via-pink-400 to-transparent rounded-full" />
-						</div> */}
 					</div>
 				</div>
-
-				{/* Wave Divider */}
-				{/* <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180">
-					<svg className="relative block w-full h-20 sm:h-28" viewBox="0 0 1200 120" preserveAspectRatio="none">
-						<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-							fill="url(#wave-gradient)" 
-						/>
-						<defs>
-							<linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-								<stop offset="0%" stopColor="rgb(248 250 252)" />
-								<stop offset="50%" stopColor="rgb(250 245 255)" />
-								<stop offset="100%" stopColor="rgb(254 242 242)" />
-							</linearGradient>
-						</defs>
-					</svg>
-				</div> */}
 			</div>
 
 			{/* Main Content */}
 			<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
 				{/* Section Header */}
-				<div 
+				<div
 					className={`text-center mb-16 transition-all duration-1000 ${
 						isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 					}`}
@@ -176,14 +148,12 @@ const ActivitiesPage = () => {
 						<Calendar className="w-4 h-4" />
 						<span>Year by Year</span>
 					</div>
-					<h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
-						Explore Our Activities
-					</h2>
+					<h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Explore Our Activities</h2>
 					<div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto" />
 				</div>
 
 				{/* First Row - 3 Cards */}
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 lg:mb-16">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 lg:gap-10 mb-6 sm:mb-8 lg:mb-12">
 					{activities.slice(0, 3).map((activity, index) => (
 						<div
 							key={activity.year}
@@ -194,10 +164,7 @@ const ActivitiesPage = () => {
 							onMouseEnter={() => setHoveredIndex(index)}
 							onMouseLeave={() => setHoveredIndex(null)}
 						>
-							<Link
-								to={activity.link}
-								className="group cursor-pointer block"
-							>
+							<Link to={activity.link} className="group cursor-pointer block">
 								{/* Image Card */}
 								<div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 bg-white transform hover:-translate-y-2">
 									{/* Decorative Corner Accents */}
@@ -205,8 +172,11 @@ const ActivitiesPage = () => {
 									<div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-pink-500/20 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
 
 									{/* Animated Border */}
-									<div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" style={{ padding: '3px' }} />
-									
+									<div
+										className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+										style={{ padding: '3px' }}
+									/>
+
 									{/* Image Container */}
 									<div className="aspect-[4/3] overflow-hidden rounded-3xl relative">
 										<img
@@ -214,7 +184,7 @@ const ActivitiesPage = () => {
 											alt={`Activities ${activity.year}`}
 											className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
 										/>
-										
+
 										{/* Gradient Overlay */}
 										<div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 									</div>
@@ -255,10 +225,8 @@ const ActivitiesPage = () => {
 				</div>
 
 				{/* Decorative Divider */}
-				<div 
-					className={`relative py-8 transition-all duration-1000 ${
-						isVisible ? 'opacity-100' : 'opacity-0'
-					}`}
+				<div
+					className={`relative py-4 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
 					style={{ transitionDelay: '0.6s' }}
 				>
 					<div className="absolute inset-0 flex items-center">
@@ -268,15 +236,21 @@ const ActivitiesPage = () => {
 						<div className="px-6 py-3 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full shadow-lg">
 							<div className="flex items-center gap-2">
 								<div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
-								<div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
-								<div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
+								<div
+									className="w-2 h-2 bg-pink-500 rounded-full animate-pulse"
+									style={{ animationDelay: '0.2s' }}
+								/>
+								<div
+									className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"
+									style={{ animationDelay: '0.4s' }}
+								/>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				{/* Second Row - 2 Cards (Left Aligned) */}
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mt-10 sm:mt-12 lg:mt-16">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mt-6 sm:mt-8 lg:mt-12">
 					{activities.slice(3, 5).map((activity, index) => (
 						<div
 							key={activity.year}
@@ -287,10 +261,7 @@ const ActivitiesPage = () => {
 							onMouseEnter={() => setHoveredIndex(index + 3)}
 							onMouseLeave={() => setHoveredIndex(null)}
 						>
-							<Link
-								to={activity.link}
-								className="group cursor-pointer block"
-							>
+							<Link to={activity.link} className="group cursor-pointer block">
 								{/* Image Card */}
 								<div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 bg-white transform hover:-translate-y-2">
 									{/* Decorative Corner Accents */}
@@ -298,8 +269,11 @@ const ActivitiesPage = () => {
 									<div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-pink-500/20 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
 
 									{/* Animated Border */}
-									<div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" style={{ padding: '3px' }} />
-									
+									<div
+										className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+										style={{ padding: '3px' }}
+									/>
+
 									{/* Image Container */}
 									<div className="aspect-[4/3] overflow-hidden rounded-3xl relative">
 										<img
@@ -307,7 +281,7 @@ const ActivitiesPage = () => {
 											alt={`Activities ${activity.year}`}
 											className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
 										/>
-										
+
 										{/* Gradient Overlay */}
 										<div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 									</div>
@@ -349,7 +323,7 @@ const ActivitiesPage = () => {
 
 				{/* Info Card */}
 				<div
-					className={`mt-16 sm:mt-20 lg:mt-24 transition-all duration-1000 transform ${
+					className={`mt-12 sm:mt-12 lg:mt-20 transition-all duration-1000 transform ${
 						isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 					}`}
 					style={{ transitionDelay: '0.9s' }}
@@ -357,20 +331,23 @@ const ActivitiesPage = () => {
 					<div className="relative group">
 						{/* Decorative Background Glow */}
 						<div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-orange-500/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
-						
+
 						{/* Main Card */}
 						<div className="relative bg-gradient-to-br from-white via-purple-50/50 to-pink-50/50 rounded-3xl p-8 sm:p-10 lg:p-12 border border-purple-200/50 shadow-xl backdrop-blur-sm overflow-hidden">
 							{/* Decorative Elements */}
 							<div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-pink-500/10 to-transparent rounded-full blur-2xl" />
 							<div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-purple-500/10 to-transparent rounded-full blur-2xl" />
-							
+
 							{/* Content */}
 							<div className="relative text-center space-y-4">
 								<Sparkles className="w-8 h-8 text-purple-500 mx-auto animate-pulse" />
 								<p className="text-slate-700 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
 									Click on any year to view detailed activities and photos from that period.
 									<br />
-									<span className="text-purple-600 font-semibold">Experience the journey of compassion and service</span> through our documented efforts.
+									<span className="text-purple-600 font-semibold">
+										Experience the journey of compassion and service
+									</span>{' '}
+									through our documented efforts.
 								</p>
 								<div className="flex items-center justify-center gap-2 pt-2">
 									<div className="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
@@ -499,6 +476,3 @@ const ActivitiesPage = () => {
 };
 
 export default ActivitiesPage;
-
-
-

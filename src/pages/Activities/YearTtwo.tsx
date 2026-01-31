@@ -11,6 +11,28 @@ import e6 from '../../assets/e6.png';
 import e7 from '../../assets/e7.png';
 import e8 from '../../assets/e8.png';
 import e9 from '../../assets/e9.png';
+import e10 from '../../assets/e10.png';
+import e11 from '../../assets/e11.png';
+import e12 from '../../assets/e12.png';
+import e13 from '../../assets/e13.png';
+import e14 from '../../assets/e14.png';
+import e15 from '../../assets/e15.png';
+import e16 from '../../assets/e16.png';
+import e17 from '../../assets/e17.png';
+import e18 from '../../assets/e18.png';
+import e19 from '../../assets/e19.png';
+import e20 from '../../assets/e20.png';
+import e21 from '../../assets/e21.png';
+import e22 from '../../assets/e22.png';
+import e23 from '../../assets/e23.png';
+import e24 from '../../assets/e24.png';
+import e25 from '../../assets/e25.png';
+import e26 from '../../assets/e26.png';
+import e27 from '../../assets/e27.png';
+import e28 from '../../assets/e28.png';
+import e29 from '../../assets/e29.png';
+import e30 from '../../assets/e30.png';
+import e31 from '../../assets/e31.png';
 interface GalleryImage {
 	id: number;
 	src: string;
@@ -32,6 +54,28 @@ const Year2022: React.FC = () => {
 		{ id: 7, src: e7, alt: 'Children receiving items' },
 		{ id: 8, src: e8, alt: 'Clothing donation' },
 		{ id: 9, src: e9, alt: 'Packed items ready for distribution' },
+		{ id: 10, src: e10, alt: 'UGADI celebration group photo' },
+		{ id: 11, src: e11, alt: 'Food distribution event' },
+		{ id: 12, src: e12, alt: 'Children receiving gifts' },
+		{ id: 13, src: e13, alt: 'Community gathering' },
+		{ id: 14, src: e14, alt: 'Volunteers with children' },
+		{ id: 15, src: e15, alt: 'Distribution of clothes' },
+		{ id: 16, src: e16, alt: 'Fresh fruits distribution' },
+		{ id: 17, src: e17, alt: 'Children receiving items' },
+		{ id: 18, src: e18, alt: 'Clothing donation' },
+		{ id: 19, src: e19, alt: 'Packed items ready for distribution' },
+		{ id: 20, src: e20, alt: 'UGADI celebration group photo' },
+		{ id: 21, src: e21, alt: 'UGADI celebration group photo' },
+		{ id: 22, src: e22, alt: 'UGADI celebration group photo' },
+		{ id: 23, src: e23, alt: 'UGADI celebration group photo' },
+		{ id: 24, src: e24, alt: 'UGADI celebration group photo' },
+		{ id: 25, src: e25, alt: 'UGADI celebration group photo' },
+		{ id: 26, src: e26, alt: 'UGADI celebration group photo' },
+		{ id: 27, src: e27, alt: 'UGADI celebration group photo' },
+		{ id: 28, src: e28, alt: 'UGADI celebration group photo' },
+		{ id: 29, src: e29, alt: 'UGADI celebration group photo' },
+		{ id: 30, src: e30, alt: 'UGADI celebration group photo' },
+		{ id: 31, src: e31, alt: 'UGADI celebration group photo' },
 	];
 
 	const openLightbox = (index: number) => {
@@ -191,19 +235,23 @@ const goToNext = () => {
 					</div>
 
 					{/* Large Featured Image */}
-					<div className="mb-12 group">
-						<div className="relative overflow-hidden rounded-2xl shadow-2xl">
+					<div className="mb-2  grid grid-cols-1 sm:grid-cols-3 flex-row items-center gap-5">
+						<div className="relative overflow-hidden sm:col-span-2 rounded-2xl shadow-2xl">
 							<img
 								src={img1}
 								alt="UGADI celebration group photo"
-								className="w-full h-auto cursor-pointer transform group-hover:scale-105 transition-transform duration-500"
+								className=" cursor-pointer transform group-hover:scale-105 transition-transform duration-500"
 								onClick={() => openLightbox(0)}
 							/>
-							<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+							{/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
 								<div className="p-6 text-white">
 									<p className="text-lg font-semibold">Click to view full image</p>
 								</div>
-							</div>
+							</div> */}
+						</div>
+						<div className='px-5 top-0'>
+							<p className='font-bold text-2xl'>UGADI Celebration – Spreading Joy Through Giving</p>
+							<p className=" text-gray-600 text-md  mt-4">On March 22, 2023, in celebration of UGADI (Telugu Samvatsaraadi), Viraga Foundation organized a special donation drive to support underprivileged children. As part of this initiative, the foundation distributed new clothes and fresh fruits to single-parent children and orphans residing at Mathruchaya Organization.</p>
 						</div>
 					</div>
 

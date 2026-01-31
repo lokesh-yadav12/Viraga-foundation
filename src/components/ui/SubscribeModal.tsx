@@ -1,17 +1,39 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, Mail, User, Brain, CheckCircle, AlertCircle } from 'lucide-react';
 
 type SubscribeModalProps = {
 	onClose: () => void;
+	isOpen: boolean;
 };
 
-const SubscribeModal = ({ onClose }: SubscribeModalProps) => {
+const SubscribeModal = ({ onClose, isOpen }: SubscribeModalProps) => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [answer, setAnswer] = useState('');
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [notification, setNotification] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
-	const correctAnswer = 16;
+	const [mathQuestion, setMathQuestion] = useState({ num1: 0, num2: 0, answer: 0 });
+	const [showModal, setShowModal] = useState(false);
+
+	// Generate random math question
+	useEffect(() => {
+		const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1-10
+		const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1-10
+		setMathQuestion({ num1, num2, answer: num1 + num2 });
+	}, []);
+
+	// Smooth modal appearance
+	useEffect(() => {
+		if (isOpen) {
+			// Small delay for smooth entrance
+			const timer = setTimeout(() => {
+				setShowModal(true);
+			}, 100);
+			return () => clearTimeout(timer);
+		} else {
+			setShowModal(false);
+		}
+	}, [isOpen]);
 
 	const showNotification = (type: 'success' | 'error', message: string) => {
 		setNotification({ type, message });
@@ -23,7 +45,7 @@ const SubscribeModal = ({ onClose }: SubscribeModalProps) => {
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 
-		if (Number(answer) !== correctAnswer) {
+		if (Number(answer) !== mathQuestion.answer) {
 			showNotification('error', 'Wrong answer! Please try again.');
 			return;
 		}
@@ -40,12 +62,25 @@ const SubscribeModal = ({ onClose }: SubscribeModalProps) => {
 		}, 2000);
 	};
 
+	const handleClose = () => {
+		setShowModal(false);
+		setTimeout(() => {
+			onClose();
+		}, 300); // Wait for exit animation
+	};
+
+	if (!isOpen) return null;
+
 	return (
-		<div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-[fadeIn_0.2s_ease-out]">
+		<div className={`fixed inset-0 z-50 h-[80vh] sm:h-[90vh] mt-16 sm:mt-0 flex items-center justify-center p-2 px-2 transition-opacity duration-300 ${
+			showModal ? 'opacity-100' : 'opacity-0'
+		}`}>
 			{/* Backdrop */}
 			<div 
-				className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/40 backdrop-blur-sm"
-				onClick={onClose}
+				className={`absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/40 backdrop-blur-sm transition-all duration-300 ${
+					showModal ? 'opacity-100' : 'opacity-0'
+				}`}
+				onClick={handleClose}
 			/>
 
 			{/* Notification Toast */}
@@ -67,45 +102,49 @@ const SubscribeModal = ({ onClose }: SubscribeModalProps) => {
 			)}
 
 			{/* Modal */}
-			<div className="relative w-full max-w-md animate-[slideUp_0.3s_ease-out]">
+			<div className={`relative w-full max-w-md transition-all duration-500 ease-out ${
+				showModal 
+					? 'opacity-100 translate-y-0 scale-100' 
+					: 'opacity-0 translate-y-8 scale-95'
+			}`}>
 				<div className="relative overflow-hidden rounded-2xl bg-white shadow-2xl">
 					{/* Close Button */}
 					<button
-						onClick={onClose}
+						onClick={handleClose}
 						className="absolute right-4 top-4 z-10 rounded-full bg-white/90 p-2 text-gray-600 shadow-lg backdrop-blur-sm transition-all hover:bg-white hover:text-gray-900 hover:scale-110 active:scale-95"
 					>
 						<X size={20} />
 					</button>
 
 					{/* Header Image Section */}
-					<div className="relative h-28 bg-cover bg-center">
-						<div className="relative flex h-full flex-col justify-end p-4 pb-4">
-							<h2 className="text-2xl font-bold text-orange-600 drop-shadow-lg">
+					<div className="relative h-24 bg-gradient-to-br from-orange-500 to-orange-600">
+						<div className="relative flex h-full px-2 flex-col justify-end sm:p-4 sm:pb-4">
+							<h2 className="text-xl sm:text-2xl font-bold text-white drop-shadow-lg">
 								Join Our Community
 							</h2>
-							<p className="mt-1 text-sm text-orange-600 drop-shadow">
+							<p className="mt-1 text-sm text-orange-50 drop-shadow">
 								Stay connected with changemakers worldwide
 							</p>
 						</div>
 					</div>
 
 					{/* Form Section */}
-					<div className="p-6 sm:p-8">
-						<p className="mb-6 text-sm leading-relaxed text-gray-600">
+					<div className="p-4 sm:p-8">
+						<p className="mb-4 text-sm leading-relaxed text-gray-600">
 							Be the first to know about our moving stories, new projects and opportunities. 
 							Join our community today!
 						</p>
 
-						<form onSubmit={handleSubmit} className="space-y-4">
+						<form onSubmit={handleSubmit} className="space-y-2">
 							{/* Name Input */}
 							<div className="group">
-								<label className="mb-1.5 block text-sm font-medium text-gray-700">
+								<label className="mb-1 block text-sm font-medium text-gray-700">
 									Name
 								</label>
 								<div className="relative">
-									<User className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400 transition-colors group-focus-within:text-purple-500" />
+									<User className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400 transition-colors group-focus-within:text-orange-500" />
 									<input
-										className="w-full rounded-lg border border-gray-300 py-2.5 pl-10 pr-4 text-sm transition-all focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20"
+										className="w-full rounded-lg border border-gray-300 py-2.5 pl-10 pr-4 text-sm transition-all focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
 										value={name}
 										onChange={(e) => setName(e.target.value)}
 										placeholder="Enter your name"
@@ -120,10 +159,10 @@ const SubscribeModal = ({ onClose }: SubscribeModalProps) => {
 									Email
 								</label>
 								<div className="relative">
-									<Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400 transition-colors group-focus-within:text-purple-500" />
+									<Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400 transition-colors group-focus-within:text-orange-500" />
 									<input
 										type="email"
-										className="w-full rounded-lg border border-gray-300 py-2.5 pl-10 pr-4 text-sm transition-all focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20"
+										className="w-full rounded-lg border border-gray-300 py-2.5 pl-10 pr-4 text-sm transition-all focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
 										value={email}
 										onChange={(e) => setEmail(e.target.value)}
 										placeholder="your@email.com"
@@ -135,13 +174,13 @@ const SubscribeModal = ({ onClose }: SubscribeModalProps) => {
 							{/* Math Question */}
 							<div className="group">
 								<label className="mb-1.5 block text-sm font-medium text-gray-700">
-									Quick verification: What is 7 + 9?
+									Quick verification: What is {mathQuestion.num1} + {mathQuestion.num2}?
 								</label>
 								<div className="relative">
-									<Brain className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400 transition-colors group-focus-within:text-purple-500" />
+									<Brain className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400 transition-colors group-focus-within:text-orange-500" />
 									<input
 										type="number"
-										className="w-full rounded-lg border border-gray-300 py-2.5 pl-10 pr-4 text-sm transition-all focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20"
+										className="w-full rounded-lg border border-gray-300 py-2.5 pl-10 pr-4 text-sm transition-all focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
 										value={answer}
 										onChange={(e) => setAnswer(e.target.value)}
 										placeholder="Enter your answer"
@@ -154,7 +193,7 @@ const SubscribeModal = ({ onClose }: SubscribeModalProps) => {
 							<button
 								type="submit"
 								disabled={isSubmitting}
-								className="w-full rounded-lg bg-gradient-to-r from-orange-600 to-orange-500 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-500/30 transition-all hover:shadow-xl hover:shadow-purple-500/40 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
+								className="w-full rounded-lg bg-gradient-to-r from-orange-600 to-orange-500 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/30 transition-all hover:shadow-xl hover:shadow-orange-500/40 hover:scale-[1.02] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
 							>
 								{isSubmitting ? (
 									<span className="flex items-center justify-center gap-2">
@@ -179,24 +218,6 @@ const SubscribeModal = ({ onClose }: SubscribeModalProps) => {
 			</div>
 
 			<style>{`
-				@keyframes fadeIn {
-					from {
-						opacity: 0;
-					}
-					to {
-						opacity: 1;
-					}
-				}
-				@keyframes slideUp {
-					from {
-						opacity: 0;
-						transform: translateY(20px);
-					}
-					to {
-						opacity: 1;
-						transform: translateY(0);
-					}
-				}
 				@keyframes slideDown {
 					0% {
 						opacity: 0;
