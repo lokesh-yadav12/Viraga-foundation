@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import vira from '../../assets/Vira.png'
+import vira from '../../assets/vira.png'
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
