@@ -123,11 +123,41 @@ const Year2024: React.FC = () => {
 
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
 						{/* Video Container - 2/3 width */}
-						<div className="lg:col-span-2 w-full">
+						<div className="md:hidden lg:col-span-2  flex justify-center">
 							<div className="relative overflow-hidden rounded-xl shadow-2xl aspect-video bg-black">
 								<iframe
-									width="800"
-									height="400"
+									// width="800"
+									// height="400"
+									src="https://www.youtube.com/embed/kjNa5jbG9TU"
+									title="viraga"
+									frameBorder={0}
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									referrerPolicy="strict-origin-when-cross-origin"
+									allowFullScreen
+									className='md:h-[400px] md:w-[800px]'
+								/>
+							</div>
+						</div>
+						<div className="hidden md:block lg:col-span-2 lg:w-full sm:w-full">
+							<div className="relative overflow-hidden rounded-xl shadow-2xl aspect-video bg-black">
+								<iframe
+									// width="800"
+									// height="400"
+									src="https://www.youtube.com/embed/kjNa5jbG9TU"
+									title="viraga"
+									frameBorder={0}
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									referrerPolicy="strict-origin-when-cross-origin"
+									allowFullScreen
+									className='md:h-[400px] md:w-[800px]'
+								/>
+							</div>
+						</div>
+
+						{/* <div className="lg:col-span-2 w-full">
+							<div className="relative overflow-hidden rounded-xl shadow-2xl aspect-video bg-black">
+								<iframe
+									className="absolute top-0 left-0 w-full h-full"
 									src="https://www.youtube.com/embed/kjNa5jbG9TU"
 									title="viraga"
 									frameBorder={0}
@@ -136,7 +166,7 @@ const Year2024: React.FC = () => {
 									allowFullScreen
 								/>
 							</div>
-						</div>
+						</div> */}
 
 						{/* Text Content - 1/3 width */}
 						<div className="lg:col-span-1 space-y-4 text-gray-700">

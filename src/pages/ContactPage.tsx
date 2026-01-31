@@ -1,4 +1,4 @@
-import bgpic from '../assets/bgpic.jpg'
+import bgpic from '../assets/contact.png'
 const ContactPage = () => {
   return (
     <div className="bg-white">
@@ -10,8 +10,8 @@ const ContactPage = () => {
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
-            CONTACT US
+          <h1 className="text-4xl md:text-7xl text-center font-bold text-white tracking-wide">
+            Lets Connect <br/>&<br/> Make a Difference Together
           </h1>
         </div>
       </section>

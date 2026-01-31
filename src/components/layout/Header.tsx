@@ -191,12 +191,18 @@ const Navbar: React.FC = () => {
               </div>
 
               {/* Mobile Menu */}
+             
+              {/* Mobile Menu */}
               {isMobileMenuOpen && (
-               <div className="lg:hidden fixed inset-0 top-0 left-0 w-full h-screen bg-white z-40 overflow-y-auto">
-                <div className="px-6 pt-12 pb-2">
+               <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg rounded-b-3xl">
+                <div className="px-6 py-4">
                   {/* Close button in front of HOME */}
                   <div className="flex items-center justify-between mb-2">
-                    <Link to="/" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                    <Link 
+                      to="/" 
+                      className="block py-2 text-gray-700 hover:text-orange-500 font-medium"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       HOME
                     </Link>
                     <button 
@@ -217,26 +223,64 @@ const Navbar: React.FC = () => {
                     </button>
                     {isOrgDropdownOpen && (
                       <div className="pl-4">
-                        <Link to="/about" className="block py-2 text-gray-600 hover:text-orange-500">About Us</Link>
-                        <Link to="/objectives" className="block py-2 text-gray-600 hover:text-orange-500">Objectives</Link>
-                        <Link to="/about-logo" className="block py-2 text-gray-600 hover:text-orange-500">About Logo</Link>
+                        <Link 
+                          to="/about" 
+                          className="block py-2 text-gray-600 hover:text-orange-500"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          About Us
+                        </Link>
+                        <Link 
+                          to="/objectives" 
+                          className="block py-2 text-gray-600 hover:text-orange-500"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Objectives
+                        </Link>
+                        <Link 
+                          to="/about-logo" 
+                          className="block py-2 text-gray-600 hover:text-orange-500"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          About Logo
+                        </Link>
                       </div>
                     )}
                   </div>
 
-                  <Link to="/activities" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                  <Link 
+                    to="/activities" 
+                    className="block py-2 text-gray-700 hover:text-orange-500 font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     ACTIVITIES
                   </Link>
-                  <Link to="/administration" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                  <Link 
+                    to="/administration" 
+                    className="block py-2 text-gray-700 hover:text-orange-500 font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     ADMINISTRATION
                   </Link>
-                  <Link to="/donation" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                  <Link 
+                    to="/donation" 
+                    className="block py-2 text-gray-700 hover:text-orange-500 font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     DONATIONS
                   </Link>
-                  <Link to="/yearly-reports" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                  <Link 
+                    to="/yearly-reports" 
+                    className="block py-2 text-gray-700 hover:text-orange-500 font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     YEARLY REPORTS
                   </Link>
-                  <Link to="/contactPage" className="block py-2 text-gray-700 hover:text-orange-500 font-medium">
+                  <Link 
+                    to="/contactPage" 
+                    className="block py-2 text-gray-700 hover:text-orange-500 font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     CONTACT US
                   </Link>
                 </div>

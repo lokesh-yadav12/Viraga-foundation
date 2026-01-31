@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import bgpic from '../assets/bgpic.jpg'
+import bgpic from '../assets/objective.png'
 const objectives = [
   {
     icon: "🌿",
@@ -56,7 +56,7 @@ const Objectives = () => {
   return (
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative h-[70vh] sm:h-[80vh] overflow-hidden">
+      <section className="relative h-[70vh] sm:h-[90vh] overflow-hidden">
         <motion.img
           initial={{ scale: 1.2 }}
           animate={{ scale: 1 }}
@@ -70,13 +70,13 @@ const Objectives = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="mx-auto max-w-6xl px-6 text-white"
+            className="mx-auto max-w-6xl px-6 text-white underline"
           >
             <motion.h1
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-5xl font-bold mb-4"
+              className="text-3xl sm:text-6xl pr-3 font-bold mb-4"
             >
               Our Objectives
             </motion.h1>
@@ -86,7 +86,7 @@ const Objectives = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-xl max-w-3xl leading-relaxed"
             >
-              Our Key Initiatives – Lighting the Path of Service
+              {/* Our Key Initiatives – Lighting the Path of Service */}
             </motion.p>
           </motion.div>
         </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Sparkles } from 'lucide-react';
-import bgpic from '../assets/bgpic.jpg';
+import bgpic from '../assets/activities.png';
 import img1 from '.././assets/image1.png';
 import img2 from '.././assets/orphan1.png';
 import img3 from '.././assets/level3.png';
@@ -67,7 +67,7 @@ const ActivitiesPage = () => {
 			</div>
 
 			{/* Hero Section */}
-			<div className="relative h-[70vh] sm:h-[80vh] overflow-hidden">
+			<div className="relative h-[70vh] sm:h-[90vh] overflow-hidden">
 				{/* Background Image with Parallax */}
 				<div
 					className="absolute inset-0 bg-cover bg-center transform scale-110"
@@ -84,17 +84,17 @@ const ActivitiesPage = () => {
 				<div className="absolute inset-0 flex items-center justify-center">
 					<div className="text-center space-y-6 px-4">
 						{/* Animated Badge */}
-						<div
+						{/* <div
 							className={`inline-flex items-center gap-2 px-5 py-2.5 sm:mt-8 mb-8 sm:mb-0 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white text-sm font-medium transition-all duration-1000 ${
 								isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
 							}`}
 						>
 							<Sparkles className="w-4 h-4 text-pink-400 hidden sm:visible animate-pulse" />
 							<span>Our Journey of Service</span>
-						</div>
+						</div> */}
 
 						{/* Main Title */}
-						<h1
+						{/* <h1
 							className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold transition-all duration-1000 transform ${
 								isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-10 opacity-0 scale-95'
 							}`}
@@ -104,17 +104,17 @@ const ActivitiesPage = () => {
 							<span className="block text-transparent bg-clip-text text-white animate-gradient-x">
 								Timeline
 							</span>
-						</h1>
+						</h1> */}
 
 						{/* Subtitle */}
-						<p
+						{/* <p
 							className={`text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 ${
 								isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 							}`}
 							style={{ transitionDelay: '0.4s' }}
 						>
 							Explore our journey of compassion, dedication, and community service through the years
-						</p>
+						</p> */}
 					</div>
 				</div>
 			</div>

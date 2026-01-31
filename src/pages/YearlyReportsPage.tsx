@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Download } from 'lucide-react';
-import bgpic from '../assets/bgpic.jpg';
+import bgpic from '../assets/annual.png';
 import pdf1 from '../files/Financial-Statements-FY-24-25.pdf';
 import pdf2 from '../files/Audit-Report-F.Y-23-24.pdf';
 import pdf3 from '../files/Audit-Report-F.Y-23-24 (1).pdf';
@@ -55,7 +55,7 @@ const YearlyReportsPage = () => {
 		<div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
 			{/* Hero Section */}
 			<div
-				className="relative h-[70vh] sm:h-[80vh] lg:h-[80vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
+				className="relative h-[70vh] sm:h-[80vh] lg:h-[90vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
 				style={{
 					backgroundImage: 'url("' + bgpic + '")',
 				}}
@@ -66,7 +66,7 @@ const YearlyReportsPage = () => {
 						isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 					}`}
 				>
-					YEARLY REPORTS
+					{/* YEARLY REPORTS */}
 				</h1>
 			</div>
 

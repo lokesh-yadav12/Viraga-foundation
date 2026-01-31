@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import img1 from '../assets/viraganew.png'
-import bgpic from '../assets/bgpic.jpg'
+import bgpic from '../assets/ourlogo.png'
 const AboutLogo = () => {
   return (
     <div className="bg-white">
@@ -16,14 +16,14 @@ const AboutLogo = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="mx-auto max-w-6xl px-4 sm:px-6 text-white"
+            className="mx-auto max-w-6xl px-4 sm:px-6 text-gray-900"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               VIRAGA FOUNDATION Logo
             </h1>
             <p className="text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed">
               A Symbol of Karma Yoga, Dharma, and Selfless Service
-            </p>
+            </p> */}
           </motion.div>
         </div>
       </section>

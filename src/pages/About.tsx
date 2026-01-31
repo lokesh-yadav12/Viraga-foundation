@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import bgpic from '../assets/bgpic.jpg';
+import bgpic from '../assets/about.png';
 const AboutUs = () => {
   return (
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+      <section className="relative h-[70vh] md:h-[90vh] overflow-hidden">
         <img
           src={bgpic}
           alt="NGO community service"
@@ -16,12 +16,12 @@ const AboutUs = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="mx-auto max-w-5xl px-4 text-center sm:px-6 text-white"
+            className=" max-w-5xl px-4  sm:px-16 text-gray-900"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-            <p className="text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed">
-              Guided by Dharma, Driven by Karma, Serving with Selflessness
-            </p>
+            {/* <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4">About Us</h1>
+            <p className="text-base font-serif sm:text-lg md:text-3xl max-w-3xl leading-relaxed">
+              Guided by Dharma,<br/> Driven by  Karma,<br/> Serving with Selflessness
+            </p> */}
           </motion.div>
         </div>
       </section>
