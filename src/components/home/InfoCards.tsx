@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-
+import image1 from '../../assets/ourlogo.png'
+import image2 from '../../assets/cele1.png'
+import image3 from '../../assets/do1.png'
 const cards = [
   {
     title: "Who we are",
     description:
       "We support the public health system by implementing innovative maternal and child health solutions designed for scale.",
-    image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d",
+    image: image1,
     bg: "bg-blue-500",
     link: "/who-we-are",
   },
@@ -15,7 +17,7 @@ const cards = [
     title: "What we do",
     description:
       "We use data, and partner with health workers to identify and manage risk, improve capacities, and elevate the quality of care at the last mile.",
-    image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3",
+    image: image2,
     bg: "bg-orange-600",
     link: "/what-we-do",
   },
@@ -23,7 +25,7 @@ const cards = [
     title: "Where we work",
     description:
       "We work across India's most challenging geographies, largely with marginalized communities.",
-    image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d",
+    image: image3,
     bg: "bg-yellow-500",
     link: "/where-we-work",
   },

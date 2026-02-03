@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
+import img from '../assets/whatwedo.png'
 
 const WhatWeDo = () => {
   return (
     <div className="bg-gray-50">
       {/* HERO */}
-      <section className="relative h-[80vh] overflow-hidden">
+      <section className="relative h-[85vh] overflow-hidden">
         <motion.img
           initial={{ scale: 1.2 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3"
+          src={img}
           className="h-full w-full object-cover"
           alt="Health workers"
         />
-        <div className="absolute inset-0 bg-black/60 flex items-center">
+        <div className="absolute inset-0 bg-black/60 text-center flex items-center">
           <div className="mx-auto max-w-6xl px-6 text-white">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import bgpic from '../assets/objective.png'
+import bgpic from '../assets/do1.png'
 const objectives = [
   {
     icon: "🌿",

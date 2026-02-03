@@ -1,14 +1,15 @@
+import img from '../assets/whoweare.png';
 const WhoWeAre = () => {
   return (
     <div className="bg-white">
       {/* HERO */}
-      <section className="relative h-[80vh]">
+      <section className="relative h-[85vh]">
         <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb"
+          src={img}
           className="h-full w-full object-cover"
           alt="Community empowerment"
         />
-        <div className="absolute inset-0 bg-black/60 flex items-center">
+        <div className="absolute inset-0 bg-black/60 flex items-center text-center">
           <div className="mx-auto max-w-6xl px-6 text-white">
             <h1 className="text-5xl font-bold mb-6">Who We Are</h1>
             <p className="text-xl max-w-3xl">

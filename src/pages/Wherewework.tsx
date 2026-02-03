@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
-
+import img from '../assets/wherewework.png';
 const WhereWeWork = () => {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="relative h-[75vh] overflow-hidden">
+      <section className="relative h-[85vh] overflow-hidden">
         <motion.img
           initial={{ scale: 1.2 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3"
+          src={img}
           className="h-full w-full object-cover"
           alt="Rural India"
         />
         <div className="absolute inset-0 bg-black/60 flex items-center">
-          <div className="max-w-6xl mx-auto px-6 text-white">
+          <div className="max-w-6xl mx-auto px-6 text-white text-center">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}

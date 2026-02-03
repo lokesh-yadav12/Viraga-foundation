@@ -198,13 +198,13 @@ const ImageGallery = () => {
 							initial={{ opacity: 0, y: 30 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.3, duration: 0.5 }}
-							className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10 text-white z-10"
+							className="absolute bottom-0 left-0 right-0 p-3 pl-4 sm:p-8 lg:p-10 text-white z-10"
 						>
 							<motion.h3
 								initial={{ opacity: 0, x: -20 }}
 								animate={{ opacity: 1, x: 0 }}
 								transition={{ delay: 0.4, duration: 0.5 }}
-								className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4"
+								className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 pl-3 sm:pl-0 sm:mb-4"
 							>
 								{events[currentIndex].title}
 							</motion.h3>
@@ -213,7 +213,7 @@ const ImageGallery = () => {
 								initial={{ opacity: 0, x: -20 }}
 								animate={{ opacity: 1, x: 0 }}
 								transition={{ delay: 0.5, duration: 0.5 }}
-								className="text-base sm:text-lg text-gray-200 mb-4"
+								className="text-base sm:text-lg text-gray-200 mb-1"
 							>
 								{events[currentIndex].description}
 							</motion.p>
@@ -222,13 +222,13 @@ const ImageGallery = () => {
 								initial={{ opacity: 0, y: 10 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 0.6, duration: 0.5 }}
-								className="flex flex-wrap gap-4 sm:gap-6"
+								className="flex flex-wrap gap-1 sm:gap-4"
 							>
-								<div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+								<div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full">
 									<MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400" />
 									<span className="text-sm sm:text-base">{events[currentIndex].location}</span>
 								</div>
-								<div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+								<div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full">
 									<Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400" />
 									<span className="text-sm sm:text-base">{events[currentIndex].date}</span>
 								</div>
@@ -238,18 +238,18 @@ const ImageGallery = () => {
 						{/* Navigation Arrows */}
 						<button
 							onClick={goToPrevious}
-							className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-3 sm:p-4 rounded-full transition-all duration-300 hover:scale-110"
+							className="absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 sm:backdrop-blur-md hover:bg-white/30 text-white p-1 sm:p-4 rounded-full transition-all duration-300 hover:scale-110"
 							aria-label="Previous slide"
 						>
-							<ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+							<ChevronLeft className="w-6 h-6 sm:w-6 sm:h-6" />
 						</button>
 
 						<button
 							onClick={goToNext}
-							className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-3 sm:p-4 rounded-full transition-all duration-300 hover:scale-110"
+							className="absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 sm:backdrop-blur-md hover:bg-white/30 text-white p-1 sm:p-4 rounded-full transition-all duration-300 hover:scale-110"
 							aria-label="Next slide"
 						>
-							<ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+							<ChevronRight className="w-6 h-6 sm:w-6 sm:h-6" />
 						</button>
 
 						{/* Auto-play Toggle */}

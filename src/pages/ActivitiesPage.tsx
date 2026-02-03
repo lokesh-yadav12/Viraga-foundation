@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Sparkles } from 'lucide-react';
-import bgpic from '../assets/activities.png';
+import bgpic from '../assets/e15.png';
 import img1 from '.././assets/image1.png';
 import img2 from '.././assets/orphan1.png';
 import img3 from '.././assets/level3.png';
 import img4 from '.././assets/level4.png';
-
+import { motion } from 'framer-motion';
 const ActivitiesPage = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -67,57 +67,28 @@ const ActivitiesPage = () => {
 			</div>
 
 			{/* Hero Section */}
-			<div className="relative h-[70vh] sm:h-[90vh] overflow-hidden">
-				{/* Background Image with Parallax */}
-				<div
-					className="absolute inset-0 bg-cover bg-center transform scale-110"
-					style={{
-						backgroundImage: `url("${bgpic}")`,
-					}}
-				/>
-
-				{/* Multi-layered Gradients */}
-				<div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-purple-900/20 to-transparent" />
-				<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-
-				{/* Hero Content */}
-				<div className="absolute inset-0 flex items-center justify-center">
-					<div className="text-center space-y-6 px-4">
-						{/* Animated Badge */}
-						{/* <div
-							className={`inline-flex items-center gap-2 px-5 py-2.5 sm:mt-8 mb-8 sm:mb-0 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white text-sm font-medium transition-all duration-1000 ${
-								isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
-							}`}
-						>
-							<Sparkles className="w-4 h-4 text-pink-400 hidden sm:visible animate-pulse" />
-							<span>Our Journey of Service</span>
-						</div> */}
-
-						{/* Main Title */}
-						{/* <h1
-							className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold transition-all duration-1000 transform ${
-								isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-10 opacity-0 scale-95'
-							}`}
-							style={{ transitionDelay: '0.2s' }}
-						>
-							<span className="block text-white sm:mb-2 drop-shadow-2xl">ACTIVITIES</span>
-							<span className="block text-transparent bg-clip-text text-white animate-gradient-x">
-								Timeline
-							</span>
-						</h1> */}
-
-						{/* Subtitle */}
-						{/* <p
-							className={`text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 ${
-								isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-							}`}
-							style={{ transitionDelay: '0.4s' }}
-						>
-							Explore our journey of compassion, dedication, and community service through the years
-						</p> */}
-					</div>
-				</div>
-			</div>
+			<section className="relative h-[70vh] md:h-[85vh] overflow-hidden">
+        <img
+          src={bgpic}
+          alt="Service and spirituality"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30 flex items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            className="mx-auto max-w-6xl px-4 sm:px-6 text-white"
+          >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              Our Activities
+            </h1>
+            {/* <p className="text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed">
+              A Symbol of Karma Yoga, Dharma, and Selfless Service
+            </p> */}
+          </motion.div>
+        </div>
+      </section>
 
 			{/* Main Content */}
 			<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
@@ -136,9 +107,9 @@ const ActivitiesPage = () => {
 					<div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto" />
 				</div>
 
-				{/* First Row - 3 Cards - Ultra Enhanced */}
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
-					{activities.slice(0, 3).map((activity, index) => (
+				{/* Single Row - 4 Cards - Ultra Enhanced */}
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
+					{activities.map((activity, index) => (
 						<div
 							key={activity.year}
 							className={`transition-all duration-1000 transform ${
@@ -180,8 +151,8 @@ const ActivitiesPage = () => {
 										</div>
 
 										{/* Hover Content Overlay */}
-										<div className="absolute inset-0 bg-gradient-to-t from-slate-900/98 via-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-end pb-10 rounded-3xl">
-											<div className="text-center space-y-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
+										<div className="absolute inset-0 bg-gradient-to-t from-slate-900/98 via-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-all duration-700 flex flex-col items-center justify-end pb-10 rounded-3xl">
+											<div className="text-center space-y-4 transform translate-y-8 group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-700">
 												{/* Year Badge */}
 												<div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/30 shadow-2xl">
 													<Calendar className="w-5 h-5 text-pink-400 animate-pulse-glow" />
@@ -222,124 +193,6 @@ const ActivitiesPage = () => {
 										<div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-500" />
 										<div className="w-2 h-2 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 										<div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full transition-all duration-500" />
-									</div>
-								</div>
-							</Link>
-						</div>
-					))}
-				</div>
-
-				{/* Decorative Divider */}
-				<div
-					className={`relative py-4 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-					style={{ transitionDelay: '0.6s' }}
-				>
-					<div className="absolute inset-0 flex items-center">
-						<div className="w-full border-t-2 border-gradient-to-r from-transparent via-purple-300 to-transparent" />
-					</div>
-					<div className="relative flex justify-center">
-						<div className="px-6 py-3 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full shadow-lg">
-							<div className="flex items-center gap-2">
-								<div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
-								<div
-									className="w-2 h-2 bg-pink-500 rounded-full animate-pulse"
-									style={{ animationDelay: '0.2s' }}
-								/>
-								<div
-									className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"
-									style={{ animationDelay: '0.4s' }}
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				{/* Second Row - 2 Cards - Ultra Enhanced */}
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 mt-8 sm:mt-12 lg:mt-16">
-					{activities.slice(3, 5).map((activity, index) => (
-						<div
-							key={activity.year}
-							className={`transition-all duration-1000 transform ${
-								isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-							}`}
-							style={{ transitionDelay: `${(index + 4) * 150}ms` }}
-							onMouseEnter={() => setHoveredIndex(index + 3)}
-							onMouseLeave={() => setHoveredIndex(null)}
-						>
-							<Link to={activity.link} className="group cursor-pointer block">
-								{/* Image Card - Premium Design */}
-								<div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-pink-500/25 transition-all duration-700 bg-white transform hover:-translate-y-4 hover:scale-105">
-									{/* Animated Gradient Border */}
-									<div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-gradient-rotate-reverse" />
-									
-									{/* Card Background Glow */}
-									<div className="absolute -inset-4 bg-gradient-to-br from-orange-500/20 via-pink-500/20 to-purple-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-									{/* Main Content Container */}
-									<div className="relative bg-white rounded-3xl overflow-hidden">
-										{/* Corner Accents - Premium */}
-										<div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-orange-500/20 via-pink-500/10 to-transparent rounded-br-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-10 animate-spin-very-slow" />
-										<div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-purple-500/20 via-pink-500/10 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-10 animate-spin-very-slow animation-delay-500" />
-
-										{/* Image Container */}
-										<div className="aspect-[4/3] overflow-hidden rounded-3xl relative">
-											{/* Image */}
-											<img
-												src={activity.image}
-												alt={`Activities ${activity.year}`}
-												className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-1000 ease-out"
-											/>
-
-											{/* Gradient Overlay */}
-											<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-											
-											{/* Shimmer Effect on Hover */}
-											<div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 translate-x-[-100%] group-hover:translate-x-[100%] group-hover:transition-transform group-hover:duration-1500" />
-										</div>
-
-										{/* Hover Content Overlay */}
-										<div className="absolute inset-0 bg-gradient-to-t from-slate-900/98 via-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-end pb-10 rounded-3xl">
-											<div className="text-center space-y-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
-												{/* Year Badge */}
-												<div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/30 shadow-2xl">
-													<Calendar className="w-5 h-5 text-orange-400 animate-pulse-glow" />
-													<span className="text-white font-bold text-lg tracking-wide">{activity.year}</span>
-												</div>
-												{/* Call to Action */}
-												<div className="flex items-center gap-3 text-white font-bold text-xl">
-													<span className="bg-gradient-to-r from-orange-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
-														View Activities
-													</span>
-													<ArrowRight className="w-6 h-6 text-orange-400 group-hover:translate-x-2 transition-transform duration-500" />
-												</div>
-											</div>
-										</div>
-
-										{/* Floating Sparkles - Premium Animation */}
-										{hoveredIndex === index + 3 && (
-											<>
-												<Sparkles className="absolute top-6 right-6 w-6 h-6 text-orange-400 animate-pulse-glow z-20 drop-shadow-lg" />
-												<Sparkles className="absolute top-10 right-12 w-4 h-4 text-pink-400 animate-ping-slow z-20 drop-shadow-lg" />
-												<Sparkles className="absolute bottom-6 left-6 w-5 h-5 text-purple-400 animate-pulse-glow animation-delay-300 z-20 drop-shadow-lg" />
-												<Sparkles className="absolute bottom-12 left-12 w-3 h-3 text-orange-400 animate-ping-slow animation-delay-500 z-20 drop-shadow-lg" />
-											</>
-										)}
-									</div>
-								</div>
-
-								{/* Year Label - Enhanced Typography */}
-								<div className="mt-8 text-center transform group-hover:scale-110 transition-transform duration-500">
-									<h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 bg-clip-text text-transparent group-hover:from-orange-500 group-hover:via-pink-500 group-hover:to-purple-500 transition-all duration-500 tracking-tight mb-3"
-										style={{
-											backgroundSize: '200% 200%',
-										}}
-									>
-										{activity.year}
-									</h3>
-									<div className="flex justify-center gap-1.5 items-center">
-										<div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full transition-all duration-500" />
-										<div className="w-2 h-2 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-										<div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-500" />
 									</div>
 								</div>
 							</Link>
@@ -388,6 +241,16 @@ const ActivitiesPage = () => {
 
 			{/* Custom Styles */}
 			<style>{`
+				/* Mobile touch support */
+				@media (hover: none) and (pointer: coarse) {
+					.group:active .absolute.inset-0.bg-gradient-to-t {
+						opacity: 1 !important;
+					}
+					.group:active .transform.translate-y-8 {
+						transform: translateY(0) !important;
+					}
+				}
+
 				@keyframes float-particle {
 					0%, 100% {
 						transform: translateY(0) translateX(0) scale(1);

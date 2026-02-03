@@ -11,7 +11,7 @@ const ContactCTA = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, amount: 0.3 }}
 					transition={{ duration: 0.8, ease: 'easeOut' }}
-					className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl shadow-2xl"
+					className="relative overflow-hidden bg-white border-2 border-orange-200 rounded-3xl shadow-l"
 				>
 					{/* Subtle Grid Pattern */}
 					<div className="absolute inset-0 opacity-5">
@@ -74,7 +74,7 @@ const ContactCTA = () => {
 									className="mb-6"
 								>
 									<div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full shadow-lg shadow-orange-500/50">
-										<MessageCircle className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+										<MessageCircle className="w-10 h-10 sm:w-12 sm:h-12 text-black" />
 									</div>
 								</motion.div>
 
@@ -84,7 +84,7 @@ const ContactCTA = () => {
 									whileInView={{ opacity: 1, y: 0 }}
 									viewport={{ once: true }}
 									transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
-									className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
+									className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6"
 								>
 									Let's{' '}
 									<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
@@ -98,7 +98,7 @@ const ContactCTA = () => {
 									whileInView={{ opacity: 1, y: 0 }}
 									viewport={{ once: true }}
 									transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
-									className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 font-light leading-relaxed"
+									className="text-lg sm:text-xl text-gray-700 mb-8 sm:mb-10 font-light leading-relaxed"
 								>
 									Have questions? Want to volunteer? Looking to collaborate? We'd love to hear from
 									you. Reach out and let's make a difference together.
@@ -117,7 +117,7 @@ const ContactCTA = () => {
 											whileHover={{ scale: 1.03, y: -2 }}
 											whileTap={{ scale: 0.98 }}
 											transition={{ duration: 0.2 }}
-											className="group relative px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-semibold text-lg shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/40 transition-all duration-300 overflow-hidden"
+											className="group relative px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-black rounded-full font-semibold text-lg shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/40 transition-all duration-300 overflow-hidden"
 										>
 											<span className="relative z-10 flex items-center gap-2">
 												Get in Touch
@@ -137,7 +137,7 @@ const ContactCTA = () => {
 										whileInView={{ opacity: 1 }}
 										viewport={{ once: true }}
 										transition={{ duration: 0.7, delay: 0.6 }}
-										className="text-gray-400 text-sm sm:text-base"
+										className="text-gray-700 text-sm sm:text-base"
 									>
 										We're here to help 📧
 									</motion.div>
@@ -156,14 +156,14 @@ const ContactCTA = () => {
 								<motion.div
 									whileHover={{ x: 5 }}
 									transition={{ duration: 0.3 }}
-									className="flex items-start gap-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 hover:bg-white/10 transition-colors duration-300"
+									className="flex items-start gap-4 bg-black/5 backdrop-blur-sm border border-black/10 rounded-2xl p-4 sm:p-6 hover:bg-black/10 transition-colors duration-300"
 								>
 									<div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
-										<Mail className="w-6 h-6 text-white" />
+										<Mail className="w-6 h-6 text-black" />
 									</div>
 									<div>
-										<h3 className="text-white font-semibold mb-1">Email Us</h3>
-										<p className="text-gray-400 text-sm sm:text-base break-all">
+										<h3 className="text-black font-semibold mb-1">Email Us</h3>
+										<p className="text-gray-700 text-sm sm:text-base break-all">
 											viragafoundation@gmail.com
 										</p>
 									</div>
@@ -173,14 +173,14 @@ const ContactCTA = () => {
 								<motion.div
 									whileHover={{ x: 5 }}
 									transition={{ duration: 0.3 }}
-									className="flex items-start gap-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 hover:bg-white/10 transition-colors duration-300"
+									className="flex items-start gap-4 bg-black/5 backdrop-blur-sm border border-black/10 rounded-2xl p-4 sm:p-6 hover:bg-black/10 transition-colors duration-300"
 								>
 									<div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
-										<Phone className="w-6 h-6 text-white" />
+										<Phone className="w-6 h-6 text-black" />
 									</div>
 									<div>
-										<h3 className="text-white font-semibold mb-1">Call Us</h3>
-										<p className="text-gray-400 text-sm sm:text-base">+91 9492940941</p>
+										<h3 className="text-black font-semibold mb-1">Call Us</h3>
+										<p className="text-gray-700 text-sm sm:text-base">+91 9492940941</p>
 									</div>
 								</motion.div>
 
@@ -188,14 +188,14 @@ const ContactCTA = () => {
 								<motion.div
 									whileHover={{ x: 5 }}
 									transition={{ duration: 0.3 }}
-									className="flex items-start gap-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 hover:bg-white/10 transition-colors duration-300"
+									className="flex items-start gap-4 bg-black/5 backdrop-blur-sm border border-black/10 rounded-2xl p-4 sm:p-6 hover:bg-black/10 transition-colors duration-300"
 								>
 									<div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
-										<MapPin className="w-6 h-6 text-white" />
+										<MapPin className="w-6 h-6 text-black" />
 									</div>
 									<div>
-										<h3 className="text-white font-semibold mb-1">Visit Us</h3>
-										<p className="text-gray-400 text-sm sm:text-base">
+										<h3 className="text-black font-semibold mb-1">Visit Us</h3>
+										<p className="text-gray-700 text-sm sm:text-base">
 											Ayodhya nagar, Vijayawada, 520003
 										</p>
 									</div>

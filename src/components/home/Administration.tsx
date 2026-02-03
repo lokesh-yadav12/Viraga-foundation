@@ -9,6 +9,7 @@ import durga from '../../assets/durga.png';
 import bala from '../../assets/bala.png';
 import veer from '../../assets/veer.png';
 import soma from '../../assets/soma.png';
+import bg from '../../assets/i14.png'
 type Member = {
 	name: string;
 	role: string;
@@ -106,7 +107,7 @@ const Administration = () => {
 				{/* Image with Parallax Effect */}
 				<div className="absolute inset-0">
 					<img
-						src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+						src={bg}
 						alt="Administration Team"
 						className="h-full w-full object-cover scale-110 animate-ken-burns"
 					/>

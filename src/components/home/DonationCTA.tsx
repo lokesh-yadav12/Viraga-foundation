@@ -11,7 +11,7 @@ const DonationCTA = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, amount: 0.3 }}
 					transition={{ duration: 0.8, ease: "easeOut" }}
-					className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl shadow-2xl"
+					className="relative overflow-hidden bg-white border-2 border-orange-200 rounded-3xl shadow-2xl"
 				>
 					{/* Subtle Grid Pattern */}
 					<div className="absolute inset-0 opacity-5">
@@ -78,7 +78,7 @@ const DonationCTA = () => {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-							className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
+							className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6"
 						>
 							Make a{' '}
 							<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
@@ -93,7 +93,7 @@ const DonationCTA = () => {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-							className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 max-w-3xl mx-auto font-light leading-relaxed"
+							className="text-lg sm:text-xl text-gray-700 mb-8 sm:mb-10 max-w-3xl mx-auto font-light leading-relaxed"
 						>
 							Your generosity feeds the hungry, educates children, and brings hope to those in need. 
 							Every rupee creates ripples of positive change in our community.
@@ -132,7 +132,7 @@ const DonationCTA = () => {
 								whileInView={{ opacity: 1 }}
 								viewport={{ once: true }}
 								transition={{ duration: 0.7, delay: 0.6 }}
-								className="text-gray-400 text-sm sm:text-base"
+								className="text-gray-700 text-sm sm:text-base"
 							>
 								Every contribution counts 🧡
 							</motion.div>
@@ -152,7 +152,7 @@ const DonationCTA = () => {
 								className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 hover:bg-white/10 transition-colors duration-300"
 							>
 								<div className="text-3xl sm:text-4xl font-bold text-orange-400 mb-2">7+</div>
-								<div className="text-gray-300 text-sm sm:text-base">Life-Changing Initiatives</div>
+								<div className="text-gray-700 text-sm sm:text-base">Life-Changing Initiatives</div>
 							</motion.div>
 							<motion.div 
 								whileHover={{ y: -5 }}
@@ -160,7 +160,7 @@ const DonationCTA = () => {
 								className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 hover:bg-white/10 transition-colors duration-300"
 							>
 								<div className="text-3xl sm:text-4xl font-bold text-orange-400 mb-2">100%</div>
-								<div className="text-gray-300 text-sm sm:text-base">Transparent Giving</div>
+								<div className="text-gray-700 text-sm sm:text-base">Transparent Giving</div>
 							</motion.div>
 							<motion.div 
 								whileHover={{ y: -5 }}
@@ -168,7 +168,7 @@ const DonationCTA = () => {
 								className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 hover:bg-white/10 transition-colors duration-300"
 							>
 								<div className="text-3xl sm:text-4xl font-bold text-orange-400 mb-2">∞</div>
-								<div className="text-gray-300 text-sm sm:text-base">Impact & Hope</div>
+								<div className="text-gray-700 text-sm sm:text-base">Impact & Hope</div>
 							</motion.div>
 						</motion.div>
 					</div>
