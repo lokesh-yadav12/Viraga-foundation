@@ -7,6 +7,7 @@ import img2 from '.././assets/orphan1.png';
 import img3 from '.././assets/level3.png';
 import img4 from '.././assets/level4.png';
 import { motion } from 'framer-motion';
+
 const ActivitiesPage = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -83,9 +84,6 @@ const ActivitiesPage = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Our Activities
             </h1>
-            {/* <p className="text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed">
-              A Symbol of Karma Yoga, Dharma, and Selfless Service
-            </p> */}
           </motion.div>
         </div>
       </section>
@@ -181,7 +179,12 @@ const ActivitiesPage = () => {
 								</div>
 
 								{/* Year Label - Enhanced Typography */}
-								<div className="mt-8 text-center transform group-hover:scale-110 transition-transform duration-500">
+								<div className="mt-3 text-center transform group-hover:scale-110 transition-transform duration-500">
+									{/* Mobile Click Indicator - Only visible on mobile */}
+									<div className="sm:hidden mt-1 flex items-center justify-center gap-1 text-purple-600">
+										<span className="text-sm font-semibold">Tap to view activities</span>
+										<ArrowRight className="w-4 h-4 animate-bounce" />
+									</div>
 									<h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent group-hover:from-purple-500 group-hover:via-pink-500 group-hover:to-orange-500 transition-all duration-500 tracking-tight mb-3"
 										style={{
 											backgroundSize: '200% 200%',
@@ -189,11 +192,14 @@ const ActivitiesPage = () => {
 									>
 										{activity.year}
 									</h3>
-									<div className="flex justify-center gap-1.5 items-center">
+									
+									<div className="flex justify-center mb-4 gap-1.5 items-center">
 										<div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-500" />
 										<div className="w-2 h-2 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 										<div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full transition-all duration-500" />
 									</div>
+									
+									
 								</div>
 							</Link>
 						</div>

@@ -1,42 +1,87 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import img1 from '../../assets/viragalogo.png';
 
 const About: React.FC = () => {
 	return (
-		<div className="max-h-screen bg-white">
-			<div className=" mx-auto px-2 sm:px-4 lg:px-6 bg-white py-10 sm:py-12 lg:py-16">
-				<div className="bg-white rounded-3xl shadow-2xl p-3 sm:p-6 lg:p-10 border border-purple-100">
-					<h1 className="text-4xl sm:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-900 bg-clip-text text-transparent">
-						About Us
-					</h1>
-					
-					<div className="space-y-6 text-slate-700 text-base sm:text-lg leading-relaxed">
-						<p>
-							We are <span className="font-semibold text-purple-700">VIRAGA Foundation</span>, a non-governmental organization established on November 25, 2020, by dedicated individuals inspired by the timeless teachings of Swami Vivekananda. Our foundation was graciously inaugurated by Swami Hridananadji Maharaj, Secretary of Ramakrishna Mission, Vijayawada. Guided by Dharma, driven by Karma, and serving with selflessness, we believe in Swami Vivekananda's profound words—<span className="italic text-purple-600">"They alone live who live for others."</span>
-						</p>
+		<div className="min-h-screen bg-gradient-to-br from-yellow-50 via-green-50 to-blue-50 py-10 sm:py-16 lg:py-20">
+			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+				<motion.section
+					className="overflow-hidden"
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1, transition: { duration: 0.8 } }}
+					viewport={{ once: true, amount: 0.2 }}
+				>
+					<div className="relative min-h-[600px]">
+						{/* Left Image - Hidden on mobile, overlaps on desktop */}
+						<div className="hidden lg:flex w-1/3 absolute left-0 top-0 bottom-0 items-center justify-end z-10 pr-8">
+							<img
+								src={img1}
+								alt="VIRAGA Foundation Logo"
+								className="w-full max-w-sm h-auto object-contain hover:scale-105 transition-all duration-300 rounded-2xl shadow-2xl bg-white p-6"
+							/>
+						</div>
 
-						{/* <p>
-							Just as Surya Bhagavan's seven horses lead the world from darkness to light, VIRAGA Foundation brings hope and transformation through seven key initiatives. We provide nutritious meals to the underprivileged through Narayana Seva, offer scholarships and mentorship to deserving students, promote health awareness and medical support, equip individuals with skill development and career guidance for self-reliance, spread the teachings of great leaders like Swami Vivekananda, provide disaster relief and humanitarian aid in times of crisis, and offer shelter, education, and holistic care to homeless and orphaned children.
-						</p> */}
+						{/* Content Card - Full width on mobile, right side on desktop */}
+						<div className="w-full lg:w-[75%] lg:ml-[25%] bg-gradient-to-br from-yellow-50 via-yellow-50 to-white shadow-2xl rounded-3xl p-8 sm:p-10 lg:p-16 min-h-[600px] hover:shadow-3xl transition-all duration-300">
+							{/* Mobile image */}
+							<div className="lg:hidden mb-8 flex justify-center">
+								<img
+									src={img1}
+									alt="VIRAGA Foundation Logo"
+									className="w-48 h-auto rounded-2xl shadow-lg bg-white p-4"
+								/>
+							</div>
 
-						<p>
-							VIRAGA Foundation is a movement of compassionate hearts working together to create positive change. Through our seven transformative initiatives, we work tirelessly to build a society rooted in kindness, dignity, and selfless service. Together, we can light up lives, because <span className="font-semibold text-purple-700">service to humanity is service to God.</span>
-						</p>
+							<div className="lg:ml-[20%]">
+								{/* Title */}
+								<h1 className="text-4xl sm:text-5xl text-center lg:text-6xl font-bold text-amber-800 mb-4">
+									ABOUT VIRAGA
+								</h1>
+
+								{/* Hindi subtitle */}
+								{/* <h2 className="text-2xl sm:text-3xl font-semibold text-orange-700 mb-8">
+									नहि ज्ञानेन सदृश्य
+								</h2> */}
+
+								{/* Main content */}
+								<div className="space-y-6 text-amber-900 text-base sm:text-lg leading-relaxed">
+									<div className="pt-4">
+										<p className="text-base sm:text-lg">
+											We are <span className="font-semibold text-purple-700">VIRAGA Foundation</span>, a non-governmental organization established on November 25, 2020, by dedicated individuals inspired by the timeless teachings of Swami Vivekananda. Our foundation was graciously inaugurated by Swami Hridananadji Maharaj, Secretary of Ramakrishna Mission, Vijayawada.
+										</p>
+									</div>
+
+									<p className="italic text-purple-700 font-medium text-lg">
+										"They alone live who live for others." — Swami Vivekananda
+									</p>
+
+									<p>
+										Guided by Dharma, driven by Karma, and serving with selflessness, VIRAGA Foundation is a movement of compassionate hearts working together to create positive change. Through our seven transformative initiatives, we work tirelessly to build a society rooted in kindness, dignity, and selfless service.
+									</p>
+
+									<p className="font-semibold text-purple-700 text-lg">
+										Together, we can light up lives, because service to humanity is service to God.
+									</p>
+								</div>
+
+								{/* Call to action */}
+								<div className="mt-10">
+									<Link
+										to="/about"
+										className="inline-block hover:text-white bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold px-8 py-3 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+									>
+										Explore Our Initiatives →
+									</Link>
+								</div>
+							</div>
+						</div>
+
+						{/* Bottom decorative element */}
+						<div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 h-2 rounded-b-3xl"></div>
 					</div>
-
-					<Link
-						to="/about"
-						className="mt-8 inline-block text-purple-700 font-bold hover:underline"
-					>
-						Learn more about our mission &rarr;
-					</Link>
-
-					<div className="mt-12 flex items-center justify-center gap-2">
-						<div className="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
-						<div className="w-2 h-2 bg-orange-500 rounded-full" />
-						<div className="h-1 w-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full" />
-					</div>
-				</div>
+				</motion.section>
 			</div>
 		</div>
 	);

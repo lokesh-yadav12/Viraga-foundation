@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { X, CheckCircle, Sparkles } from 'lucide-react';
 import bgpic from '../assets/contact.png';
 
 const ContactPage = () => {
@@ -8,6 +9,7 @@ const ContactPage = () => {
 		phone: '',
 		message: '',
 	});
+	const [showSuccessModal, setShowSuccessModal] = useState(false);
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target;
@@ -19,8 +21,11 @@ const ContactPage = () => {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-		// Handle form submission here
 		console.log('Form submitted:', formData);
+		
+		// Show success modal
+		setShowSuccessModal(true);
+		
 		// Reset form
 		setFormData({
 			name: '',
@@ -28,7 +33,10 @@ const ContactPage = () => {
 			phone: '',
 			message: '',
 		});
-		alert('Thank you for reaching out! We will get back to you soon.');
+	};
+
+	const closeModal = () => {
+		setShowSuccessModal(false);
 	};
 
 	return (
@@ -196,11 +204,131 @@ const ContactPage = () => {
 				</div>
 			</section>
 
-			{/* ================= FIXED CONTACT FORM ================= */}
+			{/* ================= SUCCESS MODAL ================= */}
+			{showSuccessModal && (
+				<div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fade-in">
+					{/* Backdrop */}
+					<div 
+						className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+						onClick={closeModal}
+					/>
+					
+					{/* Modal */}
+					<div className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden animate-scale-up">
+						{/* Decorative Background Elements */}
+						<div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl" />
+						<div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-pink-500/20 to-transparent rounded-full blur-3xl" />
+						
+						{/* Close Button */}
+						<button
+							onClick={closeModal}
+							className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10"
+						>
+							<X className="w-5 h-5 text-gray-600" />
+						</button>
+
+						{/* Content */}
+						<div className="relative p-8 text-center">
+							{/* Success Icon */}
+							<div className="mb-6 flex justify-center">
+								<div className="relative">
+									<div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-50 animate-pulse" />
+									<CheckCircle className="relative w-20 h-20 text-green-500 animate-bounce-once" />
+								</div>
+							</div>
+
+							{/* Sparkles */}
+							<div className="absolute top-8 left-12">
+								<Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+							</div>
+							<div className="absolute top-16 right-16">
+								<Sparkles className="w-4 h-4 text-pink-400 animate-pulse" style={{ animationDelay: '0.3s' }} />
+							</div>
+							<div className="absolute bottom-20 left-16">
+								<Sparkles className="w-5 h-5 text-orange-400 animate-pulse" style={{ animationDelay: '0.6s' }} />
+							</div>
+
+							{/* Title */}
+							<h3 className="text-3xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent mb-3">
+								Message Sent Successfully!
+							</h3>
+
+							{/* Message */}
+							<p className="text-gray-700 text-lg mb-6 leading-relaxed">
+								Thank you for reaching out to us! 🙏
+								<br />
+								<span className="text-purple-600 font-semibold">We will get back to you soon.</span>
+							</p>
+
+							{/* Decorative Line */}
+							<div className="flex items-center justify-center gap-2 mb-6">
+								<div className="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
+								<div className="w-2 h-2 bg-orange-500 rounded-full" />
+								<div className="h-1 w-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full" />
+							</div>
+
+							{/* Close Button */}
+							<button
+								onClick={closeModal}
+								className="bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold px-8 py-3 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+							>
+								Close
+							</button>
+						</div>
+					</div>
+				</div>
+			)}
+
+			{/* ================= CUSTOM STYLES ================= */}
+			<style>{`
+				@keyframes fade-in {
+					from {
+						opacity: 0;
+					}
+					to {
+						opacity: 1;
+					}
+				}
+
+				@keyframes scale-up {
+					from {
+						transform: scale(0.9);
+						opacity: 0;
+					}
+					to {
+						transform: scale(1);
+						opacity: 1;
+					}
+				}
+
+				@keyframes bounce-once {
+					0%, 100% {
+						transform: translateY(0);
+					}
+					50% {
+						transform: translateY(-10px);
+					}
+				}
+
+				.animate-fade-in {
+					animation: fade-in 0.3s ease-out;
+				}
+
+				.animate-scale-up {
+					animation: scale-up 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+				}
+
+				.animate-bounce-once {
+					animation: bounce-once 0.6s ease-out;
+				}
+			`}</style>
 		</div>
 	);
 };
+
 export default ContactPage;
+
+
 
 
 

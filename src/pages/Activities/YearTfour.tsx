@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Download, ZoomIn, ZoomOut } from 'lucide-react';
 import bgpic from '../../assets/bgpic.jpg';
 import pic1 from '../../assets/image1.png';
 import pic2 from '../../assets/image2.png';
@@ -6,6 +7,7 @@ import pic2 from '../../assets/image2.png';
 import vi1 from '../../assets/vi1.png';
 import vi2 from '../../assets/vi2.png';
 import vi3 from '../../assets/vi3.png';
+
 interface ImageData {
 	src: string;
 	alt: string;
@@ -14,6 +16,7 @@ interface ImageData {
 const Year2024: React.FC = () => {
 	const [isLightboxOpen, setIsLightboxOpen] = useState<boolean>(false);
 	const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+	const [zoomLevel, setZoomLevel] = useState<number>(1);
 	// const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false);
 
 	const images: ImageData[] = [
@@ -46,11 +49,13 @@ const Year2024: React.FC = () => {
 	const openLightbox = (index: number): void => {
 		setCurrentImageIndex(index);
 		setIsLightboxOpen(true);
+		setZoomLevel(1); // Reset zoom when opening
 		document.body.style.overflow = 'hidden';
 	};
 
 	const closeLightbox = (): void => {
 		setIsLightboxOpen(false);
+		setZoomLevel(1); // Reset zoom when closing
 		document.body.style.overflow = 'auto';
 	};
 
@@ -64,15 +69,36 @@ const Year2024: React.FC = () => {
 		}
 
 		setCurrentImageIndex(newIndex);
+		setZoomLevel(1); // Reset zoom when changing image
 	};
 
-	const handleKeyDown = (e: React.KeyboardEvent): void => {
-		if (e.key === 'Escape') {
-			closeLightbox();
-		} else if (e.key === 'ArrowLeft') {
-			changeImage(-1);
-		} else if (e.key === 'ArrowRight') {
-			changeImage(1);
+	const handleZoomIn = (e: React.MouseEvent): void => {
+		e.stopPropagation();
+		setZoomLevel((prev) => Math.min(prev + 0.5, 3)); // Max zoom 3x
+	};
+
+	const handleZoomOut = (e: React.MouseEvent): void => {
+		e.stopPropagation();
+		setZoomLevel((prev) => Math.max(prev - 0.5, 1)); // Min zoom 1x
+	};
+
+	const handleDownload = async (e: React.MouseEvent): Promise<void> => {
+		e.stopPropagation();
+		const image = images[currentImageIndex];
+		
+		try {
+			const response = await fetch(image.src);
+			const blob = await response.blob();
+			const url = window.URL.createObjectURL(blob);
+			const link = document.createElement('a');
+			link.href = url;
+			link.download = `viraga-${image.alt.replace(/\s+/g, '-').toLowerCase()}.jpg`;
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+			window.URL.revokeObjectURL(url);
+		} catch (error) {
+			console.error('Download failed:', error);
 		}
 	};
 
@@ -333,6 +359,38 @@ const Year2024: React.FC = () => {
 						×
 					</button>
 
+					{/* Zoom Controls */}
+					<div className="absolute top-5 left-5 flex gap-2 z-50">
+						<button
+							className="w-12 h-12 rounded-full border-2 border-white bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all duration-300"
+							onClick={handleZoomIn}
+							aria-label="Zoom in"
+							disabled={zoomLevel >= 3}
+						>
+							<ZoomIn className="w-6 h-6" />
+						</button>
+						<button
+							className="w-12 h-12 rounded-full border-2 border-white bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all duration-300"
+							onClick={handleZoomOut}
+							aria-label="Zoom out"
+							disabled={zoomLevel <= 1}
+						>
+							<ZoomOut className="w-6 h-6" />
+						</button>
+						<button
+							className="w-12 h-12 rounded-full border-2 border-white bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all duration-300"
+							onClick={handleDownload}
+							aria-label="Download image"
+						>
+							<Download className="w-6 h-6" />
+						</button>
+					</div>
+
+					{/* Zoom Level Indicator */}
+					<div className="absolute top-20 left-5 text-white text-sm bg-black/50 px-3 py-1 rounded-full z-50">
+						{Math.round(zoomLevel * 100)}%
+					</div>
+
 					{/* Previous Button */}
 					<button
 						className="absolute left-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white bg-white/20 hover:bg-white/30 text-white text-2xl flex items-center justify-center transition-all duration-300"
@@ -345,12 +403,19 @@ const Year2024: React.FC = () => {
 						‹
 					</button>
 
-					{/* Image */}
-					<div className="relative max-w-[90%] max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
+					{/* Image Container with Zoom */}
+					<div 
+						className="relative max-w-[90%] max-h-[90vh] overflow-auto" 
+						onClick={(e) => e.stopPropagation()}
+					>
 						<img
 							src={images[currentImageIndex].src}
 							alt={images[currentImageIndex].alt}
-							className="max-w-full max-h-[90vh] object-contain"
+							className="max-w-full max-h-[90vh] object-contain transition-transform duration-300"
+							style={{ 
+								transform: `scale(${zoomLevel})`,
+								cursor: zoomLevel > 1 ? 'move' : 'default'
+							}}
 						/>
 					</div>
 
@@ -365,6 +430,11 @@ const Year2024: React.FC = () => {
 					>
 						›
 					</button>
+
+					{/* Image Counter */}
+					<div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full z-50">
+						{currentImageIndex + 1} / {images.length}
+					</div>
 				</div>
 			)}
 		</div>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import img1 from '../assets/viraganew.png'
-import bgpic from '../assets/ourlogo.png'
+import bgpic from '../assets/viragalogo.png'
 const AboutLogo = () => {
   return (
     <div className="bg-white">
