@@ -51,7 +51,7 @@ import feb25_8 from '../../assets/fd7.png';
 import feb25_9 from '../../assets/fd8.png';
 import feb25_10 from '../../assets/fd9.png';
 import feb25_11 from '../../assets/fd10.png';
-import feb25_12 from '../../assets/fd11.png';
+// import feb25_12 from '../../assets/fd11.png';
 
 
 // Food Donation Nov 29 Images

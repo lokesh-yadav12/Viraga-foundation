@@ -1,9 +1,9 @@
 import { motion, Variants } from 'framer-motion';
-import { useState } from 'react';
+// import { useState } from 'react';
 import bgpic from '../../assets/bgpic.jpg';
 
 const VibrantFuturesPage = () => {
-	const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+	//const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
 	const fadeInUp: Variants = {
 		hidden: {

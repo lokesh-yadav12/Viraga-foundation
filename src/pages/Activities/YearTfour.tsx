@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import bgpic from '../../assets/bgpic.jpg';
 import pic1 from '../../assets/image1.png';
 import pic2 from '../../assets/image2.png';
-import hero from '../../assets/hero4.mp4';
+// import hero from '../../assets/hero4.mp4';
 import vi1 from '../../assets/vi1.png';
 import vi2 from '../../assets/vi2.png';
 import vi3 from '../../assets/vi3.png';
@@ -14,7 +14,7 @@ interface ImageData {
 const Year2024: React.FC = () => {
 	const [isLightboxOpen, setIsLightboxOpen] = useState<boolean>(false);
 	const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-	const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false);
+	// const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false);
 
 	const images: ImageData[] = [
 		{
@@ -93,9 +93,9 @@ const Year2024: React.FC = () => {
 		return () => window.removeEventListener('keydown', handleKeyPress);
 	}, [isLightboxOpen, currentImageIndex]);
 
-	const handlePlayVideo = (): void => {
-		setIsVideoPlaying(true);
-	};
+	// const handlePlayVideo = (): void => {
+	// 	setIsVideoPlaying(true);
+	// };
 
 	return (
 		<div className="min-h-screen bg-white ">

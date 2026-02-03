@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
 	return (
-		<div className="min-h-screen bg-white">
-			<div className="max-w-4xl mx-auto px-2 sm:px-4 lg:px-6 bg-white py-10 sm:py-12 lg:py-16">
+		<div className="max-h-screen bg-white">
+			<div className=" mx-auto px-2 sm:px-4 lg:px-6 bg-white py-10 sm:py-12 lg:py-16">
 				<div className="bg-white rounded-3xl shadow-2xl p-3 sm:p-6 lg:p-10 border border-purple-100">
 					<h1 className="text-4xl sm:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-900 bg-clip-text text-transparent">
 						About Us
