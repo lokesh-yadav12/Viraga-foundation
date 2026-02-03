@@ -469,14 +469,15 @@ const VibrantFuturesPage = () => {
 								allowfullscreen
 							></iframe> */}
 							<iframe
-								width="1170"
-								height="658"
+								// width="1170"
+								// height="658"
 								src="https://www.youtube.com/embed/NWmYBLZMioc"
 								title="Vibrant futures transforming lives programmer"
 								frameBorder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								referrerPolicy="strict-origin-when-cross-origin"
 								allowFullScreen
+								className='sm:w-full sm:h-[600px]'
 							/>
 						</div>
 						<motion.p variants={fadeInUp} className="text-center text-gray-600 mt-4 italic text-lg">

@@ -546,14 +546,15 @@ const Year2021: React.FC = () => {
 						<div className="group cursor-pointer md:col-span-2">
 							<div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-video ">
 								<iframe
-									width="800"
-									height="400"
+									// width="800"
+									// height="400"
 									src="https://www.youtube.com/embed/OXNX5cS9EaU"
 									title="viraga"
 									frameBorder={0}
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 									referrerPolicy="strict-origin-when-cross-origin"
 									allowFullScreen
+									className='md:w-[800px] md:h-[400px]'
 								/>
 							</div>
 						</div>

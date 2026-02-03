@@ -22,7 +22,7 @@ const AboutUs = () => {
 				About Us
 			</h1>
 
-			<p className="text-base  font-serif sm:text-lg md:text-3xl max-w-3xl mx-auto">
+			<p className="text-md  font-serif sm:text-lg md:text-3xl max-w-3xl mx-auto">
 				Guided by Dharma,
 				<br />
 				Driven by Karma,
