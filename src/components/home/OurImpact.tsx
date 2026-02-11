@@ -76,8 +76,8 @@ const StatCard: React.FC<StatCardProps> = ({ number, label, description, delay =
 const OurImpact: React.FC = () => {
   const stats = [
     {
-      number: '1',
-      label: 'LAC',
+      number: '3',
+      label: 'THOUSANDS',
       description: 'children and their families are impacted every year',
     },
     {
@@ -86,12 +86,12 @@ const OurImpact: React.FC = () => {
       description: 'and slums are reached out to across the country',
     },
     {
-      number: '20',
+      number: '12',
       label: 'PROJECTS',
       description: 'focused on education, healthcare, and women empowerment',
     },
     {
-      number: '27',
+      number: '7',
       label: 'STATES',
       description: 'are reached including the remotest areas',
     },

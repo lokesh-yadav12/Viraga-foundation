@@ -1,4 +1,5 @@
-import img from '../assets/whoweare.png';
+import img from '../assets/vira.png';
+import img1 from '../assets/e12.png'
 const WhoWeAre = () => {
   return (
     <div className="bg-white">
@@ -6,7 +7,7 @@ const WhoWeAre = () => {
       <section className="relative h-[85vh]">
         <img
           src={img}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           alt="Community empowerment"
         />
         <div className="absolute inset-0 bg-black/60 flex items-center text-center">
@@ -43,8 +44,8 @@ const WhoWeAre = () => {
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
             <img
-              src="https://images.unsplash.com/photo-1607748838605-ebcbe8f15772?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdvbWVuJTIwZW1wb3dlcm1lbnR8ZW58MHx8MHx8fDA%3D"
-              className="relative rounded-xl shadow-lg"
+              src={img1}
+              className="relative h-full w-full rounded-xl shadow-lg"
               alt="Women empowerment"
             />
           </div>
@@ -53,24 +54,24 @@ const WhoWeAre = () => {
             <h2 className="text-3xl font-semibold mb-6 text-gray-800 border-b-4 border-orange-500 inline-block pb-2">
               Our Core Values
             </h2>
-            <ul className="space-y-5 text-gray-700 text-lg mt-8">
-              <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-orange-50 transition-colors">
+            <ul className="space-y-2 text-gray-700 text-lg mt-4">
+              <li className="flex items-start gap-3 p-1 rounded-lg hover:bg-orange-50 transition-colors">
                 <span className="text-2xl">🤝</span>
                 <span>Compassion with dignity and respect</span>
               </li>
-              <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-green-50 transition-colors">
+              <li className="flex items-start gap-3 p-1 rounded-lg hover:bg-green-50 transition-colors">
                 <span className="text-2xl">🌱</span>
                 <span>Sustainable, community-driven development</span>
               </li>
-              <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+              <li className="flex items-start gap-3 p-1 rounded-lg hover:bg-blue-50 transition-colors">
                 <span className="text-2xl">📊</span>
                 <span>Data-informed and impact-oriented action</span>
               </li>
-              <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-purple-50 transition-colors">
+              <li className="flex items-start gap-3 p-1 rounded-lg hover:bg-purple-50 transition-colors">
                 <span className="text-2xl">🧭</span>
                 <span>Transparency, accountability, and ethics</span>
               </li>
-              <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-pink-50 transition-colors">
+              <li className="flex items-start gap-3 p-1 rounded-lg hover:bg-pink-50 transition-colors">
                 <span className="text-2xl">🤍</span>
                 <span>Service without discrimination</span>
               </li>
@@ -80,7 +81,7 @@ const WhoWeAre = () => {
       </section>
 
       {/* VISION & MISSION */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-20">
+      <section className="bg-gradient-to-b from-gray-50 to-white py-12">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>

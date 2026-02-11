@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import img from '../assets/wherewework.png';
+import img from '../assets/p5.png';
+import ing1 from '../assets/contact.png'
 const WhereWeWork = () => {
   return (
     <div className="bg-white">
@@ -107,7 +108,7 @@ const WhereWeWork = () => {
           <motion.img
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            src="https://images.unsplash.com/photo-1544027993-37dbfe43562a"
+            src={ing1}
             className="w-full"
             alt="Community outreach"
           />

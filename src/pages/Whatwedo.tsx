@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
-import img from '../assets/whatwedo.png'
-
+import img from '../assets/do7.png'
+import img1 from '../assets/do3.png'
+import img2 from '../assets/e11.png'
+import img3 from '../assets/l9.png'
+import img4 from '../assets/e20.png'
+import img5 from '../assets/level3.png'
+//import img6 from '../assets/Gallery2.png'
 const WhatWeDo = () => {
   return (
     <div className="bg-gray-50">
@@ -14,7 +19,7 @@ const WhatWeDo = () => {
           className="h-full w-full object-cover"
           alt="Health workers"
         />
-        <div className="absolute inset-0 bg-black/60 text-center flex items-center">
+        <div className="absolute inset-0 bg-black/10 text-center flex items-center">
           <div className="mx-auto max-w-6xl px-6 text-white">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
@@ -41,7 +46,7 @@ const WhatWeDo = () => {
         {[
           {
             title: "Food Donation – Narayana Seva",
-            img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
+            img: img1,
             desc:
               "Hunger weakens not only the body but also hope. Through Narayana Seva, we ensure that no one sleeps hungry.",
             points: [
@@ -53,7 +58,7 @@ const WhatWeDo = () => {
           },
           {
             title: "Scholarship & Educational Guidance",
-            img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
+            img: img2,
             desc:
               "Education is the most powerful tool for social mobility and empowerment.",
             points: [
@@ -65,7 +70,7 @@ const WhatWeDo = () => {
           },
           {
             title: "Health Awareness & Medical Support",
-            img: "https://images.unsplash.com/photo-1584515933487-779824d29309",
+            img: img3,
             desc:
               "Preventive healthcare and awareness save lives.",
             points: [
@@ -77,7 +82,7 @@ const WhatWeDo = () => {
           },
           {
             title: "Skill Development & Career Guidance",
-            img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
+            img: img4,
             desc:
               "Economic independence is key to long-term empowerment.",
             points: [
@@ -89,7 +94,7 @@ const WhatWeDo = () => {
           },
           {
             title: "Teachings of Great Leaders",
-            img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
+            img: img5,
             desc:
               "Values shape societies. Wisdom shapes generations.",
             points: [
@@ -99,18 +104,18 @@ const WhatWeDo = () => {
               "Promoting ethics and social responsibility",
             ],
           },
-          {
-            title: "Disaster Relief & Humanitarian Aid",
-            img: "https://images.unsplash.com/photo-1509099836639-18ba1795216d",
-            desc:
-              "In moments of crisis, timely support saves lives.",
-            points: [
-              "Emergency food, shelter, and medical aid",
-              "Rehabilitation and recovery support",
-              "Long-term community rebuilding",
-              "Disaster preparedness initiatives",
-            ],
-          },
+          // {
+          //   title: "Disaster Relief & Humanitarian Aid",
+          //   img: img6,
+          //   desc:
+          //     "In moments of crisis, timely support saves lives.",
+          //   points: [
+          //     "Emergency food, shelter, and medical aid",
+          //     "Rehabilitation and recovery support",
+          //     "Long-term community rebuilding",
+          //     "Disaster preparedness initiatives",
+          //   ],
+          // },
         ].map((item, index) => {
           const isEven = index % 2 === 0;
           
