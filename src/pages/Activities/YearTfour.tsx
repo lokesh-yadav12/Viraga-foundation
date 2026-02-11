@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Download, ZoomIn, ZoomOut } from 'lucide-react';
-import bgpic from '../../assets/bgpic.jpg';
+import bgpic from '../../assets/image1.png';
 import pic1 from '../../assets/image1.png';
 import pic2 from '../../assets/image2.png';
 // import hero from '../../assets/hero4.mp4';

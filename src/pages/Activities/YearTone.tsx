@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Download, ZoomIn, ZoomOut } from 'lucide-react';
 
 // Import your actual images
-import bgpic from '../../assets/bgpic.jpg';
+import bgpic from '../../assets/level4.png';
 // Foundation Inception Images
 import inception1 from '../../assets/i1.png';
 import inception2 from '../../assets/i2.png';

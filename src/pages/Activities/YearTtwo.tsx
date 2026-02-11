@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Download, ZoomIn, ZoomOut } from 'lucide-react';
 import img1 from '../../assets/cele1.png';
-import bgpic from '../../assets/bgpic.jpg';
+import bgpic from '../../assets/level3.png';
 import e1 from '../../assets/e1.png';
 import e2 from '../../assets/e2.png';
 import e3 from '../../assets/e3.png';		
