@@ -156,6 +156,9 @@ const Navbar: React.FC = () => {
                         <Link to="/about-logo" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
                           About Logo
                         </Link>
+                        <Link to="/volunteers" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                          Volunteers
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -232,6 +235,13 @@ const Navbar: React.FC = () => {
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           About Logo
+                        </Link>
+                         <Link 
+                          to="/volunteers" 
+                          className="block py-2 text-gray-600 hover:text-orange-500"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Volunteers
                         </Link>
                       </div>
                     )}

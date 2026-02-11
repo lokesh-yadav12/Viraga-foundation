@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Heart, MapPin, Mail, Phone } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Heart } from 'lucide-react';
 import logo from '../../assets/viragalogo1.png';
 
 interface LinkItem {

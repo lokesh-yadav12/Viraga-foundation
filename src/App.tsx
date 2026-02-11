@@ -20,6 +20,7 @@ import Year2022 from './pages/Activities/YearTtwo';
 import Year2025 from './pages/Activities/YearTfive';
 import Year2021 from './pages/Activities/YearTone';
 import VibrantFuturesPage from './components/home/VibrantFuturesPage';
+import Volunteer from './pages/Volunteer';
 
 
 // 🧭 Lazy-loaded pages
@@ -59,6 +60,7 @@ function App() {
 					<Route path="objectives" element={<Objectives />} />
 					<Route path="about-logo" element={<AboutLogo />} />
 					<Route path="administration" element={<Administration />} />
+					<Route path='volunteers' element={<Volunteer/>} />
 					<Route path="contactPage" element={<ContactPage />} />
 					<Route path="donation" element={<DonationsPage />} />
 					<Route path="yearly-reports" element={<YearlyReportsPage />} />
