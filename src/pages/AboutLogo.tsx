@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import img1 from '../assets/viraganew.png'
-import bgpic from '../assets/viragalogo.png'
+import img1 from '../assets/logoup.png'
+import bgpic from '../assets/logofinal.png'
 const AboutLogo = () => {
   return (
     <div className="bg-white">
@@ -9,7 +9,7 @@ const AboutLogo = () => {
         <img
           src={bgpic}
           alt="Service and spirituality"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
         />
         <div className="absolute inset-0 bg-black/30 flex items-center">
           <motion.div

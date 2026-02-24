@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import img1 from '../../assets/viragalogo.png';
+import img1 from '../../assets/logofinal.png';
 
 const About: React.FC = () => {
 	return (

@@ -1,8 +1,14 @@
 import { motion } from 'framer-motion';
-import { Heart, ArrowRight, HandHeart, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Heart, ArrowRight, HandHeart, Sparkles, Star } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const DonationCTA = () => {
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate('/vibrantfuture');
+	};
+
 	return (
 		<section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
 			<div className="max-w-7xl mx-auto">
@@ -99,7 +105,7 @@ const DonationCTA = () => {
 							Every rupee creates ripples of positive change in our community.
 						</motion.p>
 
-						{/* CTA Button */}
+						{/* CTA Buttons */}
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -171,6 +177,49 @@ const DonationCTA = () => {
 								<div className="text-gray-700 text-sm sm:text-base">Impact & Hope</div>
 							</motion.div>
 						</motion.div>
+
+						{/* Vibrant Future Button */}
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ duration: 0.7, delay: 0.9, ease: "easeOut" }}
+							className="mt-8"
+						>
+							<div className="flex items-center gap-4 mb-5">
+								<div className="flex-1 h-px bg-gradient-to-r from-transparent to-orange-200"></div>
+								<span className="text-gray-400 text-xs tracking-widest uppercase">Explore More</span>
+								<div className="flex-1 h-px bg-gradient-to-l from-transparent to-orange-200"></div>
+							</div>
+
+							<motion.button
+								onClick={handleClick}
+								whileHover={{ scale: 1.04, y: -3 }}
+								whileTap={{ scale: 0.97 }}
+								transition={{ duration: 0.25 }}
+								className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full font-semibold text-base sm:text-lg overflow-hidden border-2 border-orange-300 bg-white text-orange-600 shadow-lg hover:shadow-orange-200/60 hover:shadow-xl transition-all duration-300"
+							>
+								{/* Animated fill on hover */}
+								<motion.div
+									className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600"
+									initial={{ x: '-100%' }}
+									whileHover={{ x: 0 }}
+									transition={{ duration: 0.35 }}
+								></motion.div>
+
+								<span className="relative z-10 flex items-center gap-2 group-hover:text-gray-500 transition-colors duration-300">
+									<motion.span
+										animate={{ rotate: [0, 15, -10, 15, 0] }}
+										transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
+									>
+										<Star className="w-5 h-5 fill-current" />
+									</motion.span>
+									Explore Viraga's Vibrant Future
+									<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+								</span>
+							</motion.button>
+						</motion.div>
+
 					</div>
 				</motion.div>
 			</div>

@@ -112,8 +112,8 @@ const Administration = () => {
 						className="h-full w-full object-cover scale-110 animate-ken-burns"
 					/>
 					{/* Gradient Overlays */}
-					<div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-900/70 to-orange-900/60" />
-					<div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent" />
+					<div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-slate-900/40 to-orange-900/60" />
+					<div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
 				</div>
 
 				{/* Animated Geometric Shapes */}

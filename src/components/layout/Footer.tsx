@@ -41,10 +41,10 @@ const Footer: React.FC = () => {
 
 	const socialLinks: SocialLink[] = [
 		{ icon: <Facebook className="w-5 h-5" />, href: '#', label: 'Facebook', color: 'from-blue-600 to-blue-700' },
-		{ icon: <Twitter className="w-5 h-5" />, href: '#', label: 'Twitter', color: 'from-sky-500 to-sky-600' },
+		{ icon: <Twitter className="w-5 h-5" />, href: 'https://x.com/viraga2022?s=21', label: 'Twitter', color: 'from-sky-500 to-sky-600' },
 		{
 			icon: <Instagram className="w-5 h-5" />,
-			href: '#',
+			href: 'https://www.instagram.com/viragafoundation',
 			label: 'Instagram',
 			color: 'from-pink-600 to-purple-600',
 		},
