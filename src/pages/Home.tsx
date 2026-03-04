@@ -9,6 +9,7 @@ import DonationCTA from '@/components/home/DonationCTA';
 import ContactCTA from '@/components/home/ContactCTA';
 import ImageGallery from '@/components/home/ImageGallery';
 import About from '@/components/home/About';
+import TeluguContent from './TeluguContent';
 const Home = () => {
 //   const [showModal, setShowModal] = useState(true);
 	const [showSubscribeModal, setShowSubscribeModal] = useState(false);
@@ -52,6 +53,7 @@ const Home = () => {
       <InfoCards/>
 	  <DonationCTA/>
       <EducationProgrammeSection/>
+	  <TeluguContent/>
 	  <ContactCTA/>
       {/* <ViragaFoundation/> */}
      

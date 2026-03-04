@@ -21,6 +21,8 @@ import Year2025 from './pages/Activities/YearTfive';
 import Year2021 from './pages/Activities/YearTone';
 import VibrantFuturesPage from './components/home/VibrantFuturesPage';
 import Volunteer from './pages/Volunteer';
+import TeluguContent from './pages/TeluguContent';
+import Announcement from './pages/Announcement';
 
 
 // 🧭 Lazy-loaded pages
@@ -71,6 +73,7 @@ function App() {
 					<Route path="/activities/2022-2023" element={<Year2022 />} />
 					<Route path="/activities/2020-2021" element={<Year2021 />} />
 					 <Route path='/vibrantfuture' element={<VibrantFuturesPage />} />
+					 <Route path='/announcement' element={<Announcement />} />
 
 					{/* 🚫 Catch-all for invalid routes */}
 					{/* <Route path="*" element={<Navigate to="/404" replace />} /> */}

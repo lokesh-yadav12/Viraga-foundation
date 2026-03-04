@@ -1,0 +1,278 @@
+import React, { useEffect, useState } from 'react';
+
+const TeluguContent = () => {
+	const [visible, setVisible] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => setVisible(true), 100);
+	}, []);
+
+	const features = [
+		{ icon: '🎓', text: 'నిపుణుల మార్గదర్శకత్వం' },
+		{ icon: '📋', text: 'క్రమబద్ధమైన ప్రిపరేషన్ స్ట్రాటజీ' },
+		{ icon: '📚', text: 'సమగ్ర అధ్యయన పాఠ్యసామగ్రి' },
+		{ icon: '📊', text: 'పనితీరు విశ్లేషణ & మూల్యాంకనం' },
+		{ icon: '🚀', text: 'ప్రేరణ & కెరీర్ మార్గదర్శనం' },
+	];
+
+	const documents = [
+		'విద్యార్థి ఆధార్ ఫోటో కాపీ',
+		'తల్లిదండ్రుల ఆధార్ ఫోటో కాపీ',
+		'విద్యార్థి జనన తేదీ / కమ్యూనిటీ / ఆదాయ సర్టిఫికేట్ (ఫోటో కాపీ)',
+		'విద్యార్థి 2 పాస్‌పోర్ట్ సైజ్ ఫోటోలు',
+	];
+
+	return (
+		<div className="min-h-screen bg-white font-sans flex flex-col items-center">
+			<style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Tiro+Telugu&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap');
+
+        .telugu { font-family: 'Tiro Telugu', serif; }
+        .heading-font { font-family: 'Playfair Display', serif; }
+        .body-font { font-family: 'DM Sans', sans-serif; }
+
+        .fade-up {
+          opacity: 0;
+          transform: translateY(32px);
+          transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .fade-up.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+        .delay-6 { transition-delay: 0.6s; }
+
+        .glow-border {
+          box-shadow: 0 0 0 2px #f97316, 0 8px 32px rgba(249,115,22,0.15);
+        }
+
+        .date-card:hover {
+          transform: translateY(-4px) scale(1.03);
+          box-shadow: 0 12px 40px rgba(249,115,22,0.3);
+        }
+        .date-card { transition: all 0.3s ease; }
+
+        .feature-item:hover {
+          background: linear-gradient(135deg, #fff7ed, #ffedd5);
+          transform: translateX(6px);
+        }
+        .feature-item { transition: all 0.25s ease; }
+
+        .pulse-badge {
+          animation: pulse-glow 2s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(249,115,22,0.4); }
+          50% { box-shadow: 0 0 0 10px rgba(249,115,22,0); }
+        }
+
+        .shimmer {
+          background: linear-gradient(135deg, #ea580c 0%, #f97316 40%, #fb923c 60%, #ea580c 100%);
+          background-size: 200% 200%;
+          animation: shimmer-anim 3s ease infinite;
+        }
+        @keyframes shimmer-anim {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `}</style>
+
+			{/* Hero Header — full 7xl width */}
+			<div className="shimmer text-white relative overflow-hidden w-full max-w-7xl rounded-2xl">
+				<div
+					className="absolute inset-0 opacity-10"
+					style={{
+						backgroundImage:
+							'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)',
+						backgroundSize: '60px 60px',
+					}}
+				/>
+				<div className="relative w-full px-12 py-14 text-center">
+					<div className={`fade-up ${visible ? 'visible' : ''}`}>
+						<div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 body-font text-sm font-medium tracking-wide">
+							<span className="w-2 h-2 bg-yellow-300 rounded-full pulse-badge inline-block" />
+							NEW BATCH REGISTRATION OPEN
+						</div>
+					</div>
+
+					<div className={`fade-up delay-1 ${visible ? 'visible' : ''}`}>
+						<h1 className="heading-font text-5xl md:text-6xl font-black leading-tight mb-2 drop-shadow-lg">
+							Viraga's Vibrant Future
+						</h1>
+						<p className="heading-font text-2xl md:text-3xl font-bold italic text-orange-100 mb-4">
+							Transforming Lives
+						</p>
+					</div>
+
+					<div className={`fade-up delay-2 ${visible ? 'visible' : ''}`}>
+						<p className="telugu text-lg text-orange-100 leading-relaxed max-w-2xl mx-auto">
+							జాతీయ స్థాయి ప్రవేశ పరీక్షలకు సిద్ధమవుతున్న మా కొత్త బ్యాచ్ అభ్యర్థుల కోసం రిజిస్ట్రేషన్
+							కార్యక్రమాన్ని ప్రకటించడం మా ఆనందంగా ఉంది.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			{/* Main Content — 7xl column */}
+			<div className="w-full max-w-7xl mx-auto px-6 md:px-12 py-10 space-y-8 flex flex-col items-center">
+
+				{/* Registration Dates */}
+				<div className={`fade-up delay-2 ${visible ? 'visible' : ''} w-full`}>
+					<h2 className="body-font text-xs font-semibold uppercase tracking-widest text-orange-400 mb-4 flex items-center gap-2">
+						<span className="h-px flex-1 bg-orange-200" />
+						📅 రిజిస్ట్రేషన్ తేదీలు
+						<span className="h-px flex-1 bg-orange-200" />
+					</h2>
+					<div className="grid grid-cols-2 gap-6">
+						{[
+							{ day: '03', month: 'మార్చి', year: '2026', label: 'Day 1' },
+							{ day: '08', month: 'మార్చి', year: '2026', label: 'Day 2' },
+						].map((d, i) => (
+							<div
+								key={i}
+								className="date-card bg-white rounded-2xl p-8 text-center glow-border cursor-default"
+							>
+								<div className="body-font text-xs text-orange-400 font-semibold uppercase tracking-widest mb-1">
+									{d.label}
+								</div>
+								<div className="heading-font text-6xl font-black text-orange-600 leading-none">
+									{d.day}
+								</div>
+								<div className="telugu text-xl text-gray-700 font-medium mt-2">
+									{d.month} {d.year}
+								</div>
+								<div className="mt-3 w-12 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mx-auto" />
+							</div>
+						))}
+					</div>
+				</div>
+
+				{/* Venue */}
+				<div className={`fade-up delay-3 ${visible ? 'visible' : ''} w-full`}>
+					<div className="bg-white rounded-2xl p-8 border border-orange-100 shadow-sm">
+						<div className="flex items-start gap-6">
+							<div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+								{/* 📍 */}
+							</div>
+							<div>
+								<div className="body-font text-xs font-semibold uppercase tracking-widest text-orange-400 mb-1">
+									వేదిక / చిరునామా
+								</div>
+								<div className="telugu text-gray-800 leading-relaxed text-lg">
+									<span className="font-bold text-orange-700">విరాగా ఫౌండేషన్</span>
+									<br />
+									కల్పతరు, సెక్టార్ 5,
+									<br />
+									లోటస్ ల్యాండ్ మార్క్, అయోధ్య నగర్,
+									<br />
+									విజయవాడ - 03
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{/* Program Goal */}
+				<div className={`fade-up delay-3 ${visible ? 'visible' : ''} w-full`}>
+					<div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border border-orange-100 text-center">
+						<p className="telugu text-gray-700 leading-9 text-lg">
+							ప్రస్తుతం <span className="font-bold text-orange-600 text-xl">4వ తరగతి</span> చదువుతున్న
+							విద్యార్థులను <span className="font-bold text-orange-600 text-xl">6వ తరగతి</span> జాతీయ
+							స్థాయి పోటీ పరీక్షల్లో ప్రతిభ కనబరచేలా శక్తివంతం చేయడం మరియు మార్గనిర్దేశం చేయడం ఈ
+							కార్యక్రమం లక్ష్యం.
+						</p>
+					</div>
+				</div>
+
+				{/* Features */}
+				<div className={`fade-up delay-4 ${visible ? 'visible' : ''} w-full`}>
+					<h2 className="body-font text-xs font-semibold uppercase tracking-widest text-orange-400 mb-4 flex items-center gap-2">
+						<span className="h-px flex-1 bg-orange-200" />
+						మీరు పొందేవి
+						<span className="h-px flex-1 bg-orange-200" />
+					</h2>
+					<div className="grid grid-cols-2 gap-4">
+						{features.map((f, i) => (
+							<div key={i} className="feature-item flex items-center gap-5 px-8 py-5 cursor-default bg-white rounded-2xl border border-orange-100 shadow-sm">
+								<span className="text-3xl">{f.icon}</span>
+								<span className="telugu text-gray-800 font-medium text-lg">{f.text}</span>
+								<span className="ml-auto text-orange-300 text-xl">›</span>
+							</div>
+						))}
+					</div>
+				</div>
+
+				{/* CTA Banner */}
+				<div className={`fade-up delay-5 ${visible ? 'visible' : ''} w-full`}>
+					<div className="shimmer rounded-2xl p-10 text-white text-center relative overflow-hidden">
+						<div className="absolute -top-4 -right-4 w-32 h-32 bg-white/10 rounded-full" />
+						<div className="absolute -bottom-6 -left-6 w-40 h-40 bg-white/10 rounded-full" />
+						<div className="relative">
+							<div className="text-4xl mb-3">⭐</div>
+							<p className="telugu text-xl font-bold leading-relaxed mb-1">
+								విరాగా తో కలిసి మరింత ప్రకాశవంతమైన,
+							</p>
+							<p className="telugu text-xl font-bold leading-relaxed mb-5">
+								వైభవమైన భవిష్యత్తు వైపు మొదటి అడుగు వేయండి!
+							</p>
+							<div className="inline-flex items-center hover:text-black hover:bg-white gap-2 bg-white text-orange-400 rounded-full px-8 py-3 body-font font-bold text-sm pulse-badge">
+								📌 సీట్లు పరిమితంగా ఉన్నాయి – ముందస్తు రిజిస్ట్రేషన్ చేయండి
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{/* Required Documents */}
+				<div className={`fade-up delay-5 ${visible ? 'visible' : ''} w-full`}>
+					<h2 className="body-font text-xs font-semibold uppercase tracking-widest text-orange-400 mb-4 flex items-center gap-2">
+						<span className="h-px flex-1 bg-orange-200" />
+						అవసరమైన పత్రాలు
+						<span className="h-px flex-1 bg-orange-200" />
+					</h2>
+					<div className="bg-white rounded-2xl p-8 grid grid-cols-2 border border-orange-100 shadow-sm space-y-4">
+						{documents.map((doc, i) => (
+							<div key={i} className="flex items-center gap-4">
+								<div className="w-7 h-7 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+									<span className="text-orange-600 text-xs font-bold">{i + 1}</span>
+								</div>
+								<span className="telugu text-gray-700 leading-relaxed text-base">{doc}</span>
+							</div>
+						))}
+					</div>
+				</div>
+
+				{/* Contact CTA */}
+				<div className={`fade-up delay-6 ${visible ? 'visible' : ''} w-full`}>
+					<div className="bg-orange-50 rounded-2xl p-7 border border-orange-100 text-center">
+						<p className="telugu text-gray-600 mb-3 text-base">మరిన్ని వివరాలు మరియు ప్రవేశ సమాచారం కోసం</p>
+						<button className="shimmer text-white body-font font-semibold px-10 py-3.5 rounded-full shadow-lg hover:scale-105 transition-transform duration-200">
+							ఈరోజే మమ్మల్ని సంప్రదించండి →
+						</button>
+					</div>
+				</div>
+
+				{/* Footer */}
+				<div className={`fade-up delay-6 ${visible ? 'visible' : ''} text-center pb-6 w-full`}>
+					<div className="heading-font text-3xl font-bold text-orange-600 mb-1">Viraga Foundation</div>
+					<div className="telugu text-gray-400 text-sm">ధన్యవాదాలతో, విరాగా టీమ్</div>
+					<div className="flex justify-center gap-2 mt-3">
+						{['●', '●', '●'].map((d, i) => (
+							<span key={i} className={`text-xs ${i === 1 ? 'text-orange-400' : 'text-orange-200'}`}>
+								{d}
+							</span>
+						))}
+					</div>
+				</div>
+
+			</div>
+		</div>
+	);
+};
+
+export default TeluguContent;
