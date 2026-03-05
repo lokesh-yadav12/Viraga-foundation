@@ -197,7 +197,7 @@ const TeluguContent = () => {
 						మీరు పొందేవి
 						<span className="h-px flex-1 bg-orange-200" />
 					</h2>
-					<div className="grid grid-cols-2 gap-4">
+					<div className="grid sm:grid-cols-2 gap-4">
 						{features.map((f, i) => (
 							<div key={i} className="feature-item flex items-center gap-5 px-8 py-5 cursor-default bg-white rounded-2xl border border-orange-100 shadow-sm">
 								<span className="text-3xl">{f.icon}</span>
@@ -214,14 +214,14 @@ const TeluguContent = () => {
 						<div className="absolute -top-4 -right-4 w-32 h-32 bg-white/10 rounded-full" />
 						<div className="absolute -bottom-6 -left-6 w-40 h-40 bg-white/10 rounded-full" />
 						<div className="relative">
-							<div className="text-4xl mb-3">⭐</div>
+							{/* <div className="text-4xl mb-3">⭐</div> */}
 							<p className="telugu text-xl font-bold leading-relaxed mb-1">
 								విరాగా తో కలిసి మరింత ప్రకాశవంతమైన,
 							</p>
 							<p className="telugu text-xl font-bold leading-relaxed mb-5">
 								వైభవమైన భవిష్యత్తు వైపు మొదటి అడుగు వేయండి!
 							</p>
-							<div className="inline-flex items-center hover:text-black hover:bg-white gap-2 bg-white text-orange-400 rounded-full px-8 py-3 body-font font-bold text-sm pulse-badge">
+							<div className="inline-flex items-center text-white hover:text-black hover:bg-white gap-2 bg-orange-300  rounded-full px-8 py-3 body-font font-bold text-sm ">
 								📌 సీట్లు పరిమితంగా ఉన్నాయి – ముందస్తు రిజిస్ట్రేషన్ చేయండి
 							</div>
 						</div>
@@ -235,7 +235,7 @@ const TeluguContent = () => {
 						అవసరమైన పత్రాలు
 						<span className="h-px flex-1 bg-orange-200" />
 					</h2>
-					<div className="bg-white rounded-2xl p-8 grid grid-cols-2 border border-orange-100 shadow-sm space-y-4">
+					<div className="bg-white rounded-2xl p-8 grid sm:grid-cols-2 border border-orange-100 shadow-sm space-y-4">
 						{documents.map((doc, i) => (
 							<div key={i} className="flex items-center gap-4">
 								<div className="w-7 h-7 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">

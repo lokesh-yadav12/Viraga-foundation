@@ -21,7 +21,7 @@ import Year2025 from './pages/Activities/YearTfive';
 import Year2021 from './pages/Activities/YearTone';
 import VibrantFuturesPage from './components/home/VibrantFuturesPage';
 import Volunteer from './pages/Volunteer';
-import TeluguContent from './pages/TeluguContent';
+//import TeluguContent from './pages/TeluguContent';
 import Announcement from './pages/Announcement';
 
 
