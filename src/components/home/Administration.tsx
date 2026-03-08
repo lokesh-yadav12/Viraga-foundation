@@ -188,23 +188,23 @@ const Administration = () => {
 								<div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-orange-500/5 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
 								{/* Card Content */}
-								<div className="relative flex flex-col sm:flex-row gap-4 p-6">
+								<div className="relative flex flex-row gap-4 p-6">
 									{/* Image Section */}
-									<div className="flex justify-center sm:justify-start shrink-0">
+									<div className="flex justify-center sm:mx-2 sm:px-5 px-4 sm:justify-start shrink-0">
 										<div className="relative">
 											{/* Decorative Ring */}
 											<div className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-500/20 to-blue-500/20 blur-md scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
 											{/* Image Container */}
 											<div className="relative">
-												<img
+												{/* <img
 													src={member.image}
 													alt={member.name}
 													className="h-32 w-32 rounded-2xl object-cover border-4 border-slate-100 group-hover:border-orange-500/30 transition-all duration-500 group-hover:scale-105 group-hover:rotate-2"
-												/>
+												/> */}
 
 												{/* Role Badge */}
-												<div className="absolute -bottom-3 -right-3 p-2.5 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl shadow-lg shadow-orange-500/30 transform group-hover:scale-110 transition-transform duration-300">
+												<div className="absolute  p-2 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl shadow-lg shadow-orange-500/30 transform group-hover:scale-110 transition-transform duration-300">
 													{getRoleIcon(member.role)}
 													<span className="text-white" />
 												</div>

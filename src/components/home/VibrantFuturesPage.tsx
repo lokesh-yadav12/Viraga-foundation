@@ -1,6 +1,6 @@
 import { motion, Variants } from 'framer-motion';
 // import { useState } from 'react';
-import bgpic from '../../assets/bgpic.jpg';
+import bgpic from '../../assets/e12.png';
 
 const VibrantFuturesPage = () => {
 	//const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -80,8 +80,8 @@ const VibrantFuturesPage = () => {
 						transition={{ duration: 0.8, delay: 0.3 }}
 						className="text-center"
 					>
-						<h1 className="text-5xl md:text-7xl font-bold text-white tracking-wider mb-4">
-							VIBRANT FUTURES
+						<h1 className="text-3xl md:text-5xl font-bold text-white tracking-wider mb-4">
+							VIBRANT FUTURES—TRANSFORMING LIVES
 						</h1>
 						<motion.div
 							initial={{ width: 0 }}
@@ -359,7 +359,7 @@ const VibrantFuturesPage = () => {
 				</motion.div>
 
 				{/* Project Cost */}
-				<motion.div
+				{/* <motion.div
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true, margin: '-100px' }}
@@ -441,7 +441,7 @@ const VibrantFuturesPage = () => {
 							</div>
 						</motion.div>
 					</motion.div>
-				</motion.div>
+				</motion.div> */}
 
 				{/* Video Section */}
 				<motion.div

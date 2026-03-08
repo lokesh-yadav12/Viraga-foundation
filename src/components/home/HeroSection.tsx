@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 //import { ChevronLeft, ChevronRight } from 'lucide-react';
-import img1 from '../../assets/do1.png'
-import img2 from '../../assets/i4.png'
-import img3 from '../../assets/f2.png';
-import img4 from '../../assets/level3.png'
-import img5 from '../../assets/i7.png'
-import img6 from '../../assets/fd4.png'
+import img1 from '../../assets/home1.jpeg'
+import img2 from '../../assets/home2.jpeg'
+//import img3 from '../../assets/home2.jpeg';
+import img4 from '../../assets/home4.jpeg'
+//import img5 from '../../assets/home5.jpeg'
+import img6 from '../../assets/home6.jpeg'
+import img7 from '../../assets/home11.jpg'
+import img8 from '../../assets/home8.jpeg'
+import img9 from '../../assets/home9.jpeg'
+import img10 from '../../assets/home10.jpg'
 interface Slide {
 	id: number;
 	image: string;
@@ -19,46 +23,70 @@ const HeroSection: React.FC = () => {
 
 	const slides: Slide[] = [
 		{
-			id: 1,
-			// image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&h=1080&fit=crop',
-			image: img1,
-			heading: 'Empowering Communities Together',
-			content: 'Join us in making a difference through compassion and dedication to serve humanity',
-		},
-		{
-			id: 2,
-			// image: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1920&h=1080&fit=crop',
-			image: img2,
-			heading: 'Building a Better Tomorrow',
-			content: 'Creating sustainable solutions for communities in need across the nation',
-		},
-		{
-			id: 3,
-			// image: 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1920&h=1080&fit=crop',
-			image: img4,
-			heading: 'Education for All',
-			content: 'Providing quality education and resources to underprivileged children',
-		},
-		{
-			id: 4,
-			// image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1920&h=1080&fit=crop',
-			image: img3,
-			heading: 'Healthcare Initiatives',
-			content: 'Delivering essential healthcare services to remote and underserved areas',
-		},
-		{
-			id: 5,
-			image: img6,
-			heading: 'Women Empowerment',
-			content: 'Supporting women through skill development and entrepreneurship programs',
-		},
-		{
-			id: 6,
-			image: img5,
-			heading: 'Environmental Conservation',
-			content: 'Protecting our planet through sustainable practices and awareness campaigns',
-		},
-	];
+        id: 9,
+        image: img9,
+        heading: 'Child Leadership Programs',
+        content: 'Nurturing the next generation of changemakers through mentorship and training',
+    },
+    {
+        id: 1,
+        image: img1,
+        heading: 'Empowering Communities Together',
+        content: 'Join us in making a difference through compassion and dedication to serve humanity',
+    },
+	 {
+        id: 7,
+        image: img7,
+        heading: 'Dedicated Team of Volunteers',
+        content: 'Ensuring every contribution is maximized to create lasting impact in the communities we serve',
+    },
+	
+    {
+        id: 2,
+        image: img2,
+        heading: 'Building a Better Tomorrow',
+        content: 'Creating sustainable solutions for communities in need across the nation',
+    },
+    {
+        id: 3,
+        image: img4,
+        heading: 'Education for All',
+        content: 'Providing quality education and resources to underprivileged children',
+    },
+   
+    {
+        id: 5,
+        image: img6,
+        heading: 'Women Empowerment',
+        content: 'Supporting women through skill development and entrepreneurship programs',
+    },
+    {
+        id: 6,
+        image: img9,
+        heading: 'Environmental Conservation',
+        content: 'Protecting our planet through sustainable practices and awareness campaigns',
+    },
+   
+    {
+        id: 8,
+        image: img8,
+        heading: 'Online teaching and learning',
+        content: 'Bridging the digital divide by providing online education resources to remote areas',
+    },
+	//  {
+    //     id: 4,
+    //     image: img3,
+    //     heading: 'Healthcare Initiatives',
+    //     content: 'Delivering essential healthcare services to remote and underserved areas',
+    // },
+    
+    {
+        id: 10,
+        image: img10,
+        heading: 'Our mission ',
+        content: 'To empower underprivileged communities through education, healthcare, and sustainable development initiatives, fostering a brighter future for all.',
+    },
+];
 
 	useEffect(() => {
 		const timer = setInterval(() => {
