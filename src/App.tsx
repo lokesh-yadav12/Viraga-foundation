@@ -23,6 +23,7 @@ import VibrantFuturesPage from './components/home/VibrantFuturesPage';
 import Volunteer from './pages/Volunteer';
 //import TeluguContent from './pages/TeluguContent';
 import Announcement from './pages/Announcement';
+import Extra from './pages/Activities/Extra';
 
 
 // 🧭 Lazy-loaded pages
@@ -68,10 +69,11 @@ function App() {
 					<Route path="yearly-reports" element={<YearlyReportsPage />} />
 					<Route path="activities/*" element={<ActivitiesPage />} />
 					<Route path="/activities/2025-2026" element={<Year2025 />} />
-					<Route path="/activities/2024-2025" element={<Year2024 />} />
-					<Route path="/activities/2023-2024" element={<Year2023 />} />
-					<Route path="/activities/2022-2023" element={<Year2022 />} />
-					<Route path="/activities/2020-2021" element={<Year2021 />} />
+					<Route path="/activities/closingceremony" element={<Year2024 />} />
+					<Route path="/activities/guestlecture" element={<Year2023 />} />
+					<Route path="/activities/prizedistribution" element={<Year2022 />} />
+					<Route path="/activities/other-activity" element={<Year2021 />} />
+					<Route path='/activities/registration' element={<Extra />} />
 					 <Route path='/vibrantfuture' element={<VibrantFuturesPage />} />
 					 <Route path='/announcement' element={<Announcement />} />
 

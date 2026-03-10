@@ -240,7 +240,7 @@ const Year2021: React.FC = () => {
 				{/* <div className="absolute inset-0 bg-gradient-to-r from-purple-900/40 via-pink-800/30 to-orange-700/40"></div> */}
 				<div className="relative z-10 text-center">
 					<h1 className="text-white text-5xl sm:text-7xl font-bold tracking-wider drop-shadow-2xl mb-4 animate-fade-in">
-						2020-2021
+						All Other Activities
 					</h1>
 					<div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
 				</div>

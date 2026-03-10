@@ -1,13 +1,38 @@
 import React, { useState } from 'react';
 import { Download, ZoomIn, ZoomOut } from 'lucide-react';
-import bgpic from '../../assets/image1.png';
-import pic1 from '../../assets/image1.png';
-import pic2 from '../../assets/image2.png';
+import bgpic from '../../assets/closing10.jpeg';
+// import pic1 from '../../assets/image1.png';
+// import pic2 from '../../assets/image2.png';
 // import hero from '../../assets/hero4.mp4';
-import vi1 from '../../assets/vi1.png';
-import vi2 from '../../assets/vi2.png';
-import vi3 from '../../assets/vi3.png';
-
+// import vi1 from '../../assets/vi1.png';
+// import vi2 from '../../assets/vi2.png';
+// import vi3 from '../../assets/vi3.png';
+import closing1 from '../../assets/closing1.jpeg';
+import closing2 from '../../assets/closing2.jpeg';
+import closing3 from '../../assets/closing3.jpeg';
+import closing4 from '../../assets/closing4.jpeg';
+import closing5 from '../../assets/closing5.jpeg';
+import closing6 from '../../assets/closing6.jpeg';
+import closing7 from '../../assets/closing7.jpeg';
+import closing8 from '../../assets/closing8.jpeg';
+import closing9 from '../../assets/closing9.jpeg';
+import closing10 from '../../assets/closing10.jpeg';
+import closing11 from '../../assets/closing11.jpeg';
+import closing12 from '../../assets/closing12.jpeg';
+import closing13 from '../../assets/closing13.jpeg';
+import closing14 from '../../assets/closing14.jpeg';
+import closing15 from '../../assets/closing15.jpeg';
+import closing16 from '../../assets/closing16.jpeg';
+import closing17 from '../../assets/closing17.jpeg';
+import closing18 from '../../assets/closing18.jpeg';
+import closing19 from '../../assets/closing19.jpeg';
+import closing20 from '../../assets/closing20.jpeg';
+import closing21 from '../../assets/closing21.jpeg';
+import closing22 from '../../assets/closing22.jpeg';
+import closing23 from '../../assets/closing23.jpeg';
+import closing24 from '../../assets/closing24.jpeg';
+import closing25 from '../../assets/closing25.jpeg';
+//import closing26 from '../../assets/closing26.jpeg';
 interface ImageData {
 	src: string;
 	alt: string;
@@ -21,29 +46,109 @@ const Year2024: React.FC = () => {
 
 	const images: ImageData[] = [
 		{
-			src: pic1,
+			src: closing1,
 			alt: 'Distribution Image 1',
 		},
 		{
-			src: pic2,
+			src: closing2,
 			alt: 'Distribution Image 2',
 		},
 		{
-			src: vi1,
+			src: closing3,
 			alt: 'Distribution Image 3',
 		},
 		{
-			src: vi2,
+			src: closing4,
 			alt: 'Distribution Image 4',
 		},
 		{
-			src: vi3,
+			src: closing5,
 			alt: 'Distribution Image 5',
 		},
 		{
-			src: pic2,
+			src: closing6,
 			alt: 'Distribution Image 6',
 		},
+		{
+			src: closing7,
+			alt: 'Distribution Image 7',
+		},	
+		{
+			src: closing8,
+			alt: 'Distribution Image 8',
+		},	
+		{
+			src: closing9,
+			alt: 'Distribution Image 9',
+		},
+		{
+			src: closing10,	
+			alt: 'Distribution Image 10',
+		},
+		{
+			src: closing11,
+			alt: 'Distribution Image 11',
+		},
+		{
+			src: closing12,
+			alt: 'Distribution Image 12',
+		},
+		{
+			src: closing13,
+			alt: 'Distribution Image 13',
+		},
+		{
+			src: closing14,
+			alt: 'Distribution Image 14',
+		},
+		{
+			src: closing15,
+			alt: 'Distribution Image 15',
+		},
+		{
+			src: closing16,
+			alt: 'Distribution Image 16',
+		},
+		{
+			src: closing17,
+			alt: 'Distribution Image 17',
+		},
+		{
+			src: closing18,
+			alt: 'Distribution Image 18',
+		},
+		{
+			src: closing19,
+			alt: 'Distribution Image 19',
+		},
+		{
+			src: closing20,
+			alt: 'Distribution Image 20',
+		},
+		{
+			src: closing21,
+			alt: 'Distribution Image 21',
+		},
+		{
+			src: closing22,
+			alt: 'Distribution Image 22',
+		},
+		{
+			src: closing23,
+			alt: 'Distribution Image 23',
+		},
+		{
+			src: closing24,
+			alt: 'Distribution Image 24',
+		},
+		{
+			src: closing25,
+			alt: 'Distribution Image 25',
+		},
+		// {
+		// 	src: closing26,
+		// 	alt: 'Distribution Image 26',
+		// }
 	];
 
 	const openLightbox = (index: number): void => {
@@ -134,7 +239,7 @@ const Year2024: React.FC = () => {
 			>
 				{/* <div className="absolute inset-0 bg-gradient-to-r from-pink-400/60 via-purple-400/60 to-pink-300/60"></div> */}
 				<h1 className="relative text-4xl md:text-6xl font-bold text-white tracking-tight drop-shadow-2xl">
-					2024-2025
+					V F T L Closing Ceremony
 				</h1>
 			</div>
 
@@ -142,7 +247,25 @@ const Year2024: React.FC = () => {
 			<div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 py-12">
 				{/* Video Section */}
 				{/* Video Section */}
-				<section className="mb-16">
+				
+
+				{/* Image Gallery */}
+				<section>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+						{images.map((image, index) => (
+							<div
+								key={index}
+								className="relative overflow-hidden rounded-lg cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+								onClick={() => openLightbox(index)}
+							>
+								<img src={image.src} alt={image.alt} className="w-full h-72 object-cover" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+							</div>
+						))}
+					</div>
+				</section>
+
+				<section className="my-16">
 					<h2 className="text-2xl md:text-3xl font-bold text-red-800 mb-8">
 						Food Distribution Provisions Cloths - 15-09-2024
 					</h2>
@@ -228,7 +351,7 @@ const Year2024: React.FC = () => {
 						<span className="font-semibold text-gray-900">fancy items</span> were also distributed to help
 						families regain a sense of normalcy.
 					</p>
-					<p className="text-justify leading-relaxed text-sm">
+					<p className="text-justify leading-relaxed text-md py-4">
 						This relief effort reflects{' '}
 						<span className="font-semibold text-gray-900">
 							Viraga Foundation's commitment to humanitarian aid
@@ -240,7 +363,7 @@ const Year2024: React.FC = () => {
 				</div>
 
 				{/* Mathematics Section */}
-				<section className="mb-16 mt-12">
+				{/* <section className="mb-16 mt-12">
 					<h2 className="text-3xl font-bold text-red-600 mb-4">
 						Distribution of Mathematics Handbooks – Supporting Needy Students in Government Schools
 					</h2>
@@ -325,23 +448,7 @@ const Year2024: React.FC = () => {
 							</span>
 						</p>
 					</div>
-				</section>
-
-				{/* Image Gallery */}
-				<section>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-						{images.map((image, index) => (
-							<div
-								key={index}
-								className="relative overflow-hidden rounded-lg cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-								onClick={() => openLightbox(index)}
-							>
-								<img src={image.src} alt={image.alt} className="w-full h-72 object-cover" />
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
-							</div>
-						))}
-					</div>
-				</section>
+				</section> */}
 			</div>
 
 			{/* Lightbox */}

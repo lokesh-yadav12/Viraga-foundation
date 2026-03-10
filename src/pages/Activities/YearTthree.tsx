@@ -1,12 +1,31 @@
 import React, { useState } from 'react';
-import bgpic from '../../assets/orphan1.png'
-import do1 from '../../assets/do1.png';
-import do2 from '../../assets/do2.png';
-import do3 from '../../assets/do3.png';
-import do4 from '../../assets/do4.png';
-import do5 from '../../assets/do5.png';
-import do6 from '../../assets/do6.png';
-import do7 from '../../assets/do7.png';
+import bgpic from '../../assets/guest2.jpeg'
+// import do1 from '../../assets/do1.png';
+// import do2 from '../../assets/do2.png';
+// import do3 from '../../assets/do3.png';
+// import do4 from '../../assets/do4.png';
+// import do5 from '../../assets/do5.png';
+// import do6 from '../../assets/do6.png';
+// import do7 from '../../assets/do7.png';
+import guest1 from '../../assets/guest1.jpeg';
+import guest2 from '../../assets/guest2.jpeg';
+import guest3 from '../../assets/guest3.jpeg';
+import guest4 from '../../assets/guest4.jpeg';
+import guest5 from '../../assets/guest5.jpeg';
+import guest6 from '../../assets/guest6.jpeg';
+import guest7 from '../../assets/guest7.jpeg';
+import guest8 from '../../assets/guest8.jpeg';
+import guest9 from '../../assets/guest9.jpeg';
+import guest10 from '../../assets/guest10.jpeg';
+import guest11 from '../../assets/guest11.jpeg';
+import guest12 from '../../assets/guest12.jpeg';
+import guest13 from '../../assets/guest13.jpeg';
+import guest14 from '../../assets/guest14.jpeg';
+import guest15 from '../../assets/guest15.jpeg';
+import guest16 from '../../assets/guest16.jpeg';
+import guest17 from '../../assets/guest17.jpeg';
+import guest18 from '../../assets/guest18.jpeg';
+import guest19 from '../../assets/guest19.jpeg';
 interface ImageData {
   src: string;
   alt: string;
@@ -18,33 +37,81 @@ const Year2023: React.FC = () => {
 
   const images: ImageData[] = [
     {
-      src: do1,
+      src: guest1,
       alt: 'Orphanage Image 1',
     },
     {
-      src: do2,
+      src: guest2,
       alt: 'Orphanage Image 2',
     },
     {
-      src: do3,
+      src: guest3,
       alt: 'Orphanage Image 3',
     },
     {
-      src: do4,
+      src: guest4,
       alt: 'Orphanage Image 4',
     },
     {
-      src: do5,
+      src: guest5,
       alt: 'Orphanage Image 5',
     },
     {
-      src: do6,
+      src: guest6,
       alt: 'Orphanage Image 6',
     },
      {
-      src: do7,
+      src: guest7,
       alt: 'Orphanage Image 7',
     },
+      {
+      src: guest8,
+      alt: 'Orphanage Image 8',
+    },
+      {
+      src: guest9,
+      alt: 'Orphanage Image 9',
+    },
+      {
+      src: guest10,
+      alt: 'Orphanage Image 10',
+    },
+      {
+      src: guest11,
+      alt: 'Orphanage Image 11',
+    },
+      {
+      src: guest12,
+      alt: 'Orphanage Image 12',
+    },
+      {
+      src: guest13,
+      alt: 'Orphanage Image 13',
+    },
+      {
+      src: guest14,
+      alt: 'Orphanage Image 14',
+    },
+      {
+      src: guest15,
+      alt: 'Orphanage Image 15',
+    },
+      {
+      src: guest16,
+      alt: 'Orphanage Image 16',
+    },
+      {
+      src: guest17,
+      alt: 'Orphanage Image 17',
+    },
+      {
+      src: guest18,
+      alt: 'Orphanage Image 18',
+    },
+      {
+      src: guest19,
+      alt: 'Orphanage Image 19',
+    }
   ];
 
   const openLightbox = (index: number): void => {
@@ -98,7 +165,7 @@ const Year2023: React.FC = () => {
       >
         {/* <div className="absolute inset-0 bg-gradient-to-r from-pink-400/60 via-purple-400/60 to-pink-300/60"></div> */}
         <h1 className="relative text-4xl md:text-7xl font-bold text-white tracking-tight drop-shadow-2xl">
-          2023-2024
+          V F T L Guest Lectures
         </h1>
       </div>
 
@@ -106,12 +173,12 @@ const Year2023: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Food Donation Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          {/* <h2 className="text-3xl font-bold text-gray-900 mb-8">
             Food Donation Drive at Ferry Orphanage –
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-8">
-            {/* Main Image */}
+         
             <div
               className="relative overflow-hidden rounded-lg cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300"
               onClick={() => openLightbox(0)}
@@ -124,7 +191,7 @@ const Year2023: React.FC = () => {
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
             </div>
 
-            {/* Text Content */}
+           
             <div className="space-y-4 text-gray-700">
               <p className="text-justify leading-relaxed">
                 On <span className="font-semibold text-gray-900">May 2, 2023</span>, as part of the{' '}
@@ -145,7 +212,6 @@ const Year2023: React.FC = () => {
             </div>
           </div>
 
-          {/* Bottom Text */}
           <div className="space-y-4 text-gray-700 mb-8">
             <p className="text-justify leading-relaxed">
               To honour her memory, the foundation{' '}
@@ -172,7 +238,7 @@ const Year2023: React.FC = () => {
               </span>
               .
             </p>
-          </div>
+          </div> */}
 
           {/* Image Gallery */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

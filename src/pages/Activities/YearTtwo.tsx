@@ -1,38 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Download, ZoomIn, ZoomOut } from 'lucide-react';
 import img1 from '../../assets/cele1.png';
-import bgpic from '../../assets/level3.png';
-import e1 from '../../assets/e1.png';
-import e2 from '../../assets/e2.png';
-import e3 from '../../assets/e3.png';		
-import e4 from '../../assets/e4.png';
-import e5 from '../../assets/e5.png';
-import e6 from '../../assets/e6.png';
-import e7 from '../../assets/e7.png';
-import e8 from '../../assets/e8.png';
-import e9 from '../../assets/e9.png';
-import e10 from '../../assets/e10.png';
-import e11 from '../../assets/e11.png';
-import e12 from '../../assets/e12.png';
-import e13 from '../../assets/e13.png';
-import e14 from '../../assets/e14.png';
-import e15 from '../../assets/e15.png';
-import e16 from '../../assets/e16.png';
-import e17 from '../../assets/e17.png';
-import e18 from '../../assets/e18.png';
-import e19 from '../../assets/e19.png';
-import e20 from '../../assets/e20.png';
-import e21 from '../../assets/e21.png';
-import e22 from '../../assets/e22.png';
-import e23 from '../../assets/e23.png';
-import e24 from '../../assets/e24.png';
-import e25 from '../../assets/e25.png';
-import e26 from '../../assets/e26.png';
-import e27 from '../../assets/e27.png';
-import e28 from '../../assets/e28.png';
-import e29 from '../../assets/e29.png';
-import e30 from '../../assets/e30.png';
-import e31 from '../../assets/e31.png';
+import bgpic from '../../assets/prize2.jpeg';
+// import e1 from '../../assets/e1.png';
+// import e2 from '../../assets/e2.png';
+// import e3 from '../../assets/e3.png';		
+// import e4 from '../../assets/e4.png';
+// import e5 from '../../assets/e5.png';
+// import e6 from '../../assets/e6.png';
+// import e7 from '../../assets/e7.png';
+// import e8 from '../../assets/e8.png';
+// import e9 from '../../assets/e9.png';
+// import e10 from '../../assets/e10.png';
+// import e11 from '../../assets/e11.png';
+import prize1 from '../../assets/prize1.jpeg';
+import prize2 from '../../assets/prize2.jpeg';
+import prize3 from '../../assets/prize3.jpeg';
+import prize4 from '../../assets/prize4.jpeg';
+import prize5 from '../../assets/prize5.jpeg';
+import prize6 from '../../assets/prize6.jpeg';
+import prize7 from '../../assets/prize7.jpeg';
+import prize8 from '../../assets/prize8.jpeg';
+import prize9 from '../../assets/prize9.jpeg';
+import prize10 from '../../assets/prize10.jpeg';
+import prize11 from '../../assets/prize11.jpeg';
 interface GalleryImage {
 	id: number;
 	src: string;
@@ -45,37 +36,37 @@ const Year2022: React.FC = () => {
 
 	// Gallery images - replace with your actual image imports
 	const galleryImages: GalleryImage[] = [
-		{ id: 1, src: e1, alt: 'Food distribution event' },
-		{ id: 2, src: e2, alt: 'Children receiving gifts' },
-		{ id: 3, src: e3, alt: 'Community gathering' },
-		{ id: 4, src: e4, alt: 'Volunteers with children' },
-		{ id: 5, src: e5, alt: 'Distribution of clothes' },
-		{ id: 6, src: e6, alt: 'Fresh fruits distribution' },
-		{ id: 7, src: e7, alt: 'Children receiving items' },
-		{ id: 8, src: e8, alt: 'Clothing donation' },
-		{ id: 9, src: e9, alt: 'Packed items ready for distribution' },
-		{ id: 10, src: e10, alt: 'UGADI celebration group photo' },
-		{ id: 11, src: e11, alt: 'Food distribution event' },
-		{ id: 12, src: e12, alt: 'Children receiving gifts' },
-		{ id: 13, src: e13, alt: 'Community gathering' },
-		{ id: 14, src: e14, alt: 'Volunteers with children' },
-		{ id: 15, src: e15, alt: 'Distribution of clothes' },
-		{ id: 16, src: e16, alt: 'Fresh fruits distribution' },
-		{ id: 17, src: e17, alt: 'Children receiving items' },
-		{ id: 18, src: e18, alt: 'Clothing donation' },
-		{ id: 19, src: e19, alt: 'Packed items ready for distribution' },
-		{ id: 20, src: e20, alt: 'UGADI celebration group photo' },
-		{ id: 21, src: e21, alt: 'UGADI celebration group photo' },
-		{ id: 22, src: e22, alt: 'UGADI celebration group photo' },
-		{ id: 23, src: e23, alt: 'UGADI celebration group photo' },
-		{ id: 24, src: e24, alt: 'UGADI celebration group photo' },
-		{ id: 25, src: e25, alt: 'UGADI celebration group photo' },
-		{ id: 26, src: e26, alt: 'UGADI celebration group photo' },
-		{ id: 27, src: e27, alt: 'UGADI celebration group photo' },
-		{ id: 28, src: e28, alt: 'UGADI celebration group photo' },
-		{ id: 29, src: e29, alt: 'UGADI celebration group photo' },
-		{ id: 30, src: e30, alt: 'UGADI celebration group photo' },
-		{ id: 31, src: e31, alt: 'UGADI celebration group photo' },
+		{ id: 1, src: prize1, alt: 'Prize distribution event' },
+		{ id: 2, src: prize2, alt: 'Children receiving gifts' },
+		{ id: 3, src: prize3, alt: 'Community gathering' },
+		{ id: 4, src: prize4, alt: 'Volunteers with children' },
+		{ id: 5, src: prize5, alt: 'Distribution of clothes' },
+		{ id: 6, src: prize6, alt: 'Fresh fruits distribution' },
+		{ id: 7, src: prize7, alt: 'Children receiving items' },
+		{ id: 8, src: prize8, alt: 'Clothing donation' },
+		{ id: 9, src: prize9, alt: 'Packed items ready for distribution' },
+		{ id: 10, src: prize10, alt: 'UGADI celebration group photo' },
+		{ id: 11, src: prize11, alt: 'Food distribution event' },
+		// { id: 12, src: prize12, alt: 'Children receiving gifts' },
+		// { id: 13, src: prize13, alt: 'Community gathering' },
+		// { id: 14, src: prize14, alt: 'Volunteers with children' },
+		// { id: 15, src: prize15, alt: 'Distribution of clothes' },
+		// { id: 16, src: prize16, alt: 'Fresh fruits distribution' },
+		// { id: 17, src: e17, alt: 'Children receiving items' },
+		// { id: 18, src: e18, alt: 'Clothing donation' },
+		// { id: 19, src: e19, alt: 'Packed items ready for distribution' },
+		// { id: 20, src: e20, alt: 'UGADI celebration group photo' },
+		// { id: 21, src: e21, alt: 'UGADI celebration group photo' },
+		// { id: 22, src: e22, alt: 'UGADI celebration group photo' },
+		// { id: 23, src: e23, alt: 'UGADI celebration group photo' },
+		// { id: 24, src: e24, alt: 'UGADI celebration group photo' },
+		// { id: 25, src: e25, alt: 'UGADI celebration group photo' },
+		// { id: 26, src: e26, alt: 'UGADI celebration group photo' },
+		// { id: 27, src: e27, alt: 'UGADI celebration group photo' },
+		// { id: 28, src: e28, alt: 'UGADI celebration group photo' },
+		// { id: 29, src: e29, alt: 'UGADI celebration group photo' },
+		// { id: 30, src: e30, alt: 'UGADI celebration group photo' },
+		// { id: 31, src: e31, alt: 'UGADI celebration group photo' },
 	];
 
 	const openLightbox = (index: number) => {
@@ -158,14 +149,80 @@ const goToNext = () => {
 				}}
 			>
 				<div className="text-center">
-					<h1 className="text-white text-4xl sm:text-6xl font-bold tracking-wider drop-shadow-2xl mb-2">2022-2023</h1>
+					<h1 className="text-white text-4xl sm:text-6xl font-bold tracking-wider drop-shadow-2xl mb-2">V F T L Prize Distribution</h1>
 					<div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
 				</div>
 			</div>
 
 			{/* Main Content Section */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-				{/* Food Donation Program */}
+				
+
+				{/* UGADI Celebration Section */}
+				<div className="mb-16">
+					
+
+					{/* Text Block */}
+					{/* <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-12">
+						<div className="prose prose-lg max-w-none">
+							<p className="text-gray-700 text-lg leading-relaxed mb-6">
+								This effort aimed to bring festive joy to these children, ensuring they could celebrate
+								Ugadi with happiness and dignity. By providing essential items and fostering a sense of
+								belonging,{' '}
+								<span className="font-bold text-orange-600">
+									Viraga Foundation remains committed to its mission of uplifting vulnerable
+									communities
+								</span>
+								. Through such initiatives, the foundation continues to spread kindness and make a
+								meaningful impact on society.
+							</p>
+
+							<p className="text-gray-700 text-lg leading-relaxed">
+								This event is a part of{' '}
+								<span className="font-bold text-orange-600">
+									Viraga Foundation's ongoing Food Donation Program
+								</span>
+								, which focuses on{' '}
+								<span className="font-bold text-gray-900">
+									nourishing lives, spreading smiles, and promoting social welfare
+								</span>
+								.
+							</p>
+						</div>
+					</div> */}
+
+					{/* Image Gallery Section Header */}
+					<div className="mb-8">
+						<h3 className="text-3xl font-bold text-gray-800 mb-2">Event Gallery</h3>
+						<p className="text-gray-600">Click on any image to view in full screen</p>
+					</div>
+
+					{/* Image Gallery Grid */}
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:mb-10">
+						{galleryImages.map((image, index) => (
+							<div
+								key={image.id}
+								className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group bg-white"
+								onClick={() => openLightbox(index)}
+							>
+								<div className="aspect-[4/3] overflow-hidden">
+									<img
+										src={image.src}
+										alt={image.alt}
+										className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+									/>
+								</div>
+								<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+									<div className="text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+										<ZoomIn size={40} className="mx-auto mb-2" />
+										<p className="text-sm font-medium px-4">{image.alt}</p>
+									</div>
+								</div>
+							</div>
+						))}
+					</div>
+
+					{/* Food Donation Program */}
 				<div className="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-16">
 					<div className="prose prose-lg max-w-none">
 						<p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -189,8 +246,6 @@ const goToNext = () => {
 					</div>
 				</div>
 
-				{/* UGADI Celebration Section */}
-				<div className="mb-16">
 					<div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-8 md:p-12 mb-12">
 						<h2 className="text-red-600 text-2xl md:text-3xl font-bold mb-8 border-l-8 border-red-600 pl-6">
 							UGADI Celebration – Spreading Joy Through Giving
@@ -253,66 +308,6 @@ const goToNext = () => {
 							<p className='font-bold text-2xl'>UGADI Celebration – Spreading Joy Through Giving</p>
 							<p className=" text-gray-600 text-md  mt-4">On March 22, 2023, in celebration of UGADI (Telugu Samvatsaraadi), Viraga Foundation organized a special donation drive to support underprivileged children. As part of this initiative, the foundation distributed new clothes and fresh fruits to single-parent children and orphans residing at Mathruchaya Organization.</p>
 						</div>
-					</div>
-
-					{/* Text Block */}
-					<div className="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-12">
-						<div className="prose prose-lg max-w-none">
-							<p className="text-gray-700 text-lg leading-relaxed mb-6">
-								This effort aimed to bring festive joy to these children, ensuring they could celebrate
-								Ugadi with happiness and dignity. By providing essential items and fostering a sense of
-								belonging,{' '}
-								<span className="font-bold text-orange-600">
-									Viraga Foundation remains committed to its mission of uplifting vulnerable
-									communities
-								</span>
-								. Through such initiatives, the foundation continues to spread kindness and make a
-								meaningful impact on society.
-							</p>
-
-							<p className="text-gray-700 text-lg leading-relaxed">
-								This event is a part of{' '}
-								<span className="font-bold text-orange-600">
-									Viraga Foundation's ongoing Food Donation Program
-								</span>
-								, which focuses on{' '}
-								<span className="font-bold text-gray-900">
-									nourishing lives, spreading smiles, and promoting social welfare
-								</span>
-								.
-							</p>
-						</div>
-					</div>
-
-					{/* Image Gallery Section Header */}
-					<div className="mb-8">
-						<h3 className="text-3xl font-bold text-gray-800 mb-2">Event Gallery</h3>
-						<p className="text-gray-600">Click on any image to view in full screen</p>
-					</div>
-
-					{/* Image Gallery Grid */}
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-						{galleryImages.map((image, index) => (
-							<div
-								key={image.id}
-								className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group bg-white"
-								onClick={() => openLightbox(index)}
-							>
-								<div className="aspect-[4/3] overflow-hidden">
-									<img
-										src={image.src}
-										alt={image.alt}
-										className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-									<div className="text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-										<ZoomIn size={40} className="mx-auto mb-2" />
-										<p className="text-sm font-medium px-4">{image.alt}</p>
-									</div>
-								</div>
-							</div>
-						))}
 					</div>
 				</div>
 			</div>

@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Sparkles } from 'lucide-react';
 import bgpic from '../assets/e15.png';
-import img1 from '.././assets/image1.png';
-import img2 from '.././assets/orphan1.png';
-import img3 from '.././assets/level3.png';
+import img1 from '.././assets/closing10.jpeg';
+import img2 from '.././assets/guest2.jpeg';
+import img3 from '.././assets/prize2.jpeg';
+import img5 from '.././assets/class5.jpeg';
 import img4 from '.././assets/level4.png';
 import { motion } from 'framer-motion';
 
@@ -18,24 +19,30 @@ const ActivitiesPage = () => {
 
 	const activities = [
 		{
-			year: '2024-2025',
+			year: 'V F T L Closing Ceremony',
 			image: img1,
-			link: '/activities/2024-2025',
+			link: '/activities/closingceremony',
 		},
 		{
-			year: '2023-2024',
+			year: 'V F T L Guest Lectures',
 			image: img2,
-			link: '/activities/2023-2024',
+			link: '/activities/guestlecture',
 		},
 		{
-			year: '2022-2023',
+			year: 'V F T L Prize Distribution',
 			image: img3,
-			link: '/activities/2022-2023',
+			link: '/activities/prizedistribution',
+		},
+		
+		{
+			year: 'V F T L Registration, Class and Exam Pics',
+			image: img5,
+			link: '/activities/registration',
 		},
 		{
-			year: '2020-2021',
+			year: 'Other Activities',
 			image: img4,
-			link: '/activities/2020-2021',
+			link: '/activities/other-activity',
 		},
 	];
 
@@ -99,14 +106,14 @@ const ActivitiesPage = () => {
 				>
 					<div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-700 text-sm font-semibold mb-4 shadow-sm">
 						<Calendar className="w-4 h-4" />
-						<span>Year by Year</span>
+						<span>Activities wise</span>
 					</div>
 					<h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Explore Our Activities</h2>
 					<div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto" />
 				</div>
 
 				{/* Single Row - 4 Cards - Ultra Enhanced */}
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
 					{activities.map((activity, index) => (
 						<div
 							key={activity.year}
