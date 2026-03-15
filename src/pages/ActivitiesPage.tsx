@@ -214,7 +214,7 @@ const ActivitiesPage = () => {
 										<span className="text-sm font-semibold">Tap to view activities</span>
 										<ArrowRight className="w-4 h-4 animate-bounce" />
 									</div>
-									<h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent group-hover:from-purple-500 group-hover:via-pink-500 group-hover:to-orange-500 transition-all duration-500 tracking-tight mb-3"
+									<h3 className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent group-hover:from-purple-500 group-hover:via-pink-500 group-hover:to-orange-500 transition-all duration-500 tracking-tight mb-3"
 										style={{
 											backgroundSize: '200% 200%',
 										}}

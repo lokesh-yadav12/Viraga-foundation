@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {  ArrowRight, Calendar, Sparkles } from 'lucide-react';
 
 // One representative image per sub-folder as cover
-import cover1 from '../../assets/anandam/inauguration/1.jpg';
+//import cover1 from '../../assets/anandam/inauguration/1.jpg';
 import cover2 from '../../assets/anandam/29-11-2020/18.jpeg';
 import cover3 from '../../assets/anandam/7-2-2021/1.jpg';
 import cover4 from '../../assets/anandam/21-02-2021/1.jpg';
@@ -13,7 +13,7 @@ import cover7 from '../../assets/anandam/12-3-2023/1.jpg';
 import cover8 from '../../assets/anandam/2-5-2023/6.jpeg';
 import cover9 from '../../assets/anandam/29-11-2020/40.jpeg';
 const subFolders = [
-    { label: 'Inauguration', link: '/activities/anandam/inauguration', cover: cover1 },
+    // { label: 'Inauguration', link: '/activities/anandam/inauguration', cover: cover1 },
     { label: '29 Nov 2020', link: '/activities/anandam/29-11-2020', cover: cover2 },
     { label: '7 Feb 2021', link: '/activities/anandam/7-2-2021', cover: cover3 },
     { label: '21 Feb 2021', link: '/activities/anandam/21-02-2021', cover: cover4 },
@@ -50,7 +50,7 @@ const AnandamPage = () => {
                 <div className="text-center mb-12">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-700 text-sm font-semibold mb-4 shadow-sm">
                         <Calendar className="w-4 h-4" />
-                        <span>Annadaanam Events</span>
+                        <span className='text-2xl'>Annadaanam Events</span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Year wise</h2>
                     <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto" />

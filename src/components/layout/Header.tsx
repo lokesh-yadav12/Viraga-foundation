@@ -176,6 +176,11 @@ const Navbar: React.FC = () => {
                         <Link to="/about" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
                           About Us
                         </Link>
+
+                         <Link to="/activities/anandam/inauguration" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                          Foundation Inception
+                        </Link>
+
                         <Link to="/objectives" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
                           Objectives
                         </Link>
@@ -189,10 +194,48 @@ const Navbar: React.FC = () => {
                     </div>
                   </div>
 
-                  <Link to="/activities" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
+                   <div className="relative group">
+                    <button className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 flex items-center gap-1.5 relative">
+                      ACTIVITIES
+                      <ChevronDown size={16} className="transition-transform duration-300 group-hover:rotate-180" />
+                      <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+                    </button>
+                    <div className="absolute left-0 mt-2 w-56 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100 overflow-hidden">
+                      <div className="py-2">
+                        <Link to="/activities/anandam" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                          Food Donation (Narayana Seva)
+                        </Link>
+                        <Link to="/activities/scholarship" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                          Scholarship Assistance & Guidance
+                        </Link>
+                        <Link to="/activities/orphanage" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                         Orphanage for Street Children 
+                        </Link>
+                        <Link to="/activities/disaster-relief" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                          Disaster Relief & Humanitarian Aid 
+                        </Link>
+                        <Link to="/" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                          Health Awareness & Medical Support
+                        </Link>
+                        <Link to="/" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                          Skill Development & Career Guidance
+                        </Link>
+
+                        <Link to="/" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+                          Skill Development & Career Guidance
+                        </Link>
+                        
+                        
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                  {/* <Link to="/activities" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
                     ACTIVITIES
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
-                  </Link>
+                  </Link> */}
                   <Link to="/administration" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
                     ADMINISTRATION
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
