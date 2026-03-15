@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Sparkles } from 'lucide-react';
 import bgpic from '../assets/e15.png';
-// import img1 from '.././assets/closing10.jpeg';
-// import img2 from '.././assets/guest2.jpeg';
-// import img3 from '.././assets/prize2.jpeg';
-// import img5 from '.././assets/class5.jpeg';
-// import img4 from '.././assets/level4.png';
+import img1 from '.././assets/closing10.jpeg';
+import img2 from '.././assets/guest2.jpeg';
+import img3 from '.././assets/prize2.jpeg';
+import img5 from '.././assets/class5.jpeg';
+import img4 from '.././assets/level4.png';
 import { motion } from 'framer-motion';
 // New folder covers
 import anandamCover from '.././assets/anandam/inauguration/1.jpg';
@@ -23,31 +23,31 @@ const ActivitiesPage = () => {
 	}, []);
 
 	const activities = [
-		// {
-		// 	year: 'V F T L Closing Ceremony',
-		// 	image: img1,
-		// 	link: '/activities/closingceremony',
-		// },
-		// {
-		// 	year: 'V F T L Guest Lectures',
-		// 	image: img2,
-		// 	link: '/activities/guestlecture',
-		// },
-		// {
-		// 	year: 'V F T L Prize Distribution',
-		// 	image: img3,
-		// 	link: '/activities/prizedistribution',
-		// },
-		// {
-		// 	year: 'V F T L Registration, Class and Exam Pics',
-		// 	image: img5,
-		// 	link: '/activities/registration',
-		// },
-		// {
-		// 	year: 'Other Activities',
-		// 	image: img4,
-		// 	link: '/activities/other-activity',
-		// },
+		{
+			year: 'V F T L Closing Ceremony',
+			image: img1,
+			link: '/activities/closingceremony',
+		},
+		{
+			year: 'V F T L Guest Lectures',
+			image: img2,
+			link: '/activities/guestlecture',
+		},
+		{
+			year: 'V F T L Prize Distribution',
+			image: img3,
+			link: '/activities/prizedistribution',
+		},
+		{
+			year: 'V F T L Registration, Class and Exam Pics',
+			image: img5,
+			link: '/activities/registration',
+		},
+		{
+			year: 'Other Activities',
+			image: img4,
+			link: '/activities/other-activity',
+		},
 		{
 			year: 'Annadaanam',
 			image: anandamCover,

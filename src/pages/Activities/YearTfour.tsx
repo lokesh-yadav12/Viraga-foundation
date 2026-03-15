@@ -7,6 +7,7 @@ import bgpic from '../../assets/closing10.jpeg';
 // import vi1 from '../../assets/vi1.png';
 // import vi2 from '../../assets/vi2.png';
 // import vi3 from '../../assets/vi3.png';
+
 import closing1 from '../../assets/closing1.jpeg';
 import closing2 from '../../assets/closing2.jpeg';
 import closing3 from '../../assets/closing3.jpeg';
