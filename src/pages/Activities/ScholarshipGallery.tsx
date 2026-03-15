@@ -629,10 +629,10 @@ import img9 from '../../assets/closing1.jpeg';
 import img10 from '../../assets/closing2.jpeg';
 import img11 from '../../assets/closing3.jpeg';
 import img12 from '../../assets/closing4.jpeg';
-// import img13 from '../../assets/closing5.jpeg';
-// import img14 from '../../assets/closing6.jpeg';
-// import img15 from '../../assets/closing7.jpeg';
-// import img16 from '../../assets/closing8.jpeg';
+import img13 from '../../assets/closing5.jpeg';
+import img14 from '../../assets/closing6.jpeg';
+import img15 from '../../assets/closing7.jpeg';
+import img16 from '../../assets/closing8.jpeg';
 // import img17 from '../../assets/closing9.jpeg';
 // import img18 from '../../assets/closing10.jpeg';
 // import img19 from '../../assets/closing11.jpeg';
@@ -690,26 +690,26 @@ import b5img19 from '../../assets/guest19.jpeg';
 import b5img20 from '../../assets/guest19.jpeg';
 
 // ── BLOCK 6 ──
-import b6img1 from '../../assets/i1.png';
-import b6img2 from '../../assets/i2.png';
-import b6img3 from '../../assets/i3.png';
-import b6img4 from '../../assets/i4.png';
-import b6img5 from '../../assets/i5.png';
-import b6img6 from '../../assets/i6.png';
-import b6img7 from '../../assets/i7.png';
-import b6img8 from '../../assets/i8.png';
-import b6img9 from '../../assets/i9.png';
-import b6img10 from '../../assets/i10.png';
-import b6img11 from '../../assets/i11.png';
-import b6img12 from '../../assets/i12.png';
-import b6img13 from '../../assets/i13.png';
-import b6img14 from '../../assets/i14.png';
-import b6img15 from '../../assets/i15.png';
-import b6img16 from '../../assets/p1.png';
-import b6img17 from '../../assets/p2.png';
-import b6img18 from '../../assets/p3.png';
-import b6img19 from '../../assets/p4.png';
-import b6img20 from '../../assets/p5.png';
+import b6img1 from '../../assets/class1.jpeg';
+import b6img2 from '../../assets/class2.jpeg';
+import b6img3 from '../../assets/class3.jpeg';
+import b6img4 from '../../assets/class4.jpeg';
+import b6img5 from '../../assets/class5.jpeg';
+import b6img6 from '../../assets/class6.jpeg';
+import b6img7 from '../../assets/class7.jpeg';
+import b6img8 from '../../assets/class8.jpeg';
+import b6img9 from '../../assets/class9.jpeg';
+import b6img10 from '../../assets/class10.jpeg';
+import b6img11 from '../../assets/class11.jpeg';
+import b6img12 from '../../assets/class12.jpeg';
+import b6img13 from '../../assets/class13.jpeg';
+import b6img14 from '../../assets/class14.jpeg';
+import b6img15 from '../../assets/class15.jpeg';
+import b6img16 from '../../assets/class16.jpeg';
+import b6img17 from '../../assets/class17.jpeg';
+import b6img18 from '../../assets/class18.jpeg';
+import b6img19 from '../../assets/class19.jpeg';
+import b6img20 from '../../assets/class20.jpeg';
 
 // ── BLOCK 7 ──
 import b7img1 from '../../assets/l1.png';
@@ -759,10 +759,10 @@ const jnvItems: MediaItem[] = [
   { id: 2,  type: "image", src: img10, caption: "Students preparing for JNV Entrance Exam" },
   { id: 3,  type: "image", src: img11, caption: "Problem-solving sessions at Viraga Foundation" },
   { id: 4,  type: "image", src: img12, caption: "Students appearing for JNV Exam – Dec 13, 2025" },
-  // { id: 5,  type: "image", src: img13, caption: "Structured training for 5th standard students" },
-  // { id: 6,  type: "image", src: img14, caption: "Students preparing for JNV Entrance Exam" },
-  // { id: 7,  type: "image", src: img15, caption: "Problem-solving sessions at Viraga Foundation" },
-  // { id: 8,  type: "image", src: img16, caption: "Students appearing for JNV Exam – Dec 13, 2025" },
+  { id: 5,  type: "image", src: img13, caption: "Structured training for 5th standard students" },
+  { id: 6,  type: "image", src: img14, caption: "Students preparing for JNV Entrance Exam" },
+  { id: 7,  type: "image", src: img15, caption: "Problem-solving sessions at Viraga Foundation" },
+  { id: 8,  type: "image", src: img16, caption: "Students appearing for JNV Exam – Dec 13, 2025" },
   // { id: 9,  type: "image", src: img17, caption: "Structured training for 5th standard students" },
   // { id: 10, type: "image", src: img18, caption: "Students preparing for JNV Entrance Exam" },
   // { id: 11, type: "image", src: img19, caption: "Problem-solving sessions at Viraga Foundation" },
@@ -1185,13 +1185,6 @@ const EducationInitiativesGallery: React.FC = () => {
           <GalleryGrid items={jnvItems} onOpen={(i) => setJnvLb(i)} prefix="viraga-jnv" />
         </section>
 
-        <div className="soft-divider h-px max-w-5xl mx-auto" />
-
-        {/* ════ SECTION 4 — update label below ════ */}
-        <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
-          <SectionTitle icon="🖼️" label="V F T L Closing Ceremony" />
-          <GalleryGrid items={block4Items} onOpen={(i) => setBlock4Lb(i)} prefix="viraga-block4" />
-        </section>
 
         <div className="soft-divider h-px max-w-5xl mx-auto" />
 
@@ -1204,10 +1197,19 @@ const EducationInitiativesGallery: React.FC = () => {
         <div className="soft-divider h-px max-w-5xl mx-auto" />
 
         {/* ════ SECTION 6 — update label below ════ */}
-        {/* <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
-          <SectionTitle icon="🖼️" label="Section 6 – Update This Heading" />
+        <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
+          <SectionTitle icon="🖼️" label="V F T L Registration, Class & Exam Pics" />
           <GalleryGrid items={block6Items} onOpen={(i) => setBlock6Lb(i)} prefix="viraga-block6" />
-        </section> */}
+        </section>
+
+        
+        <div className="soft-divider h-px max-w-5xl mx-auto" />
+
+        {/* ════ SECTION 4 — update label below ════ */}
+        <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
+          <SectionTitle icon="🖼️" label="V F T L Closing Ceremony" />
+          <GalleryGrid items={block4Items} onOpen={(i) => setBlock4Lb(i)} prefix="viraga-block4" />
+        </section>
 
         <div className="soft-divider h-px max-w-5xl mx-auto" />
 
