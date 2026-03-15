@@ -1,8 +1,8 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import logo from '../assets/viraganew.png';
+import logo from '../assets/bottom1.png';
 
 const fadeUp = {
 	hidden: { opacity: 0, y: 40 },
@@ -293,7 +293,7 @@ export default function Volunteer() {
 									<motion.img
 										src={logo}
 										alt="Volunteering - Swami Vivekananda"
-										className="w-[300px] sm:w-[400px] md:w-[400px] h-[30vh] object-cover"
+										className="w-[300px] sm:w-[400px] md:w-[400px] h-[30vh] object-contain bg-white/70 p-4 rounded-lg shadow-lg	"
 										whileHover={{ scale: 1.05 }}
 										transition={{ duration: 0.4 }}
 									/>

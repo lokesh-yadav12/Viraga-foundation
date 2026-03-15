@@ -2,12 +2,17 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Sparkles } from 'lucide-react';
 import bgpic from '../assets/e15.png';
-import img1 from '.././assets/closing10.jpeg';
-import img2 from '.././assets/guest2.jpeg';
-import img3 from '.././assets/prize2.jpeg';
-import img5 from '.././assets/class5.jpeg';
-import img4 from '.././assets/level4.png';
+// import img1 from '.././assets/closing10.jpeg';
+// import img2 from '.././assets/guest2.jpeg';
+// import img3 from '.././assets/prize2.jpeg';
+// import img5 from '.././assets/class5.jpeg';
+// import img4 from '.././assets/level4.png';
 import { motion } from 'framer-motion';
+// New folder covers
+import anandamCover from '.././assets/anandam/inauguration/1.jpg';
+import disasterCover from '.././assets/Disaster Relief & Humanitarian Aid – Extending Hope in Crisis/1.jpg';
+import orphanageCover from '.././assets/Orphanage for Street Children–A Safe Haven for Every Child/1.jpeg';
+import scholarshipCover from '.././assets/closing16.jpeg';
 
 const ActivitiesPage = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -18,31 +23,50 @@ const ActivitiesPage = () => {
 	}, []);
 
 	const activities = [
+		// {
+		// 	year: 'V F T L Closing Ceremony',
+		// 	image: img1,
+		// 	link: '/activities/closingceremony',
+		// },
+		// {
+		// 	year: 'V F T L Guest Lectures',
+		// 	image: img2,
+		// 	link: '/activities/guestlecture',
+		// },
+		// {
+		// 	year: 'V F T L Prize Distribution',
+		// 	image: img3,
+		// 	link: '/activities/prizedistribution',
+		// },
+		// {
+		// 	year: 'V F T L Registration, Class and Exam Pics',
+		// 	image: img5,
+		// 	link: '/activities/registration',
+		// },
+		// {
+		// 	year: 'Other Activities',
+		// 	image: img4,
+		// 	link: '/activities/other-activity',
+		// },
 		{
-			year: 'V F T L Closing Ceremony',
-			image: img1,
-			link: '/activities/closingceremony',
+			year: 'Annadaanam',
+			image: anandamCover,
+			link: '/activities/anandam',
 		},
 		{
-			year: 'V F T L Guest Lectures',
-			image: img2,
-			link: '/activities/guestlecture',
+			year: 'Disaster Relief & Humanitarian Aid',
+			image: disasterCover,
+			link: '/activities/disaster-relief',
 		},
 		{
-			year: 'V F T L Prize Distribution',
-			image: img3,
-			link: '/activities/prizedistribution',
-		},
-		
-		{
-			year: 'V F T L Registration, Class and Exam Pics',
-			image: img5,
-			link: '/activities/registration',
+			year: 'Orphanage for Street Children',
+			image: orphanageCover,
+			link: '/activities/orphanage',
 		},
 		{
-			year: 'Other Activities',
-			image: img4,
-			link: '/activities/other-activity',
+			year: 'Scholarship Assist',
+			image: scholarshipCover,
+			link: '/activities/scholarship',
 		},
 	];
 
@@ -76,32 +100,31 @@ const ActivitiesPage = () => {
 
 			{/* Hero Section */}
 			<section className="relative h-[70vh] md:h-[85vh] overflow-hidden">
-        <img
-          src={bgpic}
-          alt="Service and spirituality"
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/30 flex items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
-            className="mx-auto max-w-6xl px-4 sm:px-6 text-white"
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              Our Activities
-            </h1>
-          </motion.div>
-        </div>
-      </section>
+				<img
+					src={bgpic}
+					alt="Service and spirituality"
+					className="h-full w-full object-cover"
+				/>
+				<div className="absolute inset-0 bg-black/30 flex items-center">
+					<motion.div
+						initial={{ opacity: 0, y: 40 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.9 }}
+						className="mx-auto max-w-6xl px-4 sm:px-6 text-white"
+					>
+						<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+							Our Activities
+						</h1>
+					</motion.div>
+				</div>
+			</section>
 
 			{/* Main Content */}
 			<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
 				{/* Section Header */}
 				<div
-					className={`text-center mb-16 transition-all duration-1000 ${
-						isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-					}`}
+					className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+						}`}
 					style={{ transitionDelay: '0.8s' }}
 				>
 					<div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-700 text-sm font-semibold mb-4 shadow-sm">
@@ -117,9 +140,8 @@ const ActivitiesPage = () => {
 					{activities.map((activity, index) => (
 						<div
 							key={activity.year}
-							className={`transition-all duration-1000 transform ${
-								isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-							}`}
+							className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+								}`}
 							style={{ transitionDelay: `${(index + 1) * 150}ms` }}
 							onMouseEnter={() => setHoveredIndex(index)}
 							onMouseLeave={() => setHoveredIndex(null)}
@@ -129,7 +151,7 @@ const ActivitiesPage = () => {
 								<div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-700 bg-white transform hover:-translate-y-4 hover:scale-105">
 									{/* Animated Gradient Border */}
 									<div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-gradient-rotate" />
-									
+
 									{/* Card Background Glow */}
 									<div className="absolute -inset-4 bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-orange-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
@@ -150,7 +172,7 @@ const ActivitiesPage = () => {
 
 											{/* Gradient Overlay */}
 											<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-											
+
 											{/* Shimmer Effect on Hover */}
 											<div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 translate-x-[-100%] group-hover:translate-x-[100%] group-hover:transition-transform group-hover:duration-1500" />
 										</div>
@@ -199,14 +221,14 @@ const ActivitiesPage = () => {
 									>
 										{activity.year}
 									</h3>
-									
+
 									<div className="flex justify-center mb-4 gap-1.5 items-center">
 										<div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-500" />
 										<div className="w-2 h-2 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 										<div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full transition-all duration-500" />
 									</div>
-									
-									
+
+
 								</div>
 							</Link>
 						</div>
@@ -215,9 +237,8 @@ const ActivitiesPage = () => {
 
 				{/* Info Card */}
 				<div
-					className={`mt-12 sm:mt-12 lg:mt-20 transition-all duration-1000 transform ${
-						isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-					}`}
+					className={`mt-12 sm:mt-12 lg:mt-20 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+						}`}
 					style={{ transitionDelay: '0.9s' }}
 				>
 					<div className="relative group">

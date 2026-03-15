@@ -9,16 +9,16 @@ interface Notification {
 }
 
 const notifications: Notification[] = [
-  { id: 1, type: 'success', title: 'Donation Received', message: 'A generous donation of ₹15,000 was received from the Sharma Foundation.', time: '2 min ago' },
-  { id: 2, type: 'info', title: 'New Volunteer Joined', message: 'Priya Mehta has joined as a volunteer in the Healthcare project in Rajasthan.', time: '15 min ago' },
-  { id: 3, type: 'alert', title: 'Event Reminder', message: 'Annual fundraiser gala is scheduled for December 20th. 200 seats remaining.', time: '1 hr ago' },
-  { id: 4, type: 'success', title: 'Project Milestone', message: '500 children enrolled in the literacy program in Bihar — a new record!', time: '3 hrs ago' },
-  { id: 5, type: 'warning', title: 'Supply Needed', message: 'Medical supplies running low in the Odisha camp. Urgent replenishment required.', time: '5 hrs ago' },
-  { id: 6, type: 'info', title: 'Partnership Confirmed', message: 'MoU signed with GreenHope NGO for joint water sanitation drive in UP.', time: '1 day ago' },
-  { id: 7, type: 'success', title: 'Goal Achieved', message: 'Women empowerment workshop in MP reached 1,000 participants this month.', time: '1 day ago' },
-  { id: 8, type: 'alert', title: 'Volunteer Training', message: 'Mandatory training session for all new volunteers on Jan 5th, 10 AM — register now.', time: '2 days ago' },
-  { id: 9, type: 'info', title: 'Report Published', message: 'Q3 Impact Report is now available. Download from the resources section.', time: '3 days ago' },
-  { id: 10, type: 'success', title: 'Award Received', message: 'Our organization was honored with the National Social Impact Award 2024.', time: '4 days ago' },
+  { id: 1, type: 'info', title: 'Registration Open', message: 'Viraga VFTL program student registration programs, last date is April 15th, 2026.', time: '10 days ago' },
+   { id: 2, type: 'success', title: 'Book Distribution', message: 'Distribution of Mathematics Handbooks', time: '1 year ago' },
+   { id: 3, type: 'success', title: 'Inauguration', message: 'The Beginning of a Mission to Serve Humanity named Viraga Foundation', time: '5 year ago' },
+   { id: 4, type: 'success', title: 'Food Relief', message: 'Flood Relief Assistance Distribution of Provisions, Clothing & Vegetables', time: '1 year ago' },
+  // { id: 5, type: 'warning', title: 'Supply Needed', message: 'Medical supplies running low in the Odisha camp. Urgent replenishment required.', time: '5 hrs ago' },
+  // { id: 6, type: 'info', title: 'Partnership Confirmed', message: 'MoU signed with GreenHope NGO for joint water sanitation drive in UP.', time: '1 day ago' },
+  // { id: 7, type: 'success', title: 'Goal Achieved', message: 'Women empowerment workshop in MP reached 1,000 participants this month.', time: '1 day ago' },
+  // { id: 8, type: 'alert', title: 'Volunteer Training', message: 'Mandatory training session for all new volunteers on Jan 5th, 10 AM — register now.', time: '2 days ago' },
+  // { id: 9, type: 'info', title: 'Report Published', message: 'Q3 Impact Report is now available. Download from the resources section.', time: '3 days ago' },
+  // { id: 10, type: 'success', title: 'Award Received', message: 'Our organization was honored with the National Social Impact Award 2024.', time: '4 days ago' },
 ];
 
 const typeConfig = {
@@ -76,7 +76,9 @@ export default function NotificationFeed() {
   const speed = 0.7; // px per frame
 
   // Duplicate notifications for seamless loop
-  const doubled = [...notifications, ...notifications];
+  const doubled = notifications.length < 1
+  ? [...notifications, ...notifications, ...notifications, ...notifications]
+  : [...notifications, ...notifications];
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -99,6 +101,7 @@ export default function NotificationFeed() {
   return (
     <div style={{
       minHeight: '100vh',
+      width: '100%',
       background: 'linear-gradient(135deg, #fff7f0 0%, #fff 50%, #f0f9ff 100%)',
       display: 'flex',
       flexDirection: 'column',
@@ -106,6 +109,7 @@ export default function NotificationFeed() {
       justifyContent: 'flex-start',
       padding: '48px 16px',
       fontFamily: "'DM Sans', sans-serif",
+      boxSizing: 'border-box' as const,
     }}>
       {/* Google Fonts */}
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap');`}</style>

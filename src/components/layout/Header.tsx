@@ -150,13 +150,13 @@ const Navbar: React.FC = () => {
             <div className="px-6">
               <div className="flex items-center justify-between py-0">
                 {/* Logo */}
-                <div className="flex items-center">
+                <Link to="/" className="flex items-center">
                   <img 
                     src={vira} 
                     alt="Viraga Foundation" 
                     className="sm:h-16 sm:w-40 pl-4 h-20 py-2 sm:py-1 w-40 transition-transform duration-300 hover:scale-105"
                   />
-                </div>
+                </Link>
                                     
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex items-center space-x-1">
