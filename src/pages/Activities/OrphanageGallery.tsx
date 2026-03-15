@@ -678,7 +678,7 @@ const UgadiCelebrationGallery: React.FC = () => {
         {/* ── Hero / Article Section ─────────────────── */}
         <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
           {/* Foundation badge */}
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
               className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
               style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}

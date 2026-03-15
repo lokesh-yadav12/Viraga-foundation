@@ -140,14 +140,14 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
       `}</style>
 
       <div
-        className="min-h-screen p-16 w-full"
+        className="min-h-screen pt-16 w-full"
         style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
       >
         {/* ── Article Section ── */}
         <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
 
           {/* Badge + date */}
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
               className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
               style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}

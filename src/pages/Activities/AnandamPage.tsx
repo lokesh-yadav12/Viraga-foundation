@@ -32,19 +32,8 @@ const AnandamPage = () => {
     useEffect(() => { setIsVisible(true); }, []);
 
     return (
-        <div className="min-h-screen bg-white sm:pt-12">
-            {/* Header */}
-            {/* <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-12 px-6">
-                <button
-                    onClick={() => navigate(-1)}
-                    className="flex items-center gap-2 mb-4 text-white/80 hover:text-white transition-colors"
-                >
-                    <ArrowLeft className="w-5 h-5" /> Back
-                </button>
-                <h1 className="text-3xl sm:text-4xl font-bold">Anandam</h1>
-                <p className="mt-2 text-white/70">Select an event to view photos</p>
-            </div> */}
-
+        <div className="min-h-screen bg-white pt-16">
+           
             {/* Sub-folder Grid */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="text-center mb-12">
