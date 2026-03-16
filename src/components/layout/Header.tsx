@@ -276,20 +276,20 @@ const Navbar: React.FC = () => {
 													Disaster Relief & Humanitarian Aid
 												</Link>
 												<Link
-													to="/"
+													to="/activities/healthawareness"
 													className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500"
 												>
 													Health Awareness & Medical Support
 												</Link>
 												<Link
-													to="/"
+													to="/activities/skilldevelopment"
 													className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500"
 												>
 													Skill Development & Career Guidance
 												</Link>
 
 												<Link
-													to="/"
+													to="/activities/skilldevelopment"
 													className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500"
 												>
 													Skill Development & Career Guidance

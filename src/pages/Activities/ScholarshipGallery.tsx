@@ -1180,29 +1180,30 @@ const EducationInitiativesGallery: React.FC = () => {
             </p>
           </div>
         </section>
-        <section className="max-w-6xl mx-auto px-6 pt-6 pb-14">
+        {/* <section className="max-w-6xl mx-auto px-6 pt-6 pb-14">
           <SectionTitle icon="🏫" label="Vibrant Futures – Photos" />
           <GalleryGrid items={jnvItems} onOpen={(i) => setJnvLb(i)} prefix="viraga-jnv" />
-        </section>
+        </section> */}
 
 
         <div className="soft-divider h-px max-w-5xl mx-auto" />
 
-        {/* ════ SECTION 5 — update label below ════ */}
-        <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
-          <SectionTitle icon="🖼️" label="V F T L Guest Lectures" />
-          <GalleryGrid items={block5Items} onOpen={(i) => setBlock5Lb(i)} prefix="viraga-block5" />
-        </section>
-
-        <div className="soft-divider h-px max-w-5xl mx-auto" />
+       
 
         {/* ════ SECTION 6 — update label below ════ */}
         <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
           <SectionTitle icon="🖼️" label="V F T L Registration, Class & Exam Pics" />
           <GalleryGrid items={block6Items} onOpen={(i) => setBlock6Lb(i)} prefix="viraga-block6" />
         </section>
-
         
+        <div className="soft-divider h-px max-w-5xl mx-auto" />
+
+             {/* ════ SECTION 5 — update label below ════ */}
+        <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
+          <SectionTitle icon="🖼️" label="V F T L Guest Lectures" />
+          <GalleryGrid items={block5Items} onOpen={(i) => setBlock5Lb(i)} prefix="viraga-block5" />
+        </section>
+
         <div className="soft-divider h-px max-w-5xl mx-auto" />
 
         {/* ════ SECTION 4 — update label below ════ */}
@@ -1214,10 +1215,10 @@ const EducationInitiativesGallery: React.FC = () => {
         <div className="soft-divider h-px max-w-5xl mx-auto" />
 
         {/* ════ SECTION 7 — update label below ════ */}
-        <section className="max-w-6xl mx-auto px-6 pt-14 pb-20">
+        {/* <section className="max-w-6xl mx-auto px-6 pt-14 pb-20">
           <SectionTitle icon="🖼️" label="V F T L Food Donation" />
           <GalleryGrid items={block7Items} onOpen={(i) => setBlock7Lb(i)} prefix="viraga-block7" />
-        </section>
+        </section> */}
 
         {/* Footer */}
         <footer className="text-center py-6 text-gray-400 text-xs tracking-widest border-t border-gray-200">

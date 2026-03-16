@@ -37,6 +37,8 @@ import May2023Gallery from './pages/Activities/anandam/May2023Gallery';
 import Mar2023Gallery from './pages/Activities/anandam/Mar2023Gallery';
 import Mar2024food from './pages/Activities/anandam/March2024food';
 import August2024 from './pages/Activities/anandam/August2024';
+import Skilldevelopment from './pages/Activities/Skilldevelopment';
+import Healthawareness from './pages/Activities/Healthawareness';
 
 // 🧭 Lazy-loaded pages
 const Home = lazy(() => import('./pages/Home'));
@@ -90,6 +92,8 @@ function App() {
 					<Route path='/activities/disaster-relief' element={<DisasterReliefGallery />} />
 					<Route path='/activities/orphanage' element={<OrphanageGallery />} />
 					<Route path='/activities/scholarship' element={<ScholarshipGallery />} />
+					<Route path='/activities/skilldevelopment' element={<Skilldevelopment />} />
+					<Route path='/activities/healthawareness' element={<Healthawareness />} />
 					<Route path='/activities/anandam/inauguration' element={<InaugurationGallery />} />
 					<Route path='/activities/anandam/29-11-2020' element={<Nov2020Gallery />} />
 					<Route path='/activities/anandam/7-2-2021' element={<Feb7Gallery />} />

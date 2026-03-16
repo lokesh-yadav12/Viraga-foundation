@@ -326,7 +326,7 @@ const FoundationInceptionGallery: React.FC = () => {
             {[
               { value: "2020", label: "Year Founded" },
               { value: "Nov 25", label: "Inception Date" },
-              { value: "🙏", label: "Inspired by Vivekananda" },
+              { value: "🙏", label: "Inspired by Swami Vivekananda" },
             ].map((s) => (
               <div
                 key={s.label}
