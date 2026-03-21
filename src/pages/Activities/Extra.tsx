@@ -3,11 +3,7 @@ import { X, ChevronLeft, ChevronRight, Download, ZoomIn, ZoomOut } from 'lucide-
 //import img1 from '../../assets/class5.jpeg';
 import bgpic from '../../assets/class5.jpeg';
 
-// import prize1 from '../../assets/prize1.jpeg';
-// import prize2 from '../../assets/prize2.jpeg';
-// import prize3 from '../../assets/prize3.jpeg';
-// import prize4 from '../../assets/prize4.jpeg';
-// import prize5 from '../../assets/prize5.jpeg';
+
 // import prize6 from '../../assets/prize6.jpeg';
 // import prize7 from '../../assets/prize7.jpeg';
 // import prize8 from '../../assets/prize8.jpeg';
