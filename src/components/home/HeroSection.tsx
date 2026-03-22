@@ -9,13 +9,15 @@ import img6 from '../../assets/home6.jpeg'
 import img7 from '../../assets/home11.jpg'
 import img8 from '../../assets/home8.jpeg'
 import img9 from '../../assets/home9.jpeg'
-import img10 from '../../assets/home10.jpg'
+//import img10 from '../../assets/home10.jpg'
+
 interface Slide {
 	id: number;
 	image: string;
 	heading: string;
 	content: string;
 }
+
 
 const HeroSection: React.FC = () => {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -25,54 +27,54 @@ const HeroSection: React.FC = () => {
 		{
         id: 9,
         image: img9,
-        heading: 'Child Leadership Programs',
-        content: 'Nurturing the next generation of changemakers through mentorship and training',
+        heading: 'Food Donation (Narayana Seva)',
+        content: 'No one should go hungry. Through Narayana Seva, we provide nutritious meals to the underprivileged.',
     },
     {
         id: 1,
         image: img1,
-        heading: 'Empowering Communities Together',
-        content: 'Join us in making a difference through compassion and dedication to serve humanity',
+        heading: 'Scholarship Assistance & Guidance ',
+        content: 'Education is the foundation of a brighter future. We offer scholarships, mentorship, and career guidance .',
     },
 	 {
         id: 7,
         image: img7,
-        heading: 'Dedicated Team of Volunteers',
-        content: 'Ensuring every contribution is maximized to create lasting impact in the communities we serve',
+        heading: 'Health Awareness & Medical Support',
+        content: 'Good health is a fundamental right. We work towards raising awareness about healthcare, guiding people.',
     },
 	
     {
         id: 2,
         image: img2,
-        heading: 'Building a Better Tomorrow',
-        content: 'Creating sustainable solutions for communities in need across the nation',
+        heading: 'Skill Development & Career Guidance',
+        content: 'True empowerment comes from self-reliance. Our skill development programs equip individuals with practical knowledge.',
     },
     {
         id: 3,
         image: img4,
-        heading: 'Education for All',
-        content: 'Providing quality education and resources to underprivileged children',
+        heading: 'Promoting the Teachings of Great Leaders',
+        content: 'The wisdom of great leaders transforms lives. By spreading the teachings of Swami Vivekananda and other visionaries.',
     },
    
     {
         id: 5,
         image: img6,
-        heading: 'Women Empowerment',
-        content: 'Supporting women through skill development and entrepreneurship programs',
+        heading: 'Orphanage for Street Children',
+        content: 'Every child deserves love, security, and a bright future. Our mission is to provide shelter, education, and holistic care .',
     },
     {
         id: 6,
-        image: img9,
-        heading: 'Environmental Conservation',
-        content: 'Protecting our planet through sustainable practices and awareness campaigns',
+        image: img8,
+        heading: 'Disaster Relief & Humanitarian Aid',
+        content: 'In times of calamity, immediate support can save lives. We provide emergency relief, rehabilitation, and long-term recovery.',
     },
    
-    {
-        id: 8,
-        image: img8,
-        heading: 'Online teaching and learning',
-        content: 'Bridging the digital divide by providing online education resources to remote areas',
-    },
+    // {
+    //     id: 8,
+    //     image: img8,
+    //     heading: 'Online teaching and learning',
+    //     content: 'Bridging the digital divide by providing online education resources to remote areas',
+    // },
 	//  {
     //     id: 4,
     //     image: img3,
@@ -80,12 +82,12 @@ const HeroSection: React.FC = () => {
     //     content: 'Delivering essential healthcare services to remote and underserved areas',
     // },
     
-    {
-        id: 10,
-        image: img10,
-        heading: 'Our mission ',
-        content: 'To empower underprivileged communities through education, healthcare, and sustainable development initiatives, fostering a brighter future for all.',
-    },
+    // {
+    //     id: 10,
+    //     image: img10,
+    //     heading: 'Our mission ',
+    //     content: 'To empower underprivileged communities through education, healthcare, and sustainable development initiatives, fostering a brighter future for all.',
+    // },
 ];
 
 	useEffect(() => {
@@ -123,7 +125,7 @@ const HeroSection: React.FC = () => {
 	};
 
 	return (
-		<div className="relative w-full h-screen overflow-hidden -mt-32 lg:-mt-0">
+		<div className="relative w-full h-screen sm:h-[90vh] overflow-hidden -mt-32 lg:-mt-0">
 			{/* Slides */}
 			{slides.map((slide, index) => (
 				<div
@@ -152,8 +154,8 @@ const HeroSection: React.FC = () => {
 								: 'opacity-0 translate-y-10'
 						}`}
 					>
-						<h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">{slide.heading}</h1>
-						<p className="text-lg md:text-2xl max-w-3xl mx-auto drop-shadow-md">{slide.content}</p>
+						<h1 className="text-2xl md:text-6xl font-bold mb-4 drop-shadow-lg">{slide.heading}</h1>
+						<p className="text-md md:text-2xl max-w-3xl mx-auto drop-shadow-md">{slide.content}</p>
 					</div>
 				</div>
 			))}

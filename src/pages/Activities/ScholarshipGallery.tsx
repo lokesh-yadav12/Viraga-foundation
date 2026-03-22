@@ -1191,26 +1191,26 @@ const EducationInitiativesGallery: React.FC = () => {
        
 
         {/* ════ SECTION 6 — update label below ════ */}
-        <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
+        {/* <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
           <SectionTitle icon="🖼️" label="V F T L Registration, Class & Exam Pics" />
           <GalleryGrid items={block6Items} onOpen={(i) => setBlock6Lb(i)} prefix="viraga-block6" />
         </section>
         
-        <div className="soft-divider h-px max-w-5xl mx-auto" />
+        <div className="soft-divider h-px max-w-5xl mx-auto" /> */}
 
              {/* ════ SECTION 5 — update label below ════ */}
-        <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
+        {/* <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
           <SectionTitle icon="🖼️" label="V F T L Guest Lectures" />
           <GalleryGrid items={block5Items} onOpen={(i) => setBlock5Lb(i)} prefix="viraga-block5" />
         </section>
 
-        <div className="soft-divider h-px max-w-5xl mx-auto" />
+        <div className="soft-divider h-px max-w-5xl mx-auto" /> */}
 
         {/* ════ SECTION 4 — update label below ════ */}
-        <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
+        {/* <section className="max-w-6xl mx-auto px-6 pt-14 pb-14">
           <SectionTitle icon="🖼️" label="V F T L Closing Ceremony" />
           <GalleryGrid items={block4Items} onOpen={(i) => setBlock4Lb(i)} prefix="viraga-block4" />
-        </section>
+        </section> */}
 
         <div className="soft-divider h-px max-w-5xl mx-auto" />
 

@@ -39,6 +39,10 @@ import Mar2024food from './pages/Activities/anandam/March2024food';
 import August2024 from './pages/Activities/anandam/August2024';
 import Skilldevelopment from './pages/Activities/Skilldevelopment';
 import Healthawareness from './pages/Activities/Healthawareness';
+import Promotingteaching from './pages/Activities/Promotingteaching';
+import VFTLpage from './pages/VFTLpage';
+import Twentysix from './pages/Activities/Twentysix';
+import Twentyseven from './pages/Activities/Twentyseven';
 
 // 🧭 Lazy-loaded pages
 const Home = lazy(() => import('./pages/Home'));
@@ -93,6 +97,7 @@ function App() {
 					<Route path='/activities/orphanage' element={<OrphanageGallery />} />
 					<Route path='/activities/scholarship' element={<ScholarshipGallery />} />
 					<Route path='/activities/skilldevelopment' element={<Skilldevelopment />} />
+					<Route path='/activities/promotingteaching' element={<Promotingteaching />} />
 					<Route path='/activities/healthawareness' element={<Healthawareness />} />
 					<Route path='/activities/anandam/inauguration' element={<InaugurationGallery />} />
 					<Route path='/activities/anandam/29-11-2020' element={<Nov2020Gallery />} />
@@ -103,6 +108,11 @@ function App() {
 					<Route path='/activities/anandam/12-3-2023' element={<Mar2023Gallery />} />
 					<Route path='/activities/anandam/3-3-2024' element={<Mar2024food/>} />
 					<Route path='/activities/anandam/31-8-2024' element={<August2024 />} />
+					{/* <Route path='/activities/2025-2026' element={<Year2025 />} /> */}
+					<Route path='/activities/vftl' element={<VFTLpage />} />
+					<Route path='/activities/Twentysix' element={<Twentysix />} />
+					<Route path='/activities/Twentyseven' element={<Twentyseven />} />
+
 
 					<Route path='/vibrantfuture' element={<VibrantFuturesPage />} />
 					<Route path='/announcement' element={<Announcement />} />

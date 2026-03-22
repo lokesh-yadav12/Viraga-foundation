@@ -6,8 +6,9 @@ import vira from '../../assets/Viraga_Foundation_logo_cropped.png';
 const Navbar: React.FC = () => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [isOrgDropdownOpen, setIsOrgDropdownOpen] = useState(false);
-  const [isActivitiesDropdownOpen, setIsActivitiesDropdownOpen] = useState(false);
-
+	const [isActivitiesDropdownOpen, setIsActivitiesDropdownOpen] = useState(false);
+	// Add this state near the top with the other useState hooks:
+	const [isScholarshipSubOpen, setIsScholarshipSubOpen] = useState(false);
 	return (
 		<nav className="w-full relative z-50">
 			{/* Top Bar - Desktop */}
@@ -202,7 +203,7 @@ const Navbar: React.FC = () => {
 											/>
 											<span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
 										</button>
-										<div className="absolute left-0 mt-2 w-56 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100 overflow-hidden">
+										<div className="absolute left-0 mt-2 w-56 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100 overflow-visible">
 											<div className="py-2">
 												<Link
 													to="/about"
@@ -249,7 +250,7 @@ const Navbar: React.FC = () => {
 											/>
 											<span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
 										</button>
-										<div className="absolute left-0 mt-2 w-56 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100 overflow-hidden">
+										<div className="absolute left-0 mt-2 w-56 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100 overflow-visible">
 											<div className="py-2">
 												<Link
 													to="/activities/anandam"
@@ -257,12 +258,46 @@ const Navbar: React.FC = () => {
 												>
 													Food Donation (Narayana Seva)
 												</Link>
-												<Link
+												{/* <Link
 													to="/activities/scholarship"
 													className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500"
 												>
 													Scholarship Assistance & Guidance
-												</Link>
+												</Link> */}
+
+												<div className="relative group/scholarship">
+													<div className="flex items-center justify-between px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500 cursor-pointer select-none">
+														<span>Scholarship Assistance &amp; Guidance</span>
+														<ChevronDown
+															size={13}
+															className="-rotate-90 flex-shrink-0 ml-2 opacity-60"
+														/>
+													</div>
+													{/* Sub-dropdown flies out to the right */}
+													<div className="absolute left-full top-0 w-60 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover/scholarship:opacity-100 group-hover/scholarship:visible transition-all duration-300 z-[60] border border-gray-100 overflow-hidden">
+														<div className="py-2">
+															<Link
+																to="/activities/scholarship"
+																className="block px-5 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium border-l-4 border-transparent hover:border-orange-500 transition-all duration-200"
+															>
+																Scholarship Overview
+															</Link>
+															<Link
+																to="/activities/vftl"
+																className="block px-5 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium border-l-4 border-transparent hover:border-orange-500 transition-all duration-200"
+															>
+																V F T L
+															</Link>
+															{/* <Link to="/activities/scholarship/eligibility" className="block px-5 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium border-l-4 border-transparent hover:border-orange-500 transition-all duration-200">
+                Eligibility Criteria
+            </Link>
+            <Link to="/activities/scholarship/recipients" className="block px-5 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium border-l-4 border-transparent hover:border-orange-500 transition-all duration-200">
+                Past Recipients
+            </Link> */}
+														</div>
+													</div>
+												</div>
+
 												<Link
 													to="/activities/orphanage"
 													className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500"
@@ -289,19 +324,20 @@ const Navbar: React.FC = () => {
 												</Link>
 
 												<Link
-													to="/activities/skilldevelopment"
+													to="/activities/promotingteaching"
 													className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500"
 												>
-													Skill Development & Career Guidance
+													Promoting the Teachings of Great Leaders
 												</Link>
 											</div>
 										</div>
 									</div>
 
 									{/* <Link to="/activities" className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group">
-                    ACTIVITIES
-                    <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
-                  </Link> */}
+										ACTIVITIES
+										<span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+									</Link> */}
+
 									<Link
 										to="/administration"
 										className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group"
@@ -424,13 +460,51 @@ const Navbar: React.FC = () => {
 													>
 														Food Donation (Narayana Seva)
 													</Link>
-													<Link
+													{/* <Link
 														to="/activities/scholarship"
 														className="block py-2 text-gray-600 hover:text-orange-500"
 														onClick={() => setIsMobileMenuOpen(false)}
 													>
 														Scholarship Assistance & Guidance
-													</Link>
+													</Link> */}
+													<div>
+														<button
+															className="w-full text-left py-2 text-gray-600 hover:text-orange-500 flex items-center justify-between"
+															onClick={() =>
+																setIsScholarshipSubOpen(!isScholarshipSubOpen)
+															}
+														>
+															<span>Scholarship Assistance &amp; Guidance</span>
+															<ChevronDown
+																size={13}
+																className={`transform transition-transform flex-shrink-0 ml-1 ${isScholarshipSubOpen ? 'rotate-180' : ''}`}
+															/>
+														</button>
+														{isScholarshipSubOpen && (
+															<div className="pl-4 border-l-2 border-orange-200 ml-1 mb-1">
+																<Link
+																	to="/activities/scholarship"
+																	className="block py-1.5 text-gray-500 hover:text-orange-500 text-sm"
+																	onClick={() => setIsMobileMenuOpen(false)}
+																>
+																	Scholarship Overview
+																</Link>
+																<Link
+																	to="/activities/vftl"
+																	className="block py-1.5 text-gray-500 hover:text-orange-500 text-sm"
+																	onClick={() => setIsMobileMenuOpen(false)}
+																>
+																	V F T L
+																</Link>
+																{/* <Link to="/activities/scholarship/eligibility" className="block py-1.5 text-gray-500 hover:text-orange-500 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
+																		Eligibility Criteria
+																	</Link>
+																	<Link to="/activities/scholarship/recipients" className="block py-1.5 text-gray-500 hover:text-orange-500 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
+																		Past Recipients
+																	</Link> */}
+															</div>
+														)}
+													</div>
 													<Link
 														to="/activities/orphanage"
 														className="block py-2 text-gray-600 hover:text-orange-500"
@@ -446,25 +520,27 @@ const Navbar: React.FC = () => {
 														Disaster Relief & Humanitarian Aid
 													</Link>
 													<Link
-														to="/"
+														to="/activities/healthawareness"
 														className="block py-2 text-gray-600 hover:text-orange-500"
 														onClick={() => setIsMobileMenuOpen(false)}
 													>
 														Health Awareness & Medical Support
 													</Link>
-                          <Link
-														to="/"
+
+													<Link
+														to="/activities/skilldevelopment"
 														className="block py-2 text-gray-600 hover:text-orange-500"
 														onClick={() => setIsMobileMenuOpen(false)}
 													>
 														Skill Development & Career Guidance
 													</Link>
-                          <Link
-														to="/"
+
+													<Link
+														to="/activities/promotingteaching"
 														className="block py-2 text-gray-600 hover:text-orange-500"
 														onClick={() => setIsMobileMenuOpen(false)}
 													>
-														Skill Development & Career Guidance
+														Promoting the Teachings of Great Leaders
 													</Link>
 												</div>
 											)}
@@ -517,3 +593,404 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
+// import React, { useState } from 'react';
+// import { Mail, MapPin, Phone, Bell, Menu, X, ChevronDown } from 'lucide-react';
+// import { Link } from 'react-router-dom';
+// import vira from '../../assets/Viraga_Foundation_logo_cropped.png';
+
+// const Navbar: React.FC = () => {
+// 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+// 	const [isOrgDropdownOpen, setIsOrgDropdownOpen] = useState(false);
+// 	const [isActivitiesDropdownOpen, setIsActivitiesDropdownOpen] = useState(false);
+// 	const [isScholarshipSubOpen, setIsScholarshipSubOpen] = useState(false);
+
+// 	return (
+// 		<nav className="w-full relative z-50">
+// 			{/* Top Bar - Desktop */}
+// 			<div className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 text-white hidden lg:block">
+// 				<div className="max-w-7xl mx-auto px-4 py-3.5">
+// 					<div className="flex items-center justify-between">
+// 						{/* Left side - Contact Info */}
+// 						<div className="flex items-center gap-8 text-sm">
+// 							<a
+// 								href="mailto:viragafoundation@gmail.com"
+// 								className="flex items-center text-white gap-2 hover:text-orange-100 transition-all duration-300 hover:scale-105"
+// 							>
+// 								<div className="bg-white/20 rounded-full p-1.5 backdrop-blur-sm">
+// 									<Mail size={16} />
+// 								</div>
+// 								<span className="font-medium">viragafoundation@gmail.com</span>
+// 							</a>
+// 							<div className="flex items-center gap-2 opacity-90">
+// 								<div className="bg-white/20 rounded-full p-1.5 backdrop-blur-sm">
+// 									<MapPin size={16} />
+// 								</div>
+// 								<span className="font-medium">Ayodhya nagar, Vijayawada, 520003</span>
+// 							</div>
+// 							<div className="flex items-center gap-2 opacity-90">
+// 								<div className="bg-white/20 rounded-full p-1.5 backdrop-blur-sm">
+// 									<Phone size={16} />
+// 								</div>
+// 								<span className="font-medium">+91 9492940941</span>
+// 							</div>
+// 						</div>
+
+// 						{/* Right side - Social Icons */}
+// 						<div className="flex items-center gap-3">
+// 							<a
+// 								href="#"
+// 								className="bg-white rounded-full text-orange-500 p-2.5 hover:bg-orange-50 hover:scale-110 transition-all duration-300 shadow-md hover:shadow-lg"
+// 							>
+// 								<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+// 									<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+// 								</svg>
+// 							</a>
+// 							<a
+// 								href="https://x.com/viraga2022?s=21"
+// 								className="bg-white rounded-full text-orange-500 p-2.5 hover:bg-orange-50 hover:scale-110 transition-all duration-300 shadow-md hover:shadow-lg"
+// 							>
+// 								<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+// 									<path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+// 								</svg>
+// 							</a>
+// 							<a
+// 								href="https://youtube.com/@viragafoundation?si=QW9_VTxdaG7d-Zds"
+// 								className="bg-white rounded-full text-orange-500 p-2.5 hover:bg-orange-50 hover:scale-110 transition-all duration-300 shadow-md hover:shadow-lg"
+// 							>
+// 								<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+// 									<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+// 								</svg>
+// 							</a>
+// 							<a
+// 								href="https://www.instagram.com/viragafoundation"
+// 								className="bg-white rounded-full text-orange-500 p-2.5 hover:bg-orange-50 hover:scale-110 transition-all duration-300 shadow-md hover:shadow-lg"
+// 							>
+// 								<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+// 									<path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+// 								</svg>
+// 							</a>
+// 							{/* ✦ Highlighted Announcement Tab */}
+// 							<Link
+// 								to="/announcement"
+// 								className="announcement-tab relative flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-orange-900 font-bold text-xs tracking-wide px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 uppercase"
+// 							>
+// 								<span className="relative flex h-2.5 w-2.5">
+// 									<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+// 									<span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
+// 								</span>
+// 								<Bell size={13} className="flex-shrink-0" />
+// 								Announcements
+// 							</Link>
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</div>
+
+// 			{/* Top Bar - Mobile */}
+// 			<div className="bg-orange-500 pt-2 pb-2 text-white lg:hidden">
+// 				<div className="px-6 py-3">
+// 					<div className="flex flex-col sm:gap-4 gap-1">
+// 						<a href="mailto:viragafoundation@gmail.com" className="flex items-start gap-1 text-white">
+// 							<div className="border-white p-1 flex-shrink-0">
+// 								<Mail size={16} />
+// 							</div>
+// 							<span className="pt-0 underline text-sm">viragafoundation@gmail.com</span>
+// 						</a>
+// 						<div className="flex items-start gap-1">
+// 							<div className="border-white p-1 flex-shrink-0">
+// 								<MapPin size={16} />
+// 							</div>
+// 							<span className="pt-0 text-sm">Ayodhya nagar, Vijayawada, 520003</span>
+// 						</div>
+// 						<a href="tel:+919492940941" className="flex items-start gap-1 text-white">
+// 							<div className="border-white p-1 flex-shrink-0">
+// 								<Phone size={16} />
+// 							</div>
+// 							<span className="pt-1 text-sm">+91 9492940941</span>
+// 						</a>
+// 						<div className="flex gap-3 mt-2">
+// 							<a href="https://x.com/viraga2022?s=21" className="bg-white rounded-lg pt-2 text-orange-500 p-1 hover:bg-orange-100 transition">
+// 								<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+// 									<path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+// 								</svg>
+// 							</a>
+// 							<a href="https://youtube.com/@viragafoundation?si=QW9_VTxdaG7d-Zds" className="bg-white pt-2 rounded-lg text-orange-500 p-1 hover:bg-orange-100 transition">
+// 								<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+// 									<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+// 								</svg>
+// 							</a>
+// 							<a href="https://www.instagram.com/viragafoundation" className="bg-white rounded-lg pt-2 text-orange-500 p-1 hover:bg-orange-100 transition">
+// 								<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+// 									<path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+// 								</svg>
+// 							</a>
+// 							<Link
+// 								to="/announcement"
+// 								className="announcement-tab relative flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-orange-900 font-bold text-xs tracking-wide px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 uppercase"
+// 							>
+// 								<Bell size={13} className="flex-shrink-0" />
+// 								<span>Announcements</span>
+// 							</Link>
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</div>
+
+// 			{/* Main Navigation */}
+// 			<div className="absolute top-0 left-0 right-0 z-50 px-4 lg:px-8 py-4 sm:mt-16 mt-40">
+// 				<div className="max-w-7xl mx-auto">
+// 					<div className="bg-white/95 backdrop-blur-md shadow-2xl rounded-3xl border border-gray-100 relative">
+// 						<div className="px-6">
+// 							<div className="flex items-center justify-between py-0">
+// 								{/* Logo */}
+// 								<Link to="/" className="flex items-center">
+// 									<img
+// 										src={vira}
+// 										alt="Viraga Foundation"
+// 										className="sm:h-16 sm:w-40 pl-4 h-20 py-2 sm:py-1 w-40 transition-transform duration-300 hover:scale-105"
+// 									/>
+// 								</Link>
+
+// 								{/* Desktop Menu */}
+// 								<div className="hidden lg:flex items-center space-x-1">
+// 									<Link
+// 										to="/"
+// 										className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group"
+// 									>
+// 										HOME
+// 										<span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+// 									</Link>
+
+// 									{/* ORGANIZATION Dropdown */}
+// 									<div className="relative group">
+// 										<button className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 flex items-center gap-1.5 relative">
+// 											ORGANIZATION
+// 											<ChevronDown size={16} className="transition-transform duration-300 group-hover:rotate-180" />
+// 											<span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+// 										</button>
+// 										<div className="absolute left-0 mt-2 w-56 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100 overflow-hidden">
+// 											<div className="py-2">
+// 												<Link to="/about" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													About Us
+// 												</Link>
+// 												<Link to="/activities/anandam/inauguration" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													Foundation Inception
+// 												</Link>
+// 												<Link to="/objectives" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													Objectives
+// 												</Link>
+// 												<Link to="/about-logo" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													About Logo
+// 												</Link>
+// 												<Link to="/volunteers" className="block px-5 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													Volunteers
+// 												</Link>
+// 											</div>
+// 										</div>
+// 									</div>
+
+// 									{/* ACTIVITIES Dropdown */}
+// 									<div className="relative group">
+// 										<button className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 flex items-center gap-1.5 relative">
+// 											ACTIVITIES
+// 											<ChevronDown size={16} className="transition-transform duration-300 group-hover:rotate-180" />
+// 											<span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+// 										</button>
+
+// 										<div className="absolute left-0 mt-2 w-64 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100 overflow-visible">
+// 											<div className="py-2">
+
+// 												<Link to="/activities/anandam" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													Food Donation (Narayana Seva)
+// 												</Link>
+
+// 												{/* ── Scholarship with nested sub-dropdown ── */}
+// 												<div className="relative group/scholarship">
+// 													<div className="flex items-center justify-between px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500 cursor-pointer">
+// 														<span>Scholarship Assistance &amp; Guidance</span>
+// 														<ChevronDown size={13} className="-rotate-90 flex-shrink-0 ml-2 opacity-60" />
+// 													</div>
+// 													{/* Sub-dropdown — flies out to the right */}
+// 													<div className="absolute left-full top-0 w-60 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover/scholarship:opacity-100 group-hover/scholarship:visible transition-all duration-300 z-[60] border border-gray-100 overflow-hidden">
+// 														<div className="py-2">
+// 															<Link to="/activities/scholarship" className="block px-5 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium border-l-4 border-transparent hover:border-orange-500 transition-all duration-200">
+// 																V F T L Closing Ceremony
+// 															</Link>
+// 															<Link to="/activities/scholarship/apply" className="block px-5 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium border-l-4 border-transparent hover:border-orange-500 transition-all duration-200">
+// 																V F T L Prize Distribution
+// 															</Link>
+// 															<Link to="/activities/scholarship/eligibility" className="block px-5 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium border-l-4 border-transparent hover:border-orange-500 transition-all duration-200">
+// 																V F T L Guest Lectures
+// 															</Link>
+// 															<Link to="/activities/scholarship/recipients" className="block px-5 py-2.5 text-gray-700 hover:bg-orange-50 hover:text-orange-600 font-medium border-l-4 border-transparent hover:border-orange-500 transition-all duration-200">
+// 																PV F T L Registration
+// 															</Link>
+// 														</div>
+// 													</div>
+// 												</div>
+// 												{/* ── end Scholarship ── */}
+
+// 												<Link to="/activities/orphanage" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													Orphanage for Street Children
+// 												</Link>
+// 												<Link to="/activities/disaster-relief" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													Disaster Relief &amp; Humanitarian Aid
+// 												</Link>
+// 												<Link to="/activities/healthawareness" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													Health Awareness &amp; Medical Support
+// 												</Link>
+// 												<Link to="/activities/skilldevelopment" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													Skill Development &amp; Career Guidance
+// 												</Link>
+// 												<Link to="/activities/promotingteaching" className="block px-5 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-orange-600 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-orange-500">
+// 													Promoting the Teachings of Great Leaders
+// 												</Link>
+// 											</div>
+// 										</div>
+// 									</div>
+
+// 									<Link
+// 										to="/administration"
+// 										className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group"
+// 									>
+// 										ADMINISTRATION
+// 										<span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+// 									</Link>
+// 									<Link
+// 										to="/donation"
+// 										className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group"
+// 									>
+// 										DONATIONS
+// 										<span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+// 									</Link>
+// 									<Link
+// 										to="/yearly-reports"
+// 										className="px-4 py-2 text-gray-700 hover:text-orange-500 font-semibold text-sm tracking-wide transition-all duration-300 relative group"
+// 									>
+// 										YEARLY REPORTS
+// 										<span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+// 									</Link>
+// 									<Link
+// 										to="/contactPage"
+// 										className="ml-2 px-5 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold text-sm tracking-wide rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
+// 									>
+// 										CONTACT US
+// 									</Link>
+// 								</div>
+
+// 								{/* Mobile Menu Button */}
+// 								<button
+// 									className="lg:hidden text-orange-700 pr-4"
+// 									onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+// 								>
+// 									{isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+// 								</button>
+// 							</div>
+
+// 							{/* Mobile Menu */}
+// 							{isMobileMenuOpen && (
+// 								<div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg rounded-b-3xl z-50">
+// 									<div className="px-6 py-4">
+// 										<Link to="/" className="block py-2 text-gray-700 hover:text-orange-500 font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+// 											HOME
+// 										</Link>
+
+// 										{/* Organization accordion */}
+// 										<div>
+// 											<button
+// 												className="w-full text-left py-2 text-gray-700 hover:text-orange-500 font-medium flex items-center justify-between"
+// 												onClick={() => setIsOrgDropdownOpen(!isOrgDropdownOpen)}
+// 											>
+// 												ORGANIZATION
+// 												<ChevronDown size={16} className={`transform transition-transform ${isOrgDropdownOpen ? 'rotate-180' : ''}`} />
+// 											</button>
+// 											{isOrgDropdownOpen && (
+// 												<div className="pl-4">
+// 													<Link to="/about" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
+// 													<Link to="/activities/anandam/inauguration" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>Foundation Inception</Link>
+// 													<Link to="/objectives" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>Objectives</Link>
+// 													<Link to="/about-logo" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>About Logo</Link>
+// 													<Link to="/volunteers" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>Volunteers</Link>
+// 												</div>
+// 											)}
+// 										</div>
+
+// 										{/* Activities accordion */}
+// 										<div>
+// 											<button
+// 												className="w-full text-left py-2 text-gray-700 hover:text-orange-500 font-medium flex items-center justify-between"
+// 												onClick={() => setIsActivitiesDropdownOpen(!isActivitiesDropdownOpen)}
+// 											>
+// 												ACTIVITIES
+// 												<ChevronDown size={16} className={`transform transition-transform ${isActivitiesDropdownOpen ? 'rotate-180' : ''}`} />
+// 											</button>
+// 											{isActivitiesDropdownOpen && (
+// 												<div className="pl-4">
+// 													<Link to="/activities/anandam" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>
+// 														Food Donation (Narayana Seva)
+// 													</Link>
+
+// 													{/* Scholarship sub-accordion (mobile) */}
+// 													<div>
+// 														<button
+// 															className="w-full text-left py-2 text-gray-600 hover:text-orange-500 flex items-center justify-between"
+// 															onClick={() => setIsScholarshipSubOpen(!isScholarshipSubOpen)}
+// 														>
+// 															<span>Scholarship Assistance &amp; Guidance</span>
+// 															<ChevronDown size={13} className={`transform transition-transform flex-shrink-0 ml-1 ${isScholarshipSubOpen ? 'rotate-180' : ''}`} />
+// 														</button>
+// 														{isScholarshipSubOpen && (
+// 															<div className="pl-4 border-l-2 border-orange-200 ml-1 mb-1">
+// 																<Link to="/activities/scholarship" className="block py-1.5 text-gray-500 hover:text-orange-500 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
+// 																	Scholarship Overview
+// 																</Link>
+// 																<Link to="/activities/scholarship/apply" className="block py-1.5 text-gray-500 hover:text-orange-500 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
+// 																	Apply for Scholarship
+// 																</Link>
+// 																<Link to="/activities/scholarship/eligibility" className="block py-1.5 text-gray-500 hover:text-orange-500 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
+// 																	Eligibility Criteria
+// 																</Link>
+// 																<Link to="/activities/scholarship/recipients" className="block py-1.5 text-gray-500 hover:text-orange-500 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
+// 																	Past Recipients
+// 																</Link>
+// 															</div>
+// 														)}
+// 													</div>
+// 													{/* end Scholarship sub-accordion */}
+
+// 													<Link to="/activities/orphanage" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>
+// 														Orphanage for Street Children
+// 													</Link>
+// 													<Link to="/activities/disaster-relief" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>
+// 														Disaster Relief &amp; Humanitarian Aid
+// 													</Link>
+// 													<Link to="/activities/healthawareness" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>
+// 														Health Awareness &amp; Medical Support
+// 													</Link>
+// 													<Link to="/activities/skilldevelopment" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>
+// 														Skill Development &amp; Career Guidance
+// 													</Link>
+// 													<Link to="/activities/promotingteaching" className="block py-2 text-gray-600 hover:text-orange-500" onClick={() => setIsMobileMenuOpen(false)}>
+// 														Promoting the Teachings of Great Leaders
+// 													</Link>
+// 												</div>
+// 											)}
+// 										</div>
+
+// 										<Link to="/administration" className="block py-2 text-gray-700 hover:text-orange-500 font-medium" onClick={() => setIsMobileMenuOpen(false)}>ADMINISTRATION</Link>
+// 										<Link to="/donation" className="block py-2 text-gray-700 hover:text-orange-500 font-medium" onClick={() => setIsMobileMenuOpen(false)}>DONATIONS</Link>
+// 										<Link to="/yearly-reports" className="block py-2 text-gray-700 hover:text-orange-500 font-medium" onClick={() => setIsMobileMenuOpen(false)}>YEARLY REPORTS</Link>
+// 										<Link to="/contactPage" className="block py-2 text-gray-700 hover:text-orange-500 font-medium" onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
+// 									</div>
+// 								</div>
+// 							)}
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</div>
+// 		</nav>
+// 	);
+// };
+
+// export default Navbar;

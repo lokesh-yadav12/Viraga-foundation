@@ -30,6 +30,7 @@ const initiatives: Initiative[] = [
     color: 'from-orange-400 to-orange-600',
     bgGradient: 'from-orange-500/20 via-orange-400/10 to-transparent'
   },
+
   {
     icon: scholarshipIcon,
     title: 'Scholarship Assistance & Guidance – Empowering Dreams Through Education',
@@ -37,6 +38,7 @@ const initiatives: Initiative[] = [
     color: 'from-blue-400 to-blue-600',
     bgGradient: 'from-blue-500/20 via-blue-400/10 to-transparent'
   },
+
   {
     icon: healthIcon,
     title: 'Health Awareness & Medical Support – Spreading Knowledge for a Healthier Society',
@@ -44,6 +46,7 @@ const initiatives: Initiative[] = [
     color: 'from-pink-400 to-pink-600',
     bgGradient: 'from-pink-500/20 via-pink-400/10 to-transparent'
   },
+
   {
     icon: skillDevIcon,
     title: 'Skill Development & Career Guidance – Shaping Self-Reliant Individuals',
@@ -51,6 +54,7 @@ const initiatives: Initiative[] = [
     color: 'from-purple-400 to-purple-600',
     bgGradient: 'from-purple-500/20 via-purple-400/10 to-transparent'
   },
+
   {
     icon: leadersIcon,
     title: 'Promoting the Teachings of Great Leaders – Inspiring Positive Change',
@@ -58,6 +62,7 @@ const initiatives: Initiative[] = [
     color: 'from-amber-400 to-amber-600',
     bgGradient: 'from-amber-500/20 via-amber-400/10 to-transparent'
   },
+
   {
     icon: orphanageIcon,
     title: 'Orphanage for Street Children – A Safe Haven for Every Child',
@@ -65,6 +70,7 @@ const initiatives: Initiative[] = [
     color: 'from-teal-400 to-teal-600',
     bgGradient: 'from-teal-500/20 via-teal-400/10 to-transparent'
   },
+  
   {
     icon: disasterIcon,
     title: 'Disaster Relief & Humanitarian Aid – Extending Hope in Crisis',
