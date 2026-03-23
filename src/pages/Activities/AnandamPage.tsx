@@ -14,14 +14,14 @@ import cover8 from '../../assets/anandam/2-5-2023/6.jpeg';
 import cover9 from '../../assets/anandam/29-11-2020/40.jpeg';
 const subFolders = [
     // { label: 'Inauguration', link: '/activities/anandam/inauguration', cover: cover1 },
-    { label: '29 Nov 2020', link: '/activities/anandam/29-11-2020', cover: cover2 },
-    { label: '7 Feb 2021', link: '/activities/anandam/7-2-2021', cover: cover3 },
-    { label: '21 Feb 2021', link: '/activities/anandam/21-02-2021', cover: cover4 },
-    { label: '25 Feb 2021', link: '/activities/anandam/25-02-2021', cover: cover5 },
-    { label: '2 May 2023', link: '/activities/anandam/2-5-2023', cover: cover6 },
-    { label: '12 Mar 2023', link: '/activities/anandam/12-3-2023', cover: cover7 },
-    { label: '3 Mar 2024', link: '/activities/anandam/3-3-2024', cover: cover8 },
-    { label: '31 Aug 2024', link: '/activities/anandam/31-8-2024', cover: cover9 },
+    { label: ' 2020', link: '/activities/anandam/29-11-2020', cover: cover2 },
+    { label: ' 2021', link: '/activities/anandam/7-2-2021', cover: cover3 },
+    { label: ' 2021', link: '/activities/anandam/21-02-2021', cover: cover4 },
+    { label: ' 2021', link: '/activities/anandam/25-02-2021', cover: cover5 },
+    { label: ' 2023', link: '/activities/anandam/2-5-2023', cover: cover6 },
+    { label: ' 2023', link: '/activities/anandam/12-3-2023', cover: cover7 },
+    { label: ' 2024', link: '/activities/anandam/3-3-2024', cover: cover8 },
+    { label: ' 2024', link: '/activities/anandam/31-8-2024', cover: cover9 },
 ];
 
 const AnandamPage = () => {
