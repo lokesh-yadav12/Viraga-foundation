@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Sparkles } from 'lucide-react';
-import bgpic from '../assets/e15.png';
+import bgpic from '../assets/vftlbg.png';
 import img1 from '.././assets/closing10.jpeg';
 import img2 from '.././assets/guest2.jpeg';
 // import img3 from '.././assets/prize2.jpeg';
