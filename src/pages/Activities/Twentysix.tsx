@@ -460,6 +460,8 @@ const VFTLGalleryPage: React.FC = () => {
 
 				<div className="soft-divider h-px max-w-5xl mx-auto" />
 
+
+
 				{/* ════ SECTION 3 — Closing Ceremony ════ */}
 				<section className="max-w-6xl mx-auto px-6 pt-14 pb-20">
 					<SectionTitle icon="🎓" label="V F T L Closing Ceremony" />
