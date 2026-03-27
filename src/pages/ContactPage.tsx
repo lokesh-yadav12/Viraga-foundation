@@ -81,12 +81,12 @@ const ContactPage = () => {
 					<p className="mt-2 text-lg text-gray-700">
 						<strong>Website:</strong>{' '}
 						<a
-							href="https://viragafoundation.org"
+							href="https://viraga.org"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-blue-700 hover:underline"
 						>
-							www.viragafoundation.org
+							www.viraga.org
 						</a>
 					</p>
 				</div>
