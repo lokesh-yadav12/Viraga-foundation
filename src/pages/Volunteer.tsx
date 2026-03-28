@@ -318,8 +318,17 @@ export default function Volunteer() {
 										animate={inView ? { opacity: 1 } : {}}
 										transition={{ delay: 0.8, duration: 0.5 }}
 									>
+										“Guided by Dharma, Driven by Karma, Serving with Selflessness”
+									</motion.p>
+									<motion.p
+										className="text-lg sm:text-xl md:text-2xl italic text-gray-700 mb-2 sm:mb-3 leading-relaxed"
+										initial={{ opacity: 0 }}
+										animate={inView ? { opacity: 1 } : {}}
+										transition={{ delay: 0.8, duration: 0.5 }}
+									>
 										"They alone live, who live for others."
 									</motion.p>
+									
 									<motion.p
 										className="text-sm sm:text-base md:text-lg text-gray-600 font-medium"
 										initial={{ opacity: 0 }}

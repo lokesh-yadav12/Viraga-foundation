@@ -202,7 +202,7 @@ const Footer: React.FC = () => {
 								</div>
 								<span className="text-sm sm:text-lg">by</span>
 								<a 
-									href="https://elite8digital.com" 
+									href="https://elite8digital.in" 
 									target="_blank" 
 									rel="noopener noreferrer"
 									className="group flex items-center gap-1 sm:gap-2"

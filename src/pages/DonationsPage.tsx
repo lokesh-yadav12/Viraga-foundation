@@ -33,6 +33,7 @@ const DonationsPage = () => {
 		{ label: 'Customer ID/Name', value: '901449184/ Viraga Foundation' },
 		{ label: 'IFSC', value: 'UBIN0822205' },
 		{ label: 'MICR Code', value: '520026021' },
+		{ label: 'Google Pay/PhonePe', value: '9492940941' },
 	];
 
 	const circleHelps = [

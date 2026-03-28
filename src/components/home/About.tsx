@@ -44,9 +44,13 @@ const About: React.FC = () => {
 								{/* <h2 className="text-2xl sm:text-3xl font-semibold text-orange-700 mb-8">
 									नहि ज्ञानेन सदृश्य
 								</h2> */}
-
+								<p className="italic text-purple-700 font-bold text-lg">
+										“Guided by Dharma, Driven by Karma, Serving with Selflessness”
+								</p>
 								{/* Main content */}
 								<div className="space-y-6 text-amber-900 text-base sm:text-lg leading-relaxed">
+									
+									
 									<div className="pt-4">
 										<p className="text-base sm:text-lg">
 											We are <span className="font-semibold text-purple-700">VIRAGA Foundation</span>, a non-governmental organization established on November 25, 2020, by dedicated individuals inspired by the timeless teachings of Swami Vivekananda. Our foundation was graciously inaugurated by Swami Hridananadji Maharaj, Secretary of Ramakrishna Mission, Vijayawada.
