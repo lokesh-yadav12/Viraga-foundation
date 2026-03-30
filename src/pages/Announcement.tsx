@@ -120,7 +120,7 @@ const TeluguContent = () => {
 			</div>
 
 			{/* Main Content — centered column */}
-			<div className="w-full max-w-3xl mx-auto px-4 md:px-6 py-10 space-y-8 flex flex-col items-center">
+			<div className="w-full max-w-5xl mx-auto px-4 md:px-6 py-10 space-y-8 flex flex-col items-center">
 				{/* Registration Dates */}
 				<div className={`fade-up delay-2 ${visible ? 'visible' : ''} w-full`}>
 					<h2 className="body-font text-xs font-semibold uppercase tracking-widest text-orange-400 mb-4 flex items-center gap-2">
@@ -135,7 +135,7 @@ const TeluguContent = () => {
 								🎉 Registrations Now Open
 							</div>
 							<div className="text-white text-2xl font-black leading-tight">Register Before</div>
-							<div className="text-white text-4xl font-black leading-none mt-1">31 March 2026</div>
+							<div className="text-white text-4xl font-black leading-none mt-1">30 April 2026</div>
 							<div className="mt-3 w-16 h-1 bg-white/40 rounded-full mx-auto" />
 						</div>
 
@@ -236,7 +236,7 @@ const TeluguContent = () => {
 							<p className="telugu text-lg font-bold leading-relaxed mb-4">
 								వైభవమైన భవిష్యత్తు వైపు మొదటి అడుగు వేయండి!
 							</p>
-							<div className="inline-flex items-center gap-2 bg-white text-orange-600 rounded-full px-6 py-2.5 body-font font-bold text-sm pulse-badge">
+							<div className="inline-flex items-center gap-2 bg-white text-orange-600 rounded-full px-6 py-2.5 body-font font-bold text-sm ">
 								📌 సీట్లు పరిమితంగా ఉన్నాయి – ముందస్తు రిజిస్ట్రేషన్ చేయండి
 							</div>
 						</div>

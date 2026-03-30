@@ -8,6 +8,7 @@ import img2 from '.././assets/guest2.jpeg';
 // import img5 from '.././assets/class5.jpeg';
 // import img4 from '.././assets/level4.png';
 import { motion } from 'framer-motion';
+
 // New folder covers
 // import anandamCover from '.././assets/anandam/inauguration/1.jpg';
 // import disasterCover from '.././assets/Disaster Relief & Humanitarian Aid – Extending Hope in Crisis/1.jpg';

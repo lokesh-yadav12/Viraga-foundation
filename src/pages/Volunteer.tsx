@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import logo from '../assets/bottom1.png';
-
+import axios from "axios";
 const fadeUp = {
 	hidden: { opacity: 0, y: 40 },
 	visible: { opacity: 1, y: 0 },
@@ -170,33 +170,44 @@ export default function Volunteer() {
 		return newErrors;
 	};
 
+	
 	const handleSubmit = async () => {
-		const validationErrors = validate();
-		if (Object.keys(validationErrors).length > 0) {
-			setErrors(validationErrors);
-			return;
-		}
-		setIsSubmitting(true);
-		try {
-			const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(formData),
-			});
-			if (response.ok) {
-				setShowSuccess(true);
-				setFormData({ name: '', email: '', phone: '', occupation: '', department: '' });
-				setErrors({});
-			}
-		} catch (err) {
-			// Show popup during dev/offline testing too
-			setShowSuccess(true);
-			setFormData({ name: '', email: '', phone: '', occupation: '', department: '' });
-			setErrors({});
-		} finally {
-			setIsSubmitting(false);
-		}
-	};
+  const validationErrors = validate();
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const response = await axios.post(
+      "https://lets-taxify.onrender.com/api/viraga/volunteer",
+      formData
+    );
+
+    if (response.data?.success) {
+      setShowSuccess(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        occupation: "",
+        department: "",
+      });
+      setErrors({});
+    }
+
+  } catch (error: any) {
+    console.error("Volunteer error:", error);
+
+    // Still show success UI (optional UX choice)
+    setShowSuccess(true);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
 	return (
 		<section className="relative bg-white min-h-screen overflow-hidden">
@@ -328,7 +339,6 @@ export default function Volunteer() {
 									>
 										"They alone live, who live for others."
 									</motion.p>
-									
 									<motion.p
 										className="text-sm sm:text-base md:text-lg text-gray-600 font-medium"
 										initial={{ opacity: 0 }}

@@ -113,6 +113,7 @@ const Footer: React.FC = () => {
 							</div>
 						</div>
 
+
 						{/* Quick Links */}
 						<div className="animate-fade-slide-up px-4 sm:px-1" style={{ animationDelay: '0.3s' }}>
 							<div className="mb-8">

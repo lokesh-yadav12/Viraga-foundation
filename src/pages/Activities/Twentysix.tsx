@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-
+import img12 from '../../assets/newbacha.png';
 // ── BLOCK 4: Closing Ceremony ──
 import b4img1 from '../../assets/closing1.jpeg';
 import b4img2 from '../../assets/closing2.jpeg';
@@ -460,22 +460,34 @@ const VFTLGalleryPage: React.FC = () => {
 
 				<div className="soft-divider h-px max-w-5xl mx-auto" />
 
-
-
 				{/* ════ SECTION 3 — Closing Ceremony ════ */}
 				<section className="max-w-6xl mx-auto px-6 pt-14 pb-20">
 					<SectionTitle icon="🎓" label="V F T L Closing Ceremony" />
 					<GalleryGrid items={block4Items} onOpen={(i) => setBlock4Lb(i)} prefix="viraga-block4" />
 				</section>
-      
-      
 
-        <div className='max-w-6xl mx-auto px-6 text-xl font-medium py-2'> 
-             "🏆 ఇటీవల జేఎన్వీఎస్టీ 2026 పరీక్షకు సంబంధించి విరాగ ఫౌండేషన్ 21 మంది విద్యార్థులకు ప్రత్యేక శిక్షణ ఇచ్చింది. ఈ పరీక్షలో 7 మంది విద్యార్థులు అర్హత సాధించడం గర్వకారణం. ముఖ్యంగా ఘంటసాల యశ్వంత్ నాగ సాయి (హాల్ టికెట్ నం: 1029231) ప్రధాన జాబితాలో ఎంపిక కావడం విశేషం. ఈ సందర్భంగా అతనికి హృదయపూర్వక అభినందనలు తెలియజేస్తున్నాం.
-ఇతరంగా కే బి ఎస్ ఎస్ భావేష్, వి ఎం నాగ సాయి, ఎన్ ధరణి శ్రీ, బి రూపావతి, ఎం ఎస్తేర్ రాణి మరియు జి బి సాయి కుమార్ అనే ఆరుగురు విద్యార్థులు అర్హత సాధించి, రెండో లేదా మూడో జాబితాలో సీటు పొందే అవకాశాలు ఉన్నాయి. వీరందరికీ కూడా శుభాకాంక్షలు తెలియజేస్తున్నాం.
-ఈ విజయాల వెనుక ఉపాధ్యాయులు, దాతలు, తల్లిదండ్రులు మరియు విద్యార్థుల కృషి ఎంతో ఉంది. వారి సహకారం వల్లే ఈ ఫలితాలు సాధ్యమయ్యాయి 🙏🏻."
-        </div>
+				<div className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 max-w-6xl mx-auto py-5">
+					
+					<div className="px-6 text-xl sm:text-2xl font-medium py-2 w-full lg:w-3/5">
+						"🏆 ఇటీవల జేఎన్వీఎస్టీ 2026 పరీక్షకు సంబంధించి విరాగ ఫౌండేషన్ 21 మంది విద్యార్థులకు ప్రత్యేక
+						శిక్షణ ఇచ్చింది. ఈ పరీక్షలో 7 మంది విద్యార్థులు అర్హత సాధించడం గర్వకారణం. ముఖ్యంగా ఘంటసాల
+						యశ్వంత్ నాగ సాయి (హాల్ టికెట్ నం: 1029231) ప్రధాన జాబితాలో ఎంపిక కావడం విశేషం. ఈ సందర్భంగా
+						అతనికి హృదయపూర్వక అభినందనలు తెలియజేస్తున్నాం. ఇతరంగా కే బి ఎస్ ఎస్ భావేష్, వి ఎం నాగ సాయి, ఎన్
+						ధరణి శ్రీ, బి రూపావతి, ఎం ఎస్తేర్ రాణి మరియు జి బి సాయి కుమార్ అనే ఆరుగురు విద్యార్థులు అర్హత
+						సాధించి, రెండో లేదా మూడో జాబితాలో సీటు పొందే అవకాశాలు ఉన్నాయి. వీరందరికీ కూడా శుభాకాంక్షలు
+						తెలియజేస్తున్నాం. ఈ విజయాల వెనుక ఉపాధ్యాయులు, దాతలు, తల్లిదండ్రులు మరియు విద్యార్థుల కృషి ఎంతో
+						ఉంది. వారి సహకారం వల్లే ఈ ఫలితాలు సాధ్యమయ్యాయి 🙏🏻."
+					</div>
 
+					<div className="w-full lg:w-2/5 flex justify-center">
+						<img
+							src={img12}
+							alt="VFTL Success Story"
+							className="w-full h-[480px] object-contain rounded-lg shadow-lg"
+						/>
+					</div>
+
+				</div>
 
 
 				{/* Footer */}

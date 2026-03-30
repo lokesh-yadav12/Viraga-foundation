@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { X, CheckCircle, Sparkles } from 'lucide-react';
 import bgpic from '../assets/contact.png';
+import axios from "axios";
 
 const ContactPage = () => {
 	const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const ContactPage = () => {
 		message: '',
 	});
 	const [showSuccessModal, setShowSuccessModal] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target;
@@ -19,21 +21,46 @@ const ContactPage = () => {
 		}));
 	};
 
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		console.log('Form submitted:', formData);
-		
-		// Show success modal
-		setShowSuccessModal(true);
-		
-		// Reset form
-		setFormData({
-			name: '',
-			email: '',
-			phone: '',
-			message: '',
-		});
-	};
+
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill all required fields");
+      return;
+    }
+
+    setIsSubmitting(true); // 🔥 start loading
+
+    const response = await axios.post(
+      "https://lets-taxify.onrender.com/api/viraga/contact",
+      formData
+    );
+
+    if (response.data?.success) {
+      setShowSuccessModal(true);
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    }
+
+  } catch (error: any) {
+    console.error("Contact error:", error);
+
+    alert(
+      error.response?.data?.message || "Failed to send message. Try again."
+    );
+
+  } finally {
+    setIsSubmitting(false); // 🔥 stop loading
+  }
+};
 
 	const closeModal = () => {
 		setShowSuccessModal(false);

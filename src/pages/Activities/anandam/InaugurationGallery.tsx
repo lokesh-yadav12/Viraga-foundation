@@ -234,11 +234,11 @@ const FoundationInceptionGallery: React.FC = () => {
       `}</style>
 
       <div
-        className="min-h-screen p-16 w-full"
+        className="min-h-screen py-12 w-full"
         style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
       >
         {/* ── Article Section ── */}
-        <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
 
           {/* Badge + date */}
           <div className="flex items-center gap-3 mb-6">
@@ -322,7 +322,7 @@ const FoundationInceptionGallery: React.FC = () => {
           </div>
 
           {/* Milestone cards */}
-          <div className="grid grid-cols-3 gap-4 mt-10">
+          <div className="grid grid-cols-3 gap-2 mt-10">
             {[
               { value: "2020", label: "Year Founded" },
               { value: "Nov 25", label: "Inception Date" },

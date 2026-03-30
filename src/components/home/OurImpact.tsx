@@ -1,194 +1,553 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 interface Notification {
-  id: number;
-  type: 'info' | 'success' | 'warning' | 'alert';
-  title: string;
-  message: string;
-  time: string;
+	id: number;
+	type: 'info' | 'success' | 'warning' | 'alert';
+	title: string;
+	message: string;
+	time: string;
 }
 
 const notifications: Notification[] = [
-  { id: 1, type: 'info', title: 'Registration Open', message: 'Viraga VFTL program student registration programs, last date is April 15th, 2026.', time: '10 days ago' },
-   { id: 2, type: 'success', title: 'Book Distribution', message: 'Distribution of Mathematics Handbooks', time: '1 year ago' },
-   { id: 3, type: 'success', title: 'Inauguration', message: 'The Beginning of a Mission to Serve Humanity named Viraga Foundation', time: '5 year ago' },
-   { id: 4, type: 'success', title: 'Food Relief', message: 'Flood Relief Assistance Distribution of Provisions, Clothing & Vegetables', time: '1 year ago' },
-  // { id: 5, type: 'warning', title: 'Supply Needed', message: 'Medical supplies running low in the Odisha camp. Urgent replenishment required.', time: '5 hrs ago' },
-  // { id: 6, type: 'info', title: 'Partnership Confirmed', message: 'MoU signed with GreenHope NGO for joint water sanitation drive in UP.', time: '1 day ago' },
-  // { id: 7, type: 'success', title: 'Goal Achieved', message: 'Women empowerment workshop in MP reached 1,000 participants this month.', time: '1 day ago' },
-  // { id: 8, type: 'alert', title: 'Volunteer Training', message: 'Mandatory training session for all new volunteers on Jan 5th, 10 AM — register now.', time: '2 days ago' },
-  // { id: 9, type: 'info', title: 'Report Published', message: 'Q3 Impact Report is now available. Download from the resources section.', time: '3 days ago' },
-  // { id: 10, type: 'success', title: 'Award Received', message: 'Our organization was honored with the National Social Impact Award 2024.', time: '4 days ago' },
+	{
+		id: 1,
+		type: 'info',
+		title: 'Registration Open',
+		message: 'Viraga VFTL program student registration programs, last date is April 15th, 2026.',
+		time: '10 days ago',
+	},
+	{
+		id: 2,
+		type: 'success',
+		title: 'Book Distribution',
+		message: 'Distribution of Mathematics Handbooks',
+		time: '1 year ago',
+	},
+	{
+		id: 3,
+		type: 'success',
+		title: 'Inauguration',
+		message: 'The Beginning of a Mission to Serve Humanity named Viraga Foundation',
+		time: '5 year ago',
+	},
+	{
+		id: 4,
+		type: 'success',
+		title: 'Food Relief',
+		message: 'Flood Relief Assistance Distribution of Provisions, Clothing & Vegetables',
+		time: '1 year ago',
+	},
 ];
 
 const typeConfig = {
-  info:    { bg: '#EFF6FF', border: '#3B82F6', dot: '#3B82F6', icon: 'ℹ' },
-  success: { bg: '#F0FDF4', border: '#22C55E', dot: '#22C55E', icon: '✓' },
-  warning: { bg: '#FFFBEB', border: '#F59E0B', dot: '#F59E0B', icon: '⚠' },
-  alert:   { bg: '#FFF7ED', border: '#F97316', dot: '#F97316', icon: '!' },
+	info: {
+		bg: 'bg-blue-50',
+		border: 'border-blue-500',
+		dot: 'bg-blue-500',
+		iconBg: 'bg-blue-500',
+		icon: 'ℹ',
+	},
+	success: {
+		bg: 'bg-green-50',
+		border: 'border-green-500',
+		dot: 'bg-green-500',
+		iconBg: 'bg-green-500',
+		icon: '✓',
+	},
+	warning: {
+		bg: 'bg-yellow-50',
+		border: 'border-yellow-500',
+		dot: 'bg-yellow-500',
+		iconBg: 'bg-yellow-500',
+		icon: '⚠',
+	},
+	alert: {
+		bg: 'bg-orange-50',
+		border: 'border-orange-500',
+		dot: 'bg-orange-500',
+		iconBg: 'bg-orange-500',
+		icon: '!',
+	},
 };
 
 const NotificationCard: React.FC<{ notif: Notification }> = ({ notif }) => {
-  const cfg = typeConfig[notif.type];
-  return (
-    <div style={{
-      background: cfg.bg,
-      borderLeft: `4px solid ${cfg.border}`,
-      borderRadius: '12px',
-      padding: '18px 20px',
-      marginBottom: '14px',
-      boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
-      display: 'flex',
-      gap: '14px',
-      alignItems: 'flex-start',
-      flexShrink: 0,
-    }}>
-      <div style={{
-        width: '34px', height: '34px', borderRadius: '50%',
-        background: cfg.border, color: '#fff',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        fontWeight: 900, fontSize: '15px', flexShrink: 0,
-      }}>
-        {cfg.icon}
-      </div>
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-          <span style={{ fontWeight: 700, fontSize: '15px', color: '#1a1a2e', fontFamily: "'Playfair Display', Georgia, serif" }}>
-            {notif.title}
-          </span>
-          <span style={{ fontSize: '11px', color: '#9ca3af', fontFamily: 'monospace', flexShrink: 0, marginLeft: '12px' }}>
-            {notif.time}
-          </span>
-        </div>
-        <p style={{ margin: 0, fontSize: '13.5px', color: '#4b5563', lineHeight: 1.55, fontFamily: "'DM Sans', sans-serif" }}>
-          {notif.message}
-        </p>
-      </div>
-    </div>
-  );
+	const cfg = typeConfig[notif.type];
+	return (
+		<div
+			className={`${cfg.bg} border-l-4 ${cfg.border} rounded-xl p-[18px_20px] mb-[14px] shadow-[0_2px_12px_rgba(0,0,0,0.06)] flex gap-[14px] items-start flex-shrink-0`}
+		>
+			{/* Icon */}
+			<div
+				className={`w-[24px] h-[24px] rounded-full ${cfg.iconBg} text-white flex items-center justify-center font-black text-[15px] flex-shrink-0`}
+			>
+				{cfg.icon}
+			</div>
+
+			{/* Content */}
+			<div className="flex-1 min-w-0">
+				{/* Title row with time on the right */}
+				<div className="flex items-center justify-between mb-1">
+					<span
+						className="font-bold text-[15px] text-[#1a1a2e]"
+						style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+					>
+						{notif.title}
+					</span>
+					<span className="text-[11px] text-gray-400 font-mono flex-shrink-0 ml-3">{notif.time}</span>
+				</div>
+
+				{/* Message below title */}
+				<p
+					className="m-0 text-[13.5px] text-gray-600 leading-[1.55]"
+					style={{ fontFamily: "'DM Sans', sans-serif" }}
+				>
+					{notif.message}
+				</p>
+			</div>
+		</div>
+	);
 };
 
+// const NotificationCard: React.FC<{ notif: Notification }> = ({ notif }) => {
+// 	const cfg = typeConfig[notif.type];
+// 	return (
+// 		<div
+// 			className={`${cfg.bg} border-l-4 ${cfg.border} sm:flex-row flex-col rounded-xl p-[18px_20px] mb-[14px] shadow-[0_2px_12px_rgba(0,0,0,0.06)] flex gap-[14px] items-start flex-shrink-0`}
+// 		>
+// 			<div className='flex gap-5'>
+// 				<div
+// 					className={`w-[24px] h-[24px] rounded-full ${cfg.iconBg} text-white flex items-center justify-center font-black text-[15px] flex-shrink-0`}
+// 				>
+// 					{cfg.icon}
+// 				</div>
+//         <span
+//             className="font-bold text-[15px] text-[#1a1a2e]"
+//             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+//           >
+//             {notif.title}
+//           </span>
+//           <span className="text-[11px] text-gray-400 font-mono flex-shrink-0 mr-3">{notif.time}</span>
+// 			</div>
+// 			<div className="flex min-w-0">
+// 				{/* <div className="flex justify-end items-end mb-1"> */}
+// 					{/* <span
+//             className="font-bold text-[15px] text-[#1a1a2e]"
+//             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+//           >
+//             {notif.title}
+//           </span> */}
+// 					{/* <span className="text-[11px] text-gray-400 font-mono flex-shrink-0 ml-3">{notif.time}</span> */}
+// 				{/* </div> */}
+// 				<p
+// 					className="m-0 text-[13.5px] text-gray-600 items-start justify-start leading-[1.55]"
+// 					style={{ fontFamily: "'DM Sans', sans-serif" }}
+// 				>
+// 					{notif.message}
+// 				</p>
+// 			</div>
+// 		</div>
+// 	);
+// };
+
 export default function NotificationFeed() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [paused, setPaused] = useState(false);
-  const posRef = useRef(0);
-  const rafRef = useRef<number>(0);
-  const speed = 0.7; // px per frame
+	const scrollRef = useRef<HTMLDivElement>(null);
+	const [paused, setPaused] = useState(false);
+	const posRef = useRef(0);
+	const rafRef = useRef<number>(0);
+	const speed = 0.7;
 
-  // Duplicate notifications for seamless loop
-  const doubled = notifications.length < 1
-  ? [...notifications, ...notifications, ...notifications, ...notifications]
-  : [...notifications, ...notifications];
+	const doubled =
+		notifications.length < 1
+			? [...notifications, ...notifications, ...notifications, ...notifications]
+			: [...notifications, ...notifications];
 
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
+	useEffect(() => {
+		const el = scrollRef.current;
+		if (!el) return;
 
-    const tick = () => {
-      if (!paused && el) {
-        posRef.current += speed;
-        const half = el.scrollHeight / 2;
-        if (posRef.current >= half) posRef.current = 0;
-        el.scrollTop = posRef.current;
-      }
-      rafRef.current = requestAnimationFrame(tick);
-    };
+		const tick = () => {
+			if (!paused && el) {
+				posRef.current += speed;
+				const half = el.scrollHeight / 2;
+				if (posRef.current >= half) posRef.current = 0;
+				el.scrollTop = posRef.current;
+			}
+			rafRef.current = requestAnimationFrame(tick);
+		};
 
-    rafRef.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, [paused]);
+		rafRef.current = requestAnimationFrame(tick);
+		return () => cancelAnimationFrame(rafRef.current);
+	}, [paused]);
 
-  return (
-    <div style={{
-      minHeight: '100vh',
-      width: '100%',
-      background: 'linear-gradient(135deg, #fff7f0 0%, #fff 50%, #f0f9ff 100%)',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      padding: '48px 16px',
-      fontFamily: "'DM Sans', sans-serif",
-      boxSizing: 'border-box' as const,
-    }}>
-      {/* Google Fonts */}
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap');`}</style>
-
-      {/* Header */}
-      <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: '8px',
-          background: '#FFF3E8', border: '1px solid #FDBA74',
-          borderRadius: '999px', padding: '4px 14px',
-          fontSize: '12px', fontWeight: 700, color: '#EA580C',
-          letterSpacing: '0.08em', marginBottom: '14px', textTransform: 'uppercase',
-        }}>
-          <span style={{ width: 7, height: 7, background: '#EA580C', borderRadius: '50%', display: 'inline-block', animation: 'pulse 1.4s infinite' }} />
-          Live Updates
-        </div>
-        <h1 style={{
-          fontFamily: "'Playfair Display', Georgia, serif",
-          fontSize: 'clamp(28px, 5vw, 48px)',
-          fontWeight: 900, color: '#1a1a2e', margin: '0 0 10px',
-          lineHeight: 1.1,
-        }}>
-          Notifications
-        </h1>
-        <p style={{ color: '#6b7280', fontSize: '15px', margin: 0 }}>
-          Stay updated with the latest activities &amp; announcements
-        </p>
-      </div>
-
-      {/* Scroll Container */}
-      <div style={{ position: 'relative', width: '100%', maxWidth: '70%' }}>
-        {/* Top fade */}
-        <div style={{
-          position: 'absolute', top: 0, left: 0, right: 0, height: '60px',
-          background: 'linear-gradient(to bottom, rgba(255,247,240,0.95), transparent)',
-          zIndex: 2, pointerEvents: 'none', borderRadius: '16px 16px 0 0',
-        }} />
-
-        {/* Bottom fade */}
-        <div style={{
-          position: 'absolute', bottom: 0, left: 0, right: 0, height: '60px',
-          background: 'linear-gradient(to top, rgba(240,249,255,0.95), transparent)',
-          zIndex: 2, pointerEvents: 'none', borderRadius: '0 0 16px 16px',
-        }} />
-
-        {/* Scrolling list */}
-        <div
-          ref={scrollRef}
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-          onTouchStart={() => setPaused(true)}
-          onTouchEnd={() => setPaused(false)}
-          style={{
-            height: '520px',
-            overflowY: 'hidden',
-            padding: '20px 4px',
-            cursor: 'default',
-          }}
-        >
-          {doubled.map((notif, i) => (
-            <NotificationCard key={`${notif.id}-${i}`} notif={notif} />
-          ))}
-        </div>
-      </div>
-
-      {/* Pause hint */}
-      <p style={{ marginTop: '16px', fontSize: '16px', color: 'black', letterSpacing: '0.04em' }}>
-        Hover to pause · Scroll is live
-      </p>
-
-      <style>{`
+	return (
+		<div
+			className="min-h-screen w-full flex flex-col items-center justify-start sm:px-4 px-2 py-12 box-border"
+			style={{
+				background: 'linear-gradient(135deg, #fff7f0 0%, #fff 50%, #f0f9ff 100%)',
+				fontFamily: "'DM Sans', sans-serif",
+			}}
+		>
+			{/* Google Fonts */}
+			<style>{`@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap');
         @keyframes pulse {
           0%, 100% { opacity: 1; transform: scale(1); }
           50% { opacity: 0.4; transform: scale(0.8); }
         }
       `}</style>
-    </div>
-  );
+
+			{/* Header */}
+			<div className="text-center mb-9">
+				<div className="inline-flex items-center gap-2 bg-[#FFF3E8] border border-orange-300 rounded-full px-[14px] py-1 text-xs font-bold text-orange-600 tracking-[0.08em] uppercase mb-[14px]">
+					<span
+						className="w-[7px] h-[7px] bg-orange-600 rounded-full inline-block"
+						style={{ animation: 'pulse 1.4s infinite' }}
+					/>
+					Live Updates
+				</div>
+				<h1
+					className="text-[clamp(28px,5vw,48px)] font-black text-[#1a1a2e] m-0 mb-[10px] leading-[1.1]"
+					style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+				>
+					Notifications
+				</h1>
+				<p className="text-gray-500 text-[15px] m-0">
+					Stay updated with the latest activities &amp; announcements
+				</p>
+			</div>
+
+			{/* Scroll Container */}
+			<div className="relative w-full max-w-[90%] sm:max-w-[70%]">
+				{/* Top fade */}
+				<div
+					className="absolute top-0 left-0 right-0 h-[60px] z-[2] pointer-events-none rounded-t-2xl"
+					style={{ background: 'linear-gradient(to bottom, rgba(255,247,240,0.95), transparent)' }}
+				/>
+
+				{/* Bottom fade */}
+				<div
+					className="absolute bottom-0 left-0 right-0 h-[60px] z-[2] pointer-events-none rounded-b-2xl"
+					style={{ background: 'linear-gradient(to top, rgba(240,249,255,0.95), transparent)' }}
+				/>
+
+				{/* Scrolling list */}
+				<div
+					ref={scrollRef}
+					onMouseEnter={() => setPaused(true)}
+					onMouseLeave={() => setPaused(false)}
+					onTouchStart={() => setPaused(true)}
+					onTouchEnd={() => setPaused(false)}
+					className="h-[520px] overflow-y-hidden px-1 py-5 cursor-default"
+				>
+					{doubled.map((notif, i) => (
+						<NotificationCard key={`${notif.id}-${i}`} notif={notif} />
+					))}
+				</div>
+			</div>
+
+			{/* Pause hint */}
+			<p className="mt-4 text-base text-black tracking-[0.04em]">Hover to pause · Scroll is live</p>
+		</div>
+	);
 }
+
+// import React, { useState, useRef, useEffect } from 'react';
+
+// interface Notification {
+// 	id: number;
+// 	type: 'info' | 'success' | 'warning' | 'alert';
+// 	title: string;
+// 	message: string;
+// 	time: string;
+// }
+
+// const notifications: Notification[] = [
+// 	{
+// 		id: 1,
+// 		type: 'info',
+// 		title: 'Registration Open',
+// 		message: 'Viraga VFTL program student registration programs, last date is April 15th, 2026.',
+// 		time: '10 days ago',
+// 	},
+// 	{
+// 		id: 2,
+// 		type: 'success',
+// 		title: 'Book Distribution',
+// 		message: 'Distribution of Mathematics Handbooks',
+// 		time: '1 year ago',
+// 	},
+// 	{
+// 		id: 3,
+// 		type: 'success',
+// 		title: 'Inauguration',
+// 		message: 'The Beginning of a Mission to Serve Humanity named Viraga Foundation',
+// 		time: '5 year ago',
+// 	},
+// 	{
+// 		id: 4,
+// 		type: 'success',
+// 		title: 'Food Relief',
+// 		message: 'Flood Relief Assistance Distribution of Provisions, Clothing & Vegetables',
+// 		time: '1 year ago',
+// 	},
+// 	// { id: 5, type: 'warning', title: 'Supply Needed', message: 'Medical supplies running low in the Odisha camp. Urgent replenishment required.', time: '5 hrs ago' },
+// 	// { id: 6, type: 'info', title: 'Partnership Confirmed', message: 'MoU signed with GreenHope NGO for joint water sanitation drive in UP.', time: '1 day ago' },
+// 	// { id: 7, type: 'success', title: 'Goal Achieved', message: 'Women empowerment workshop in MP reached 1,000 participants this month.', time: '1 day ago' },
+// 	// { id: 8, type: 'alert', title: 'Volunteer Training', message: 'Mandatory training session for all new volunteers on Jan 5th, 10 AM — register now.', time: '2 days ago' },
+// 	// { id: 9, type: 'info', title: 'Report Published', message: 'Q3 Impact Report is now available. Download from the resources section.', time: '3 days ago' },
+// 	// { id: 10, type: 'success', title: 'Award Received', message: 'Our organization was honored with the National Social Impact Award 2024.', time: '4 days ago' },
+// ];
+
+// const typeConfig = {
+// 	info: { bg: '#EFF6FF', border: '#3B82F6', dot: '#3B82F6', icon: 'ℹ' },
+// 	success: { bg: '#F0FDF4', border: '#22C55E', dot: '#22C55E', icon: '✓' },
+// 	warning: { bg: '#FFFBEB', border: '#F59E0B', dot: '#F59E0B', icon: '⚠' },
+// 	alert: { bg: '#FFF7ED', border: '#F97316', dot: '#F97316', icon: '!' },
+// };
+
+// const NotificationCard: React.FC<{ notif: Notification }> = ({ notif }) => {
+// 	const cfg = typeConfig[notif.type];
+// 	return (
+// 		<div
+// 			style={{
+// 				background: cfg.bg,
+// 				borderLeft: `4px solid ${cfg.border}`,
+// 				borderRadius: '12px',
+// 				padding: '18px 20px',
+// 				marginBottom: '14px',
+// 				boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
+// 				display: 'flex',
+// 				gap: '14px',
+// 				alignItems: 'flex-start',
+// 				flexShrink: 0,
+// 			}}
+// 		>
+// 			<div
+// 				style={{
+// 					width: '34px',
+// 					height: '34px',
+// 					borderRadius: '50%',
+// 					background: cfg.border,
+// 					color: '#fff',
+// 					display: 'flex',
+// 					alignItems: 'center',
+// 					justifyContent: 'center',
+// 					fontWeight: 900,
+// 					fontSize: '15px',
+// 					flexShrink: 0,
+// 				}}
+// 			>
+// 				{cfg.icon}
+// 			</div>
+// 			<div style={{ flex: 1, minWidth: 0 }}>
+// 				<div
+// 					style={{
+// 						display: 'flex',
+// 						justifyContent: 'space-between',
+// 						alignItems: 'center',
+// 						marginBottom: '4px',
+// 					}}
+// 				>
+// 					<span
+// 						style={{
+// 							fontWeight: 700,
+// 							fontSize: '15px',
+// 							color: '#1a1a2e',
+// 							fontFamily: "'Playfair Display', Georgia, serif",
+// 						}}
+// 					>
+// 						{notif.title}
+// 					</span>
+// 					<span
+// 						style={{
+// 							fontSize: '11px',
+// 							color: '#9ca3af',
+// 							fontFamily: 'monospace',
+// 							flexShrink: 0,
+// 							marginLeft: '12px',
+// 						}}
+// 					>
+// 						{notif.time}
+// 					</span>
+// 				</div>
+// 				<p
+// 					style={{
+// 						margin: 0,
+// 						fontSize: '13.5px',
+// 						color: '#4b5563',
+// 						lineHeight: 1.55,
+// 						fontFamily: "'DM Sans', sans-serif",
+// 					}}
+// 				>
+// 					{notif.message}
+// 				</p>
+// 			</div>
+// 		</div>
+// 	);
+// };
+
+// export default function NotificationFeed() {
+// 	const scrollRef = useRef<HTMLDivElement>(null);
+// 	const [paused, setPaused] = useState(false);
+// 	const posRef = useRef(0);
+// 	const rafRef = useRef<number>(0);
+// 	const speed = 0.7; // px per frame
+
+// 	// Duplicate notifications for seamless loop
+// 	const doubled =
+// 		notifications.length < 1
+// 			? [...notifications, ...notifications, ...notifications, ...notifications]
+// 			: [...notifications, ...notifications];
+
+// 	useEffect(() => {
+// 		const el = scrollRef.current;
+// 		if (!el) return;
+
+// 		const tick = () => {
+// 			if (!paused && el) {
+// 				posRef.current += speed;
+// 				const half = el.scrollHeight / 2;
+// 				if (posRef.current >= half) posRef.current = 0;
+// 				el.scrollTop = posRef.current;
+// 			}
+// 			rafRef.current = requestAnimationFrame(tick);
+// 		};
+
+// 		rafRef.current = requestAnimationFrame(tick);
+// 		return () => cancelAnimationFrame(rafRef.current);
+// 	}, [paused]);
+
+// 	return (
+// 		<div
+// 			style={{
+// 				minHeight: '100vh',
+// 				width: '100%',
+// 				background: 'linear-gradient(135deg, #fff7f0 0%, #fff 50%, #f0f9ff 100%)',
+// 				display: 'flex',
+// 				flexDirection: 'column',
+// 				alignItems: 'center',
+// 				justifyContent: 'flex-start',
+// 				padding: '48px 16px',
+// 				fontFamily: "'DM Sans', sans-serif",
+// 				boxSizing: 'border-box' as const,
+// 			}}
+// 		>
+// 			{/* Google Fonts */}
+// 			<style>{`@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap');`}</style>
+
+// 			{/* Header */}
+// 			<div style={{ textAlign: 'center', marginBottom: '36px' }}>
+// 				<div
+// 					style={{
+// 						display: 'inline-flex',
+// 						alignItems: 'center',
+// 						gap: '8px',
+// 						background: '#FFF3E8',
+// 						border: '1px solid #FDBA74',
+// 						borderRadius: '999px',
+// 						padding: '4px 14px',
+// 						fontSize: '12px',
+// 						fontWeight: 700,
+// 						color: '#EA580C',
+// 						letterSpacing: '0.08em',
+// 						marginBottom: '14px',
+// 						textTransform: 'uppercase',
+// 					}}
+// 				>
+// 					<span
+// 						style={{
+// 							width: 7,
+// 							height: 7,
+// 							background: '#EA580C',
+// 							borderRadius: '50%',
+// 							display: 'inline-block',
+// 							animation: 'pulse 1.4s infinite',
+// 						}}
+// 					/>
+// 					Live Updates
+// 				</div>
+// 				<h1
+// 					style={{
+// 						fontFamily: "'Playfair Display', Georgia, serif",
+// 						fontSize: 'clamp(28px, 5vw, 48px)',
+// 						fontWeight: 900,
+// 						color: '#1a1a2e',
+// 						margin: '0 0 10px',
+// 						lineHeight: 1.1,
+// 					}}
+// 				>
+// 					Notifications
+// 				</h1>
+// 				<p style={{ color: '#6b7280', fontSize: '15px', margin: 0 }}>
+// 					Stay updated with the latest activities &amp; announcements
+// 				</p>
+// 			</div>
+
+// 			{/* Scroll Container */}
+// 			<div style={{ position: 'relative', width: '100%', maxWidth: '70%' }}>
+// 				{/* Top fade */}
+// 				<div
+// 					style={{
+// 						position: 'absolute',
+// 						top: 0,
+// 						left: 0,
+// 						right: 0,
+// 						height: '60px',
+// 						background: 'linear-gradient(to bottom, rgba(255,247,240,0.95), transparent)',
+// 						zIndex: 2,
+// 						pointerEvents: 'none',
+// 						borderRadius: '16px 16px 0 0',
+// 					}}
+// 				/>
+
+// 				{/* Bottom fade */}
+// 				<div
+// 					style={{
+// 						position: 'absolute',
+// 						bottom: 0,
+// 						left: 0,
+// 						right: 0,
+// 						height: '60px',
+// 						background: 'linear-gradient(to top, rgba(240,249,255,0.95), transparent)',
+// 						zIndex: 2,
+// 						pointerEvents: 'none',
+// 						borderRadius: '0 0 16px 16px',
+// 					}}
+// 				/>
+
+// 				{/* Scrolling list */}
+// 				<div
+// 					ref={scrollRef}
+// 					onMouseEnter={() => setPaused(true)}
+// 					onMouseLeave={() => setPaused(false)}
+// 					onTouchStart={() => setPaused(true)}
+// 					onTouchEnd={() => setPaused(false)}
+// 					style={{
+// 						height: '520px',
+// 						overflowY: 'hidden',
+// 						padding: '20px 4px',
+// 						cursor: 'default',
+// 					}}
+// 				>
+// 					{doubled.map((notif, i) => (
+// 						<NotificationCard key={`${notif.id}-${i}`} notif={notif} />
+// 					))}
+// 				</div>
+// 			</div>
+
+// 			{/* Pause hint */}
+// 			<p style={{ marginTop: '16px', fontSize: '16px', color: 'black', letterSpacing: '0.04em' }}>
+// 				Hover to pause · Scroll is live
+// 			</p>
+
+// 			<style>{`
+//         @keyframes pulse {
+//           0%, 100% { opacity: 1; transform: scale(1); }
+//           50% { opacity: 0.4; transform: scale(0.8); }
+//         }
+//       `}</style>
+// 		</div>
+// 	);
+// }
 
 // import React, { useState, useEffect, useRef } from 'react';
 

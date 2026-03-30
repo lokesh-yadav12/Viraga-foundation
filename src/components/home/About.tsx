@@ -44,20 +44,19 @@ const About: React.FC = () => {
 								{/* <h2 className="text-2xl sm:text-3xl font-semibold text-orange-700 mb-8">
 									नहि ज्ञानेन सदृश्य
 								</h2> */}
-								<p className="italic text-purple-700 font-bold text-lg">
+								<p className="italic text-orange-700 font-bold text-lg">
 										“Guided by Dharma, Driven by Karma, Serving with Selflessness”
 								</p>
+
 								{/* Main content */}
 								<div className="space-y-6 text-amber-900 text-base sm:text-lg leading-relaxed">
-									
-									
 									<div className="pt-4">
 										<p className="text-base sm:text-lg">
-											We are <span className="font-semibold text-purple-700">VIRAGA Foundation</span>, a non-governmental organization established on November 25, 2020, by dedicated individuals inspired by the timeless teachings of Swami Vivekananda. Our foundation was graciously inaugurated by Swami Hridananadji Maharaj, Secretary of Ramakrishna Mission, Vijayawada.
+											We are <span className="font-semibold text-orange-700">VIRAGA Foundation</span>, a non-governmental organization established on November 25, 2020, by dedicated individuals inspired by the timeless teachings of Swami Vivekananda. Our foundation was graciously inaugurated by Swami Hridananadji Maharaj, Secretary of Ramakrishna Mission, Vijayawada.
 										</p>
 									</div>
 
-									<p className="italic text-purple-700 font-medium text-lg">
+									<p className="italic text-orange-700 font-medium text-lg">
 										"They alone live who live for others." — Swami Vivekananda
 									</p>
 
@@ -65,7 +64,7 @@ const About: React.FC = () => {
 										Guided by Dharma, driven by Karma, and serving with selflessness, VIRAGA Foundation is a movement of compassionate hearts working together to create positive change. Through our seven transformative initiatives, we work tirelessly to build a society rooted in kindness, dignity, and selfless service.
 									</p>
 
-									<p className="font-semibold text-purple-700 text-lg">
+									<p className="font-semibold text-orange-700 text-lg">
 										Together, we can light up lives, because service to humanity is service to God.
 									</p>
 								</div>
@@ -74,7 +73,7 @@ const About: React.FC = () => {
 								<div className="mt-10">
 									<Link
 										to="/about"
-										className="inline-block hover:text-white bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold px-8 py-3 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+										className="inline-block hover:text-white bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold px-8 py-3 rounded-full hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
 									>
 										Explore Our Initiatives →
 									</Link>
