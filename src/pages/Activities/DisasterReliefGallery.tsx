@@ -226,11 +226,11 @@ const DisasterReliefGallery: React.FC = () => {
         }}
       >
         {/* ── Hero / Article Section ─────────────────── */}
-        <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}
+              className="text-[16px] tracking-[0.5em] uppercase font-medium px-3 py-1 rounded-full border"
+              style={{ color: "orange-900", borderColor: "orange-500", background: "orange-500" }}
             >
               Viraga Foundation
             </span>
@@ -252,11 +252,11 @@ const DisasterReliefGallery: React.FC = () => {
           <h2
             className="mb-6"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Cormorant Garamond'",
               fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
               fontWeight: 700,
-              fontStyle: "italic",
-              color: "#c8973a",
+              fontStyle: "normal",
+              color: "orange-900",
             }}
           >
             Distribution of Provisions, Clothing &amp; Vegetables
@@ -264,10 +264,10 @@ const DisasterReliefGallery: React.FC = () => {
 
           <div className="hero-divider h-px w-full mb-8" />
 
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.35rem" }}>
             <p>
               On{" "}
-              <span style={{ color: "#c8973a" }} className="font-medium">
+              <span style={{ color: "amber-800" }} className="font-medium">
                 August 31, 2024
               </span>
               , severe floods caused by the{" "}
@@ -389,7 +389,7 @@ const DisasterReliefGallery: React.FC = () => {
                     style={{ background: "rgba(0,0,0,0.28)" }}>
                     <div
                       className="w-10 h-10 rounded-full flex items-center justify-center text-base"
-                      style={{ background: "#c8973a", color: "#fff" }}
+                      style={{ background: "orange-900", color: "#fff" }}
                     >
                       ▶
                     </div>
@@ -460,7 +460,7 @@ const ActionBtn: React.FC<{
   <button
     onClick={onClick}
     className="text-[11px] font-medium px-2 py-0.5 rounded-full transition hover:opacity-80"
-    style={{ background: "#c8973a", color: "#fff" }}
+    style={{ background: "orange-900", color: "#fff" }}
   >
     {label}
   </button>

@@ -128,12 +128,12 @@ const VFTLpage = () => {
                         }`}
                     style={{ transitionDelay: '0.8s' }}
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-700 text-sm font-semibold mb-4 shadow-sm">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-100 to-pink-100 rounded-full text-orange-700 text-sm font-semibold mb-4 shadow-sm">
                         <Calendar className="w-4 h-4" />
                         <span>Year wise</span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Explore Our V F T L</h2>
-                    <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto" />
+                    <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full mx-auto" />
                 </div>
 
                 {/* Single Row - 4 Cards - Ultra Enhanced */}
@@ -149,17 +149,17 @@ const VFTLpage = () => {
                         >
                             <Link to={activity.link} className="group cursor-pointer block">
                                 {/* Image Card - Premium Design */}
-                                <div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-700 bg-white transform hover:-translate-y-4 hover:scale-105">
+                                <div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-orange-500/25 transition-all duration-700 bg-white transform hover:-translate-y-4 hover:scale-105">
                                     {/* Animated Gradient Border */}
-                                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-gradient-rotate" />
+                                    <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 via-pink-500 to-orange-500 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-gradient-rotate" />
 
                                     {/* Card Background Glow */}
-                                    <div className="absolute -inset-4 bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-orange-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                    <div className="absolute -inset-4 bg-gradient-to-br from-orange-500/20 via-pink-500/20 to-orange-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
                                     {/* Main Content Container */}
                                     <div className="relative bg-white rounded-3xl overflow-hidden">
                                         {/* Corner Accents - Premium */}
-                                        <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-purple-500/20 via-pink-500/10 to-transparent rounded-br-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-10 animate-spin-very-slow" />
+                                        <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-orange-500/20 via-pink-500/10 to-transparent rounded-br-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-10 animate-spin-very-slow" />
                                         <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-orange-500/20 via-pink-500/10 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-10 animate-spin-very-slow animation-delay-500" />
 
                                         {/* Image Container */}
@@ -199,10 +199,10 @@ const VFTLpage = () => {
                                         {/* Floating Sparkles - Premium Animation */}
                                         {hoveredIndex === index && (
                                             <>
-                                                <Sparkles className="absolute top-6 right-6 w-6 h-6 text-pink-400 animate-pulse-glow z-20 drop-shadow-lg" />
-                                                <Sparkles className="absolute top-10 right-12 w-4 h-4 text-purple-400 animate-ping-slow z-20 drop-shadow-lg" />
+                                                <Sparkles className="absolute top-6 right-6 w-6 h-6 text-orange-400 animate-pulse-glow z-20 drop-shadow-lg" />
+                                                <Sparkles className="absolute top-10 right-12 w-4 h-4 text-orange-400 animate-ping-slow z-20 drop-shadow-lg" />
                                                 <Sparkles className="absolute bottom-6 left-6 w-5 h-5 text-orange-400 animate-pulse-glow animation-delay-300 z-20 drop-shadow-lg" />
-                                                <Sparkles className="absolute bottom-12 left-12 w-3 h-3 text-pink-400 animate-ping-slow animation-delay-500 z-20 drop-shadow-lg" />
+                                                <Sparkles className="absolute bottom-12 left-12 w-3 h-3 text-orange-400 animate-ping-slow animation-delay-500 z-20 drop-shadow-lg" />
                                             </>
                                         )}
                                     </div>
@@ -211,11 +211,11 @@ const VFTLpage = () => {
                                 {/* Year Label - Enhanced Typography */}
                                 <div className="mt-3 text-center transform group-hover:scale-110 transition-transform duration-500">
                                     {/* Mobile Click Indicator - Only visible on mobile */}
-                                    <div className="sm:hidden mt-1 flex items-center justify-center gap-1 text-purple-600">
+                                    <div className="sm:hidden mt-1 flex items-center justify-center gap-1 text-orange-600">
                                         <span className="text-sm font-semibold">Tap to view activities</span>
                                         <ArrowRight className="w-4 h-4 animate-bounce" />
                                     </div>
-                                    <h3 className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent group-hover:from-purple-500 group-hover:via-pink-500 group-hover:to-orange-500 transition-all duration-500 tracking-tight mb-3"
+                                    <h3 className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-orange-600 via-pink-600 to-orange-600 bg-clip-text text-transparent group-hover:from-purple-500 group-hover:via-pink-500 group-hover:to-orange-500 transition-all duration-500 tracking-tight mb-3"
                                         style={{
                                             backgroundSize: '200% 200%',
                                         }}
@@ -224,7 +224,7 @@ const VFTLpage = () => {
                                     </h3>
 
                                     <div className="flex justify-center mb-4 gap-1.5 items-center">
-                                        <div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-500" />
+                                        <div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full transition-all duration-500" />
                                         <div className="w-2 h-2 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                         <div className="h-1 w-0 group-hover:w-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full transition-all duration-500" />
                                     </div>
@@ -254,17 +254,17 @@ const VFTLpage = () => {
 
                             {/* Content */}
                             <div className="relative text-center space-y-4">
-                                <Sparkles className="w-8 h-8 text-purple-500 mx-auto animate-pulse" />
+                                <Sparkles className="w-8 h-8 text-orange-500 mx-auto animate-pulse" />
                                 <p className="text-slate-700 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
                                     Click on any year to view detailed activities and photos from that period.
                                     <br />
-                                    <span className="text-purple-600 font-semibold">
+                                    <span className="text-orange-600 font-semibold">
                                         Experience the journey of compassion and service
                                     </span>{' '}
                                     through our documented efforts.
                                 </p>
                                 <div className="flex items-center justify-center gap-2 pt-2">
-                                    <div className="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
+                                    <div className="h-1 w-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full" />
                                     <div className="w-2 h-2 bg-orange-500 rounded-full" />
                                     <div className="h-1 w-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full" />
                                 </div>

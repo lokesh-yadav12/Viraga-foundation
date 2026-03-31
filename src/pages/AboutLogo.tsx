@@ -5,7 +5,7 @@ const AboutLogo = () => {
   return (
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative h-[70vh] md:h-[90vh] overflow-hidden">
+      <section className="relative  h-[75vh] md:h-[90vh] overflow-hidden">
         <img
           src={bgpic}
           alt="Service and spirituality"
@@ -29,7 +29,7 @@ const AboutLogo = () => {
       </section>
 
       {/* ================= LOGO SECTION ================= */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-12 md:py-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-8 ">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ const AboutLogo = () => {
             className="mx-auto w-48 sm:w-60 md:w-68 mb-1 sm:mb-1 drop-shadow-2xl"
           />
 
-          <p className="text-base sm:text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto pt-3">
             The <strong className="text-orange-600">VIRAGA FOUNDATION</strong> logo represents Dharma
             (righteous duty), Seva (selfless service), and Karma (action with
             devotion), deeply rooted in the eternal wisdom of the Bhagavad Gita.
@@ -60,8 +60,8 @@ const AboutLogo = () => {
       </section>
 
       {/* ================= CONTENT SECTION ================= */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-12 sm:py-16 md:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-10 md:space-y-14">
+      <section className="bg-gradient-to-b from-gray-50 to-white py-12 sm:py-12 md:py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-8 md:space-y-10">
 
           {/* Vivekananda Card */}
           <motion.div
@@ -71,7 +71,7 @@ const AboutLogo = () => {
             transition={{ duration: 0.6 }}
             className="relative group"
           >
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
             <div className="relative bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
               <div className="flex items-center gap-3 mb-4 sm:mb-6">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -87,7 +87,7 @@ const AboutLogo = () => {
                 humanity, reflecting Lord Krishna's teaching:
               </p>
 
-              <div className="bg-blue-50 p-4 sm:p-6 rounded-xl border-l-4 border-blue-600 mb-4 sm:mb-6">
+              <div className="bg-blue-50 p-4 sm:p-6 rounded-xl border-l-4 border-orange-600 mb-4 sm:mb-6">
                 <blockquote className="italic text-gray-900 text-base sm:text-lg mb-3 leading-relaxed">
                   బుద్ధియుక్తో జహాతీహ ఉభే సుకృతదుష్కృతే । <br />
                   తస్మాద్యోగాయ యుజ్యస్వ యోగః కర్మసు కౌశలమ్ (2:50)
@@ -114,10 +114,10 @@ const AboutLogo = () => {
             transition={{ duration: 0.6 }}
             className="relative group"
           >
-            <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-emerald-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
             <div className="relative bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
               <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-2xl sm:text-3xl">🤲</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
@@ -130,7 +130,7 @@ const AboutLogo = () => {
                 rewards, as taught by Lord Krishna:
               </p>
 
-              <div className="bg-green-50 p-4 sm:p-6 rounded-xl border-l-4 border-green-600 mb-4 sm:mb-6">
+              <div className="bg-orange-50 p-4 sm:p-6 rounded-xl border-l-4 border-orange-600 mb-4 sm:mb-6">
                 <blockquote className="italic text-gray-900 text-base sm:text-lg mb-3 leading-relaxed">
                   కర్మణ్యేవాధికారస్తే మా ఫలేషు కదాచన । <br />
                   మా కర్మఫలహేతుర్భూః మా తే సంగోఽస్త్వకర్మణి (2:47)
@@ -195,9 +195,9 @@ const AboutLogo = () => {
             transition={{ duration: 0.6 }}
             className="relative group"
           >
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-pink-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
             <div className="relative bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 text-center">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <span className="text-3xl sm:text-4xl">🙏</span>
               </div>
               
@@ -205,7 +205,7 @@ const AboutLogo = () => {
                 Committed to Karma Yoga – Selfless Service to Humanity
               </h3>
 
-              <div className="bg-purple-50 p-4 sm:p-6 rounded-xl mb-4 sm:mb-6 max-w-3xl mx-auto">
+              <div className="bg-orange-50 p-4 sm:p-6 rounded-xl mb-4 sm:mb-6 max-w-3xl mx-auto">
                 <blockquote className="italic text-base sm:text-lg text-gray-900 mb-3 leading-relaxed">
                   సన్నియమ్యేంద్రియగ్రామం సర్వత్ర సమబుద్ధయః । <br />
                   తే ప్రాప్నువంతి మామేవ సర్వభూతహితే రతాః (12:4)
@@ -217,7 +217,7 @@ const AboutLogo = () => {
               </div>
 
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-                With Karma as its foundation, <strong className="text-purple-600">VIRAGA FOUNDATION</strong> serves not for rewards, but for the well-being of all.
+                With Karma as its foundation, <strong className="text-orange-600">VIRAGA FOUNDATION</strong> serves not for rewards, but for the well-being of all.
               </p>
             </div>
           </motion.div>

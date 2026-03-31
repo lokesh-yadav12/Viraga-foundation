@@ -322,7 +322,7 @@ export default function SocialInitiativesFire() {
   const orbColors = ["bg-orange-300/20", "bg-yellow-300/15", "bg-pink-300/15"];
 
   return (
-    <div className={`min-h-screen ${bgClass} py-16 sm:py-20 md:py-24 lg:py-32 relative overflow-hidden`}>
+    <div className={`min-h-screen ${bgClass} py-16 sm:py-20 md:py-20 lg:py-20 relative overflow-hidden`}>
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating orbs */}

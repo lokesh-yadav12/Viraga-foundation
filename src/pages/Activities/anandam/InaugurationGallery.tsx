@@ -235,20 +235,20 @@ const FoundationInceptionGallery: React.FC = () => {
 
       <div
         className="min-h-screen py-12 w-full"
-        style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
+        style={{ background: "white", fontFamily: "'Jost', sans-serif", color: "" }}
       >
         {/* ── Article Section ── */}
-        <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
+        <section className="max-w-6xl mx-auto px-6 pt-16 sm:pt-20 pb-12">
 
           {/* Badge + date */}
           <div className="flex items-center gap-3 mb-6">
             <span
-              className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}
+              className="text-[16px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
+              style={{ color: "orange-700", borderColor: "#orange-800", background: "#c8973a11" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-sm font-semibold tracking-widest">November 25, 2020</span>
+            <span className="text-gray-400 text-md font-semibold tracking-widest">November 25, 2020</span>
           </div>
 
           {/* Title */}
@@ -268,9 +268,9 @@ const FoundationInceptionGallery: React.FC = () => {
             className="mb-6"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "italic",
-              color: "#c8973a",
+              fontSize: "clamp(1rem, 2.5vw, 1.60rem)",
+              fontStyle: "normal",
+              color: "orange-600",
             }}
           >
             The Beginning of a Mission to Serve Humanity
@@ -279,10 +279,10 @@ const FoundationInceptionGallery: React.FC = () => {
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.30rem" }}>
             <p>
               Viraga Foundation was established on{" "}
-              <span style={{ color: "#c8973a" }} className="font-medium">
+              <span style={{ color: "orange-700" }} className="font-medium">
                 November 25, 2020
               </span>
               , inspired by the teachings of{" "}
@@ -305,16 +305,16 @@ const FoundationInceptionGallery: React.FC = () => {
                 className="italic text-center"
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: "clamp(1.05rem, 2vw, 1.25rem)",
-                  color: "#7a5c28",
+                  fontSize: "clamp(1.05rem, 2vw, 1.35rem)",
+                  color: "orange-700",
                   lineHeight: 1.7,
                 }}
               >
                 "The best way to find yourself is to lose yourself in the service of others."
               </p>
               <p
-                className="text-center mt-3 text-xs tracking-widest uppercase"
-                style={{ color: "#c8973a" }}
+                className="text-center mt-3 text-sm tracking-widest uppercase"
+                style={{ color: "orange-700" }}
               >
                 — Swami Vivekananda
               </p>
@@ -331,7 +331,7 @@ const FoundationInceptionGallery: React.FC = () => {
               <div
                 key={s.label}
                 className="rounded-xl p-4 text-center"
-                style={{ background: "#f9f9f9", border: "1px solid #e5e5e5" }}
+                style={{ background: "white", border: "1px solid #e5e5e5" }}
               >
                 <div
                   style={{
@@ -343,7 +343,7 @@ const FoundationInceptionGallery: React.FC = () => {
                 >
                   {s.value}
                 </div>
-                <div className="text-gray-400 text-xs tracking-wider mt-0.5 uppercase">{s.label}</div>
+                <div className="text-gray-600 text-xs tracking-wider mt-0.5 uppercase">{s.label}</div>
               </div>
             ))}
           </div>

@@ -34,21 +34,21 @@ const AboutUs = () => {
 </section>
 
 			{/* ================= CONTENT SECTION ================= */}
-			<section className="mx-auto max-w-5xl px-4 sm:px-6 py-12 sm:py-16 md:py-20 space-y-8 sm:space-y-10">
+			<section className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16 md:py-20 space-y-8 sm:space-y-10">
 				{/* Intro Card */}
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
-					className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 sm:p-8 md:p-10 rounded-2xl shadow-lg border-l-4 border-blue-600"
+					className="bg-gradient-to-br from-orange-50 to-orange-50 p-6 sm:p-8 md:p-10 rounded-2xl shadow-lg border-l-4 border-orange-600"
 				>
 					<h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">
 						Guided by Dharma, Driven by Karma, Serving with Selflessness
 					</h2>
 
 					<p className="text-base sm:text-lg leading-relaxed text-gray-700 mb-4">
-						<strong className="text-blue-700">VIRAGA FOUNDATION</strong> was established on November 25,
+						<strong className="text-orange-600">VIRAGA FOUNDATION</strong> was established on November 25,
 						2020, by a group of dedicated individuals inspired by the timeless teachings of Swami
 						Vivekananda. Our journey began with a shared vision to serve humanity with compassion,
 						integrity, and purpose.
@@ -69,9 +69,9 @@ const AboutUs = () => {
 					transition={{ duration: 0.6 }}
 					className="relative bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100"
 				>
-					<div className="absolute -left-2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></div>
+					<div className="absolute -left-2 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-600 to-orange-700 rounded-full"></div>
 					<div className="flex items-start gap-3 sm:gap-4 mb-4">
-						<span className="text-4xl sm:text-5xl md:text-6xl text-blue-600">"</span>
+						<span className="text-4xl sm:text-5xl md:text-6xl text-orange-600">"</span>
 						<blockquote className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 italic">
 							They alone live who live for others.
 						</blockquote>
@@ -194,11 +194,11 @@ const AboutUs = () => {
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: true }}
 					transition={{ delay: 0.3, duration: 0.6 }}
-					className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 sm:p-8 md:p-10 rounded-2xl shadow-lg mt-8 sm:mt-12 border-l-4 border-purple-600"
+					className="bg-gradient-to-br from-orange-50 to-orange-50 p-6 sm:p-8 md:p-10 rounded-2xl shadow-lg mt-8 sm:mt-12 border-l-4 border-orange-600"
 				>
 					<p className="text-base sm:text-lg leading-relaxed text-gray-700 mb-4">
-						With <strong className="text-purple-600">Dharma</strong> as our foundation and{' '}
-						<strong className="text-purple-600">Karma</strong> as our driving force, we continue our journey
+						With <strong className="text-orange-600">Dharma</strong> as our foundation and{' '}
+						<strong className="text-orange-600">Karma</strong> as our driving force, we continue our journey
 						of selfless service—ensuring that every action we take creates meaningful and lasting impact.
 					</p>
 

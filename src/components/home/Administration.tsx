@@ -9,7 +9,7 @@ import durga from '../../assets/durga.png';
 import bala from '../../assets/bala.png';
 import veer from '../../assets/veer.png';
 import soma from '../../assets/soma.png';
-import bg from '../../assets/i14.png'
+import bg from '../../assets/i14.png';
 type Member = {
 	name: string;
 	role: string;
@@ -103,7 +103,7 @@ const Administration = () => {
 			</div>
 
 			{/* ================= HERO SECTION ================= */}
-			<section className="relative h-[70vh]  w-full overflow-hidden">
+			<section className="relative h-[75vh]  w-full overflow-hidden">
 				{/* Image with Parallax Effect */}
 				<div className="absolute inset-0">
 					<img
@@ -181,44 +181,37 @@ const Administration = () => {
 						{members.map((member, index) => (
 							<div
 								key={member.name}
-								className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 animate-fade-in-up"
+								className={`group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 animate-fade-in-up ${
+									members.length % 2 !== 0 && index === members.length - 1
+										? 'lg:col-span-2 lg:w-1/2 lg:mx-auto'
+										: ''
+								}`}
 								style={{ animationDelay: `${index * 0.1}s` }}
 							>
 								{/* Decorative Background Pattern */}
 								<div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-orange-500/5 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
 								{/* Card Content */}
-								<div className="relative flex flex-row gap-4 p-6">
-									{/* Image Section */}
-									<div className="flex justify-center sm:mx-2 sm:px-5 px-4 sm:justify-start shrink-0">
-										<div className="relative">
-											{/* Decorative Ring */}
+
+								<div className="relative flex flex-col gap-4 p-4 sm:p-6">
+									{/* Badge + Name Row — always in same row on all screen sizes */}
+									<div className="flex items-center gap-3">
+										{/* Role Badge Icon */}
+										<div className="relative flex-shrink-0">
 											<div className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-500/20 to-blue-500/20 blur-md scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-											{/* Image Container */}
-											<div className="relative">
-												{/* <img
-													src={member.image}
-													alt={member.name}
-													className="h-32 w-32 rounded-2xl object-cover border-4 border-slate-100 group-hover:border-orange-500/30 transition-all duration-500 group-hover:scale-105 group-hover:rotate-2"
-												/> */}
-
-												{/* Role Badge */}
-												<div className="absolute  p-2 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl shadow-lg shadow-orange-500/30 transform group-hover:scale-110 transition-transform duration-300">
-													{getRoleIcon(member.role)}
-													<span className="text-white" />
-												</div>
+											<div className="relative w-11 h-11 flex items-center justify-center bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl shadow-lg shadow-orange-500/30 transform group-hover:scale-110 transition-transform duration-300 text-white">
+												{getRoleIcon(member.role)}
 											</div>
 										</div>
+
+										{/* Name */}
+										<h3 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors duration-300">
+											{member.name}
+										</h3>
 									</div>
 
 									{/* Content Section */}
-									<div className="flex-1 text-center sm:text-left space-y-3">
-										{/* Name */}
-										<h3 className="text-2xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors duration-300">
-											{member.name}
-										</h3>
-
+									<div className="space-y-3">
 										{/* Role with Badge */}
 										<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-orange-50 to-blue-50 rounded-full border border-orange-200/50">
 											<div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
@@ -226,12 +219,12 @@ const Administration = () => {
 										</div>
 
 										{/* Description */}
-										<p className="text-slate-600 leading-relaxed text-sm pt-2">
+										<p className="text-slate-600 leading-relaxed text-sm pt-1">
 											{member.description}
 										</p>
 
 										{/* Decorative Bottom Line */}
-										<div className="pt-4">
+										<div className="pt-2">
 											<div className="h-1 w-16 bg-gradient-to-r from-orange-500 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 										</div>
 									</div>

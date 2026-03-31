@@ -1037,29 +1037,29 @@ const EducationInitiativesGallery: React.FC = () => {
       <div className="min-h-screen pt-16 w-full" style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}>
 
         {/* ── Page Header ── */}
-        <div className="max-w-5xl mx-auto px-6 pt-16 pb-2">
+        <div className="max-w-6xl mx-auto px-6 pt-16 pb-2">
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-5">
-            <span className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border" style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}>
+            <span className="text-[16px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border" style={{ color: "orange-700", borderColor: "orange-800", background: "" }}>
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-sm font-semibold tracking-widest">Education Initiatives</span>
+            <span className="text-gray-400 text-md font-semibold tracking-widest">Education Initiatives</span>
           </div>
           <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.7rem, 4.5vw, 2.8rem)", fontWeight: 700, color: "#1a1a1a", letterSpacing: "-0.01em", lineHeight: 1.2 }}>
             Scholarship Assistance &amp; Guidance
           </h1>
-          <p className="mt-1 mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1rem, 2.2vw, 1.3rem)", fontStyle: "italic", color: "#c8973a" }}>
+          <p className="mt-1 mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1rem, 2.2vw, 1.3rem)", fontStyle: "normal", color: "orange-500" }}>
             Empowering Dreams Through Education
           </p>
           <div className="hero-divider h-px w-full" />
         </div>
 
         {/* ════ SECTION 1 — MATHEMATICS HANDBOOKS ════ */}
-        <section className="max-w-5xl mx-auto px-6 pt-14 pb-4">
+        <section className="max-w-6xl mx-auto px-6 pt-14 pb-4">
           <EventBadge label="Distribution Drive" />
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.5rem, 3.5vw, 2.3rem)", fontWeight: 600, color: "#1a1a1a", lineHeight: 1.25 }}>
             Distribution of Mathematics Handbooks
           </h2>
-          <p className="mt-1 mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(0.95rem, 2vw, 1.25rem)", fontStyle: "italic", color: "#c8973a" }}>
+          <p className="mt-1 mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(0.95rem, 2vw, 1.25rem)", fontStyle: "normal", color: "orange-700" }}>
             Supporting Needy Students in Government Schools
           </p>
           <div className="hero-divider h-px w-full mb-8" />
@@ -1067,7 +1067,7 @@ const EducationInitiativesGallery: React.FC = () => {
             <p>
               As part of its commitment to promoting education, Viraga Foundation, in collaboration with{" "}
               <strong className="text-gray-800">MTG Learning Media Private Limited</strong> (content provided by MTG), is distributing{" "}
-              <span className="font-semibold text-amber-600">100 Mathematics Handbooks</span> to needy students studying in government schools.
+              <span className="font-semibold text-amber-500">100 Mathematics Handbooks</span> to needy students studying in government schools.
             </p>
             <p>
               This specially designed handbook contains all essential mathematical formulas from{" "}
@@ -1097,12 +1097,12 @@ const EducationInitiativesGallery: React.FC = () => {
         <div className="soft-divider h-px max-w-5xl mx-auto" />
 
         {/* ════ SECTION 2 — CUSTOMIZED NOTEBOOKS ════ */}
-        <section className="max-w-5xl mx-auto px-6 pt-14 pb-4">
+        <section className="max-w-6xl mx-auto px-6 pt-14 pb-4">
           <EventBadge label="Education Support" />
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.5rem, 3.5vw, 2.3rem)", fontWeight: 600, color: "#1a1a1a", lineHeight: 1.25 }}>
             Distribution of Customized Notebooks
           </h2>
-          <p className="mt-1 mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(0.95rem, 2vw, 1.25rem)", fontStyle: "italic", color: "#c8973a" }}>
+          <p className="mt-1 mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(0.95rem, 2vw, 1.25rem)", fontStyle: "normal", color: "orange-700" }}>
             to Needy Students
           </p>
           <div className="hero-divider h-px w-full mb-8" />
@@ -1261,8 +1261,8 @@ const EducationInitiativesGallery: React.FC = () => {
 
 // ─── Small helpers ────────────────────────────
 const EventBadge: React.FC<{ label: string }> = ({ label }) => (
-  <span className="inline-block text-[10px] tracking-[0.25em] uppercase font-medium px-3 py-1 rounded-full border mb-3"
-    style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}>
+  <span className="inline-block text-[16px] tracking-[0.25em] uppercase font-medium px-3 py-1 rounded-full border mb-3"
+    style={{ color: "orange-800", borderColor: "orange-600", background: "orange-400" }}>
     {label}
   </span>
 );
@@ -1280,7 +1280,7 @@ const SectionTitle: React.FC<{ icon: string; label: string }> = ({ icon, label }
 const ActionBtn: React.FC<{ label: string; onClick?: (e: React.MouseEvent) => void }> = ({ label, onClick }) => (
   <button onClick={onClick}
     className="text-[11px] font-medium px-2 py-0.5 rounded-full transition hover:opacity-80"
-    style={{ background: "#c8973a", color: "#fff" }}>
+    style={{ background: "orange-500", color: "#fff" }}>
     {label}
   </button>
 );

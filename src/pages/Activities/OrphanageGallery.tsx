@@ -676,16 +676,16 @@ const UgadiCelebrationGallery: React.FC = () => {
         }}
       >
         {/* ── Hero / Article Section ─────────────────── */}
-        <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
           {/* Foundation badge */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}
+              className="text-[16px] tracking-[0.5em] uppercase font-medium px-3 py-1 rounded-full border"
+              style={{ color: "amber-600", borderColor: "amber-500", background: "amber-400" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-sm font-semibold tracking-widest">March 22, 2023</span>
+            <span className="text-gray-400 text-md font-semibold tracking-widest">March 22, 2023</span>
           </div>
 
           {/* Title */}
@@ -707,8 +707,8 @@ const UgadiCelebrationGallery: React.FC = () => {
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
               fontWeight: 700,
-              fontStyle: "italic",
-              color: "#c8973a",
+              fontStyle: "normal",
+              color: "orange-900",
             }}
           >
             Spreading Joy Through Giving
@@ -718,10 +718,10 @@ const UgadiCelebrationGallery: React.FC = () => {
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body paragraphs */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.45rem" }}>
             <p>
               On{" "}
-              <span style={{ color: "#c8973a" }} className="font-medium">
+              <span style={{ color: "orange-900" }} className="font-medium">
                 March 22, 2023
               </span>
               , in celebration of{" "}
@@ -744,7 +744,7 @@ const UgadiCelebrationGallery: React.FC = () => {
               style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
             >
               This event is a part of Viraga Foundation's ongoing{" "}
-              <strong style={{ color: "#c8973a", fontStyle: "normal" }}>
+              <strong style={{ color: "orange-900", fontStyle: "normal" }}>
                 Food Donation Program
               </strong>
               , which focuses on nourishing lives, spreading smiles, and promoting social welfare.

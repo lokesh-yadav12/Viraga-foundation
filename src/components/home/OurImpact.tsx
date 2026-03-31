@@ -181,7 +181,7 @@ export default function NotificationFeed() {
 
 	return (
 		<div
-			className="min-h-screen w-full flex flex-col items-center justify-start sm:px-4 px-2 py-12 box-border"
+			className="min-h-[50vh] w-full flex flex-col items-center justify-start sm:px-4 px-2 py-8 box-border"
 			style={{
 				background: 'linear-gradient(135deg, #fff7f0 0%, #fff 50%, #f0f9ff 100%)',
 				fontFamily: "'DM Sans', sans-serif",
@@ -245,7 +245,7 @@ export default function NotificationFeed() {
 			</div>
 
 			{/* Pause hint */}
-			<p className="mt-4 text-base text-black tracking-[0.04em]">Hover to pause · Scroll is live</p>
+			<p className="mt-4 text-base text-black tracking-[0.04em]">Hover to pause</p>
 		</div>
 	);
 }

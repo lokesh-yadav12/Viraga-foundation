@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
   // Auto-close splash after 8 seconds
   useEffect(() => {
     if (!showSplash) return;
-    const autoClose = setTimeout(() => closeSplash(), 8000);
+    const autoClose = setTimeout(() => closeSplash(), 5000);
     return () => clearTimeout(autoClose);
   }, [showSplash]);
 
@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
     setTimeout(() => {
       setShowSplash(false);
       setSplashFading(false);
-    }, 800);
+    }, 500);
   };
 
   const handleNext = () => {
@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
       {/* ── Splash Screen ── */}
       {showSplash && (
         <div
-          className={`fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-500 ${splashFading ? 'opacity-0' : 'opacity-100'}`}
+          className={`fixed inset-0 z-50 flex items-center justify-center  transition-opacity duration-500 ${splashFading ? 'opacity-0' : 'opacity-100'}`}
           onClick={closeSplash} // click outside (anywhere on backdrop) closes
         >
           {/* Image — stop click propagation so clicking image itself also closes (same as outside) */}
@@ -98,7 +98,7 @@ const HeroSection: React.FC = () => {
           <div className="absolute bottom-0 left-0 w-full h-1 bg-white/20">
             <div
               className="h-full bg-orange-500"
-              style={{ animation: 'shrink 8s linear forwards' }}
+              style={{ animation: 'shrink 5s linear forwards' }}
             />
           </div>
 

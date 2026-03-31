@@ -352,7 +352,7 @@ const ActionBtn: React.FC<{
 	<button
 		onClick={onClick}
 		className="text-[11px] font-medium px-2 py-0.5 rounded-full transition hover:opacity-80"
-		style={{ background: '#c8973a', color: '#fff' }}
+		style={{ background: 'orange-600', color: '#fff' }}
 	>
 		{label}
 	</button>
@@ -397,19 +397,19 @@ const VFTLGalleryPage: React.FC = () => {
 				}}
 			>
 				{/* ── Page Header ── */}
-				<div className="max-w-5xl mx-auto px-6 pt-16 pb-8">
+				<div className="max-w-6xl mx-auto px-6 pt-16 pb-8">
 					<div className="flex sm:flex-row flex-col items-center gap-3 mb-5">
 						<span
-							className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
+							className="text-[16px] tracking-[0.6em] uppercase font-medium px-3 py-1 rounded-full border"
 							style={{
-								color: '#c8973a',
-								borderColor: '#c8973a55',
-								background: '#c8973a11',
+								color: 'amber-600',
+								borderColor: 'orange-500',
+								background: 'orange-400',
 							}}
 						>
 							Viraga Foundation
 						</span>
-						<span className="text-gray-400 text-sm font-semibold tracking-widest">
+						<span className="text-gray-400 text-md font-semibold tracking-widest">
 							Vibrant Futures – Transforming Lives
 						</span>
 					</div>
@@ -429,9 +429,9 @@ const VFTLGalleryPage: React.FC = () => {
 						className="mt-1"
 						style={{
 							fontFamily: "'Cormorant Garamond', serif",
-							fontSize: 'clamp(1rem, 2.2vw, 1.3rem)',
-							fontStyle: 'italic',
-							color: '#c8973a',
+							fontSize: 'clamp(1.2rem, 2.2vw, 1.3rem)',
+							fontStyle: 'normal',
+							color: 'orange-700',
 						}}
 					>
 						Registration, Classes, Exams · Guest Lectures · Closing Ceremony

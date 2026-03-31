@@ -84,19 +84,19 @@ const TeluguContent = () => {
       `}</style>
 
 			{/* Hero Header — full width */}
-			<div className="shimmer flex items-center max-w-7xl rounded-lg text-white relative overflow-hidden w-full">
-				<div
+			<div className="shimmer flex items-center max-w-6xl rounded-lg text-white relative overflow-hidden w-full">
+				{/* <div
 					className="absolute inset-0 opacity-10"
 					style={{
 						backgroundImage:
 							'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)',
 						backgroundSize: '60px 60px',
 					}}
-				/>
+				/> */}
 				<div className="relative max-w-3xl mx-auto px-6 py-12 text-center">
 					<div className={`fade-up ${visible ? 'visible' : ''}`}>
 						<div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 body-font text-sm font-medium tracking-wide">
-							<span className="w-2 h-2 bg-yellow-300 rounded-full pulse-badge inline-block" />
+							<span className="w-2 h-2 bg-yellow-50 rounded-full pulse-badge inline-block" />
 							NEW BATCH REGISTRATION OPEN
 						</div>
 					</div>

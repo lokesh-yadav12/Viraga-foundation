@@ -38,12 +38,12 @@ const AnandamPage = () => {
 			{/* Sub-folder Grid */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 				<div className="text-center mb-12">
-					<div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-700 text-sm font-semibold mb-4 shadow-sm">
+					<div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-100 to-pink-100 rounded-full text-orange-700 text-sm font-semibold mb-4 shadow-sm">
 						<Calendar className="w-4 h-4" />
 						<span className="text-2xl">Annadaanam Events</span>
 					</div>
 					<h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Year wise</h2>
-					<div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto" />
+					<div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full mx-auto" />
 				</div>
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -56,8 +56,8 @@ const AnandamPage = () => {
 							onMouseLeave={() => setHoveredIndex(null)}
 						>
 							<Link to={folder.link} className="group cursor-pointer block">
-								<div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-700 bg-white transform hover:-translate-y-4 hover:scale-105">
-									<div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+								<div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-orange-500/25 transition-all duration-700 bg-white transform hover:-translate-y-4 hover:scale-105">
+									<div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 via-pink-500 to-orange-500 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 									<div className="relative bg-white rounded-3xl overflow-hidden">
 										<div className="aspect-[4/3] overflow-hidden rounded-3xl relative">
 											<img

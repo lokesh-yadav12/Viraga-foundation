@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { HandHeart, Copy, Check, Heart, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
-import bgpic from '../assets/donation2.png'
+import bgpic from '../assets/donation2.png';
 import upi from '../assets/upi.png';
 
 const DonationsPage = () => {
@@ -62,7 +62,7 @@ const DonationsPage = () => {
 	];
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-purple-50 md:px-6 via-pink-50 to-orange-50">
+		<div className="min-h-screen bg-gradient-to-br from-orange-50 md:px-6 via-pink-50 to-orange-50">
 			{/* Hero Section */}
 			<motion.div
 				initial={{ opacity: 0 }}
@@ -94,7 +94,7 @@ const DonationsPage = () => {
 					initial={{ y: 40, opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
 					viewport={{ once: true, amount: 0.3 }}
-					transition={{ duration: 0.8, ease: "easeOut" }}
+					transition={{ duration: 0.8, ease: 'easeOut' }}
 					className="text-center mb-8 sm:mb-12 lg:mb-16"
 				>
 					<div className="flex items-center justify-center gap-2 mb-4">
@@ -111,15 +111,22 @@ const DonationsPage = () => {
 					initial={{ y: 40, opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
 					viewport={{ once: true, amount: 0.3 }}
-					transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+					transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
 					className="mb-12 sm:mb-16 lg:mb-20"
 				>
-					<div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border border-purple-100">
+					<div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border border-orange-100">
 						<p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-4 sm:mb-6">
-							At <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">VIRAGA FOUNDATION</span>, we believe that meaningful change does not always require big money — it requires consistent compassion.
+							At{' '}
+							<span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">
+								VIRAGA FOUNDATION
+							</span>
+							, we believe that meaningful change does not always require big money — it requires
+							consistent compassion.
 						</p>
 						<p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
-							While many people wish to support education and social causes, not everyone can make large one-time donations. Understanding this reality, VIRAGA FOUNDATION introduces a simple and powerful idea:
+							While many people wish to support education and social causes, not everyone can make large
+							one-time donations. Understanding this reality, VIRAGA FOUNDATION introduces a simple and
+							powerful idea:
 						</p>
 					</div>
 				</motion.div>
@@ -131,21 +138,21 @@ const DonationsPage = () => {
 						initial={{ x: -60, opacity: 0 }}
 						whileInView={{ x: 0, opacity: 1 }}
 						viewport={{ once: true, amount: 0.2 }}
-						transition={{ duration: 0.8, ease: "easeOut" }}
+						transition={{ duration: 0.8, ease: 'easeOut' }}
 					>
 						{/* Donate Illustration */}
 						<motion.div
 							initial={{ scale: 0.8, opacity: 0 }}
 							whileInView={{ scale: 1, opacity: 1 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+							transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
 							className="mb-8 flex justify-center"
 						>
-							<div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
-								<div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full animate-pulse"></div>
+							<div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-gradient-to-br from-orange-100 via-pink-100 to-orange-100 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
+								<div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-pink-400/20 rounded-full animate-pulse"></div>
 								<div className="text-center relative z-10">
-									<HandHeart className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-purple-600 mx-auto mb-3 sm:mb-4 animate-pulse" />
-									<h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+									<HandHeart className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-orange-600 mx-auto mb-3 sm:mb-4 animate-pulse" />
+									<h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
 										DONATE
 									</h3>
 								</div>
@@ -166,12 +173,14 @@ const DonationsPage = () => {
 									initial={{ x: -40, opacity: 0 }}
 									whileInView={{ x: 0, opacity: 1 }}
 									viewport={{ once: true }}
-									transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+									transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
 									whileHover={{ x: 5, transition: { duration: 0.3 } }}
-									className="flex items-start gap-3 sm:gap-4 p-4 sm:p-5 bg-white/90 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-purple-50"
+									className="flex items-start gap-3 sm:gap-4 p-4 sm:p-5 bg-white/90 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-orange-50"
 								>
 									<span className="text-2xl sm:text-3xl flex-shrink-0">{initiative.icon}</span>
-									<p className="text-sm sm:text-base text-gray-700 leading-relaxed">{initiative.text}</p>
+									<p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+										{initiative.text}
+									</p>
 								</motion.div>
 							))}
 						</div>
@@ -182,7 +191,7 @@ const DonationsPage = () => {
 						initial={{ x: 60, opacity: 0 }}
 						whileInView={{ x: 0, opacity: 1 }}
 						viewport={{ once: true, amount: 0.2 }}
-						transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+						transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
 					>
 						<div className="lg:sticky lg:top-8 space-y-6 sm:space-y-8">
 							{/* Account Details Card */}
@@ -190,8 +199,8 @@ const DonationsPage = () => {
 								initial={{ y: 30, opacity: 0 }}
 								whileInView={{ y: 0, opacity: 1 }}
 								viewport={{ once: true }}
-								transition={{ duration: 0.7, ease: "easeOut" }}
-								className="bg-white/90 backdrop-blur-sm border-2 border-purple-200 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500"
+								transition={{ duration: 0.7, ease: 'easeOut' }}
+								className="bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500"
 							>
 								<h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 text-center lg:text-left">
 									Account Details for Donation
@@ -203,15 +212,19 @@ const DonationsPage = () => {
 										initial={{ y: 20, opacity: 0 }}
 										whileInView={{ y: 0, opacity: 1 }}
 										viewport={{ once: true }}
-										transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+										transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
 										className="mb-4 group"
 									>
-										<p className="text-xs sm:text-sm text-gray-600 mb-1 font-medium">{detail.label}:</p>
-										<div className="flex items-center justify-between bg-gradient-to-r from-purple-50 to-pink-50 p-3 sm:p-4 rounded-lg group-hover:from-purple-100 group-hover:to-pink-100 transition-all duration-300">
-											<p className="font-semibold text-gray-800 text-sm sm:text-base break-all pr-2">{detail.value}</p>
+										<p className="text-xs sm:text-sm text-gray-600 mb-1 font-medium">
+											{detail.label}:
+										</p>
+										<div className="flex items-center justify-between bg-gradient-to-r from-orange-50 to-pink-50 p-3 sm:p-4 rounded-lg group-hover:from-orange-100 group-hover:to-pink-100 transition-all duration-300">
+											<p className="font-semibold text-gray-800 text-sm sm:text-base break-all pr-2">
+												{detail.value}
+											</p>
 											<button
 												onClick={() => copyToClipboard(detail.value, detail.label)}
-												className="text-gray-400 hover:text-purple-600 transition-colors duration-300 flex-shrink-0"
+												className="text-gray-400 hover:text-orange-600 transition-colors duration-300 flex-shrink-0"
 												aria-label={`Copy ${detail.label}`}
 											>
 												{copiedField === detail.label ? (
@@ -230,8 +243,8 @@ const DonationsPage = () => {
 								initial={{ y: 30, opacity: 0 }}
 								whileInView={{ y: 0, opacity: 1 }}
 								viewport={{ once: true }}
-								transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-								className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-8 shadow-xl border-2 border-purple-100"
+								transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
+								className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-8 shadow-xl border-2 border-orange-100"
 							>
 								<img src={upi} alt="UPI QR Code" className="w-full h-full object-contain mb-4" />
 							</motion.div>
@@ -244,23 +257,26 @@ const DonationsPage = () => {
 					initial={{ y: 40, opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
 					viewport={{ once: true, amount: 0.3 }}
-					transition={{ duration: 0.8, ease: "easeOut" }}
+					transition={{ duration: 0.8, ease: 'easeOut' }}
 					className="text-center mb-12"
 				>
-					<div className="bg-gradient-to-r from-purple-100 via-pink-100 to-orange-100 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border-2 border-purple-200">
+					<div className="bg-gradient-to-r from-orange-100 via-pink-100 to-orange-100 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border-2 border-orange-200">
 						<h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 sm:mb-6">
 							Your Kindness Can Change Lives
 						</h3>
 						<p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
-							A single act of generosity can bring a smile, a warm meal, and a new beginning. Open your heart
-							and donate today—because a small act of love can create a lifetime of change.
+							A single act of generosity can bring a smile, a warm meal, and a new beginning. Open your
+							heart and donate today—because a small act of love can create a lifetime of change.
 						</p>
 
 						<div className="bg-red-50 border-l-4 border-red-500 p-4 sm:p-6 mb-6 sm:mb-8 rounded-lg max-w-3xl mx-auto">
 							<p className="text-sm sm:text-base text-gray-800 text-left">
-								Please donate either through the Bank account which was mentioned above or through the QR
-								code given aside and send a screenshot or receipt to the{' '}
-								<a href="https://wa.me/919492940941" className="font-bold text-red-600 hover:text-red-700 underline break-all">
+								Please donate either through the Bank account which was mentioned above or through the
+								QR code given aside and send a screenshot or receipt to the{' '}
+								<a
+									href="https://wa.me/919492940941"
+									className="font-bold text-red-600 hover:text-red-700 underline break-all"
+								>
 									Whatsapp no. 9492940941
 								</a>{' '}
 								for generation of donation receipt
@@ -280,18 +296,20 @@ const DonationsPage = () => {
 					initial={{ y: 60, opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
 					viewport={{ once: true, amount: 0.1 }}
-					transition={{ duration: 0.9, ease: "easeOut" }}
+					transition={{ duration: 0.9, ease: 'easeOut' }}
 					className="relative mb-16"
 				>
 					{/* Section divider */}
 					<div className="flex items-center gap-4 mb-10">
-						<div className="flex-1 h-px bg-gradient-to-r from-transparent via-purple-300 to-purple-300"></div>
-						<div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full shadow-lg">
+						<div className="flex-1 h-px bg-gradient-to-r from-transparent via-orange-300 to-orange-300"></div>
+						<div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-400 to-pink-400 rounded-full shadow-lg">
 							<span className="text-white text-lg">🌊</span>
-							<span className="text-white font-bold text-sm sm:text-base tracking-wider">VIRAGA CIRCLE</span>
+							<span className="text-white font-bold text-sm sm:text-base tracking-wider">
+								VIRAGA CIRCLE
+							</span>
 							<span className="text-white text-lg">🌊</span>
 						</div>
-						<div className="flex-1 h-px bg-gradient-to-l from-transparent via-purple-300 to-purple-300"></div>
+						<div className="flex-1 h-px bg-gradient-to-l from-transparent via-orange-300 to-orange-300"></div>
 					</div>
 
 					{/* Hero tagline */}
@@ -299,14 +317,16 @@ const DonationsPage = () => {
 						initial={{ scale: 0.9, opacity: 0 }}
 						whileInView={{ scale: 1, opacity: 1 }}
 						viewport={{ once: true }}
-						transition={{ duration: 0.7, ease: "easeOut" }}
+						transition={{ duration: 0.7, ease: 'easeOut' }}
 						className="text-center mb-10"
 					>
-						<div className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl px-6 sm:px-10 py-4 sm:py-6 shadow-2xl mb-4">
-							<p className="text-white text-xl sm:text-2xl lg:text-3xl font-bold">
-								Donate just <span className="text-yellow-300 text-2xl sm:text-3xl lg:text-4xl">₹300</span> per month.
+						<div className="inline-block bg-transparent/10 rounded-2xl px-6 sm:px-10 py-4 sm:py-6 shadow-2xl mb-4">
+							<p className="text-oraange-700 text-xl sm:text-2xl lg:text-3xl font-bold">
+								Donate just{' '}
+								<span className="text-orange-500 text-2xl sm:text-3xl lg:text-4xl">₹300</span> per
+								month.
 							</p>
-							<p className="text-purple-100 text-lg sm:text-xl lg:text-2xl font-light mt-1">
+							<p className="text-black text-lg sm:text-xl lg:text-2xl font-light mt-1">
 								Change a life. 💫
 							</p>
 						</div>
@@ -314,31 +334,32 @@ const DonationsPage = () => {
 
 					{/* Cards Grid */}
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-8">
-
 						{/* Card 1 – The Idea */}
 						<motion.div
 							initial={{ x: -40, opacity: 0 }}
 							whileInView={{ x: 0, opacity: 1 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+							transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
 							whileHover={{ y: -4, transition: { duration: 0.25 } }}
-							className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-purple-100 hover:border-purple-300 hover:shadow-2xl transition-all duration-300"
+							className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-orange-100 hover:border-orange-300 hover:shadow-2xl transition-all duration-300"
 						>
 							<div className="flex items-center gap-3 mb-4">
-								<div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-xl shadow-md flex-shrink-0">
+								<div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-pink-500 rounded-xl flex items-center justify-center text-xl shadow-md flex-shrink-0">
 									💡
 								</div>
-								<h4 className="text-lg sm:text-xl font-bold text-gray-800">The Idea Behind VIRAGA CIRCLE</h4>
+								<h4 className="text-lg sm:text-xl font-bold text-gray-800">
+									The Idea Behind VIRAGA CIRCLE
+								</h4>
 							</div>
 							<p className="text-xl  text-gray-700 leading-relaxed mb-6">
 								Inspired by the belief that{' '}
-								<span className="font-semibold text-purple-600">"every rupee counts"</span>, VIRAGA CIRCLE is a
-								community of like-minded individuals who contribute a minimum of ₹300 every month to support
-								children from government schools and underprivileged backgrounds.
+								<span className="font-semibold text-orange-600">"every rupee counts"</span>, VIRAGA
+								CIRCLE is a community of like-minded individuals who contribute a minimum of ₹300 every
+								month to support children from government schools and underprivileged backgrounds.
 							</p>
 							<p className="text-lg  text-gray-700 leading-relaxed">
-								When many people give a little, together we create a sustainable flow of support that transforms
-								lives continuously — not just once.
+								When many people give a little, together we create a sustainable flow of support that
+								transforms lives continuously — not just once.
 							</p>
 						</motion.div>
 
@@ -347,7 +368,7 @@ const DonationsPage = () => {
 							initial={{ x: 40, opacity: 0 }}
 							whileInView={{ x: 0, opacity: 1 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+							transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
 							whileHover={{ y: -4, transition: { duration: 0.25 } }}
 							className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-pink-100 hover:border-pink-300 hover:shadow-2xl transition-all duration-300"
 						>
@@ -355,7 +376,9 @@ const DonationsPage = () => {
 								<div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-400 rounded-xl flex items-center justify-center text-xl shadow-md flex-shrink-0">
 									🎯
 								</div>
-								<h4 className="text-lg sm:text-xl font-bold text-gray-800">How Your Monthly ₹300 Helps</h4>
+								<h4 className="text-lg sm:text-xl font-bold text-gray-800">
+									How Your Monthly ₹300 Helps
+								</h4>
 							</div>
 							<p className="text-sm sm:text-base text-gray-600 mb-4 font-medium">
 								All monthly contributions are collectively used for:
@@ -367,7 +390,7 @@ const DonationsPage = () => {
 										initial={{ x: 20, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										viewport={{ once: true }}
-										transition={{ duration: 0.4, delay: 0.3 + i * 0.08, ease: "easeOut" }}
+										transition={{ duration: 0.4, delay: 0.3 + i * 0.08, ease: 'easeOut' }}
 										className="flex items-start gap-3 p-3 bg-gradient-to-r from-pink-50 to-orange-50 rounded-lg"
 									>
 										<span className="text-lg flex-shrink-0">{item.icon}</span>
@@ -376,7 +399,8 @@ const DonationsPage = () => {
 								))}
 							</div>
 							<p className="text-sm sm:text-base text-gray-600 mt-4 italic border-t border-pink-100 pt-3">
-								Your ₹300 becomes part of a larger mission — building confidence, opportunity, and a brighter future for deserving children.
+								Your ₹300 becomes part of a larger mission — building confidence, opportunity, and a
+								brighter future for deserving children.
 							</p>
 						</motion.div>
 
@@ -385,7 +409,7 @@ const DonationsPage = () => {
 							initial={{ x: -40, opacity: 0 }}
 							whileInView={{ x: 0, opacity: 1 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+							transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
 							whileHover={{ y: -4, transition: { duration: 0.25 } }}
 							className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-orange-100 hover:border-orange-300 hover:shadow-2xl transition-all duration-300"
 						>
@@ -405,16 +429,20 @@ const DonationsPage = () => {
 										initial={{ x: -20, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										viewport={{ once: true }}
-										transition={{ duration: 0.4, delay: 0.4 + i * 0.08, ease: "easeOut" }}
+										transition={{ duration: 0.4, delay: 0.4 + i * 0.08, ease: 'easeOut' }}
 										className="flex items-start gap-3"
 									>
-										<span className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</span>
+										<span className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">
+											✓
+										</span>
 										<p className="text-sm sm:text-base text-gray-700">{point}</p>
 									</motion.div>
 								))}
 							</div>
 							<p className="text-sm sm:text-base text-gray-600 mt-4 p-3 bg-orange-50 rounded-lg border border-orange-100">
-								Payments can be made easily through <span className="font-semibold text-orange-600">QR Code / UPI / Bank Transfer</span> to the official VIRAGA FOUNDATION account.
+								Payments can be made easily through{' '}
+								<span className="font-semibold text-orange-600">QR Code / UPI / Bank Transfer</span> to
+								the official VIRAGA FOUNDATION account.
 							</p>
 						</motion.div>
 
@@ -423,15 +451,17 @@ const DonationsPage = () => {
 							initial={{ x: 40, opacity: 0 }}
 							whileInView={{ x: 0, opacity: 1 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+							transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
 							whileHover={{ y: -4, transition: { duration: 0.25 } }}
-							className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-purple-100 hover:border-purple-300 hover:shadow-2xl transition-all duration-300"
+							className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-orange-100 hover:border-orange-300 hover:shadow-2xl transition-all duration-300"
 						>
 							<div className="flex items-center gap-3 mb-4">
-								<div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center text-xl shadow-md flex-shrink-0">
+								<div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-indigo-500 rounded-xl flex items-center justify-center text-xl shadow-md flex-shrink-0">
 									💜
 								</div>
-								<h4 className="text-lg sm:text-xl font-bold text-gray-800">Why Monthly Giving Matters</h4>
+								<h4 className="text-lg sm:text-xl font-bold text-gray-800">
+									Why Monthly Giving Matters
+								</h4>
 							</div>
 							<div className="space-y-3 mb-5">
 								{whyMonthly.map((point, i) => (
@@ -440,10 +470,10 @@ const DonationsPage = () => {
 										initial={{ y: 15, opacity: 0 }}
 										whileInView={{ y: 0, opacity: 1 }}
 										viewport={{ once: true }}
-										transition={{ duration: 0.4, delay: 0.5 + i * 0.08, ease: "easeOut" }}
-										className="flex items-start gap-3 p-3 bg-purple-50 rounded-lg"
+										transition={{ duration: 0.4, delay: 0.5 + i * 0.08, ease: 'easeOut' }}
+										className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg"
 									>
-										<span className="text-purple-500 font-bold text-lg flex-shrink-0">•</span>
+										<span className="text-orange-500 font-bold text-lg flex-shrink-0">•</span>
 										<p className="text-sm sm:text-base text-gray-700">{point}</p>
 									</motion.div>
 								))}
@@ -454,12 +484,12 @@ const DonationsPage = () => {
 								whileInView={{ scale: 1, opacity: 1 }}
 								viewport={{ once: true }}
 								transition={{ duration: 0.5, delay: 0.7 }}
-								className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-4 text-center"
+								className="bg-orange-50 rounded-xl p-4 text-center"
 							>
-								<p className="text-white text-sm sm:text-base italic font-medium">
+								<p className="text-orange-700 text-sm sm:text-base italic font-medium">
 									"Every drop creates the ocean.
 								</p>
-								<p className="text-yellow-200 text-sm sm:text-base italic font-semibold">
+								<p className="text-orange-700 text-sm sm:text-base italic font-semibold">
 									Every ₹300 creates a future."
 								</p>
 							</motion.div>
@@ -471,32 +501,32 @@ const DonationsPage = () => {
 						initial={{ y: 50, opacity: 0 }}
 						whileInView={{ y: 0, opacity: 1 }}
 						viewport={{ once: true }}
-						transition={{ duration: 0.8, ease: "easeOut" }}
-						className="relative overflow-hidden rounded-3xl shadow-2xl"
+						transition={{ duration: 0.8, ease: 'easeOut' }}
+						className="relative overflow-hidden rounded-3xl shadow-lg border border-gray-100"
 					>
-						{/* Animated background */}
-						<div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500"></div>
-						<div className="absolute inset-0 opacity-20">
-							<div className="absolute top-0 left-0 w-72 h-72 bg-white rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-							<div className="absolute bottom-0 right-0 w-72 h-72 bg-yellow-300 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
-						</div>
+						{/* Simple clean background */}
+						<div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-orange-50" />
+
+						{/* Subtle decorative circles */}
+						<div className="absolute top-0 left-0 w-64 h-64 bg-orange-100 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-60" />
+						<div className="absolute bottom-0 right-0 w-64 h-64 bg-amber-100 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl opacity-60" />
 
 						<div className="relative z-10 p-8 sm:p-10 lg:p-12 text-center">
 							<motion.div
 								animate={{ scale: [1, 1.05, 1] }}
-								transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+								transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
 								className="inline-block mb-4"
 							>
 								<span className="text-4xl sm:text-5xl">🌟</span>
 							</motion.div>
 
-							<h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">
+							<h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-3">
 								Join VIRAGA CIRCLE Today
 							</h3>
-							<p className="text-purple-100 text-base sm:text-lg lg:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+							<p className="text-gray-500 text-base sm:text-lg lg:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
 								Become part of a growing community that believes in{' '}
-								<span className="text-yellow-300 font-semibold">Dharma through action</span> and{' '}
-								<span className="text-yellow-300 font-semibold">Karma through service</span>.
+								<span className="text-orange-500 font-semibold">Dharma through action</span> and{' '}
+								<span className="text-orange-500 font-semibold">Karma through service</span>.
 							</p>
 
 							{/* Stats */}
@@ -508,19 +538,20 @@ const DonationsPage = () => {
 										whileInView={{ y: 0, opacity: 1 }}
 										viewport={{ once: true }}
 										transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-										className="bg-white/15 backdrop-blur-sm border border-white/30 rounded-2xl p-4 text-center"
+										className="bg-white border border-orange-100 rounded-2xl p-4 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
 									>
 										<div className="text-2xl mb-2">{stat.icon}</div>
-										<p className="text-purple-200 text-xs font-medium mb-1">{stat.label}</p>
-										<p className="text-white font-bold text-sm sm:text-base">{stat.value}</p>
+										<p className="text-gray-400 text-xs font-medium mb-1">{stat.label}</p>
+										<p className="text-gray-700 font-bold text-sm sm:text-base">{stat.value}</p>
 									</motion.div>
 								))}
 							</div>
 
-							<p className="text-white text-base sm:text-lg lg:text-xl font-medium">
+							<p className="text-gray-600 text-base sm:text-lg lg:text-xl font-medium">
 								Together, let us create{' '}
-								<span className="text-yellow-300 font-bold">Vibrant Futures</span> and{' '}
-								<span className="text-yellow-300 font-bold">Transform Lives</span> — one month at a time. 🙏
+								<span className="text-orange-500 font-bold">Vibrant Futures</span> and{' '}
+								<span className="text-orange-500 font-bold">Transform Lives</span> — one month at a
+								time. 🙏
 							</p>
 						</div>
 					</motion.div>
@@ -532,26 +563,20 @@ const DonationsPage = () => {
 			<div className="fixed bottom-0 left-0 w-full h-32 pointer-events-none overflow-hidden z-10">
 				<motion.div
 					animate={{ y: [-100, 0] }}
-					transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+					transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
 					className="absolute bottom-0 left-1/4"
-				>
-				</motion.div>
+				></motion.div>
 				<motion.div
 					animate={{ y: [-100, 0] }}
-					transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+					transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
 					className="absolute bottom-0 right-1/4"
-				>
-				</motion.div>
+				></motion.div>
 			</div>
 		</div>
 	);
 };
 
 export default DonationsPage;
-
-
-
-
 
 // import { useState, useEffect } from 'react';
 // import { HandHeart, Copy, Check, Heart, Sparkles } from 'lucide-react';
@@ -588,7 +613,7 @@ export default DonationsPage;
 // 	];
 
 // 	return (
-// 		<div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
+// 		<div className="min-h-screen bg-gradient-to-br from-orange-50 via-pink-50 to-orange-50">
 // 			{/* Hero Section */}
 // 			<div
 // 				className="relative h-64 sm:h-80 lg:h-96 bg-cover bg-center flex items-center justify-center overflow-hidden"
@@ -597,7 +622,7 @@ export default DonationsPage;
 // 						'url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&h=600&fit=crop")',
 // 				}}
 // 			>
-// 				<div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 via-pink-500/50 to-orange-500/50"></div>
+// 				<div className="absolute inset-0 bg-gradient-to-r from-orange-600/50 via-pink-500/50 to-orange-500/50"></div>
 // 				<div className="absolute inset-0 backdrop-blur-sm"></div>
 // 				<div
 // 					className={`relative text-center px-4 transition-all duration-1000 transform ${
@@ -636,9 +661,9 @@ export default DonationsPage;
 // 						isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 // 					}`}
 // 				>
-// 					<div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border border-purple-100">
+// 					<div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border border-orange-100">
 // 						<p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-4 sm:mb-6">
-// 							At <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">VIRAGA FOUNDATION</span>, we believe in the
+// 							At <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">VIRAGA FOUNDATION</span>, we believe in the
 // 							power of selfless service. Inspired by Swami Vivekananda's teachings, we are on a mission to
 // 							spread kindness, uplift lives, and bring hope to those in need.
 // 						</p>
@@ -659,11 +684,11 @@ export default DonationsPage;
 // 					>
 // 						{/* Donate Illustration */}
 // 						<div className="mb-8 flex justify-center">
-// 							<div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
-// 								<div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full animate-pulse"></div>
+// 							<div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-gradient-to-br from-orange-100 via-pink-100 to-orange-100 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
+// 								<div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-pink-400/20 rounded-full animate-pulse"></div>
 // 								<div className="text-center relative z-10">
-// 									<HandHeart className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-purple-600 mx-auto mb-3 sm:mb-4 animate-pulse" />
-// 									<h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+// 									<HandHeart className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-orange-600 mx-auto mb-3 sm:mb-4 animate-pulse" />
+// 									<h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
 // 										DONATE
 // 									</h3>
 // 								</div>
@@ -681,7 +706,7 @@ export default DonationsPage;
 // 							{initiatives.map((initiative, index) => (
 // 								<div
 // 									key={index}
-// 									className="flex items-start gap-3 sm:gap-4 p-4 sm:p-5 bg-white/90 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-purple-50"
+// 									className="flex items-start gap-3 sm:gap-4 p-4 sm:p-5 bg-white/90 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-orange-50"
 // 									style={{ animationDelay: `${index * 100}ms` }}
 // 								>
 // 									<span className="text-2xl sm:text-3xl flex-shrink-0">{initiative.icon}</span>
@@ -699,7 +724,7 @@ export default DonationsPage;
 // 					>
 // 						<div className="lg:sticky lg:top-8 space-y-6 sm:space-y-8">
 // 							{/* Account Details Card */}
-// 							<div className="bg-white/90 backdrop-blur-sm border-2 border-purple-200 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500">
+// 							<div className="bg-white/90 backdrop-blur-sm border-2 border-orange-200 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500">
 // 								<h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 text-center lg:text-left">
 // 									Account Details for Donation
 // 								</h3>
@@ -707,11 +732,11 @@ export default DonationsPage;
 // 								{accountDetails.map((detail, index) => (
 // 									<div key={index} className="mb-4 group">
 // 										<p className="text-xs sm:text-sm text-gray-600 mb-1 font-medium">{detail.label}:</p>
-// 										<div className="flex items-center justify-between bg-gradient-to-r from-purple-50 to-pink-50 p-3 sm:p-4 rounded-lg group-hover:from-purple-100 group-hover:to-pink-100 transition-all duration-300">
+// 										<div className="flex items-center justify-between bg-gradient-to-r from-orange-50 to-pink-50 p-3 sm:p-4 rounded-lg group-hover:from-orange-100 group-hover:to-pink-100 transition-all duration-300">
 // 											<p className="font-semibold text-gray-800 text-sm sm:text-base break-all pr-2">{detail.value}</p>
 // 											<button
 // 												onClick={() => copyToClipboard(detail.value, detail.label)}
-// 												className="text-gray-400 hover:text-purple-600 transition-colors duration-300 flex-shrink-0"
+// 												className="text-gray-400 hover:text-orange-600 transition-colors duration-300 flex-shrink-0"
 // 												aria-label={`Copy ${detail.label}`}
 // 											>
 // 												{copiedField === detail.label ? (
@@ -726,7 +751,7 @@ export default DonationsPage;
 // 							</div>
 
 // 							{/* Bank and QR Code Section */}
-// 							<div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-purple-100">
+// 							<div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-orange-100">
 // 								{/* Bank Header */}
 // 								<div className="mb-6">
 // 									<div className="bg-gradient-to-r from-red-600 to-red-700 rounded-xl p-4 sm:p-6 mb-4">
@@ -820,7 +845,7 @@ export default DonationsPage;
 // 						isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 // 					}`}
 // 				>
-// 					<div className="bg-gradient-to-r from-purple-100 via-pink-100 to-orange-100 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border-2 border-purple-200">
+// 					<div className="bg-gradient-to-r from-orange-100 via-pink-100 to-orange-100 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border-2 border-orange-200">
 // 						<h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 sm:mb-6">
 // 							Your Kindness Can Change Lives
 // 						</h3>
@@ -853,7 +878,7 @@ export default DonationsPage;
 // 					<Heart className="w-6 h-6 text-pink-400 opacity-50" />
 // 				</div>
 // 				<div className="absolute bottom-0 right-1/4 animate-bounce" style={{ animationDelay: '1s' }}>
-// 					<Heart className="w-8 h-8 text-purple-400 opacity-50" />
+// 					<Heart className="w-8 h-8 text-orange-400 opacity-50" />
 // 				</div>
 // 			</div>
 // 		</div>
