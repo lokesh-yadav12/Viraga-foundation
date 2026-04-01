@@ -212,12 +212,15 @@ const TeluguContent = () => {
 						మీరు పొందేవి
 						<span className="h-px flex-1 bg-orange-200" />
 					</h2>
-					<div className="bg-white rounded-2xl overflow-hidden border border-orange-100 shadow-sm divide-y divide-orange-50">
+					<div className="grid grid-cols-2 gap-3">
 						{features.map((f, i) => (
-							<div key={i} className="feature-item flex items-center gap-4 px-6 py-4 cursor-default">
-								<span className="text-2xl">{f.icon}</span>
-								<span className="telugu text-gray-800 font-medium">{f.text}</span>
-								<span className="ml-auto text-orange-300 text-lg">›</span>
+							<div
+								key={i}
+								className={`feature-item bg-white border border-orange-100 rounded-2xl shadow-sm flex flex-col items-center text-center gap-2 p-4 cursor-default
+          ${i === features.length - 1 && features.length % 2 !== 0 ? 'col-span-2' : ''}`}
+							>
+								<span className="text-3xl">{f.icon}</span>
+								<span className="telugu text-gray-800 font-medium text-sm leading-snug">{f.text}</span>
 							</div>
 						))}
 					</div>
