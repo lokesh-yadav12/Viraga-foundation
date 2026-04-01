@@ -23,7 +23,7 @@ const TeluguContent = () => {
 	];
 
 	return (
-		<div className="min-h-screen bg-white font-sans flex pt-40 flex-col items-center">
+		<div className="min-h-screen bg-[#fdfaf7] font-sans flex pt-40 flex-col items-center">
 			<style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -48,7 +48,7 @@ const TeluguContent = () => {
         .delay-6 { transition-delay: 0.6s; }
 
         .glow-border {
-          box-shadow: 0 0 0 2px #f97316, 0 8px 32px rgba(249,115,22,0.15);
+          box-shadow: 0 0 0 2px #f97316, 0 8px 32px rgba(249,115,22,0.12);
         }
 
         .date-card:hover {
@@ -58,8 +58,9 @@ const TeluguContent = () => {
         .date-card { transition: all 0.3s ease; }
 
         .feature-item:hover {
-          background: linear-gradient(135deg, #fff7ed, #ffedd5);
-          transform: translateX(6px);
+          background: linear-gradient(145deg, #fff7ed, #ffedd5);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(249,115,22,0.12);
         }
         .feature-item { transition: all 0.25s ease; }
 
@@ -67,36 +68,41 @@ const TeluguContent = () => {
           animation: pulse-glow 2s ease-in-out infinite;
         }
         @keyframes pulse-glow {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(249,115,22,0.4); }
-          50% { box-shadow: 0 0 0 10px rgba(249,115,22,0); }
+          0%, 100% { box-shadow: 0 0 0 0 rgba(255,237,213,0.6); }
+          50% { box-shadow: 0 0 0 10px rgba(255,237,213,0); }
         }
 
         .shimmer {
-          background: linear-gradient(135deg, #ea580c 0%, #f97316 40%, #fb923c 60%, #ea580c 100%);
-          background-size: 200% 200%;
-          animation: shimmer-anim 3s ease infinite;
+          background: linear-gradient(135deg, #c2410c 0%, #ea580c 25%, #f97316 50%, #fb923c 75%, #c2410c 100%);
+          background-size: 300% 300%;
+          animation: shimmer-anim 4s ease infinite;
         }
         @keyframes shimmer-anim {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
         }
+
+        .card-warm {
+          background: linear-gradient(145deg, #ffffff, #fffbf7);
+          border: 1px solid #fde8d0;
+          box-shadow: 0 2px 12px rgba(249,115,22,0.06);
+        }
+
+        .doc-item-hover:hover {
+          background: #fff7ed;
+          border-radius: 10px;
+          padding-left: 6px;
+        }
+        .doc-item-hover { transition: all 0.2s ease; padding-left: 0; }
       `}</style>
 
 			{/* Hero Header — full width */}
-			<div className="shimmer flex items-center max-w-6xl rounded-lg text-white relative overflow-hidden w-full">
-				{/* <div
-					className="absolute inset-0 opacity-10"
-					style={{
-						backgroundImage:
-							'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)',
-						backgroundSize: '60px 60px',
-					}}
-				/> */}
+			<div className="shimmer flex items-center max-w-6xl rounded-2xl text-white relative overflow-hidden w-full shadow-2xl">
 				<div className="relative max-w-3xl mx-auto px-6 py-12 text-center">
 					<div className={`fade-up ${visible ? 'visible' : ''}`}>
-						<div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 body-font text-sm font-medium tracking-wide">
-							<span className="w-2 h-2 bg-yellow-50 rounded-full pulse-badge inline-block" />
+						<div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-6 body-font text-sm font-medium tracking-wide">
+							<span className="w-2 h-2 bg-amber-200 rounded-full pulse-badge inline-block" />
 							NEW BATCH REGISTRATION OPEN
 						</div>
 					</div>
@@ -105,7 +111,7 @@ const TeluguContent = () => {
 						<h1 className="heading-font text-4xl md:text-5xl font-black leading-tight mb-2 drop-shadow-lg">
 							Viraga's Vibrant Future
 						</h1>
-						<p className="heading-font text-xl md:text-2xl font-bold italic text-orange-100 mb-4">
+						<p className="heading-font text-xl md:text-2xl font-bold italic text-amber-200 mb-4">
 							Transforming Lives
 						</p>
 					</div>
@@ -124,45 +130,48 @@ const TeluguContent = () => {
 				{/* Registration Dates */}
 				<div className={`fade-up delay-2 ${visible ? 'visible' : ''} w-full`}>
 					<h2 className="body-font text-xs font-semibold uppercase tracking-widest text-orange-400 mb-4 flex items-center gap-2">
-						<span className="h-px flex-1 bg-orange-200" />
+						<span className="h-px flex-1 bg-gradient-to-r from-transparent to-orange-200" />
 						📅 రిజిస్ట్రేషన్ తేదీలు
-						<span className="h-px flex-1 bg-orange-200" />
+						<span className="h-px flex-1 bg-gradient-to-l from-transparent to-orange-200" />
 					</h2>
 					<div className="space-y-4">
 						{/* Registration Open Banner */}
-						<div className="bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl p-5 text-center shadow-lg">
-							<div className="text-white text-xs font-bold uppercase tracking-widest mb-1 opacity-80">
-								🎉 Registrations Now Open
+						<div className="shimmer rounded-2xl p-5 text-center shadow-xl relative overflow-hidden">
+							<div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
+							<div className="relative">
+								<div className="text-white text-xs font-bold uppercase tracking-widest mb-1 opacity-80">
+									🎉 Registrations Now Open
+								</div>
+								<div className="text-white text-2xl font-black leading-tight">Register Before</div>
+								<div className="text-white text-4xl font-black leading-none mt-1 drop-shadow">30 April 2026</div>
+								<div className="mt-3 w-16 h-1 bg-white/30 rounded-full mx-auto" />
 							</div>
-							<div className="text-white text-2xl font-black leading-tight">Register Before</div>
-							<div className="text-white text-4xl font-black leading-none mt-1">30 April 2026</div>
-							<div className="mt-3 w-16 h-1 bg-white/40 rounded-full mx-auto" />
 						</div>
 
 						{/* Contact Buttons */}
 						<div className="grid grid-cols-2 gap-3">
 							<a
 								href="mailto:viragafoundation@gmail.com"
-								className="flex flex-col items-center justify-center bg-white rounded-2xl p-4 glow-border cursor-pointer hover:bg-orange-50 transition-colors group"
+								className="flex flex-col items-center justify-center card-warm rounded-2xl p-4 glow-border cursor-pointer hover:bg-orange-50 transition-all hover:-translate-y-1 group"
 							>
 								<div className="text-2xl mb-1">✉️</div>
 								<div className="text-xs font-bold text-orange-500 uppercase tracking-wide mb-1">
 									Email Us
 								</div>
-								<div className="text-xs text-gray-600 font-medium text-center break-all">
+								<div className="text-xs text-gray-500 font-medium text-center break-all">
 									viragafoundation@gmail.com
 								</div>
 							</a>
 
 							<a
 								href="tel:+919492940941"
-								className="flex flex-col items-center justify-center bg-white rounded-2xl p-4 glow-border cursor-pointer hover:bg-orange-50 transition-colors group"
+								className="flex flex-col items-center justify-center card-warm rounded-2xl p-4 glow-border cursor-pointer hover:bg-orange-50 transition-all hover:-translate-y-1 group"
 							>
 								<div className="text-2xl mb-1">📞</div>
 								<div className="text-xs font-bold text-orange-500 uppercase tracking-wide mb-1">
 									Call Us
 								</div>
-								<div className="text-xs text-gray-600 font-medium text-center">+91 9492940941</div>
+								<div className="text-xs text-gray-500 font-medium text-center">+91 9492940941</div>
 							</a>
 						</div>
 					</div>
@@ -170,17 +179,17 @@ const TeluguContent = () => {
 
 				{/* Venue */}
 				<div className={`fade-up delay-3 ${visible ? 'visible' : ''} w-full`}>
-					<div className="bg-white rounded-2xl p-6 border border-orange-100 shadow-sm">
+					<div className="card-warm rounded-2xl p-6">
 						<div className="flex items-start gap-4">
-							<div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+							<div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">
 								📍
 							</div>
 							<div>
 								<div className="body-font text-xs font-semibold uppercase tracking-widest text-orange-400 mb-1">
 									వేదిక / చిరునామా
 								</div>
-								<div className="telugu text-gray-800 leading-relaxed">
-									<span className="font-bold text-orange-700">విరాగా ఫౌండేషన్</span>
+								<div className="telugu text-gray-700 leading-relaxed">
+									<span className="font-bold text-orange-600">విరాగా ఫౌండేషన్</span>
 									<br />
 									కల్పతరు, సెక్టార్ 5,
 									<br />
@@ -195,10 +204,10 @@ const TeluguContent = () => {
 
 				{/* Program Goal */}
 				<div className={`fade-up delay-3 ${visible ? 'visible' : ''} w-full`}>
-					<div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border border-orange-100 text-center">
+					<div className="bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 rounded-2xl p-6 border border-orange-100 text-center shadow-sm">
 						<p className="telugu text-gray-700 leading-8 text-base">
-							ప్రస్తుతం <span className="font-bold text-orange-600 text-lg">4వ తరగతి</span> చదువుతున్న
-							విద్యార్థులను <span className="font-bold text-orange-600 text-lg">6వ తరగతి</span> జాతీయ
+							ప్రస్తుతం <span className="font-bold text-orange-500 text-lg">4వ తరగతి</span> చదువుతున్న
+							విద్యార్థులను <span className="font-bold text-orange-500 text-lg">6వ తరగతి</span> జాతీయ
 							స్థాయి పోటీ పరీక్షల్లో ప్రతిభ కనబరచేలా శక్తివంతం చేయడం మరియు మార్గనిర్దేశం చేయడం ఈ
 							కార్యక్రమం లక్ష్యం.
 						</p>
@@ -208,19 +217,19 @@ const TeluguContent = () => {
 				{/* Features */}
 				<div className={`fade-up delay-4 ${visible ? 'visible' : ''} w-full`}>
 					<h2 className="body-font text-xs font-semibold uppercase tracking-widest text-orange-400 mb-4 flex items-center gap-2">
-						<span className="h-px flex-1 bg-orange-200" />
+						<span className="h-px flex-1 bg-gradient-to-r from-transparent to-orange-200" />
 						మీరు పొందేవి
-						<span className="h-px flex-1 bg-orange-200" />
+						<span className="h-px flex-1 bg-gradient-to-l from-transparent to-orange-200" />
 					</h2>
 					<div className="grid grid-cols-2 gap-3">
 						{features.map((f, i) => (
 							<div
 								key={i}
-								className={`feature-item bg-white border border-orange-100 rounded-2xl shadow-sm flex flex-col items-center text-center gap-2 p-4 cursor-default
-          ${i === features.length - 1 && features.length % 2 !== 0 ? 'col-span-2' : ''}`}
+								className={`feature-item card-warm rounded-2xl flex flex-col items-center text-center gap-2 p-4 cursor-default
+									${i === features.length - 1 && features.length % 2 !== 0 ? 'col-span-2' : ''}`}
 							>
 								<span className="text-3xl">{f.icon}</span>
-								<span className="telugu text-gray-800 font-medium text-sm leading-snug">{f.text}</span>
+								<span className="telugu text-gray-700 font-medium text-sm leading-snug">{f.text}</span>
 							</div>
 						))}
 					</div>
@@ -228,9 +237,10 @@ const TeluguContent = () => {
 
 				{/* CTA Banner */}
 				<div className={`fade-up delay-5 ${visible ? 'visible' : ''} w-full`}>
-					<div className="shimmer rounded-2xl p-6 text-white text-center relative overflow-hidden">
+					<div className="shimmer rounded-2xl p-6 text-white text-center relative overflow-hidden shadow-xl">
 						<div className="absolute -top-4 -right-4 w-24 h-24 bg-white/10 rounded-full" />
 						<div className="absolute -bottom-6 -left-6 w-32 h-32 bg-white/10 rounded-full" />
+						<div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
 						<div className="relative">
 							<div className="text-3xl mb-2">⭐</div>
 							<p className="telugu text-lg font-bold leading-relaxed mb-1">
@@ -239,7 +249,7 @@ const TeluguContent = () => {
 							<p className="telugu text-lg font-bold leading-relaxed mb-4">
 								వైభవమైన భవిష్యత్తు వైపు మొదటి అడుగు వేయండి!
 							</p>
-							<div className="inline-flex items-center gap-2 bg-white text-orange-600 rounded-full px-6 py-2.5 body-font font-bold text-sm ">
+							<div className="inline-flex items-center gap-2 bg-white text-orange-600 rounded-full px-6 py-2.5 body-font font-bold text-sm shadow-md">
 								📌 సీట్లు పరిమితంగా ఉన్నాయి – ముందస్తు రిజిస్ట్రేషన్ చేయండి
 							</div>
 						</div>
@@ -249,17 +259,17 @@ const TeluguContent = () => {
 				{/* Required Documents */}
 				<div className={`fade-up delay-5 ${visible ? 'visible' : ''} w-full`}>
 					<h2 className="body-font text-xs font-semibold uppercase tracking-widest text-orange-400 mb-4 flex items-center gap-2">
-						<span className="h-px flex-1 bg-orange-200" />
+						<span className="h-px flex-1 bg-gradient-to-r from-transparent to-orange-200" />
 						అవసరమైన పత్రాలు
-						<span className="h-px flex-1 bg-orange-200" />
+						<span className="h-px flex-1 bg-gradient-to-l from-transparent to-orange-200" />
 					</h2>
-					<div className="bg-white rounded-2xl p-6 border border-orange-100 shadow-sm space-y-3">
+					<div className="card-warm rounded-2xl p-6 space-y-3">
 						{documents.map((doc, i) => (
-							<div key={i} className="flex items-center gap-3">
-								<div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-									<span className="text-orange-600 text-xs font-bold">{i + 1}</span>
+							<div key={i} className="doc-item-hover flex items-center gap-3 py-1">
+								<div className="w-6 h-6 bg-gradient-to-br from-orange-400 to-amber-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+									<span className="text-white text-xs font-bold">{i + 1}</span>
 								</div>
-								<span className="telugu text-gray-700 leading-relaxed">{doc}</span>
+								<span className="telugu text-gray-600 leading-relaxed">{doc}</span>
 							</div>
 						))}
 					</div>
@@ -267,8 +277,8 @@ const TeluguContent = () => {
 
 				{/* Contact CTA */}
 				<div className={`fade-up delay-6 ${visible ? 'visible' : ''} w-full`}>
-					<div className="bg-orange-50 rounded-2xl p-5 border border-orange-100 text-center">
-						<p className="telugu text-gray-600 mb-2">మరిన్ని వివరాలు మరియు ప్రవేశ సమాచారం కోసం</p>
+					<div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-5 border border-orange-100 text-center shadow-sm">
+						<p className="telugu text-gray-500 mb-2">మరిన్ని వివరాలు మరియు ప్రవేశ సమాచారం కోసం</p>
 						<button className="shimmer text-white body-font font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-200">
 							ఈరోజే మమ్మల్ని సంప్రదించండి →
 						</button>
@@ -277,7 +287,7 @@ const TeluguContent = () => {
 
 				{/* Footer */}
 				<div className={`fade-up delay-6 ${visible ? 'visible' : ''} text-center pb-6 w-full`}>
-					<div className="heading-font text-2xl font-bold text-orange-600 mb-1">Viraga Foundation</div>
+					<div className="heading-font text-2xl font-bold text-orange-500 mb-1">Viraga Foundation</div>
 					<div className="telugu text-gray-400 text-sm">ధన్యవాదాలతో, విరాగా టీమ్</div>
 					<div className="flex justify-center gap-2 mt-3">
 						{['●', '●', '●'].map((d, i) => (

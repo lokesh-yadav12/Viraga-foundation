@@ -181,7 +181,7 @@ export default function NotificationFeed() {
 
 	return (
 		<div
-			className="min-h-[50vh] w-full flex flex-col items-center justify-start sm:px-4 px-2 py-8 box-border"
+			className="min-h-[50vh] w-full  flex flex-col items-center sm:px-4 px-2 py-8 box-border"
 			style={{
 				background: 'linear-gradient(135deg, #fff7f0 0%, #fff 50%, #f0f9ff 100%)',
 				fontFamily: "'DM Sans', sans-serif",
@@ -216,7 +216,7 @@ export default function NotificationFeed() {
 			</div>
 
 			{/* Scroll Container */}
-			<div className="relative w-full max-w-[90%] sm:max-w-[70%]">
+			<div className="relative w-full max-w-6xl">
 				{/* Top fade */}
 				<div
 					className="absolute top-0 left-0 right-0 h-[60px] z-[2] pointer-events-none rounded-t-2xl"
