@@ -36,6 +36,19 @@ export default {
         sans: ['Poppins', 'Roboto', 'sans-serif'],
         heading: ['Poppins', 'sans-serif'],
       },
+      fontSize: {
+        // Standardized font sizes
+        'xs': ['0.75rem', { lineHeight: '1.5' }],      // 12px
+        'sm': ['0.875rem', { lineHeight: '1.5' }],     // 14px
+        'base': ['1rem', { lineHeight: '1.6' }],       // 16px - Default paragraph
+        'lg': ['1.125rem', { lineHeight: '1.6' }],     // 18px - Large paragraph
+        'xl': ['1.25rem', { lineHeight: '1.5' }],      // 20px - Small heading
+        '2xl': ['1.5rem', { lineHeight: '1.4' }],      // 24px - Section subtitle
+        '3xl': ['1.875rem', { lineHeight: '1.3' }],    // 30px - Section title
+        '4xl': ['2.25rem', { lineHeight: '1.2' }],     // 36px - Page title
+        '5xl': ['3rem', { lineHeight: '1.1' }],        // 48px - Hero title
+        '6xl': ['3.75rem', { lineHeight: '1' }],       // 60px - Large hero
+      },
       container: {
         center: true,
         padding: '1rem',

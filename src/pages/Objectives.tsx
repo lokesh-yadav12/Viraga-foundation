@@ -181,7 +181,7 @@ const Objectives = () => {
 											duration: 0.5,
 											delay: index * 0.1 + 0.4,
 										}}
-										className="text-sm font-medium text-blue-700 mb-2"
+										className="text-sm font-medium text-orange-600 mb-2"
 									>
 										{item.subtitle}
 									</motion.p>

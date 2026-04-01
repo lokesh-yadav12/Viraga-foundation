@@ -43,29 +43,29 @@ const galleryItems: MediaItem[] = [
   { id: 3, type: "image", src: img3, caption: "Viraga Foundation volunteers at the event" },
   { id: 4, type: "image", src: img4, caption: "Food donation programme – February 21, 2021" },
   { id: 5, type: "image", src: img5, caption: "Volunteers distributing food to the community" },
-{ id: 6, type: "image", src: img6, caption: "People gathered for the food donation programme" },
-{ id: 7, type: "image", src: img7, caption: "Serving meals to those in need" },
-{ id: 8, type: "image", src: img8, caption: "Volunteers preparing food packets for distribution" },
-{ id: 9, type: "image", src: img9, caption: "Smiles during the community service activity" },
-{ id: 10, type: "image", src: img10, caption: "Volunteers working together to help the community" },
-{ id: 11, type: "image", src: img11, caption: "Food packets arranged for distribution" },
-{ id: 12, type: "image", src: img12, caption: "Community members receiving meals" },
-{ id: 13, type: "image", src: img13, caption: "Moments from the food donation drive" },
-{ id: 14, type: "image", src: img14, caption: "Volunteers coordinating the distribution process" },
-{ id: 15, type: "image", src: img15, caption: "Helping hands serving the needy" },
-{ id: 16, type: "image", src: img16, caption: "Food being served with care and compassion" },
-{ id: 17, type: "image", src: img17, caption: "Community members gathered for the event" },
-{ id: 18, type: "image", src: img18, caption: "Volunteers sharing meals with gratitude" },
-{ id: 19, type: "image", src: img19, caption: "A day dedicated to service and kindness" },
-{ id: 20, type: "image", src: img20, caption: "Distribution of food packets during the drive" },
-{ id: 21, type: "image", src: img21, caption: "Volunteers ensuring everyone receives food" },
-{ id: 22, type: "image", src: img22, caption: "Community members appreciating the initiative" },
-{ id: 23, type: "image", src: img23, caption: "Moments of unity and service" },
-{ id: 24, type: "image", src: img24, caption: "Volunteers standing together for a noble cause" },
-{ id: 25, type: "image", src: img25, caption: "Smiles shared during the food donation programme" },
-{ id: 26, type: "image", src: img26, caption: "Helping the community through collective effort" },
-{ id: 27, type: "image", src: img27, caption: "Food distribution reaching those in need" },
-{ id: 28, type: "image", src: img28, caption: "A successful community service initiative" },
+  { id: 6, type: "image", src: img6, caption: "People gathered for the food donation programme" },
+  { id: 7, type: "image", src: img7, caption: "Serving meals to those in need" },
+  { id: 8, type: "image", src: img8, caption: "Volunteers preparing food packets for distribution" },
+  { id: 9, type: "image", src: img9, caption: "Smiles during the community service activity" },
+  { id: 10, type: "image", src: img10, caption: "Volunteers working together to help the community" },
+  { id: 11, type: "image", src: img11, caption: "Food packets arranged for distribution" },
+  { id: 12, type: "image", src: img12, caption: "Community members receiving meals" },
+  { id: 13, type: "image", src: img13, caption: "Moments from the food donation drive" },
+  { id: 14, type: "image", src: img14, caption: "Volunteers coordinating the distribution process" },
+  { id: 15, type: "image", src: img15, caption: "Helping hands serving the needy" },
+  { id: 16, type: "image", src: img16, caption: "Food being served with care and compassion" },
+  { id: 17, type: "image", src: img17, caption: "Community members gathered for the event" },
+  { id: 18, type: "image", src: img18, caption: "Volunteers sharing meals with gratitude" },
+  { id: 19, type: "image", src: img19, caption: "A day dedicated to service and kindness" },
+  { id: 20, type: "image", src: img20, caption: "Distribution of food packets during the drive" },
+  { id: 21, type: "image", src: img21, caption: "Volunteers ensuring everyone receives food" },
+  { id: 22, type: "image", src: img22, caption: "Community members appreciating the initiative" },
+  { id: 23, type: "image", src: img23, caption: "Moments of unity and service" },
+  { id: 24, type: "image", src: img24, caption: "Volunteers standing together for a noble cause" },
+  { id: 25, type: "image", src: img25, caption: "Smiles shared during the food donation programme" },
+  { id: 26, type: "image", src: img26, caption: "Helping the community through collective effort" },
+  { id: 27, type: "image", src: img27, caption: "Food distribution reaching those in need" },
+  { id: 28, type: "image", src: img28, caption: "A successful community service initiative" },
 ];
 
 const downloadMedia = async (src: string, filename: string) => {
@@ -154,7 +154,7 @@ const Lightbox: React.FC<{
             className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-amber-400 hover:text-stone-900 text-white flex items-center justify-center text-xl transition"
           >›</button>
         </div>
-{/* 
+        {/* 
         <p className="mt-3 text-center text-stone-300 text-sm italic px-4">{item.caption}</p> */}
       </div>
     </div>
@@ -193,17 +193,17 @@ const NirmalHrudayBhavanGallery: React.FC = () => {
         style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
       >
         {/* ── Article Section ── */}
-        <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
 
           {/* Badge + date */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}
+              className="text-[16px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
+              style={{ color: "orange-900", borderColor: "orange-400", background: "orange-400" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-sm font-semibold tracking-widest">February 21, 2021</span>
+            <span className="text-gray-400 text-md font-semibold tracking-widest">February 21, 2021</span>
           </div>
 
           {/* Title */}
@@ -224,8 +224,8 @@ const NirmalHrudayBhavanGallery: React.FC = () => {
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "italic",
-              color: "#c8973a",
+              fontStyle: "normal",
+              color: "orange-900",
             }}
           >
             Vijayawada · February 2021
@@ -234,7 +234,7 @@ const NirmalHrudayBhavanGallery: React.FC = () => {
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
             <p>
               On{" "}
               <span style={{ color: "#c8973a" }} className="font-medium">
@@ -249,7 +249,7 @@ const NirmalHrudayBhavanGallery: React.FC = () => {
             </p>
 
             <p
-              className="border-l-2 pl-4 italic"
+              className="border-l-2 pl-4 "
               style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
             >
               Viraga Foundation believes that a warm meal is one of the simplest yet most
@@ -329,7 +329,7 @@ const NirmalHrudayBhavanGallery: React.FC = () => {
         </section>
 
         {/* Footer */}
-        <footer className="text-center py-6 text-gray-400 text-xs tracking-widest border-t border-gray-200">
+        <footer className="text-center py-6 text-gray-400 text-sm tracking-widest border-t border-gray-200">
           © 2021 Viraga Foundation · Food Donation Programme
         </footer>
       </div>

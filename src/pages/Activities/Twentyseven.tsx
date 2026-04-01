@@ -14,7 +14,7 @@ const Skilldevelopment = () => {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
         .sd-root {
-          font-family: 'Jost', sans-serif;
+          font-family: 'Poppins', sans-serif;
           min-height: 100vh;
           background: #FFFFFF;
           display: flex;
@@ -97,19 +97,19 @@ const Skilldevelopment = () => {
         .sd-dash { width: 26px; height: 1px; background: rgba(180,147,90,0.5); }
 
         .sd-title {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Poppins', sans-serif;
           font-size: clamp(52px, 8vw, 82px);
-          font-weight: 300;
+          font-weight: 600;
           line-height: 1.0;
           color: #1A1A1A;
           letter-spacing: -1.5px;
           margin-bottom: 6px;
         }
         .sd-title-italic {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Poppins', sans-serif;
           font-size: clamp(52px, 8vw, 82px);
-          font-weight: 300;
-          font-style: italic;
+          font-weight: 600;
+          font-style: normal;
           color: rgba(180,147,90,0.95);
           letter-spacing: -1px;
           display: block;
@@ -160,7 +160,7 @@ const Skilldevelopment = () => {
           border-radius: 3px;
           background: transparent;
           color: rgba(140,105,50,0.95);
-          font-family: 'Jost', sans-serif;
+          font-family: 'Poppins', sans-serif;
           font-size: 11px;
           font-weight: 600;
           letter-spacing: 3px;
@@ -214,7 +214,7 @@ const Skilldevelopment = () => {
           </div>
 
           <h1 className="sd-title">
-            V F T L 
+            V F T L
             <span className="sd-title-italic">2026-2027</span>
           </h1>
 

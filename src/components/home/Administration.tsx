@@ -219,7 +219,7 @@ const Administration = () => {
 										</div>
 
 										{/* Description */}
-										<p className="text-slate-600 leading-relaxed text-sm pt-1">
+										<p className="text-slate-600 leading-relaxed text-md pt-1">
 											{member.description}
 										</p>
 

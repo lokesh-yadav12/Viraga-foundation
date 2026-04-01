@@ -264,7 +264,7 @@ const DisasterReliefGallery: React.FC = () => {
 
           <div className="hero-divider h-px w-full mb-8" />
 
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.35rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.30rem" }}>
             <p>
               On{" "}
               <span style={{ color: "amber-800" }} className="font-medium">
@@ -287,7 +287,7 @@ const DisasterReliefGallery: React.FC = () => {
               help families regain a sense of normalcy.
             </p>
             <p
-              className="border-l-2 pl-4 italic"
+              className="border-l-2 pl-4 "
               style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
             >
               This relief effort reflects Viraga Foundation's commitment to humanitarian
@@ -306,13 +306,13 @@ const DisasterReliefGallery: React.FC = () => {
               <div
                 key={s.label}
                 className="rounded-xl p-4 text-center"
-                style={{ background: "#f9f9f9", border: "1px solid #e5e5e5" }}
+                style={{ background: "orange-200", border: "1px solid #e5e5e5" }}
               >
                 <div
                   style={{
-                    fontFamily: "'Cormorant Garamond', serif",
+                    fontFamily: "'Cormorant Garamond'",
                     fontSize: "2.2rem",
-                    color: "#c8973a",
+                    color: "orange-900",
                     fontWeight: 600,
                   }}
                 >
@@ -389,7 +389,7 @@ const DisasterReliefGallery: React.FC = () => {
                     style={{ background: "rgba(0,0,0,0.28)" }}>
                     <div
                       className="w-10 h-10 rounded-full flex items-center justify-center text-base"
-                      style={{ background: "orange-900", color: "#fff" }}
+                      style={{ background: "amber-900", color: "#fff" }}
                     >
                       ▶
                     </div>

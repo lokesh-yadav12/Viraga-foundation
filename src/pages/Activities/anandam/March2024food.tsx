@@ -12,17 +12,17 @@ const AmodiniGirlsHomeEvent: React.FC = () => {
         className="min-h-screen pt-16 w-full"
         style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
       >
-        <section className="max-w-5xl mx-auto px-6 pt-16 pb-20">
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-20">
 
           {/* Badge + date */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
               className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}
+              style={{ color: "orange-900", borderColor: "orange-400", background: "orange-300" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-sm font-semibold tracking-widest">March 3, 2024</span>
+            <span className="text-gray-400 text-md font-semibold tracking-widest">March 3, 2024</span>
           </div>
 
           {/* Title */}
@@ -43,8 +43,8 @@ const AmodiniGirlsHomeEvent: React.FC = () => {
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "italic",
-              color: "#c8973a",
+              fontStyle: "normal",
+              color: "orange-900",
             }}
           >
             Celebrating a Birthday with Kindness · March 2024
@@ -53,7 +53,7 @@ const AmodiniGirlsHomeEvent: React.FC = () => {
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
             <p>
               On{" "}
               <span style={{ color: "#c8973a" }} className="font-medium">
@@ -81,10 +81,10 @@ const AmodiniGirlsHomeEvent: React.FC = () => {
             >
               <span style={{ fontSize: "1.6rem", lineHeight: 1 }}>🎂</span>
               <div>
-                <p className="font-semibold text-gray-800" style={{ fontSize: "0.95rem" }}>
+                <p className="font-semibold text-gray-800" style={{ fontSize: "1.25rem" }}>
                   A Birthday Celebrated with Giving
                 </p>
-                <p className="text-gray-600 mt-1" style={{ fontSize: "0.93rem" }}>
+                <p className="text-gray-600 mt-1" style={{ fontSize: "1.2rem" }}>
                   The event was filled with joy and excitement as the children enjoyed the
                   meal and received valuable learning resources to support their education —
                   a beautiful reminder that the best birthdays are ones shared with those in need.
@@ -93,7 +93,7 @@ const AmodiniGirlsHomeEvent: React.FC = () => {
             </div>
 
             <p
-              className="border-l-2 pl-4 italic"
+              className="border-l-2 pl-4 "
               style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
             >
               Through such initiatives, Viraga Foundation remains committed to nurturing young
@@ -123,7 +123,7 @@ const AmodiniGirlsHomeEvent: React.FC = () => {
                 >
                   {s.value}
                 </div>
-                <div className="text-gray-400 text-xs tracking-wider mt-0.5 uppercase">{s.label}</div>
+                <div className="text-gray-400 text-sm tracking-wider mt-0.5 uppercase">{s.label}</div>
               </div>
             ))}
           </div>

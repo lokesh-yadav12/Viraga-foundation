@@ -718,7 +718,7 @@ const UgadiCelebrationGallery: React.FC = () => {
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body paragraphs */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.45rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.30rem" }}>
             <p>
               On{" "}
               <span style={{ color: "orange-900" }} className="font-medium">

@@ -25,11 +25,11 @@ const TeluguContent = () => {
 	return (
 		<div className="min-h-screen bg-white font-sans flex pt-40 flex-col items-center">
 			<style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Tiro+Telugu&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-        .telugu { font-family: 'Tiro Telugu', serif; }
-        .heading-font { font-family: 'Playfair Display', serif; }
-        .body-font { font-family: 'DM Sans', sans-serif; }
+        .telugu { font-family: 'Poppins', sans-serif; }
+        .heading-font { font-family: 'Poppins', sans-serif; }
+        .body-font { font-family: 'Poppins', sans-serif; }
 
         .fade-up {
           opacity: 0;

@@ -72,60 +72,60 @@ const foodItems: MediaItem[] = [
   { id: 3, type: "image", src: img3, caption: "Children at Premdan Ashram, Gunadala, Vijayawada" },
   { id: 4, type: "image", src: img4, caption: "Karthika Pournami celebration – November 29, 2020" },
   { id: 5, type: "image", src: img5, caption: "Children gathered during the celebration" },
-{ id: 6, type: "image", src: img6, caption: "Moments from Karthika Pournami festivities" },
-{ id: 7, type: "image", src: img7, caption: "Volunteers interacting with children at the ashram" },
-{ id: 8, type: "image", src: img8, caption: "Children enjoying the special celebration" },
-{ id: 9, type: "image", src: img9, caption: "A joyful gathering at Premdan Ashram" },
-{ id: 10, type: "image", src: img10, caption: "Children smiling during the celebration" },
-{ id: 11, type: "image", src: img11, caption: "Sharing happiness with the children" },
-{ id: 12, type: "image", src: img12, caption: "Volunteers spending time with children" },
-{ id: 13, type: "image", src: img13, caption: "Festive moments captured at the ashram" },
-{ id: 14, type: "image", src: img14, caption: "Children participating in celebrations" },
-{ id: 15, type: "image", src: img15, caption: "Smiles and laughter during the event" },
-{ id: 16, type: "image", src: img16, caption: "Children gathered for a group moment" },
-{ id: 17, type: "image", src: img17, caption: "Memories from the Karthika Pournami event" },
-{ id: 18, type: "image", src: img18, caption: "Children enjoying the festive spirit" },
-{ id: 19, type: "image", src: img19, caption: "Volunteers sharing joyful moments" },
-{ id: 20, type: "image", src: img20, caption: "A special day at Premdan Ashram" },
-{ id: 21, type: "image", src: img21, caption: "Celebration moments with children" },
-{ id: 22, type: "image", src: img22, caption: "Children happily participating in the event" },
-{ id: 23, type: "image", src: img23, caption: "Group photo with volunteers and children" },
-{ id: 24, type: "image", src: img24, caption: "Memorable moments from the celebration" },
-{ id: 25, type: "image", src: img25, caption: "Children enjoying the festive atmosphere" },
-{ id: 26, type: "image", src: img26, caption: "Joyful smiles captured during the event" },
-{ id: 27, type: "image", src: img27, caption: "Children gathered together in celebration" },
-{ id: 28, type: "image", src: img28, caption: "Volunteers interacting warmly with children" },
-{ id: 29, type: "image", src: img29, caption: "Moments of happiness at the ashram" },
-{ id: 30, type: "image", src: img30, caption: "Children celebrating with joy" },
-{ id: 31, type: "image", src: img31, caption: "Smiling faces at Premdan Ashram" },
-{ id: 32, type: "image", src: img32, caption: "Festive gathering of children and volunteers" },
-{ id: 33, type: "image", src: img33, caption: "Children enjoying the celebration day" },
-{ id: 34, type: "image", src: img34, caption: "Group moments from the celebration" },
-{ id: 35, type: "image", src: img35, caption: "Happy memories captured at the event" },
-{ id: 36, type: "image", src: img36, caption: "Children sharing joyful smiles" },
-{ id: 37, type: "image", src: img37, caption: "Moments of togetherness at the ashram" },
-{ id: 38, type: "image", src: img38, caption: "Children enjoying activities together" },
-{ id: 39, type: "image", src: img39, caption: "Festive smiles during Karthika Pournami" },
-{ id: 40, type: "image", src: img40, caption: "Volunteers celebrating with the children" },
-{ id: 41, type: "image", src: img41, caption: "A memorable day at Premdan Ashram" },
-{ id: 42, type: "image", src: img42, caption: "Children gathered for celebration moments" },
-{ id: 43, type: "image", src: img43, caption: "Happy faces captured during the event" },
-{ id: 44, type: "image", src: img44, caption: "Joyful memories from the ashram celebration" },
-{ id: 45, type: "image", src: img45, caption: "Children smiling for the camera" },
-{ id: 46, type: "image", src: img46, caption: "Volunteers sharing happiness with children" },
-{ id: 47, type: "image", src: img47, caption: "Celebration moments captured at Premdan Ashram" },
-{ id: 48, type: "image", src: img48, caption: "Children enjoying the festive gathering" },
-{ id: 49, type: "image", src: img49, caption: "A beautiful memory from Karthika Pournami celebration" },
+  { id: 6, type: "image", src: img6, caption: "Moments from Karthika Pournami festivities" },
+  { id: 7, type: "image", src: img7, caption: "Volunteers interacting with children at the ashram" },
+  { id: 8, type: "image", src: img8, caption: "Children enjoying the special celebration" },
+  { id: 9, type: "image", src: img9, caption: "A joyful gathering at Premdan Ashram" },
+  { id: 10, type: "image", src: img10, caption: "Children smiling during the celebration" },
+  { id: 11, type: "image", src: img11, caption: "Sharing happiness with the children" },
+  { id: 12, type: "image", src: img12, caption: "Volunteers spending time with children" },
+  { id: 13, type: "image", src: img13, caption: "Festive moments captured at the ashram" },
+  { id: 14, type: "image", src: img14, caption: "Children participating in celebrations" },
+  { id: 15, type: "image", src: img15, caption: "Smiles and laughter during the event" },
+  { id: 16, type: "image", src: img16, caption: "Children gathered for a group moment" },
+  { id: 17, type: "image", src: img17, caption: "Memories from the Karthika Pournami event" },
+  { id: 18, type: "image", src: img18, caption: "Children enjoying the festive spirit" },
+  { id: 19, type: "image", src: img19, caption: "Volunteers sharing joyful moments" },
+  { id: 20, type: "image", src: img20, caption: "A special day at Premdan Ashram" },
+  { id: 21, type: "image", src: img21, caption: "Celebration moments with children" },
+  { id: 22, type: "image", src: img22, caption: "Children happily participating in the event" },
+  { id: 23, type: "image", src: img23, caption: "Group photo with volunteers and children" },
+  { id: 24, type: "image", src: img24, caption: "Memorable moments from the celebration" },
+  { id: 25, type: "image", src: img25, caption: "Children enjoying the festive atmosphere" },
+  { id: 26, type: "image", src: img26, caption: "Joyful smiles captured during the event" },
+  { id: 27, type: "image", src: img27, caption: "Children gathered together in celebration" },
+  { id: 28, type: "image", src: img28, caption: "Volunteers interacting warmly with children" },
+  { id: 29, type: "image", src: img29, caption: "Moments of happiness at the ashram" },
+  { id: 30, type: "image", src: img30, caption: "Children celebrating with joy" },
+  { id: 31, type: "image", src: img31, caption: "Smiling faces at Premdan Ashram" },
+  { id: 32, type: "image", src: img32, caption: "Festive gathering of children and volunteers" },
+  { id: 33, type: "image", src: img33, caption: "Children enjoying the celebration day" },
+  { id: 34, type: "image", src: img34, caption: "Group moments from the celebration" },
+  { id: 35, type: "image", src: img35, caption: "Happy memories captured at the event" },
+  { id: 36, type: "image", src: img36, caption: "Children sharing joyful smiles" },
+  { id: 37, type: "image", src: img37, caption: "Moments of togetherness at the ashram" },
+  { id: 38, type: "image", src: img38, caption: "Children enjoying activities together" },
+  { id: 39, type: "image", src: img39, caption: "Festive smiles during Karthika Pournami" },
+  { id: 40, type: "image", src: img40, caption: "Volunteers celebrating with the children" },
+  { id: 41, type: "image", src: img41, caption: "A memorable day at Premdan Ashram" },
+  { id: 42, type: "image", src: img42, caption: "Children gathered for celebration moments" },
+  { id: 43, type: "image", src: img43, caption: "Happy faces captured during the event" },
+  { id: 44, type: "image", src: img44, caption: "Joyful memories from the ashram celebration" },
+  { id: 45, type: "image", src: img45, caption: "Children smiling for the camera" },
+  { id: 46, type: "image", src: img46, caption: "Volunteers sharing happiness with children" },
+  { id: 47, type: "image", src: img47, caption: "Celebration moments captured at Premdan Ashram" },
+  { id: 48, type: "image", src: img48, caption: "Children enjoying the festive gathering" },
+  { id: 49, type: "image", src: img49, caption: "A beautiful memory from Karthika Pournami celebration" },
 
   // ── Videos ──────────────────────────────────
   { id: 50, type: "video", src: video1, caption: "Food distribution drive at Premdan Ashram" },
   { id: 51, type: "video", src: video2, caption: "Volunteers and children celebrating Karthika Pournami" },
-    { id: 52, type: "video", src: video3, caption: "Children enjoying the festive activities" },
-    { id: 53, type: "video", src: video4, caption: "Volunteers serving meals to children" },
-    { id: 54, type: "video", src: video5, caption: "Group moments during the celebration" },
-    { id: 55, type: "video", src: video6, caption: "Children participating in Karthika Pournami festivities" },
-    { id: 56, type: "video", src: video7, caption: "Joyful moments at Premdan Ashram" },
-    { id: 57, type: "video", src: video8, caption: "Volunteers and children sharing happiness together" },
+  { id: 52, type: "video", src: video3, caption: "Children enjoying the festive activities" },
+  { id: 53, type: "video", src: video4, caption: "Volunteers serving meals to children" },
+  { id: 54, type: "video", src: video5, caption: "Group moments during the celebration" },
+  { id: 55, type: "video", src: video6, caption: "Children participating in Karthika Pournami festivities" },
+  { id: 56, type: "video", src: video7, caption: "Joyful moments at Premdan Ashram" },
+  { id: 57, type: "video", src: video8, caption: "Volunteers and children sharing happiness together" },
 ];
 
 const downloadMedia = async (src: string, filename: string) => {
@@ -250,7 +250,7 @@ const FoodDistributionGallery: React.FC = () => {
 
       <div
         className="min-h-screen pt-16 w-full"
-        style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
+        style={{ background: "#ffffff", fontFamily: "'Poppins', sans-serif", color: "#1c1c1c" }}
       >
         {/* ── Article Section ── */}
         <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
@@ -258,19 +258,19 @@ const FoodDistributionGallery: React.FC = () => {
           {/* Badge + date */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}
+              className="text-[16px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
+              style={{ color: "orange-900", borderColor: "orange-500", background: "orange-600" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-sm font-semibold tracking-widest">November 29, 2020</span>
+            <span className="text-gray-400 text-md font-semibold tracking-widest">November 29, 2020</span>
           </div>
 
           {/* Title */}
           <h1
             className="leading-tight mb-2"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "clamp(1.8rem, 5vw, 3rem)",
               fontWeight: 600,
               color: "#1a1a1a",
@@ -282,10 +282,10 @@ const FoodDistributionGallery: React.FC = () => {
           <p
             className="mb-6"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "italic",
-              color: "#c8973a",
+              fontStyle: "normal",
+              color: "orange-600",
             }}
           >
             Gunadala · Karthika Pournami 2020
@@ -294,7 +294,7 @@ const FoodDistributionGallery: React.FC = () => {
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
             <p>
               On{" "}
               <span style={{ color: "#c8973a" }} className="font-medium">
@@ -313,7 +313,7 @@ const FoodDistributionGallery: React.FC = () => {
             </p>
 
             <p
-              className="border-l-2 pl-4 italic"
+              className="border-l-2 pl-4"
               style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
             >
               Every act of kindness, no matter how small, carries the power to transform a life.
@@ -335,7 +335,7 @@ const FoodDistributionGallery: React.FC = () => {
               >
                 <div
                   style={{
-                    fontFamily: "'Cormorant Garamond', serif",
+                    fontFamily: "'Poppins', sans-serif",
                     fontSize: s.value.length > 5 ? "1.5rem" : "2.1rem",
                     color: "#c8973a",
                     fontWeight: 600,
@@ -416,7 +416,7 @@ const SectionTitle: React.FC<{ icon: string; label: string }> = ({ icon, label }
     <span className="text-xl">{icon}</span>
     <h3
       style={{
-        fontFamily: "'Cormorant Garamond', serif",
+        fontFamily: "'Poppins', sans-serif",
         fontSize: "1.55rem",
         color: "#1a1a1a",
         fontWeight: 600,

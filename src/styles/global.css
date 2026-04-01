@@ -38,8 +38,55 @@ body {
   color: var(--text-primary);
   background-color: var(--background);
   line-height: 1.6;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Standardized Typography */
+@layer components {
+  /* Headings */
+  .heading-hero {
+    @apply text-4xl sm:text-5xl font-bold font-heading text-slate-900;
+  }
+  
+  .heading-page {
+    @apply text-3xl sm:text-4xl font-bold font-heading text-slate-900;
+  }
+  
+  .heading-section {
+    @apply text-2xl sm:text-3xl font-bold font-heading text-slate-900;
+  }
+  
+  .heading-card {
+    @apply text-xl sm:text-2xl font-semibold font-heading text-slate-900;
+  }
+  
+  .heading-small {
+    @apply text-lg sm:text-xl font-semibold font-heading text-slate-900;
+  }
+
+  /* Paragraphs */
+  .text-body {
+    @apply text-base leading-relaxed text-slate-700;
+  }
+  
+  .text-body-lg {
+    @apply text-lg leading-relaxed text-slate-700;
+  }
+  
+  .text-body-sm {
+    @apply text-sm leading-relaxed text-slate-600;
+  }
+
+  /* Labels & Captions */
+  .text-label {
+    @apply text-sm font-medium text-slate-700;
+  }
+  
+  .text-caption {
+    @apply text-xs text-slate-500;
+  }
 }
 
 a {

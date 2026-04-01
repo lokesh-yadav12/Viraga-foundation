@@ -5,7 +5,7 @@ import img1 from '../../assets/logofinal.png';
 
 const About: React.FC = () => {
 	return (
-		<div className="min-h-[75vh] bg-gradient-to-br from-yellow-50 via-green-50 to-blue-50 py-10 sm:py-16 lg:py-20">
+		<div className="min-h-[70vh] bg-gradient-to-br from-yellow-50 via-green-50 to-blue-50 py-10 sm:py-12 lg:py-12">
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 				<motion.section
 					className="overflow-hidden"

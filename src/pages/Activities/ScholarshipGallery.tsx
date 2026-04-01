@@ -1063,7 +1063,7 @@ const EducationInitiativesGallery: React.FC = () => {
             Supporting Needy Students in Government Schools
           </p>
           <div className="hero-divider h-px w-full mb-8" />
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
             <p>
               As part of its commitment to promoting education, Viraga Foundation, in collaboration with{" "}
               <strong className="text-gray-800">MTG Learning Media Private Limited</strong> (content provided by MTG), is distributing{" "}
@@ -1076,14 +1076,14 @@ const EducationInitiativesGallery: React.FC = () => {
               <em>VIRAGA Foundation cover</em>, making it a personalized resource for students.
             </p>
             <div className="rounded-xl p-5 space-y-2" style={{ background: "#fdf8f0", border: "1px solid #e8d9b8" }}>
-              <p className="text-gray-700 font-medium mb-3" style={{ fontSize: "0.95rem" }}>By providing these handbooks, the foundation aims to:</p>
+              <p className="text-gray-700 font-medium mb-3" style={{ fontSize: "1.3rem" }}>By providing these handbooks, the foundation aims to:</p>
               {["Support students in their academic journey", "Boost their confidence in mathematics", "Help them prepare for competitive exams and future studies"].map((goal) => (
-                <div key={goal} className="flex items-start gap-2 text-gray-600" style={{ fontSize: "0.95rem" }}>
+                <div key={goal} className="flex items-start gap-2 text-gray-600" style={{ fontSize: "1.25rem" }}>
                   <span style={{ color: "#c8973a", marginTop: "1px" }}>✔</span><span>{goal}</span>
                 </div>
               ))}
             </div>
-            <p className="border-l-2 pl-4 italic" style={{ borderColor: "#c8973a", color: "#5a5a5a" }}>
+            <p className="border-l-2 pl-4" style={{ borderColor: "#c8973a", color: "#5a5a5a" }}>
               Through such efforts, Viraga Foundation, in partnership with MTG Learning Media Private Limited, continues to inspire, uplift, and
               make education accessible, helping students shape a brighter and more promising future.
             </p>
@@ -1106,7 +1106,7 @@ const EducationInitiativesGallery: React.FC = () => {
             to Needy Students
           </p>
           <div className="hero-divider h-px w-full mb-8" />
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
             <p>
               As part of its commitment to supporting education, Viraga Foundation has ordered{" "}
               <span className="font-semibold text-amber-600">1,000 customized 170-page notebooks</span>{" "}
@@ -1117,7 +1117,7 @@ const EducationInitiativesGallery: React.FC = () => {
               constraints. By ensuring access to these notebooks, Viraga Foundation continues to empower young learners and promote equal
               learning opportunities.
             </p>
-            <p className="border-l-2 pl-4 italic" style={{ borderColor: "#c8973a", color: "#5a5a5a" }}>
+            <p className="border-l-2 pl-4 " style={{ borderColor: "#c8973a", color: "#5a5a5a" }}>
               Through such efforts, the foundation remains dedicated to uplifting underprivileged students and fostering a brighter future through education.
             </p>
           </div>
@@ -1143,11 +1143,11 @@ const EducationInitiativesGallery: React.FC = () => {
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.5rem, 3.5vw, 2.3rem)", fontWeight: 600, color: "#1a1a1a", lineHeight: 1.25 }}>
             Vibrant Futures – Transforming Lives
           </h2>
-          <p className="mt-1 mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(0.95rem, 2vw, 1.25rem)", fontStyle: "italic", color: "#c8973a" }}>
+          <p className="mt-1 mb-6" style={{ fontFamily: "'Cormorant Garamond'", fontSize: "clamp(0.95rem, 2vw, 1.25rem)", fontStyle: "", color: "orange-800" }}>
             JNV Entrance Examination Preparation Programme
           </p>
           <div className="hero-divider h-px w-full mb-8" />
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
             <p>
               As part of its flagship educational initiative,{" "}
               <em>Scholarship Assistance &amp; Guidance – Empowering Dreams Through Education</em>, VIRAGA FOUNDATION launched the{" "}
@@ -1167,14 +1167,14 @@ const EducationInitiativesGallery: React.FC = () => {
             <div className="rounded-xl p-5 flex items-start gap-4" style={{ background: "#fdf8f0", border: "1px solid #e8d9b8" }}>
               <span style={{ fontSize: "1.8rem", lineHeight: 1 }}>🏆</span>
               <div>
-                <p className="font-semibold text-gray-800" style={{ fontSize: "0.95rem" }}>Examination Milestone</p>
-                <p className="text-gray-600 mt-1" style={{ fontSize: "0.92rem" }}>
+                <p className="font-semibold text-gray-800" style={{ fontSize: "1.25rem" }}>Examination Milestone</p>
+                <p className="text-gray-600 mt-1" style={{ fontSize: "1.2rem" }}>
                   The training culminated in students appearing for the JNV Entrance Examination conducted on{" "}
                   <span style={{ color: "#c8973a" }} className="font-semibold">13 December 2025</span>, marking an important milestone in their educational journey.
                 </p>
               </div>
             </div>
-            <p className="border-l-2 pl-4 italic" style={{ borderColor: "#c8973a", color: "#5a5a5a" }}>
+            <p className="border-l-2 pl-4 " style={{ borderColor: "#c8973a", color: "#5a5a5a" }}>
               Through the Vibrant Futures – Transforming Lives initiative, VIRAGA FOUNDATION continues its commitment to empowering young minds,
               bridging educational disparities, and enabling deserving children to realize their full potential through education.
             </p>

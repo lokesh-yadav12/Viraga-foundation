@@ -299,12 +299,12 @@ const FoundationInceptionGallery: React.FC = () => {
             {/* Vivekananda quote card */}
             <div
               className="rounded-xl p-6 mt-2"
-              style={{ background: "#fdf8f0", border: "1px solid #e8d9b8" }}
+              style={{ background: "orange-300", border: "1px solid #e8d9b8" }}
             >
               <p
-                className="italic text-center"
+                className=" text-center"
                 style={{
-                  fontFamily: "'Cormorant Garamond', serif",
+                  fontFamily: "'Cormorant Garamond',",
                   fontSize: "clamp(1.05rem, 2vw, 1.35rem)",
                   color: "orange-700",
                   lineHeight: 1.7,
@@ -335,9 +335,9 @@ const FoundationInceptionGallery: React.FC = () => {
               >
                 <div
                   style={{
-                    fontFamily: "'Cormorant Garamond', serif",
+                    fontFamily: "'Cormorant Garamond'",
                     fontSize: s.value.length > 5 ? "1.5rem" : "2.1rem",
-                    color: "#c8973a",
+                    color: "orange-900",
                     fontWeight: 600,
                   }}
                 >

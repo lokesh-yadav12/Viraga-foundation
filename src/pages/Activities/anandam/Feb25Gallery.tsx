@@ -42,20 +42,20 @@ const galleryItems: MediaItem[] = [
   { id: 3, type: "image", src: img3, caption: "Volunteers with elderly residents – February 25, 2021" },
   { id: 4, type: "image", src: img4, caption: "B. Ramesh Kumar & B. Madhavi supporting the initiative" },
   { id: 5, type: "image", src: img5, caption: "Community members participating in the initiative" },
-{ id: 6, type: "image", src: img6, caption: "Volunteers organizing supplies for distribution" },
-{ id: 7, type: "image", src: img7, caption: "Helping hands working together for a noble cause" },
-{ id: 8, type: "image", src: img8, caption: "Volunteers preparing items for community support" },
-{ id: 9, type: "image", src: img9, caption: "Moments from the community service event" },
-{ id: 10, type: "image", src: img10, caption: "Volunteers coordinating the distribution drive" },
-{ id: 11, type: "image", src: img11, caption: "Community members receiving support and care" },
-{ id: 12, type: "image", src: img12, caption: "A day dedicated to service and compassion" },
-{ id: 13, type: "image", src: img13, caption: "Volunteers sharing smiles with the community" },
-{ id: 14, type: "image", src: img14, caption: "Teamwork during the community outreach programme" },
-{ id: 15, type: "image", src: img15, caption: "Supplies arranged for distribution to beneficiaries" },
-{ id: 16, type: "image", src: img16, caption: "Community gathering during the service event" },
-{ id: 17, type: "image", src: img17, caption: "Volunteers ensuring smooth distribution" },
-{ id: 18, type: "image", src: img18, caption: "Moments of unity and generosity" },
-{ id: 19, type: "image", src: img19, caption: "Volunteers working together to help others" },
+  { id: 6, type: "image", src: img6, caption: "Volunteers organizing supplies for distribution" },
+  { id: 7, type: "image", src: img7, caption: "Helping hands working together for a noble cause" },
+  { id: 8, type: "image", src: img8, caption: "Volunteers preparing items for community support" },
+  { id: 9, type: "image", src: img9, caption: "Moments from the community service event" },
+  { id: 10, type: "image", src: img10, caption: "Volunteers coordinating the distribution drive" },
+  { id: 11, type: "image", src: img11, caption: "Community members receiving support and care" },
+  { id: 12, type: "image", src: img12, caption: "A day dedicated to service and compassion" },
+  { id: 13, type: "image", src: img13, caption: "Volunteers sharing smiles with the community" },
+  { id: 14, type: "image", src: img14, caption: "Teamwork during the community outreach programme" },
+  { id: 15, type: "image", src: img15, caption: "Supplies arranged for distribution to beneficiaries" },
+  { id: 16, type: "image", src: img16, caption: "Community gathering during the service event" },
+  { id: 17, type: "image", src: img17, caption: "Volunteers ensuring smooth distribution" },
+  { id: 18, type: "image", src: img18, caption: "Moments of unity and generosity" },
+  { id: 19, type: "image", src: img19, caption: "Volunteers working together to help others" },
 
 ];
 
@@ -189,12 +189,12 @@ const TanmayiOldAgeHomeGallery: React.FC = () => {
           {/* Badge + date */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}
+              className="text-[16px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
+              style={{ color: "orange-900", borderColor: "orange-500", background: "orange-400" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-sm font-semibold tracking-widest">February 25, 2021</span>
+            <span className="text-gray-400 text-md font-semibold tracking-widest">February 25, 2021</span>
           </div>
 
           {/* Title */}
@@ -215,8 +215,8 @@ const TanmayiOldAgeHomeGallery: React.FC = () => {
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "italic",
-              color: "#c8973a",
+              fontStyle: "normal",
+              color: "orange-900",
             }}
           >
             Vijayawada · February 2021
@@ -225,7 +225,7 @@ const TanmayiOldAgeHomeGallery: React.FC = () => {
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
             <p>
               On{" "}
               <span style={{ color: "#c8973a" }} className="font-medium">
@@ -240,7 +240,7 @@ const TanmayiOldAgeHomeGallery: React.FC = () => {
             </p>
 
             <p
-              className="border-l-2 pl-4 italic"
+              className="border-l-2 pl-4"
               style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
             >
               Caring for our elders is not just a duty — it is an honour. Viraga Foundation
@@ -320,7 +320,7 @@ const TanmayiOldAgeHomeGallery: React.FC = () => {
         </section>
 
         {/* Footer */}
-        <footer className="text-center py-6 text-gray-400 text-xs tracking-widest border-t border-gray-200">
+        <footer className="text-center py-6 text-gray-400 text-sm tracking-widest border-t border-gray-200">
           © 2021 Viraga Foundation · Food Donation Programme
         </footer>
       </div>

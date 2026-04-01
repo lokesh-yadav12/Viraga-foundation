@@ -141,24 +141,24 @@ const FoodDonationMarch2023Gallery: React.FC = () => {
         style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
       >
         {/* ── Article Section ── */}
-        <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
 
           {/* Badge + date */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
               className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}
+              style={{ color: "orange-900", borderColor: "orange-400", background: "orange-300" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-sm font-semibold tracking-widest">March 12, 2023</span>
+            <span className="text-gray-400 text-md font-semibold tracking-widest">March 12, 2023</span>
           </div>
 
           {/* Title */}
           <h1
             className="leading-tight mb-2"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Cormorant Garamond'",
               fontSize: "clamp(1.8rem, 5vw, 3rem)",
               fontWeight: 600,
               color: "#1a1a1a",
@@ -170,10 +170,10 @@ const FoodDonationMarch2023Gallery: React.FC = () => {
           <p
             className="mb-6"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Cormorant Garamond'",
               fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "italic",
-              color: "#c8973a",
+              fontStyle: "normal",
+              color: "",
             }}
           >
             Nourishing 100 Lives · March 2023
@@ -182,7 +182,7 @@ const FoodDonationMarch2023Gallery: React.FC = () => {
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
             <p>
               On{" "}
               <span style={{ color: "#c8973a" }} className="font-medium">
@@ -201,7 +201,7 @@ const FoodDonationMarch2023Gallery: React.FC = () => {
             </p>
 
             <p
-              className="border-l-2 pl-4 italic"
+              className="border-l-2 pl-4 "
               style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
             >
               Through such efforts, Viraga Foundation continues to make a positive impact,
@@ -223,7 +223,7 @@ const FoodDonationMarch2023Gallery: React.FC = () => {
               >
                 <div
                   style={{
-                    fontFamily: "'Cormorant Garamond', serif",
+                    fontFamily: "'Cormorant Garamond'",
                     fontSize: s.value.length > 5 ? "1.5rem" : "2.1rem",
                     color: "#c8973a",
                     fontWeight: 600,
@@ -304,7 +304,7 @@ const SectionTitle: React.FC<{ icon: string; label: string }> = ({ icon, label }
     <span className="text-xl">{icon}</span>
     <h3
       style={{
-        fontFamily: "'Cormorant Garamond', serif",
+        fontFamily: "'Cormorant Garamond', ",
         fontSize: "1.55rem",
         color: "#1a1a1a",
         fontWeight: 600,

@@ -167,12 +167,12 @@ const FerryOrphanageFoodDonationGallery: React.FC = () => {
 					{/* Badge + date */}
 					<div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
 						<span
-							className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-							style={{ color: '#c8973a', borderColor: '#c8973a55', background: '#c8973a11' }}
+							className="text-[16px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
+							style={{ color: 'orange-900', borderColor: 'orange-500', background: 'orange-500' }}
 						>
 							Viraga Foundation
 						</span>
-						<span className="text-gray-400 text-sm font-semibold tracking-widest">May 2, 2023</span>
+						<span className="text-gray-400 text-md font-semibold tracking-widest">May 2, 2023</span>
 					</div>
 
 					{/* Title */}
@@ -193,8 +193,8 @@ const FerryOrphanageFoodDonationGallery: React.FC = () => {
 						style={{
 							fontFamily: "'Cormorant Garamond', serif",
 							fontSize: 'clamp(1rem, 2.5vw, 1.45rem)',
-							fontStyle: 'italic',
-							color: '#c8973a',
+							fontStyle: 'normal',
+							color: 'orange-900',
 						}}
 					>
 						Ibrahimpatnam · May 2023
@@ -203,7 +203,7 @@ const FerryOrphanageFoodDonationGallery: React.FC = () => {
 					<div className="hero-divider h-px w-full mb-8" />
 
 					{/* Body */}
-					<div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: '1.05rem' }}>
+					<div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: '1.25rem' }}>
 						<p>
 							On{' '}
 							<span style={{ color: '#c8973a' }} className="font-medium">
@@ -229,7 +229,7 @@ const FerryOrphanageFoodDonationGallery: React.FC = () => {
 								{/* <p className="font-semibold text-gray-800" style={{ fontSize: "0.95rem" }}>
                   In Loving Memory
                 </p> */}
-								<p className="text-gray-600 mt-1" style={{ fontSize: '0.93rem' }}>
+								<p className="text-gray-600 mt-1" style={{ fontSize: '1.2rem' }}>
 									This initiative was conducted in loving memory of{' '}
 									<strong className="text-gray-800">Munagala Seetamahalakshmi</strong>, grandmother of{' '}
 									<em>Munagala Gopinadh</em>. To honour her memory, the foundation prepared and served
@@ -245,7 +245,7 @@ const FerryOrphanageFoodDonationGallery: React.FC = () => {
 							donation initiatives, spreading joy, and making a positive impact on society.
 						</p>
 
-						<p className="border-l-2 pl-4 italic" style={{ borderColor: '#c8973a', color: '#5a5a5a' }}>
+						<p className="border-l-2 pl-4 " style={{ borderColor: '#c8973a', color: '#5a5a5a' }}>
 							Through such efforts, the foundation continues to uplift underprivileged communities and
 							foster a culture of compassion and generosity.
 						</p>

@@ -16,7 +16,7 @@ const galleryItems: MediaItem[] = [
   { id: 1, type: "image", src: img1, caption: "Food distribution at Nirmala Sishu Bhavan" },
   { id: 2, type: "image", src: img2, caption: "Volunteers with children at Krishnalanka" },
   { id: 3, type: "image", src: img3, caption: "Nourishment for 50 children under 10 years" },
-//   { id: 4, type: "image", src: img4, caption: "Ch. Apparao and Viraga Foundation team – Feb 7, 2021" },
+  //   { id: 4, type: "image", src: img4, caption: "Ch. Apparao and Viraga Foundation team – Feb 7, 2021" },
 ];
 
 const downloadMedia = async (src: string, filename: string) => {
@@ -144,17 +144,17 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
         style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
       >
         {/* ── Article Section ── */}
-        <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
 
           {/* Badge + date */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "#c8973a", borderColor: "#c8973a55", background: "#c8973a11" }}
+              className="text-[16px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
+              style={{ color: "orange-900", borderColor: "orange-600", background: "orange-500" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-sm font-semibold tracking-widest">February 7, 2021</span>
+            <span className="text-gray-400 text-md font-semibold tracking-widest">February 7, 2021</span>
           </div>
 
           {/* Title */}
@@ -175,8 +175,8 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "italic",
-              color: "#c8973a",
+              fontStyle: "normal",
+              color: "orange-800",
             }}
           >
             Krishnalanka, Vijayawada · February 2021
@@ -185,7 +185,7 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.05rem" }}>
+          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
             <p>
               On{" "}
               <span style={{ color: "#c8973a" }} className="font-medium">
@@ -194,13 +194,13 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
               , Viraga Foundation, with the support of{" "}
               <strong className="text-gray-800">Ch. Apparao</strong>, distributed food to{" "}
               <span className="font-semibold text-amber-600">50 physically and mentally
-              challenged children</span> under 10 years at{" "}
+                challenged children</span> under 10 years at{" "}
               <strong className="text-gray-800">Nirmala Sishu Bhavan</strong>, Krishnalanka.
               This initiative aimed to provide nourishment and spread kindness to those in need.
             </p>
 
             <p
-              className="border-l-2 pl-4 italic"
+              className="border-l-2 pl-4"
               style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
             >
               Viraga Foundation continues to stand beside the most vulnerable, ensuring
@@ -224,7 +224,7 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontSize: "2.1rem",
-                    color: "#c8973a",
+                    color: "orange-900",
                     fontWeight: 600,
                   }}
                 >
