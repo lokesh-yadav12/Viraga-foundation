@@ -37,15 +37,15 @@ type MediaItem = {
 };
 
 const galleryItems: MediaItem[] = [
-  { id: 1, type: "image", src: img1, caption: "Breakfast served to elderly residents" },
-  { id: 2, type: "image", src: img2, caption: "Nutritious lunch distribution at Tanmayi Old Age Home" },
-  { id: 3, type: "image", src: img3, caption: "Volunteers with elderly residents – February 25, 2021" },
-  { id: 4, type: "image", src: img4, caption: "B. Ramesh Kumar & B. Madhavi supporting the initiative" },
-  { id: 5, type: "image", src: img5, caption: "Community members participating in the initiative" },
-  { id: 6, type: "image", src: img6, caption: "Volunteers organizing supplies for distribution" },
-  { id: 7, type: "image", src: img7, caption: "Helping hands working together for a noble cause" },
-  { id: 8, type: "image", src: img8, caption: "Volunteers preparing items for community support" },
-  { id: 9, type: "image", src: img9, caption: "Moments from the community service event" },
+  { id: 1,  type: "image", src: img1,  caption: "Breakfast served to elderly residents" },
+  { id: 2,  type: "image", src: img2,  caption: "Nutritious lunch distribution at Tanmayi Old Age Home" },
+  { id: 3,  type: "image", src: img3,  caption: "Volunteers with elderly residents – February 25, 2021" },
+  { id: 4,  type: "image", src: img4,  caption: "B. Ramesh Kumar & B. Madhavi supporting the initiative" },
+  { id: 5,  type: "image", src: img5,  caption: "Community members participating in the initiative" },
+  { id: 6,  type: "image", src: img6,  caption: "Volunteers organizing supplies for distribution" },
+  { id: 7,  type: "image", src: img7,  caption: "Helping hands working together for a noble cause" },
+  { id: 8,  type: "image", src: img8,  caption: "Volunteers preparing items for community support" },
+  { id: 9,  type: "image", src: img9,  caption: "Moments from the community service event" },
   { id: 10, type: "image", src: img10, caption: "Volunteers coordinating the distribution drive" },
   { id: 11, type: "image", src: img11, caption: "Community members receiving support and care" },
   { id: 12, type: "image", src: img12, caption: "A day dedicated to service and compassion" },
@@ -56,7 +56,6 @@ const galleryItems: MediaItem[] = [
   { id: 17, type: "image", src: img17, caption: "Volunteers ensuring smooth distribution" },
   { id: 18, type: "image", src: img18, caption: "Moments of unity and generosity" },
   { id: 19, type: "image", src: img19, caption: "Volunteers working together to help others" },
-
 ];
 
 const downloadMedia = async (src: string, filename: string) => {
@@ -117,7 +116,7 @@ const Lightbox: React.FC<{
           <div className="flex gap-3">
             <button
               onClick={() => downloadMedia(item.src, `viraga-tanmayi-${item.id}`)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 text-xs font-bold transition"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 font-bold text-xs transition"
             >
               ↓ Download
             </button>
@@ -165,8 +164,6 @@ const TanmayiOldAgeHomeGallery: React.FC = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
-
         .gallery-card {
           transition: transform 0.35s cubic-bezier(.22,.68,0,1.3), box-shadow 0.3s ease;
         }
@@ -179,70 +176,48 @@ const TanmayiOldAgeHomeGallery: React.FC = () => {
         .hero-divider { background: linear-gradient(90deg, transparent, #c8973a, transparent); }
       `}</style>
 
-      <div
-        className="min-h-screen pt-16 w-full"
-        style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
-      >
+      <div className="min-h-screen pt-16 w-full" style={{ background: "#ffffff", color: "#1c1c1c" }}>
+
         {/* ── Article Section ── */}
-        <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
 
           {/* Badge + date */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[16px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "orange-900", borderColor: "orange-500", background: "orange-400" }}
+              className="text-base font-medium text-center px-3 py-1 rounded-full border tracking-[0.5em] uppercase"
+              style={{ color: "#92400e", borderColor: "#92400e", background: "#c8973a11" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-md font-semibold tracking-widest">February 25, 2021</span>
+            <span className="text-gray-600 text-base font-semibold tracking-widest">February 25, 2021</span>
           </div>
 
-          {/* Title */}
-          <h1
-            className="leading-tight mb-2"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(1.8rem, 5vw, 3rem)",
-              fontWeight: 600,
-              color: "#1a1a1a",
-              letterSpacing: "-0.01em",
-            }}
-          >
+          {/* H1 Title */}
+          <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-amber-700 leading-tight mb-2">
             Food Donation at Tanmayi Old Age Home
           </h1>
-          <p
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "normal",
-              color: "orange-900",
-            }}
-          >
+
+          {/* H2 Subtitle */}
+          <h2 className="text-lg font-bold text-orange-600 mb-6">
             Vijayawada · February 2021
-          </p>
+          </h2>
 
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
+          <div className="space-y-5 text-gray-900 text-base sm:text-lg leading-relaxed">
             <p>
               On{" "}
-              <span style={{ color: "#c8973a" }} className="font-medium">
-                February 25, 2021
-              </span>
-              , Viraga Foundation, with the support of{" "}
-              <strong className="text-gray-800">B. Ramesh Kumar &amp; B. Madhavi</strong>,
+              <span className="font-semibold text-orange-700">February 25, 2021</span>,
+              Viraga Foundation, with the support of{" "}
+              <strong className="text-amber-900">B. Ramesh Kumar &amp; B. Madhavi</strong>,
               organized a food donation programme at{" "}
-              <strong className="text-gray-800">Tanmayi Old Age Home</strong>, Vijayawada.
+              <strong className="text-amber-900">Tanmayi Old Age Home</strong>, Vijayawada.
               Nutritious breakfast and lunch were provided, offering care and support to the
               elderly residents.
             </p>
 
-            <p
-              className="border-l-2 pl-4"
-              style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
-            >
+            <p className="border-l-2 pl-4 text-lg font-medium text-gray-700" style={{ borderColor: "#c8973a" }}>
               Caring for our elders is not just a duty — it is an honour. Viraga Foundation
               remains committed to ensuring that every individual, regardless of age, feels
               seen, valued, and nourished.
@@ -250,28 +225,19 @@ const TanmayiOldAgeHomeGallery: React.FC = () => {
           </div>
 
           {/* Stat cards */}
-          <div className="grid grid-cols-3 gap-4 mt-10">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-10">
             {[
-              { value: "🍳", label: "Breakfast & Lunch" },
+              { value: "🍳",    label: "Breakfast & Lunch" },
               { value: "Feb 25", label: "Date of Event" },
-              { value: "🏠", label: "Old Age Home" },
+              { value: "🏠",    label: "Old Age Home" },
             ].map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl p-4 text-center"
+                className="rounded-xl px-2 py-4 sm:px-4 text-center"
                 style={{ background: "#f9f9f9", border: "1px solid #e5e5e5" }}
               >
-                <div
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: s.value.length > 5 ? "1.5rem" : "2.1rem",
-                    color: "#c8973a",
-                    fontWeight: 600,
-                  }}
-                >
-                  {s.value}
-                </div>
-                <div className="text-gray-400 text-xs tracking-wider mt-0.5 uppercase">{s.label}</div>
+                <div className="text-xl sm:text-2xl font-bold text-amber-700">{s.value}</div>
+                <div className="text-sm sm:text-base text-amber-800 tracking-wider mt-1 lowercase sm:uppercase">{s.label}</div>
               </div>
             ))}
           </div>
@@ -320,7 +286,7 @@ const TanmayiOldAgeHomeGallery: React.FC = () => {
         </section>
 
         {/* Footer */}
-        <footer className="text-center py-6 text-gray-400 text-sm tracking-widest border-t border-gray-200">
+        <footer className="text-center py-6 text-base text-amber-900 tracking-widest border-t border-gray-200">
           © 2021 Viraga Foundation · Food Donation Programme
         </footer>
       </div>
@@ -342,16 +308,7 @@ const TanmayiOldAgeHomeGallery: React.FC = () => {
 const SectionTitle: React.FC<{ icon: string; label: string }> = ({ icon, label }) => (
   <div className="flex items-center gap-3">
     <span className="text-xl">{icon}</span>
-    <h3
-      style={{
-        fontFamily: "'Cormorant Garamond', serif",
-        fontSize: "1.55rem",
-        color: "#1a1a1a",
-        fontWeight: 600,
-      }}
-    >
-      {label}
-    </h3>
+    <h3 className="text-3xl sm:text-4xl font-bold text-amber-700">{label}</h3>
     <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, #c8973a44, transparent)" }} />
   </div>
 );
@@ -362,7 +319,7 @@ const ActionBtn: React.FC<{
 }> = ({ label, onClick }) => (
   <button
     onClick={onClick}
-    className="text-[11px] font-medium px-2 py-0.5 rounded-full transition hover:opacity-80"
+    className="text-base font-bold px-2 py-0.5 rounded-full transition hover:opacity-80"
     style={{ background: "#c8973a", color: "#fff" }}
   >
     {label}

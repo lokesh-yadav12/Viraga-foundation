@@ -81,442 +81,84 @@ type MediaItem = {
   caption: string;
 };
 
-// ── Plug in your real imports here ──────────────────────────
 const mediaItems: MediaItem[] = [
-  {
-    id: 1,
-    type: "image",
-    src: img1,
-    caption: "New clothes distributed to children at Mathruchaya",
-  },
-  {
-    id: 2,
-    type: "image",
-    src: img2,
-    caption: "Fresh fruits shared with orphan children",
-  },
-  {
-    id: 3,
-    type: "image",
-    src: img3,
-    caption: "Children celebrating Ugadi with new clothes",
-  },
-  {
-    id: 4,
-    type: "image",
-    src: img4,
-    caption: "Volunteers from Viraga Foundation at the event",
-  },
-  {
-    id: 5,
-    type: "image",
-    src: img5,
-    caption: "Festive smiles at Mathruchaya Organization",
-  },
-  {
-    id: 6,
-    type: "image",
-    src: img6,
-    caption: "Group photo with children and volunteers",
-  },
-   {
-    id: 7,
-    type: "image",
-    src: img7,
-    caption: "New clothes distributed to children at Mathruchaya",
-  },
-  {
-    id: 8,
-    type: "image",
-    src: img8,
-    caption: "Fresh fruits shared with orphan children",
-  },
-  {
-    id: 9,
-    type: "image",
-    src: img9,
-    caption: "Children celebrating Ugadi with new clothes",
-  },
-  {
-    id: 10,
-    type: "image",
-    src: img10,
-    caption: "Volunteers from Viraga Foundation at the event",
-  },
-  {
-    id: 11,
-    type: "image",
-    src: img11,
-    caption: "Festive smiles at Mathruchaya Organization",
-  },
-  {
-    id: 12,
-    type: "image",
-    src: img12,
-    caption: "Group photo with children and volunteers",
-  },
-   {
-    id: 13,
-    type: "image",
-    src: img13,
-    caption: "New clothes distributed to children at Mathruchaya",
-  },{
-  id: 14,
-  type: "image",
-  src: img14,
-  caption: "Children enjoying activities at Mathruchaya",
-},
-{
-  id: 15,
-  type: "image",
-  src: img15,
-  caption: "Volunteers interacting with children",
-},
-{
-  id: 16,
-  type: "image",
-  src: img16,
-  caption: "Moments of joy at the orphanage",
-},
-{
-  id: 17,
-  type: "image",
-  src: img17,
-  caption: "Children celebrating together",
-},
-{
-  id: 18,
-  type: "image",
-  src: img18,
-  caption: "Sharing happiness with every child",
-},
-{
-  id: 19,
-  type: "image",
-  src: img19,
-  caption: "Children smiling during celebration",
-},
-{
-  id: 20,
-  type: "image",
-  src: img20,
-  caption: "Memorable day with Mathruchaya children",
-},
-{
-  id: 21,
-  type: "image",
-  src: img21,
-  caption: "Children enjoying the festive spirit",
-},
-{
-  id: 22,
-  type: "image",
-  src: img22,
-  caption: "Volunteers spending quality time with children",
-},
-{
-  id: 23,
-  type: "image",
-  src: img23,
-  caption: "Smiles that light up the day",
-},
-{
-  id: 24,
-  type: "image",
-  src: img24,
-  caption: "Children gathered for celebration",
-},
-{
-  id: 25,
-  type: "image",
-  src: img25,
-  caption: "Moments of laughter and joy",
-},
-{
-  id: 26,
-  type: "image",
-  src: img26,
-  caption: "A joyful day with the children",
-},
-{
-  id: 27,
-  type: "image",
-  src: img27,
-  caption: "Celebrating togetherness",
-},
-{
-  id: 28,
-  type: "image",
-  src: img28,
-  caption: "Happy faces at Mathruchaya",
-},
-{
-  id: 29,
-  type: "image",
-  src: img29,
-  caption: "Spreading smiles among children",
-},
-{
-  id: 30,
-  type: "image",
-  src: img30,
-  caption: "Special moments with children",
-},
-{
-  id: 31,
-  type: "image",
-  src: img31,
-  caption: "Group activities with children",
-},
-{
-  id: 32,
-  type: "image",
-  src: img32,
-  caption: "Children enjoying the celebration",
-},
-{
-  id: 33,
-  type: "image",
-  src: img33,
-  caption: "Together we create happy memories",
-},
-{
-  id: 34,
-  type: "image",
-  src: img34,
-  caption: "Volunteers sharing joyful moments",
-},
-{
-  id: 35,
-  type: "image",
-  src: img35,
-  caption: "Children smiling for the camera",
-},
-{
-  id: 36,
-  type: "image",
-  src: img36,
-  caption: "Celebration with the children",
-},
-{
-  id: 37,
-  type: "image",
-  src: img37,
-  caption: "Moments of togetherness",
-},
-{
-  id: 38,
-  type: "image",
-  src: img38,
-  caption: "Children enjoying the event",
-},
-{
-  id: 39,
-  type: "image",
-  src: img39,
-  caption: "Joyful memories captured",
-},
-{
-  id: 40,
-  type: "image",
-  src: img40,
-  caption: "Sharing smiles and laughter",
-},
-{
-  id: 41,
-  type: "image",
-  src: img41,
-  caption: "Children celebrating happily",
-},
-{
-  id: 42,
-  type: "image",
-  src: img42,
-  caption: "Happy gathering at Mathruchaya",
-},
-{
-  id: 43,
-  type: "image",
-  src: img43,
-  caption: "Volunteers and children together",
-},
-{
-  id: 44,
-  type: "image",
-  src: img44,
-  caption: "Moments of celebration",
-},
-{
-  id: 45,
-  type: "image",
-  src: img45,
-  caption: "Sharing happiness with children",
-},
-{
-  id: 46,
-  type: "image",
-  src: img46,
-  caption: "Memorable group photo",
-},
-{
-  id: 47,
-  type: "image",
-  src: img47,
-  caption: "Smiling faces everywhere",
-},
-{
-  id: 48,
-  type: "image",
-  src: img48,
-  caption: "Fun moments with children",
-},
-{
-  id: 49,
-  type: "image",
-  src: img49,
-  caption: "Children enjoying together",
-},
-{
-  id: 50,
-  type: "image",
-  src: img50,
-  caption: "Joyful gathering captured",
-},
-{
-  id: 51,
-  type: "image",
-  src: img51,
-  caption: "Sharing love and happiness",
-},
-{
-  id: 52,
-  type: "image",
-  src: img52,
-  caption: "Children smiling brightly",
-},
-{
-  id: 53,
-  type: "image",
-  src: img53,
-  caption: "Beautiful moments at the orphanage",
-},
-{
-  id: 54,
-  type: "image",
-  src: img54,
-  caption: "Children enjoying every moment",
-},
-{
-  id: 55,
-  type: "image",
-  src: img55,
-  caption: "Celebration with smiles",
-},
-{
-  id: 56,
-  type: "image",
-  src: img56,
-  caption: "Volunteers spreading happiness",
-},
-{
-  id: 57,
-  type: "image",
-  src: img57,
-  caption: "Children gathered together",
-},
-{
-  id: 58,
-  type: "image",
-  src: img58,
-  caption: "A joyful celebration day",
-},
-{
-  id: 59,
-  type: "image",
-  src: img59,
-  caption: "Memories made together",
-},
-{
-  id: 60,
-  type: "image",
-  src: img60,
-  caption: "Children celebrating with joy",
-},
-{
-  id: 61,
-  type: "image",
-  src: img61,
-  caption: "Group fun and laughter",
-},
-{
-  id: 62,
-  type: "image",
-  src: img62,
-  caption: "Children enjoying the day",
-},
-{
-  id: 63,
-  type: "image",
-  src: img63,
-  caption: "Happy faces captured",
-},
-{
-  id: 64,
-  type: "image",
-  src: img64,
-  caption: "Sharing special moments",
-},
-{
-  id: 65,
-  type: "image",
-  src: img65,
-  caption: "Children celebrating happily",
-},
-{
-  id: 66,
-  type: "image",
-  src: img66,
-  caption: "Joyful gathering with children",
-},
-{
-  id: 67,
-  type: "image",
-  src: img67,
-  caption: "Fun memories together",
-},
-{
-  id: 68,
-  type: "image",
-  src: img68,
-  caption: "Children smiling together",
-},
-{
-  id: 69,
-  type: "image",
-  src: img69,
-  caption: "Celebrating happiness",
-},
-{
-  id: 70,
-  type: "image",
-  src: img70,
-  caption: "Volunteers and children enjoying",
-},
-{
-  id: 71,
-  type: "image",
-  src: img71,
-  caption: "Happy moments captured",
-},
-{
-  id: 72,
-  type: "image",
-  src: img72,
-  caption: "A beautiful memory with children",
-},
+  { id: 1,  type: "image", src: img1,  caption: "New clothes distributed to children at Mathruchaya" },
+  { id: 2,  type: "image", src: img2,  caption: "Fresh fruits shared with orphan children" },
+  { id: 3,  type: "image", src: img3,  caption: "Children celebrating Ugadi with new clothes" },
+  { id: 4,  type: "image", src: img4,  caption: "Volunteers from Viraga Foundation at the event" },
+  { id: 5,  type: "image", src: img5,  caption: "Festive smiles at Mathruchaya Organization" },
+  { id: 6,  type: "image", src: img6,  caption: "Group photo with children and volunteers" },
+  { id: 7,  type: "image", src: img7,  caption: "New clothes distributed to children at Mathruchaya" },
+  { id: 8,  type: "image", src: img8,  caption: "Fresh fruits shared with orphan children" },
+  { id: 9,  type: "image", src: img9,  caption: "Children celebrating Ugadi with new clothes" },
+  { id: 10, type: "image", src: img10, caption: "Volunteers from Viraga Foundation at the event" },
+  { id: 11, type: "image", src: img11, caption: "Festive smiles at Mathruchaya Organization" },
+  { id: 12, type: "image", src: img12, caption: "Group photo with children and volunteers" },
+  { id: 13, type: "image", src: img13, caption: "New clothes distributed to children at Mathruchaya" },
+  { id: 14, type: "image", src: img14, caption: "Children enjoying activities at Mathruchaya" },
+  { id: 15, type: "image", src: img15, caption: "Volunteers interacting with children" },
+  { id: 16, type: "image", src: img16, caption: "Moments of joy at the orphanage" },
+  { id: 17, type: "image", src: img17, caption: "Children celebrating together" },
+  { id: 18, type: "image", src: img18, caption: "Sharing happiness with every child" },
+  { id: 19, type: "image", src: img19, caption: "Children smiling during celebration" },
+  { id: 20, type: "image", src: img20, caption: "Memorable day with Mathruchaya children" },
+  { id: 21, type: "image", src: img21, caption: "Children enjoying the festive spirit" },
+  { id: 22, type: "image", src: img22, caption: "Volunteers spending quality time with children" },
+  { id: 23, type: "image", src: img23, caption: "Smiles that light up the day" },
+  { id: 24, type: "image", src: img24, caption: "Children gathered for celebration" },
+  { id: 25, type: "image", src: img25, caption: "Moments of laughter and joy" },
+  { id: 26, type: "image", src: img26, caption: "A joyful day with the children" },
+  { id: 27, type: "image", src: img27, caption: "Celebrating togetherness" },
+  { id: 28, type: "image", src: img28, caption: "Happy faces at Mathruchaya" },
+  { id: 29, type: "image", src: img29, caption: "Spreading smiles among children" },
+  { id: 30, type: "image", src: img30, caption: "Special moments with children" },
+  { id: 31, type: "image", src: img31, caption: "Group activities with children" },
+  { id: 32, type: "image", src: img32, caption: "Children enjoying the celebration" },
+  { id: 33, type: "image", src: img33, caption: "Together we create happy memories" },
+  { id: 34, type: "image", src: img34, caption: "Volunteers sharing joyful moments" },
+  { id: 35, type: "image", src: img35, caption: "Children smiling for the camera" },
+  { id: 36, type: "image", src: img36, caption: "Celebration with the children" },
+  { id: 37, type: "image", src: img37, caption: "Moments of togetherness" },
+  { id: 38, type: "image", src: img38, caption: "Children enjoying the event" },
+  { id: 39, type: "image", src: img39, caption: "Joyful memories captured" },
+  { id: 40, type: "image", src: img40, caption: "Sharing smiles and laughter" },
+  { id: 41, type: "image", src: img41, caption: "Children celebrating happily" },
+  { id: 42, type: "image", src: img42, caption: "Happy gathering at Mathruchaya" },
+  { id: 43, type: "image", src: img43, caption: "Volunteers and children together" },
+  { id: 44, type: "image", src: img44, caption: "Moments of celebration" },
+  { id: 45, type: "image", src: img45, caption: "Sharing happiness with children" },
+  { id: 46, type: "image", src: img46, caption: "Memorable group photo" },
+  { id: 47, type: "image", src: img47, caption: "Smiling faces everywhere" },
+  { id: 48, type: "image", src: img48, caption: "Fun moments with children" },
+  { id: 49, type: "image", src: img49, caption: "Children enjoying together" },
+  { id: 50, type: "image", src: img50, caption: "Joyful gathering captured" },
+  { id: 51, type: "image", src: img51, caption: "Sharing love and happiness" },
+  { id: 52, type: "image", src: img52, caption: "Children smiling brightly" },
+  { id: 53, type: "image", src: img53, caption: "Beautiful moments at the orphanage" },
+  { id: 54, type: "image", src: img54, caption: "Children enjoying every moment" },
+  { id: 55, type: "image", src: img55, caption: "Celebration with smiles" },
+  { id: 56, type: "image", src: img56, caption: "Volunteers spreading happiness" },
+  { id: 57, type: "image", src: img57, caption: "Children gathered together" },
+  { id: 58, type: "image", src: img58, caption: "A joyful celebration day" },
+  { id: 59, type: "image", src: img59, caption: "Memories made together" },
+  { id: 60, type: "image", src: img60, caption: "Children celebrating with joy" },
+  { id: 61, type: "image", src: img61, caption: "Group fun and laughter" },
+  { id: 62, type: "image", src: img62, caption: "Children enjoying the day" },
+  { id: 63, type: "image", src: img63, caption: "Happy faces captured" },
+  { id: 64, type: "image", src: img64, caption: "Sharing special moments" },
+  { id: 65, type: "image", src: img65, caption: "Children celebrating happily" },
+  { id: 66, type: "image", src: img66, caption: "Joyful gathering with children" },
+  { id: 67, type: "image", src: img67, caption: "Fun memories together" },
+  { id: 68, type: "image", src: img68, caption: "Children smiling together" },
+  { id: 69, type: "image", src: img69, caption: "Celebrating happiness" },
+  { id: 70, type: "image", src: img70, caption: "Volunteers and children enjoying" },
+  { id: 71, type: "image", src: img71, caption: "Happy moments captured" },
+  { id: 72, type: "image", src: img72, caption: "A beautiful memory with children" },
 ];
-// ─────────────────────────────────────────────
 
+// ─────────────────────────────────────────────
+// Download helper
+// ─────────────────────────────────────────────
 const downloadMedia = async (src: string, filename: string) => {
   try {
     const res = await fetch(src, { mode: "cors" });
@@ -532,6 +174,9 @@ const downloadMedia = async (src: string, filename: string) => {
   }
 };
 
+// ─────────────────────────────────────────────
+// Lightbox
+// ─────────────────────────────────────────────
 const Lightbox: React.FC<{
   items: MediaItem[];
   index: number;
@@ -569,13 +214,15 @@ const Lightbox: React.FC<{
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between w-full mb-3 px-1">
+          {/* Counter — UI element kept as-is */}
           <span className="text-amber-400 font-semibold text-sm tracking-widest uppercase">
             {index + 1} / {items.length}
           </span>
           <div className="flex gap-3">
+            {/* Download btn — font-bold matches About CTA */}
             <button
               onClick={() => downloadMedia(item.src, `viraga-ugadi-${item.id}`)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 text-xs font-bold transition"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 font-bold text-xs transition"
               title="Download"
             >
               ↓ Download
@@ -592,37 +239,21 @@ const Lightbox: React.FC<{
 
         <div className="relative w-full bg-stone-900 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center min-h-[280px]">
           {item.type === "image" ? (
-            <img
-              src={item.src}
-              alt={item.caption}
-              className="max-h-[72vh] w-full object-contain"
-            />
+            <img src={item.src} alt={item.caption} className="max-h-[72vh] w-full object-contain" />
           ) : (
-            <video
-              src={item.src}
-              controls
-              autoPlay
-              className="max-h-[72vh] w-full object-contain"
-            />
+            <video src={item.src} controls autoPlay className="max-h-[72vh] w-full object-contain" />
           )}
-
           <button
             onClick={onPrev}
             className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-amber-400 hover:text-stone-900 text-white flex items-center justify-center text-xl transition"
-          >
-            ‹
-          </button>
+          >‹</button>
           <button
             onClick={onNext}
             className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-amber-400 hover:text-stone-900 text-white flex items-center justify-center text-xl transition"
-          >
-            ›
-          </button>
+          >›</button>
         </div>
 
-        {/* <p className="mt-3 text-center text-stone-300 text-sm italic px-4">
-          {item.caption}
-        </p> */}
+        {/* <p className="mt-3 text-center text-stone-300 text-sm italic px-4">{item.caption}</p> */}
       </div>
     </div>
   );
@@ -637,19 +268,13 @@ const UgadiCelebrationGallery: React.FC = () => {
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
   const prevItem = () =>
-    setLightboxIndex((i) =>
-      i !== null ? (i - 1 + mediaItems.length) % mediaItems.length : 0
-    );
+    setLightboxIndex((i) => i !== null ? (i - 1 + mediaItems.length) % mediaItems.length : 0);
   const nextItem = () =>
-    setLightboxIndex((i) =>
-      i !== null ? (i + 1) % mediaItems.length : 0
-    );
+    setLightboxIndex((i) => i !== null ? (i + 1) % mediaItems.length : 0);
 
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
-
         .gallery-card {
           transition: transform 0.35s cubic-bezier(.22,.68,0,1.3), box-shadow 0.3s ease;
         }
@@ -657,78 +282,59 @@ const UgadiCelebrationGallery: React.FC = () => {
           transform: translateY(-6px) scale(1.02);
           box-shadow: 0 20px 48px rgba(0,0,0,0.15);
         }
-        .gallery-card:hover .overlay {
-          opacity: 1;
-        }
+        .gallery-card:hover .overlay { opacity: 1; }
         .overlay { transition: opacity 0.3s ease; }
-
-        .hero-divider {
-          background: linear-gradient(90deg, transparent, #c8973a, transparent);
-        }
+        .hero-divider { background: linear-gradient(90deg, transparent, #c8973a, transparent); }
       `}</style>
 
-      <div
-        className="min-h-screen pt-16 w-full"
-        style={{
-          background: "#ffffff",
-          fontFamily: "'Jost', sans-serif",
-          color: "#1c1c1c",
-        }}
-      >
-        {/* ── Hero / Article Section ─────────────────── */}
-        <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
-          {/* Foundation badge */}
+      <div className="min-h-screen pt-16 w-full" style={{ background: "#ffffff", color: "#1c1c1c" }}>
+
+        {/* ── Hero / Article Section ── */}
+        <section className="max-w-6xl mx-auto px-8 pt-16 pb-12">
+
+          {/* Badge + date
+              FROM: text-[16px] font-medium broken color strings
+              TO:   text-base font-medium text-amber-800 border-amber-800 (About badge) */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[16px] tracking-[0.5em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "amber-600", borderColor: "amber-500", background: "amber-400" }}
+              className="text-base font-medium text-center px-3 py-1 rounded-full border tracking-[0.5em] uppercase"
+              style={{ color: "#92400e", borderColor: "#92400e", background: "#c8973a11" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-md font-semibold tracking-widest">March 22, 2023</span>
+            {/* FROM: text-md font-semibold → TO: text-base font-semibold */}
+            <span className="text-gray-600 text-base font-semibold tracking-widest">March 22, 2023</span>
           </div>
 
-          {/* Title */}
-          <h1
-            className="leading-tight mb-2"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(1.8rem, 5vw, 3rem)",
-              fontWeight: 600,
-              color: "#1a1a1a",
-              letterSpacing: "-0.01em",
-            }}
-          >
+          {/* H1 Title
+              FROM: clamp(1.8rem, 5vw, 3rem) fontWeight:600 color:#1a1a1a
+              TO:   text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-800 */}
+          <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-amber-700 leading-tight mb-2">
             UGADI Celebration
           </h1>
-          <h2
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontWeight: 700,
-              fontStyle: "normal",
-              color: "orange-900",
-            }}
-          >
+
+          {/* H2 Subtitle
+              FROM: clamp(1rem, 2.5vw, 1.45rem) fontWeight:700 fontStyle:normal
+              TO:   text-lg font-bold italic text-orange-700 (About tagline) */}
+          <h2 className="text-lg font-bold  text-orange-600 mb-6">
             Spreading Joy Through Giving
           </h2>
 
-          {/* Decorative divider */}
           <div className="hero-divider h-px w-full mb-8" />
 
-          {/* Body paragraphs */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.30rem" }}>
+          {/* Body
+              FROM: fontSize:1.30rem text-gray-600
+              TO:   text-base sm:text-lg text-amber-900 leading-relaxed */}
+          <div className="space-y-5 text-gray-900 text-base sm:text-lg leading-relaxed">
             <p>
               On{" "}
-              <span style={{ color: "orange-900" }} className="font-medium">
-                March 22, 2023
-              </span>
-              , in celebration of{" "}
-              <strong className="text-gray-800">UGADI (Telugu Samvatsaraadi)</strong>,
+              {/* Inline span — FROM: color:"orange-900" font-medium → TO: font-semibold text-orange-700 */}
+              <span className="font-semibold text-orange-700">March 22, 2023</span>, in celebration of{" "}
+              <strong className="text-amber-900">UGADI (Telugu Samvatsaraadi)</strong>,
               Viraga Foundation organized a special donation drive to support underprivileged
               children. As part of this initiative, the foundation distributed{" "}
-              <span className="font-semibold text-amber-600">new clothes and fresh fruits</span>{" "}
+              {/* FROM: font-semibold text-amber-600 → TO: font-semibold text-orange-700 */}
+              <span className="font-semibold text-orange-700">new clothes and fresh fruits</span>{" "}
               to single-parent children and orphans residing at{" "}
               <em>Mathruchaya Organization</em>.
             </p>
@@ -739,15 +345,12 @@ const UgadiCelebrationGallery: React.FC = () => {
               mission of uplifting vulnerable communities. Through such initiatives, the
               foundation continues to spread kindness and make a meaningful impact on society.
             </p>
-            <p
-              className="border-l-2 pl-4 italic"
-              style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
-            >
+            {/* Block quote
+                FROM: italic color:#5a5a5a → TO: text-lg font-medium italic text-orange-700 */}
+            <p className="border-l-2 pl-4 text-lg font-medium  text-gray-700" style={{ borderColor: "#c8973a" }}>
               This event is a part of Viraga Foundation's ongoing{" "}
-              <strong style={{ color: "orange-900", fontStyle: "normal" }}>
-                Food Donation Program
-              </strong>
-              , which focuses on nourishing lives, spreading smiles, and promoting social welfare.
+              <strong className="not-italic font-semibold text-orange-700">Food Donation Program</strong>,
+              which focuses on nourishing lives, spreading smiles, and promoting social welfare.
             </p>
           </div>
 
@@ -763,16 +366,16 @@ const UgadiCelebrationGallery: React.FC = () => {
                 className="rounded-xl p-4 text-center"
                 style={{ background: "#f9f9f9", border: "1px solid #e5e5e5" }}
               >
-                <div style={{ fontSize: "2rem" }}>{s.value}</div>
-                <div className="text-gray-400 text-xs tracking-wider mt-1 uppercase">
-                  {s.label}
-                </div>
+                {/* Emoji value — unchanged size for emoji display */}
+                <div style={{ fontSize: "1rem" }}>{s.value}</div>
+                {/* Stat label — FROM: text-xs text-gray-400 → TO: text-base text-amber-900 */}
+                <div className="text-sm sm:text-base text-amber-800 tracking-wider mt-1 uppercase">{s.label}</div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* ── Clothes Distribution Gallery ──────────────────────────── */}
+        {/* ── Gallery ── */}
         <section className="max-w-6xl mx-auto px-6 pb-20">
           <SectionTitle icon="👗" label="Clothes Distribution" />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
@@ -784,40 +387,18 @@ const UgadiCelebrationGallery: React.FC = () => {
                 onClick={() => openLightbox(idx)}
               >
                 {item.type === "image" ? (
-                  <img
-                    src={item.src}
-                    alt={item.caption}
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={item.src} alt={item.caption} className="w-full h-full object-cover" />
                 ) : (
                   <>
-                    <video
-                      src={item.src}
-                      className="w-full h-full object-cover"
-                      muted
-                      preload="metadata"
-                    />
-                    <div
-                      className="absolute inset-0 flex items-center justify-center"
-                      style={{ background: "rgba(0,0,0,0.28)" }}
-                    >
-                      <div
-                        className="w-10 h-10 rounded-full flex items-center justify-center text-base"
-                        style={{ background: "#c8973a", color: "#fff" }}
-                      >
-                        ▶
-                      </div>
+                    <video src={item.src} className="w-full h-full object-cover" muted preload="metadata" />
+                    <div className="absolute inset-0 flex items-center justify-center" style={{ background: "rgba(0,0,0,0.28)" }}>
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center text-base" style={{ background: "#c8973a", color: "#fff" }}>▶</div>
                     </div>
                   </>
                 )}
-
-                {/* Hover overlay */}
                 <div
                   className="overlay absolute inset-0 opacity-0 flex flex-col justify-end p-3"
-                  style={{
-                    background:
-                      "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 60%)",
-                  }}
+                  style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 60%)" }}
                 >
                   {/* <p className="text-white text-xs leading-snug">{item.caption}</p> */}
                   <div className="flex gap-2 mt-2">
@@ -837,13 +418,13 @@ const UgadiCelebrationGallery: React.FC = () => {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="text-center py-6 text-gray-400 text-xs tracking-widest border-t border-gray-200">
-          © 2023 Viraga Foundation · Food Donation Program
+        {/* Footer
+            FROM: text-xs text-gray-400 → TO: text-base text-amber-900 */}
+        <footer className="text-center py-6 text-base text-amber-900 tracking-widest border-t border-gray-200">
+          © 2023 Viraga Foundation · Cloth Distribution Program
         </footer>
       </div>
 
-      {/* Lightbox */}
       {lightboxIndex !== null && (
         <Lightbox
           items={mediaItems}
@@ -858,35 +439,30 @@ const UgadiCelebrationGallery: React.FC = () => {
 };
 
 // ─── Small helpers ────────────────────────────
+
+/*
+  SectionTitle H3 — FROM: fontSize:'1.55rem' fontWeight:600 color:'#1a1a1a'
+  TO: text-4xl font-bold text-amber-800
+*/
 const SectionTitle: React.FC<{ icon: string; label: string }> = ({ icon, label }) => (
   <div className="flex items-center gap-3">
     <span className="text-xl">{icon}</span>
-    <h3
-      style={{
-        fontFamily: "'Cormorant Garamond', serif",
-        fontSize: "1.55rem",
-        color: "#1a1a1a",
-        fontWeight: 600,
-      }}
-    >
-      {label}
-    </h3>
-    <div
-      className="flex-1 h-px"
-      style={{
-        background: "linear-gradient(90deg, #c8973a44, transparent)",
-      }}
-    />
+    <h3 className="text-3xl sm:text-4xl font-bold text-amber-700">{label}</h3>
+    <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, #c8973a44, transparent)" }} />
   </div>
 );
 
+/*
+  ActionBtn — FROM: text-[11px] font-medium
+  TO: text-base font-bold (About CTA button)
+*/
 const ActionBtn: React.FC<{
   label: string;
   onClick?: (e: React.MouseEvent) => void;
 }> = ({ label, onClick }) => (
   <button
     onClick={onClick}
-    className="text-[11px] font-medium px-2 py-0.5 rounded-full transition hover:opacity-80"
+    className="text-base font-bold px-2 py-0.5 rounded-full transition hover:opacity-80"
     style={{ background: "#c8973a", color: "#fff" }}
   >
     {label}
@@ -894,8 +470,6 @@ const ActionBtn: React.FC<{
 );
 
 export default UgadiCelebrationGallery;
-
-
 
 // import GalleryPage from './GalleryPage';
 

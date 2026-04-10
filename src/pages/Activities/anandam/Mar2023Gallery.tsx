@@ -11,9 +11,9 @@ type MediaItem = {
 
 const galleryItems: MediaItem[] = [
   { id: 1, type: "image", src: img1, caption: "Self-prepared nutritious meals for 100 individuals" },
-//   { id: 2, type: "image", src: "https://placehold.co/900x600/fdf8f0/a07830?text=Food+Donation+2", caption: "Volunteers preparing food with care and dedication" },
-//   { id: 3, type: "image", src: "https://placehold.co/900x600/fdf8f0/a07830?text=Food+Donation+3", caption: "Distribution of wholesome meals to the community" },
-//   { id: 4, type: "image", src: "https://placehold.co/900x600/fdf8f0/a07830?text=Food+Donation+4", caption: "Viraga Foundation Food Donation Programme – March 12, 2023" },
+  // { id: 2, type: "image", src: "...", caption: "Volunteers preparing food with care and dedication" },
+  // { id: 3, type: "image", src: "...", caption: "Distribution of wholesome meals to the community" },
+  // { id: 4, type: "image", src: "...", caption: "Viraga Foundation Food Donation Programme – March 12, 2023" },
 ];
 
 const downloadMedia = async (src: string, filename: string) => {
@@ -74,7 +74,7 @@ const Lightbox: React.FC<{
           <div className="flex gap-3">
             <button
               onClick={() => downloadMedia(item.src, `viraga-food-mar2023-${item.id}`)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 text-xs font-bold transition"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 font-bold text-xs transition"
             >
               ↓ Download
             </button>
@@ -122,8 +122,6 @@ const FoodDonationMarch2023Gallery: React.FC = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
-
         .gallery-card {
           transition: transform 0.35s cubic-bezier(.22,.68,0,1.3), box-shadow 0.3s ease;
         }
@@ -136,102 +134,71 @@ const FoodDonationMarch2023Gallery: React.FC = () => {
         .hero-divider { background: linear-gradient(90deg, transparent, #c8973a, transparent); }
       `}</style>
 
-      <div
-        className="min-h-screen pt-16 w-full"
-        style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
-      >
+      <div className="min-h-screen pt-16 w-full" style={{ background: "#ffffff", color: "#1c1c1c" }}>
+
         {/* ── Article Section ── */}
         <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
 
           {/* Badge + date */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[10px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "orange-900", borderColor: "orange-400", background: "orange-300" }}
+              className="text-base font-medium text-center px-3 py-1 rounded-full border tracking-[0.5em] uppercase"
+              style={{ color: "#92400e", borderColor: "#92400e", background: "#c8973a11" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-md font-semibold tracking-widest">March 12, 2023</span>
+            <span className="text-gray-600 text-base font-semibold tracking-widest">March 12, 2023</span>
           </div>
 
-          {/* Title */}
-          <h1
-            className="leading-tight mb-2"
-            style={{
-              fontFamily: "'Cormorant Garamond'",
-              fontSize: "clamp(1.8rem, 5vw, 3rem)",
-              fontWeight: 600,
-              color: "#1a1a1a",
-              letterSpacing: "-0.01em",
-            }}
-          >
+          {/* H1 Title */}
+          <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-amber-700 leading-tight mb-2">
             Food Donation Programme
           </h1>
-          <p
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond'",
-              fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "normal",
-              color: "",
-            }}
-          >
+
+          {/* H2 Subtitle */}
+          <h2 className="text-lg font-bold text-orange-600 mb-6">
             Nourishing 100 Lives · March 2023
-          </p>
+          </h2>
 
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
+          <div className="space-y-5 text-gray-900 text-base sm:text-lg leading-relaxed">
             <p>
               On{" "}
-              <span style={{ color: "#c8973a" }} className="font-medium">
-                March 12, 2023
-              </span>
-              , as part of the Food Donation Program, the Viraga Foundation successfully
+              <span className="font-semibold text-orange-700">March 12, 2023</span>,
+              as part of the Food Donation Program, the Viraga Foundation successfully
               prepared and distributed nutritious meals to{" "}
-              <span className="font-semibold text-amber-600">100 needy individuals</span>.
+              <span className="font-semibold text-orange-700">100 needy individuals</span>.
               The food was self-prepared with care and dedication, ensuring quality and hygiene.
             </p>
             <p>
               This initiative aimed to support underprivileged communities by providing them
               with wholesome meals, reinforcing the foundation's commitment to{" "}
-              <strong className="text-gray-800">eradicating hunger</strong> and promoting
+              <strong className="text-amber-900">eradicating hunger</strong> and promoting
               social welfare.
             </p>
 
-            <p
-              className="border-l-2 pl-4 "
-              style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
-            >
+            <p className="border-l-2 pl-4 text-lg font-medium text-gray-700" style={{ borderColor: "#c8973a" }}>
               Through such efforts, Viraga Foundation continues to make a positive impact,
               fostering a spirit of compassion and community service.
             </p>
           </div>
 
           {/* Stat cards */}
-          <div className="grid grid-cols-3 gap-4 mt-10">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-10">
             {[
-              { value: "100", label: "Meals Distributed" },
-              { value: "🍲", label: "Self-Prepared Food" },
+              { value: "100",    label: "Meals Distributed" },
+              { value: "🍲",    label: "Self-Prepared Food" },
               { value: "Mar 12", label: "Date of Event" },
             ].map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl p-4 text-center"
+                className="rounded-xl sm:px-4 px-2 py-4 text-center"
                 style={{ background: "#f9f9f9", border: "1px solid #e5e5e5" }}
               >
-                <div
-                  style={{
-                    fontFamily: "'Cormorant Garamond'",
-                    fontSize: s.value.length > 5 ? "1.5rem" : "2.1rem",
-                    color: "#c8973a",
-                    fontWeight: 600,
-                  }}
-                >
-                  {s.value}
-                </div>
-                <div className="text-gray-400 text-xs tracking-wider mt-0.5 uppercase">{s.label}</div>
+                <div className="text-xl sm:text-2xl font-bold text-amber-700">{s.value}</div>
+                <div className="text-sm sm:text-base text-amber-800 tracking-wider mt-1 lowercase sm:uppercase">{s.label}</div>
               </div>
             ))}
           </div>
@@ -280,7 +247,7 @@ const FoodDonationMarch2023Gallery: React.FC = () => {
         </section>
 
         {/* Footer */}
-        <footer className="text-center py-6 text-gray-400 text-xs tracking-widest border-t border-gray-200">
+        <footer className="text-center py-6 text-base text-amber-900 tracking-widest border-t border-gray-200">
           © 2023 Viraga Foundation · Food Donation Programme
         </footer>
       </div>
@@ -302,16 +269,7 @@ const FoodDonationMarch2023Gallery: React.FC = () => {
 const SectionTitle: React.FC<{ icon: string; label: string }> = ({ icon, label }) => (
   <div className="flex items-center gap-3">
     <span className="text-xl">{icon}</span>
-    <h3
-      style={{
-        fontFamily: "'Cormorant Garamond', ",
-        fontSize: "1.55rem",
-        color: "#1a1a1a",
-        fontWeight: 600,
-      }}
-    >
-      {label}
-    </h3>
+    <h3 className="text-3xl sm:text-4xl font-bold text-amber-700">{label}</h3>
     <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, #c8973a44, transparent)" }} />
   </div>
 );
@@ -322,7 +280,7 @@ const ActionBtn: React.FC<{
 }> = ({ label, onClick }) => (
   <button
     onClick={onClick}
-    className="text-[11px] font-medium px-2 py-0.5 rounded-full transition hover:opacity-80"
+    className="text-base font-bold px-2 py-0.5 rounded-full transition hover:opacity-80"
     style={{ background: "#c8973a", color: "#fff" }}
   >
     {label}

@@ -66,16 +66,15 @@ type MediaItem = {
 };
 
 const foodItems: MediaItem[] = [
-  // ── Images ──────────────────────────────────
-  { id: 1, type: "image", src: img1, caption: "Food prepared for 100 children at Premdan Ashram" },
-  { id: 2, type: "image", src: img2, caption: "Volunteers serving meals to children" },
-  { id: 3, type: "image", src: img3, caption: "Children at Premdan Ashram, Gunadala, Vijayawada" },
-  { id: 4, type: "image", src: img4, caption: "Karthika Pournami celebration – November 29, 2020" },
-  { id: 5, type: "image", src: img5, caption: "Children gathered during the celebration" },
-  { id: 6, type: "image", src: img6, caption: "Moments from Karthika Pournami festivities" },
-  { id: 7, type: "image", src: img7, caption: "Volunteers interacting with children at the ashram" },
-  { id: 8, type: "image", src: img8, caption: "Children enjoying the special celebration" },
-  { id: 9, type: "image", src: img9, caption: "A joyful gathering at Premdan Ashram" },
+  { id: 1,  type: "image", src: img1,  caption: "Food prepared for 100 children at Premdan Ashram" },
+  { id: 2,  type: "image", src: img2,  caption: "Volunteers serving meals to children" },
+  { id: 3,  type: "image", src: img3,  caption: "Children at Premdan Ashram, Gunadala, Vijayawada" },
+  { id: 4,  type: "image", src: img4,  caption: "Karthika Pournami celebration – November 29, 2020" },
+  { id: 5,  type: "image", src: img5,  caption: "Children gathered during the celebration" },
+  { id: 6,  type: "image", src: img6,  caption: "Moments from Karthika Pournami festivities" },
+  { id: 7,  type: "image", src: img7,  caption: "Volunteers interacting with children at the ashram" },
+  { id: 8,  type: "image", src: img8,  caption: "Children enjoying the special celebration" },
+  { id: 9,  type: "image", src: img9,  caption: "A joyful gathering at Premdan Ashram" },
   { id: 10, type: "image", src: img10, caption: "Children smiling during the celebration" },
   { id: 11, type: "image", src: img11, caption: "Sharing happiness with the children" },
   { id: 12, type: "image", src: img12, caption: "Volunteers spending time with children" },
@@ -116,8 +115,6 @@ const foodItems: MediaItem[] = [
   { id: 47, type: "image", src: img47, caption: "Celebration moments captured at Premdan Ashram" },
   { id: 48, type: "image", src: img48, caption: "Children enjoying the festive gathering" },
   { id: 49, type: "image", src: img49, caption: "A beautiful memory from Karthika Pournami celebration" },
-
-  // ── Videos ──────────────────────────────────
   { id: 50, type: "video", src: video1, caption: "Food distribution drive at Premdan Ashram" },
   { id: 51, type: "video", src: video2, caption: "Volunteers and children celebrating Karthika Pournami" },
   { id: 52, type: "video", src: video3, caption: "Children enjoying the festive activities" },
@@ -186,7 +183,7 @@ const Lightbox: React.FC<{
           <div className="flex gap-3">
             <button
               onClick={() => downloadMedia(item.src, `viraga-food-${item.id}`)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 text-xs font-bold transition"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 font-bold text-xs transition"
             >
               ↓ Download
             </button>
@@ -234,8 +231,6 @@ const FoodDistributionGallery: React.FC = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
-
         .gallery-card {
           transition: transform 0.35s cubic-bezier(.22,.68,0,1.3), box-shadow 0.3s ease;
         }
@@ -248,102 +243,70 @@ const FoodDistributionGallery: React.FC = () => {
         .hero-divider { background: linear-gradient(90deg, transparent, #c8973a, transparent); }
       `}</style>
 
-      <div
-        className="min-h-screen pt-16 w-full"
-        style={{ background: "#ffffff", fontFamily: "'Poppins', sans-serif", color: "#1c1c1c" }}
-      >
+      <div className="min-h-screen pt-16 w-full" style={{ background: "#ffffff", color: "#1c1c1c" }}>
+
         {/* ── Article Section ── */}
-        <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
 
           {/* Badge + date */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[16px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "orange-900", borderColor: "orange-500", background: "orange-600" }}
+              className="text-base font-medium text-center px-3 py-1 rounded-full border tracking-[0.5em] uppercase"
+              style={{ color: "#92400e", borderColor: "#92400e", background: "#c8973a11" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-md font-semibold tracking-widest">November 29, 2020</span>
+            <span className="text-gray-600 text-base font-semibold tracking-widest">November 29, 2020</span>
           </div>
 
-          {/* Title */}
-          <h1
-            className="leading-tight mb-2"
-            style={{
-              fontFamily: "'Poppins', sans-serif",
-              fontSize: "clamp(1.8rem, 5vw, 3rem)",
-              fontWeight: 600,
-              color: "#1a1a1a",
-              letterSpacing: "-0.01em",
-            }}
-          >
+          {/* H1 Title */}
+          <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-amber-700 leading-tight mb-2">
             Food Distribution at Premdan Ashram
           </h1>
-          <p
-            className="mb-6"
-            style={{
-              fontFamily: "'Poppins', sans-serif",
-              fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "normal",
-              color: "orange-600",
-            }}
-          >
+
+          {/* H2 Subtitle */}
+          <h2 className="text-lg font-bold text-orange-600 mb-6">
             Gunadala · Karthika Pournami 2020
-          </p>
+          </h2>
 
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
+          <div className="space-y-5 text-gray-900 text-base sm:text-lg leading-relaxed">
             <p>
               On{" "}
-              <span style={{ color: "#c8973a" }} className="font-medium">
-                November 29, 2020
-              </span>
-              , Viraga Foundation prepared and distributed food for{" "}
-              <span className="font-semibold text-amber-600">100 children</span> at{" "}
-              <strong className="text-gray-800">Mother Teresa's Premdan Ashram</strong>,
+              <span className="font-semibold text-gray-700">November 29, 2020</span>,
+              Viraga Foundation prepared and distributed food for{" "}
+              <span className="font-semibold text-gray-700">100 children</span> at{" "}
+              <strong className="text-amber-900">Mother Teresa's Premdan Ashram</strong>,
               Gunadala, Vijayawada.
             </p>
             <p>
               This initiative was carried out on the occasion of{" "}
-              <strong className="text-gray-800">Karthika Pournami</strong>, bringing joy and
+              <strong className="text-amber-900">Karthika Pournami</strong>, bringing joy and
               nourishment to physically and mentally challenged children. Through this effort,
               we aimed to spread love, care, and support to those in need.
             </p>
-
-            <p
-              className="border-l-2 pl-4"
-              style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
-            >
+            <p className="border-l-2 pl-4 text-lg font-medium text-gray-700" style={{ borderColor: "#c8973a" }}>
               Every act of kindness, no matter how small, carries the power to transform a life.
               Viraga Foundation remains committed to serving those who need it most.
             </p>
           </div>
 
           {/* Stat cards */}
-          <div className="grid grid-cols-3 gap-4 mt-10">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-10">
             {[
-              { value: "100", label: "Children Fed" },
-              { value: "🪔", label: "Karthika Pournami" },
+              { value: "100",    label: "Children Fed" },
+              { value: "🪔",    label: "Karthika Pournami" },
               { value: "Nov 29", label: "Date of Event" },
             ].map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl p-4 text-center"
+                className="rounded-xl sm:px-4 px-2 py-4 text-center"
                 style={{ background: "#f9f9f9", border: "1px solid #e5e5e5" }}
               >
-                <div
-                  style={{
-                    fontFamily: "'Poppins', sans-serif",
-                    fontSize: s.value.length > 5 ? "1.5rem" : "2.1rem",
-                    color: "#c8973a",
-                    fontWeight: 600,
-                  }}
-                >
-                  {s.value}
-                </div>
-                <div className="text-gray-400 text-xs tracking-wider mt-0.5 uppercase">{s.label}</div>
+                <div className="text-xl sm:text-2xl font-bold text-amber-700">{s.value}</div>
+                <div className="text-sm sm:text-base text-amber-800 tracking-wider mt-1 lowercase sm:uppercase">{s.label}</div>
               </div>
             ))}
           </div>
@@ -392,7 +355,7 @@ const FoodDistributionGallery: React.FC = () => {
         </section>
 
         {/* Footer */}
-        <footer className="text-center py-6 text-gray-400 text-xs tracking-widest border-t border-gray-200">
+        <footer className="text-center py-6 text-base text-amber-900 tracking-widest border-t border-gray-200">
           © 2020 Viraga Foundation · Food Donation Programme
         </footer>
       </div>
@@ -414,16 +377,7 @@ const FoodDistributionGallery: React.FC = () => {
 const SectionTitle: React.FC<{ icon: string; label: string }> = ({ icon, label }) => (
   <div className="flex items-center gap-3">
     <span className="text-xl">{icon}</span>
-    <h3
-      style={{
-        fontFamily: "'Poppins', sans-serif",
-        fontSize: "1.55rem",
-        color: "#1a1a1a",
-        fontWeight: 600,
-      }}
-    >
-      {label}
-    </h3>
+    <h3 className="text-3xl sm:text-4xl font-bold text-amber-700">{label}</h3>
     <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, #c8973a44, transparent)" }} />
   </div>
 );
@@ -434,7 +388,7 @@ const ActionBtn: React.FC<{
 }> = ({ label, onClick }) => (
   <button
     onClick={onClick}
-    className="text-[11px] font-medium px-2 py-0.5 rounded-full transition hover:opacity-80"
+    className="text-base font-bold px-2 py-0.5 rounded-full transition hover:opacity-80"
     style={{ background: "#c8973a", color: "#fff" }}
   >
     {label}
@@ -442,18 +396,3 @@ const ActionBtn: React.FC<{
 );
 
 export default FoodDistributionGallery;
-
-
-
-// import GalleryPage from '../GalleryPage';
-
-// const mediaModules = import.meta.glob(
-//     '../../../assets/anandam/29-11-2020/*',
-//     { eager: true, query: '?url', import: 'default' }
-// );
-// const media = Object.values(mediaModules) as string[];
-
-// const Nov2020Gallery = () => (
-//     <GalleryPage title="Anandam – 29 Nov 2020" media={media} />
-// );
-// export default Nov2020Gallery;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import img12 from '../../assets/newbacha.png';
+
 // ── BLOCK 4: Closing Ceremony ──
 import b4img1 from '../../assets/closing1.jpeg';
 import b4img2 from '../../assets/closing2.jpeg';
@@ -80,15 +81,15 @@ type MediaItem = {
 // Data
 // ─────────────────────────────────────────────
 const block4Items: MediaItem[] = [
-	{ id: 1, type: 'image', src: b4img1, caption: 'Closing Ceremony Photo 1' },
-	{ id: 2, type: 'image', src: b4img2, caption: 'Closing Ceremony Photo 2' },
-	{ id: 3, type: 'image', src: b4img3, caption: 'Closing Ceremony Photo 3' },
-	{ id: 4, type: 'image', src: b4img4, caption: 'Closing Ceremony Photo 4' },
-	{ id: 5, type: 'image', src: b4img5, caption: 'Closing Ceremony Photo 5' },
-	{ id: 6, type: 'image', src: b4img6, caption: 'Closing Ceremony Photo 6' },
-	{ id: 7, type: 'image', src: b4img7, caption: 'Closing Ceremony Photo 7' },
-	{ id: 8, type: 'image', src: b4img8, caption: 'Closing Ceremony Photo 8' },
-	{ id: 9, type: 'image', src: b4img9, caption: 'Closing Ceremony Photo 9' },
+	{ id: 1,  type: 'image', src: b4img1,  caption: 'Closing Ceremony Photo 1' },
+	{ id: 2,  type: 'image', src: b4img2,  caption: 'Closing Ceremony Photo 2' },
+	{ id: 3,  type: 'image', src: b4img3,  caption: 'Closing Ceremony Photo 3' },
+	{ id: 4,  type: 'image', src: b4img4,  caption: 'Closing Ceremony Photo 4' },
+	{ id: 5,  type: 'image', src: b4img5,  caption: 'Closing Ceremony Photo 5' },
+	{ id: 6,  type: 'image', src: b4img6,  caption: 'Closing Ceremony Photo 6' },
+	{ id: 7,  type: 'image', src: b4img7,  caption: 'Closing Ceremony Photo 7' },
+	{ id: 8,  type: 'image', src: b4img8,  caption: 'Closing Ceremony Photo 8' },
+	{ id: 9,  type: 'image', src: b4img9,  caption: 'Closing Ceremony Photo 9' },
 	{ id: 10, type: 'image', src: b4img10, caption: 'Closing Ceremony Photo 10' },
 	{ id: 11, type: 'image', src: b4img11, caption: 'Closing Ceremony Photo 11' },
 	{ id: 12, type: 'image', src: b4img12, caption: 'Closing Ceremony Photo 12' },
@@ -103,15 +104,15 @@ const block4Items: MediaItem[] = [
 ];
 
 const block5Items: MediaItem[] = [
-	{ id: 1, type: 'image', src: b5img1, caption: 'Guest Lecture Photo 1' },
-	{ id: 2, type: 'image', src: b5img2, caption: 'Guest Lecture Photo 2' },
-	{ id: 3, type: 'image', src: b5img3, caption: 'Guest Lecture Photo 3' },
-	{ id: 4, type: 'image', src: b5img4, caption: 'Guest Lecture Photo 4' },
-	{ id: 5, type: 'image', src: b5img5, caption: 'Guest Lecture Photo 5' },
-	{ id: 6, type: 'image', src: b5img6, caption: 'Guest Lecture Photo 6' },
-	{ id: 7, type: 'image', src: b5img7, caption: 'Guest Lecture Photo 7' },
-	{ id: 8, type: 'image', src: b5img8, caption: 'Guest Lecture Photo 8' },
-	{ id: 9, type: 'image', src: b5img9, caption: 'Guest Lecture Photo 9' },
+	{ id: 1,  type: 'image', src: b5img1,  caption: 'Guest Lecture Photo 1' },
+	{ id: 2,  type: 'image', src: b5img2,  caption: 'Guest Lecture Photo 2' },
+	{ id: 3,  type: 'image', src: b5img3,  caption: 'Guest Lecture Photo 3' },
+	{ id: 4,  type: 'image', src: b5img4,  caption: 'Guest Lecture Photo 4' },
+	{ id: 5,  type: 'image', src: b5img5,  caption: 'Guest Lecture Photo 5' },
+	{ id: 6,  type: 'image', src: b5img6,  caption: 'Guest Lecture Photo 6' },
+	{ id: 7,  type: 'image', src: b5img7,  caption: 'Guest Lecture Photo 7' },
+	{ id: 8,  type: 'image', src: b5img8,  caption: 'Guest Lecture Photo 8' },
+	{ id: 9,  type: 'image', src: b5img9,  caption: 'Guest Lecture Photo 9' },
 	{ id: 10, type: 'image', src: b5img10, caption: 'Guest Lecture Photo 10' },
 	{ id: 11, type: 'image', src: b5img11, caption: 'Guest Lecture Photo 11' },
 	{ id: 12, type: 'image', src: b5img12, caption: 'Guest Lecture Photo 12' },
@@ -126,15 +127,15 @@ const block5Items: MediaItem[] = [
 ];
 
 const block6Items: MediaItem[] = [
-	{ id: 1, type: 'image', src: b6img1, caption: 'Registration / Class / Exam Photo 1' },
-	{ id: 2, type: 'image', src: b6img2, caption: 'Registration / Class / Exam Photo 2' },
-	{ id: 3, type: 'image', src: b6img3, caption: 'Registration / Class / Exam Photo 3' },
-	{ id: 4, type: 'image', src: b6img4, caption: 'Registration / Class / Exam Photo 4' },
-	{ id: 5, type: 'image', src: b6img5, caption: 'Registration / Class / Exam Photo 5' },
-	{ id: 6, type: 'image', src: b6img6, caption: 'Registration / Class / Exam Photo 6' },
-	{ id: 7, type: 'image', src: b6img7, caption: 'Registration / Class / Exam Photo 7' },
-	{ id: 8, type: 'image', src: b6img8, caption: 'Registration / Class / Exam Photo 8' },
-	{ id: 9, type: 'image', src: b6img9, caption: 'Registration / Class / Exam Photo 9' },
+	{ id: 1,  type: 'image', src: b6img1,  caption: 'Registration / Class / Exam Photo 1' },
+	{ id: 2,  type: 'image', src: b6img2,  caption: 'Registration / Class / Exam Photo 2' },
+	{ id: 3,  type: 'image', src: b6img3,  caption: 'Registration / Class / Exam Photo 3' },
+	{ id: 4,  type: 'image', src: b6img4,  caption: 'Registration / Class / Exam Photo 4' },
+	{ id: 5,  type: 'image', src: b6img5,  caption: 'Registration / Class / Exam Photo 5' },
+	{ id: 6,  type: 'image', src: b6img6,  caption: 'Registration / Class / Exam Photo 6' },
+	{ id: 7,  type: 'image', src: b6img7,  caption: 'Registration / Class / Exam Photo 7' },
+	{ id: 8,  type: 'image', src: b6img8,  caption: 'Registration / Class / Exam Photo 8' },
+	{ id: 9,  type: 'image', src: b6img9,  caption: 'Registration / Class / Exam Photo 9' },
 	{ id: 10, type: 'image', src: b6img10, caption: 'Registration / Class / Exam Photo 10' },
 	{ id: 11, type: 'image', src: b6img11, caption: 'Registration / Class / Exam Photo 11' },
 	{ id: 12, type: 'image', src: b6img12, caption: 'Registration / Class / Exam Photo 12' },
@@ -207,13 +208,15 @@ const Lightbox: React.FC<{
 			>
 				{/* Top bar */}
 				<div className="flex items-center justify-between w-full mb-3 px-1">
+					{/* Counter — kept as UI element, font-semibold text-sm */}
 					<span className="text-amber-400 font-semibold text-sm tracking-widest uppercase">
 						{index + 1} / {items.length}
 					</span>
 					<div className="flex gap-3">
+						{/* Download btn — FROM: text-xs font-bold → TO: font-bold (About CTA style) */}
 						<button
 							onClick={() => downloadMedia(item.src, `viraga-vftl-${item.id}`)}
-							className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 text-xs font-bold transition"
+							className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 font-bold text-xs transition"
 						>
 							↓ Download
 						</button>
@@ -296,11 +299,10 @@ const GalleryGrid: React.FC<{
 				{/* Hover overlay */}
 				<div
 					className="overlay absolute inset-0 opacity-0 flex flex-col justify-end p-3"
-					style={{
-						background: 'linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 60%)',
-					}}
+					style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 60%)' }}
 				>
-					<p className="text-white text-xs mb-2 line-clamp-2">{item.caption}</p>
+					{/* Caption on hover — FROM: text-xs → TO: text-base text-amber-900 (About body base) */}
+					<p className="text-white text-base mb-2 line-clamp-2">{item.caption}</p>
 					<div className="flex gap-2">
 						<ActionBtn label={item.type === 'video' ? '▶ Play' : '⤢ Zoom'} />
 						<ActionBtn
@@ -323,36 +325,36 @@ const GalleryGrid: React.FC<{
 // ─────────────────────────────────────────────
 // Small helpers
 // ─────────────────────────────────────────────
+
+/*
+  SectionTitle H3 — FROM: fontSize:'1.55rem' fontWeight:600 color:'#1a1a1a'
+  TO: text-4xl font-bold text-amber-800  (matches About h1 weight/color)
+*/
 const SectionTitle: React.FC<{ icon: string; label: string }> = ({ icon, label }) => (
 	<div className="flex items-center gap-3">
 		<span className="text-xl">{icon}</span>
-		<h3
-			style={{
-				fontFamily: "'Cormorant Garamond', serif",
-				fontSize: '1.55rem',
-				color: '#1a1a1a',
-				fontWeight: 600,
-			}}
-		>
+		<h3 className="text-3xl sm:text-4xl font-bold text-amber-700">
 			{label}
 		</h3>
 		<div
 			className="flex-1 h-px"
-			style={{
-				background: 'linear-gradient(90deg, #c8973a44, transparent)',
-			}}
+			style={{ background: 'linear-gradient(90deg, #c8973a44, transparent)' }}
 		/>
 	</div>
 );
 
+/*
+  ActionBtn — FROM: text-[11px] font-medium
+  TO: text-base font-bold  (matches About CTA button)
+*/
 const ActionBtn: React.FC<{
 	label: string;
 	onClick?: (e: React.MouseEvent) => void;
 }> = ({ label, onClick }) => (
 	<button
 		onClick={onClick}
-		className="text-[11px] font-medium px-2 py-0.5 rounded-full transition hover:opacity-80"
-		style={{ background: 'orange-600', color: '#fff' }}
+		className="text-base font-bold px-2 py-0.5 rounded-full transition hover:opacity-80"
+		style={{ background: '#c8973a', color: '#fff' }}
 	>
 		{label}
 	</button>
@@ -375,7 +377,6 @@ const VFTLGalleryPage: React.FC = () => {
 	return (
 		<>
 			<style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
         .gallery-card {
           transition: transform 0.35s cubic-bezier(.22,.68,0,1.3), box-shadow 0.3s ease;
         }
@@ -386,62 +387,52 @@ const VFTLGalleryPage: React.FC = () => {
         .gallery-card:hover .overlay { opacity: 1; }
         .overlay { transition: opacity 0.3s ease; }
         .soft-divider { background: linear-gradient(90deg, transparent, #e0e0e0, transparent); }
+        .hero-divider { background: linear-gradient(90deg, transparent, #c8973a, transparent); }
       `}</style>
 
 			<div
 				className="min-h-screen pt-16 w-full"
-				style={{
-					background: '#ffffff',
-					fontFamily: "'Jost', sans-serif",
-					color: '#1c1c1c',
-				}}
+				style={{ background: '#ffffff', color: '#1c1c1c' }}
 			>
 				{/* ── Page Header ── */}
 				<div className="max-w-6xl mx-auto px-6 pt-16 pb-8">
 					<div className="flex sm:flex-row flex-col items-center gap-3 mb-5">
+						{/*
+							Badge — FROM: text-[16px] tracking-[0.6em] font-medium
+							TO: text-base font-medium  (About body base)
+						*/}
 						<span
-							className="text-[16px] tracking-[0.6em] uppercase font-medium px-3 py-1 rounded-full border"
-							style={{
-								color: 'amber-600',
-								borderColor: 'orange-500',
-								background: 'orange-400',
-							}}
+							className="text-base font-medium px-5 text-center py-2 rounded-full border tracking-[0.6em] uppercase"
+							style={{ color: '#92400e', borderColor: '#92400e', background: '#c8973a11' }}
 						>
 							Viraga Foundation
 						</span>
-						<span className="text-gray-400 text-md font-semibold tracking-widest">
+						{/*
+							Sub-label — FROM: text-md font-semibold
+							TO: text-base font-semibold
+						*/}
+						<span className="text-gray-600 text-md font-semibold tracking-widest">
 							Vibrant Futures – Transforming Lives
 						</span>
 					</div>
-					<h1
-						style={{
-							fontFamily: "'Cormorant Garamond', serif",
-							fontSize: 'clamp(1.7rem, 4.5vw, 2.8rem)',
-							fontWeight: 700,
-							color: '#1a1a1a',
-							letterSpacing: '-0.01em',
-							lineHeight: 1.2,
-						}}
-					>
+
+					{/*
+						Page H1 — FROM: clamp(1.7rem, 4.5vw, 2.8rem) fontWeight:700
+						TO: text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-800
+					*/}
+					<h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-amber-700 leading-tight mb-2">
 						VFTL Programme Gallery
 					</h1>
-					<p
-						className="mt-1"
-						style={{
-							fontFamily: "'Cormorant Garamond', serif",
-							fontSize: 'clamp(1.2rem, 2.2vw, 1.3rem)',
-							fontStyle: 'normal',
-							color: 'orange-700',
-						}}
-					>
+
+					{/*
+						Page subtitle — FROM: clamp(1.2rem, 2.2vw, 1.3rem) fontStyle:normal
+						TO: text-lg font-bold italic text-orange-700
+					*/}
+					<p className="text-md font-bold  text-orange-600 mt-1">
 						Registration, Classes, Exams · Guest Lectures · Closing Ceremony
 					</p>
-					<div
-						className="mt-6 h-px w-full"
-						style={{
-							background: 'linear-gradient(90deg, transparent, #c8973a, transparent)',
-						}}
-					/>
+
+					<div className="hero-divider mt-6 h-px w-full" />
 				</div>
 
 				{/* ════ SECTION 1 — Registration, Class & Exam Pics ════ */}
@@ -466,9 +457,14 @@ const VFTLGalleryPage: React.FC = () => {
 					<GalleryGrid items={block4Items} onOpen={(i) => setBlock4Lb(i)} prefix="viraga-block4" />
 				</section>
 
+				{/* ── Telugu Success Story Block ── */}
 				<div className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 max-w-6xl mx-auto py-5">
-					
-					<div className="px-6 text-xl sm:text-2xl font-medium py-2 w-full lg:w-3/5">
+					{/*
+						Telugu quote — FROM: text-xl sm:text-2xl font-medium
+						TO: text-base sm:text-lg font-medium text-amber-900 leading-relaxed
+							(matches About body paragraph wrapper)
+					*/}
+					<div className="px-6 text-base sm:text-xl font-medium text-gray-900 leading-relaxed py-2 w-full lg:w-3/5">
 						"🏆 ఇటీవల జేఎన్వీఎస్టీ 2026 పరీక్షకు సంబంధించి విరాగ ఫౌండేషన్ 21 మంది విద్యార్థులకు ప్రత్యేక
 						శిక్షణ ఇచ్చింది. ఈ పరీక్షలో 7 మంది విద్యార్థులు అర్హత సాధించడం గర్వకారణం. ముఖ్యంగా ఘంటసాల
 						యశ్వంత్ నాగ సాయి (హాల్ టికెట్ నం: 1029231) ప్రధాన జాబితాలో ఎంపిక కావడం విశేషం. ఈ సందర్భంగా
@@ -486,12 +482,13 @@ const VFTLGalleryPage: React.FC = () => {
 							className="w-full h-[480px] object-contain rounded-lg shadow-lg"
 						/>
 					</div>
-
 				</div>
 
-
-				{/* Footer */}
-				<footer className="text-center py-6 text-gray-400 text-xs tracking-widest border-t border-gray-200">
+				{/*
+					Footer — FROM: text-xs text-gray-400
+					TO: text-base text-amber-900
+				*/}
+				<footer className="text-center py-6 text-base text-amber-900 tracking-widest border-t border-gray-200">
 					© 2025 Viraga Foundation · Vibrant Futures – Transforming Lives
 				</footer>
 			</div>

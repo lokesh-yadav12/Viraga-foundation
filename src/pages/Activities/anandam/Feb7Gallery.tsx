@@ -77,7 +77,7 @@ const Lightbox: React.FC<{
           <div className="flex gap-3">
             <button
               onClick={() => downloadMedia(item.src, `viraga-nirmala-${item.id}`)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 text-xs font-bold transition"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-900 font-bold text-xs transition"
             >
               ↓ Download
             </button>
@@ -125,8 +125,6 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
-
         .gallery-card {
           transition: transform 0.35s cubic-bezier(.22,.68,0,1.3), box-shadow 0.3s ease;
         }
@@ -139,70 +137,48 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
         .hero-divider { background: linear-gradient(90deg, transparent, #c8973a, transparent); }
       `}</style>
 
-      <div
-        className="min-h-screen pt-16 w-full"
-        style={{ background: "#ffffff", fontFamily: "'Jost', sans-serif", color: "#1c1c1c" }}
-      >
+      <div className="min-h-screen pt-16 w-full" style={{ background: "#ffffff", color: "#1c1c1c" }}>
+
         {/* ── Article Section ── */}
         <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
 
           {/* Badge + date */}
           <div className="flex sm:flex-row flex-col items-center gap-3 mb-6">
             <span
-              className="text-[16px] tracking-[0.3em] uppercase font-medium px-3 py-1 rounded-full border"
-              style={{ color: "orange-900", borderColor: "orange-600", background: "orange-500" }}
+              className="text-base font-medium text-center px-3 py-1 rounded-full border tracking-[0.5em] uppercase"
+              style={{ color: "#92400e", borderColor: "#92400e", background: "#c8973a11" }}
             >
               Viraga Foundation
             </span>
-            <span className="text-gray-400 text-md font-semibold tracking-widest">February 7, 2021</span>
+            <span className="text-gray-600 text-base font-semibold tracking-widest">February 7, 2021</span>
           </div>
 
-          {/* Title */}
-          <h1
-            className="leading-tight mb-2"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(1.8rem, 5vw, 3rem)",
-              fontWeight: 600,
-              color: "#1a1a1a",
-              letterSpacing: "-0.01em",
-            }}
-          >
+          {/* H1 Title */}
+          <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-amber-700 leading-tight mb-2">
             Food Distribution at Nirmala Sishu Bhavan
           </h1>
-          <p
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(1rem, 2.5vw, 1.45rem)",
-              fontStyle: "normal",
-              color: "orange-800",
-            }}
-          >
+
+          {/* H2 Subtitle */}
+          <h2 className="text-lg font-bold text-orange-600 mb-6">
             Krishnalanka, Vijayawada · February 2021
-          </p>
+          </h2>
 
           <div className="hero-divider h-px w-full mb-8" />
 
           {/* Body */}
-          <div className="space-y-5 text-gray-600 leading-relaxed" style={{ fontSize: "1.25rem" }}>
+          <div className="space-y-5 text-gray-900 text-base sm:text-lg leading-relaxed">
             <p>
               On{" "}
-              <span style={{ color: "#c8973a" }} className="font-medium">
-                February 7, 2021
-              </span>
-              , Viraga Foundation, with the support of{" "}
-              <strong className="text-gray-800">Ch. Apparao</strong>, distributed food to{" "}
-              <span className="font-semibold text-amber-600">50 physically and mentally
+              <span className="font-semibold text-orange-700">February 7, 2021</span>,
+              Viraga Foundation, with the support of{" "}
+              <strong className="text-amber-900">Ch. Apparao</strong>, distributed food to{" "}
+              <span className="font-semibold text-orange-700">50 physically and mentally
                 challenged children</span> under 10 years at{" "}
-              <strong className="text-gray-800">Nirmala Sishu Bhavan</strong>, Krishnalanka.
+              <strong className="text-amber-900">Nirmala Sishu Bhavan</strong>, Krishnalanka.
               This initiative aimed to provide nourishment and spread kindness to those in need.
             </p>
 
-            <p
-              className="border-l-2 pl-4"
-              style={{ borderColor: "#c8973a", color: "#5a5a5a" }}
-            >
+            <p className="border-l-2 pl-4 text-lg font-medium text-gray-700" style={{ borderColor: "#c8973a" }}>
               Viraga Foundation continues to stand beside the most vulnerable, ensuring
               that no child goes without care, warmth, or a meal.
             </p>
@@ -211,26 +187,17 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
           {/* Stat cards */}
           <div className="grid grid-cols-3 gap-4 mt-10">
             {[
-              { value: "50", label: "Children Served" },
+              { value: "50",    label: "Children Served" },
               { value: "< 10", label: "Years of Age" },
               { value: "Feb 7", label: "Date of Event" },
             ].map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl p-4 text-center"
+                className="rounded-xl sm:px-4 px-2 py-4 text-center"
                 style={{ background: "#f9f9f9", border: "1px solid #e5e5e5" }}
               >
-                <div
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: "2.1rem",
-                    color: "orange-900",
-                    fontWeight: 600,
-                  }}
-                >
-                  {s.value}
-                </div>
-                <div className="text-gray-400 text-xs tracking-wider mt-0.5 uppercase">{s.label}</div>
+                <div className="text-xl sm:text-2xl font-bold text-amber-700">{s.value}</div>
+                <div className="text-sm sm:text-base text-amber-800 tracking-wider mt-1 lowercase sm:uppercase">{s.label}</div>
               </div>
             ))}
           </div>
@@ -279,7 +246,7 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
         </section>
 
         {/* Footer */}
-        <footer className="text-center py-6 text-gray-400 text-xs tracking-widest border-t border-gray-200">
+        <footer className="text-center py-6 text-base text-amber-900 tracking-widest border-t border-gray-200">
           © 2021 Viraga Foundation · Food Donation Programme
         </footer>
       </div>
@@ -301,16 +268,7 @@ const NirmalaSishuBhavanGallery: React.FC = () => {
 const SectionTitle: React.FC<{ icon: string; label: string }> = ({ icon, label }) => (
   <div className="flex items-center gap-3">
     <span className="text-xl">{icon}</span>
-    <h3
-      style={{
-        fontFamily: "'Cormorant Garamond', serif",
-        fontSize: "1.55rem",
-        color: "#1a1a1a",
-        fontWeight: 600,
-      }}
-    >
-      {label}
-    </h3>
+    <h3 className="text-3xl sm:text-4xl font-bold text-amber-700">{label}</h3>
     <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, #c8973a44, transparent)" }} />
   </div>
 );
@@ -321,7 +279,7 @@ const ActionBtn: React.FC<{
 }> = ({ label, onClick }) => (
   <button
     onClick={onClick}
-    className="text-[11px] font-medium px-2 py-0.5 rounded-full transition hover:opacity-80"
+    className="text-base font-bold px-2 py-0.5 rounded-full transition hover:opacity-80"
     style={{ background: "#c8973a", color: "#fff" }}
   >
     {label}

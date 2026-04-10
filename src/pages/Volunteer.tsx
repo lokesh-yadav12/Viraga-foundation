@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import logo from '../assets/bottom1.png';
-import axios from 'axios';
+import axios from "axios";
 const fadeUp = {
 	hidden: { opacity: 0, y: 40 },
 	visible: { opacity: 1, y: 0 },
@@ -14,7 +14,7 @@ const departments = [
 	'Teaching Support',
 	'Technical support',
 	'Public contact (PRO)',
-	'Computer Science (IT)',
+	'Computer (Information Technology)',
 ];
 
 // ✅ Renders directly on document.body — no parent can clip or hide this
@@ -23,10 +23,7 @@ function SuccessPopup({ onClose }: { onClose: () => void }) {
 		<div
 			style={{
 				position: 'fixed',
-				top: 0,
-				left: 0,
-				right: 0,
-				bottom: 0,
+				top: 0, left: 0, right: 0, bottom: 0,
 				zIndex: 99999,
 				display: 'flex',
 				alignItems: 'center',
@@ -65,16 +62,10 @@ function SuccessPopup({ onClose }: { onClose: () => void }) {
 				}}
 			>
 				{/* Top gradient bar */}
-				<div
-					style={{
-						position: 'absolute',
-						top: 0,
-						left: 0,
-						right: 0,
-						height: '5px',
-						background: 'linear-gradient(90deg, #f97316, #fbbf24)',
-					}}
-				/>
+				<div style={{
+					position: 'absolute', top: 0, left: 0, right: 0, height: '5px',
+					background: 'linear-gradient(90deg, #f97316, #fbbf24)',
+				}} />
 
 				{/* Checkmark circle */}
 				<motion.div
@@ -82,27 +73,16 @@ function SuccessPopup({ onClose }: { onClose: () => void }) {
 					animate={{ scale: 1 }}
 					transition={{ type: 'spring', bounce: 0.5, delay: 0.15 }}
 					style={{
-						width: '80px',
-						height: '80px',
+						width: '80px', height: '80px',
 						background: 'linear-gradient(135deg, #f97316, #fbbf24)',
 						borderRadius: '50%',
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
+						display: 'flex', alignItems: 'center', justifyContent: 'center',
 						margin: '0 auto 24px',
 						boxShadow: '0 8px 32px rgba(249,115,22,0.4)',
 					}}
 				>
-					<svg
-						width="40"
-						height="40"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="white"
-						strokeWidth="3"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-					>
+					<svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+						stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
 						<motion.path
 							d="M5 13l4 4L19 7"
 							initial={{ pathLength: 0 }}
@@ -128,8 +108,8 @@ function SuccessPopup({ onClose }: { onClose: () => void }) {
 					style={{ fontSize: '16px', color: '#6b7280', marginBottom: '32px', lineHeight: 1.6 }}
 				>
 					Thank you for volunteering with{' '}
-					<span style={{ fontWeight: 700, color: '#f97316' }}>Viraga Foundation</span>. We'll get in touch
-					with you shortly!
+					<span style={{ fontWeight: 700, color: '#f97316' }}>Viraga Foundation</span>.
+					We'll get in touch with you shortly!
 				</motion.p>
 
 				<motion.button
@@ -140,15 +120,10 @@ function SuccessPopup({ onClose }: { onClose: () => void }) {
 					whileTap={{ scale: 0.97 }}
 					onClick={onClose}
 					style={{
-						width: '100%',
-						padding: '14px',
-						borderRadius: '14px',
+						width: '100%', padding: '14px', borderRadius: '14px',
 						background: 'linear-gradient(90deg, #f97316, #fbbf24)',
-						color: '#ffffff',
-						fontWeight: 700,
-						fontSize: '16px',
-						border: 'none',
-						cursor: 'pointer',
+						color: '#ffffff', fontWeight: 700, fontSize: '16px',
+						border: 'none', cursor: 'pointer',
 						boxShadow: '0 8px 24px rgba(249,115,22,0.35)',
 					}}
 				>
@@ -156,7 +131,7 @@ function SuccessPopup({ onClose }: { onClose: () => void }) {
 				</motion.button>
 			</motion.div>
 		</div>,
-		document.body,
+		document.body
 	);
 }
 
@@ -165,11 +140,7 @@ export default function Volunteer() {
 	const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
 	const [formData, setFormData] = useState({
-		name: '',
-		email: '',
-		phone: '',
-		occupation: '',
-		department: '',
+		name: '', email: '', phone: '', occupation: '', department: '',
 	});
 	const [errors, setErrors] = useState<Record<string, string>>({});
 	const [isSubmitting, setIsSubmitting] = useState(false);
@@ -177,8 +148,8 @@ export default function Volunteer() {
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
 		const { name, value } = e.target;
-		setFormData((prev) => ({ ...prev, [name]: value }));
-		if (errors[name]) setErrors((prev) => ({ ...prev, [name]: '' }));
+		setFormData(prev => ({ ...prev, [name]: value }));
+		if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }));
 	};
 
 	const validate = () => {
@@ -199,41 +170,48 @@ export default function Volunteer() {
 		return newErrors;
 	};
 
+	
 	const handleSubmit = async () => {
-		const validationErrors = validate();
-		if (Object.keys(validationErrors).length > 0) {
-			setErrors(validationErrors);
-			return;
-		}
+  const validationErrors = validate();
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+    return;
+  }
 
-		setIsSubmitting(true);
+  setIsSubmitting(true);
 
-		try {
-			const response = await axios.post('https://lets-taxify.onrender.com/api/viraga/volunteer', formData);
+  try {
+    const response = await axios.post(
+      "https://lets-taxify.onrender.com/api/viraga/volunteer",
+      formData
+    );
 
-			if (response.data?.success) {
-				setShowSuccess(true);
-				setFormData({
-					name: '',
-					email: '',
-					phone: '',
-					occupation: '',
-					department: '',
-				});
-				setErrors({});
-			}
-		} catch (error: any) {
-			console.error('Volunteer error:', error);
+    if (response.data?.success) {
+      setShowSuccess(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        occupation: "",
+        department: "",
+      });
+      setErrors({});
+    }
 
-			// Still show success UI (optional UX choice)
-			setShowSuccess(true);
-		} finally {
-			setIsSubmitting(false);
-		}
-	};
+  } catch (error: any) {
+    console.error("Volunteer error:", error);
+
+    // Still show success UI (optional UX choice)
+    setShowSuccess(true);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
 	return (
 		<section className="relative bg-white min-h-screen overflow-hidden">
+
 			{/* ✅ Portal popup — outside all parent stacking contexts */}
 			{showSuccess && <SuccessPopup onClose={() => setShowSuccess(false)} />}
 
@@ -256,7 +234,7 @@ export default function Volunteer() {
 				<motion.div
 					ref={headerRef}
 					initial="hidden"
-					animate={headerInView ? 'visible' : 'hidden'}
+					animate={headerInView ? "visible" : "hidden"}
 					variants={fadeUp}
 					transition={{ duration: 0.8 }}
 					className="text-center mb-8 sm:mb-12 md:mb-12"
@@ -264,7 +242,7 @@ export default function Volunteer() {
 					<motion.div
 						initial={{ scale: 0.8, opacity: 0 }}
 						animate={headerInView ? { scale: 1, opacity: 1 } : {}}
-						transition={{ duration: 0.6, type: 'spring', bounce: 0.4 }}
+						transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
 						className="inline-block bg-white/60 backdrop-blur-sm rounded-2xl sm:rounded-3xl px-6 py-6 sm:px-12 sm:py-6 md:px-10 md:py-6 shadow-xl border border-amber-200/50 w-full sm:w-auto"
 					>
 						<motion.h1
@@ -303,13 +281,13 @@ export default function Volunteer() {
 					<motion.div
 						initial={{ opacity: 0, y: 50 }}
 						animate={inView ? { opacity: 1, y: 0 } : {}}
-						transition={{ duration: 0.8, type: 'spring', bounce: 0.3 }}
+						transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
 						className="relative"
 					>
 						<motion.div
 							className="absolute -inset-3 sm:-inset-6 bg-gradient-to-r from-orange-300 to-amber-400 rounded-2xl sm:rounded-3xl blur-2xl sm:blur-3xl opacity-20"
 							animate={{ opacity: [0.2, 0.3, 0.2], scale: [1, 1.05, 1] }}
-							transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+							transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
 						/>
 						<motion.div
 							className="relative sm:w-[60vw] shadow-2xl backdrop-blur-sm rounded-2xl sm:rounded-3xl overflow-hidden"
@@ -384,53 +362,46 @@ export default function Volunteer() {
 				>
 					<motion.div
 						className="bg-gradient-to-br from-white/80 to-amber-50/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-14 shadow-xl border border-gray-200/50"
-						whileHover={{ boxShadow: '0 25px 50px -12px rgba(251, 146, 60, 0.25)' }}
+						whileHover={{ boxShadow: "0 25px 50px -12px rgba(251, 146, 60, 0.25)" }}
 						transition={{ duration: 0.3 }}
 					>
-						<div className='flex flex-col sm:flex-row mx-4'>
-							<motion.p
-								initial={{ opacity: 0 }}
-								animate={inView ? { opacity: 1 } : {}}
-								transition={{ delay: 0.8, duration: 0.6 }}
-								className="text-base sm:text-lg sm:mx-8 md:text-xl sm:w-1/2 text-gray-700 leading-relaxed mb-6 sm:mb-8 md:mb-10"
-							>
-								The{' '}
-								<motion.span
-									className="font-bold text-gray-900"
-									whileHover={{ color: '#f97316' }}
-									transition={{ duration: 0.2 }}
-								>
-									Viraga Foundation
-								</motion.span>{' '}
-								welcomes volunteers of all ages who are willing to dedicate their time and skills to
-								support students and teachers. There are many ways to render your service we require
-								volunteers in the following departments:
-							</motion.p>
+						<motion.p
+							initial={{ opacity: 0 }}
+							animate={inView ? { opacity: 1 } : {}}
+							transition={{ delay: 0.8, duration: 0.6 }}
+							className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 md:mb-10"
+						>
+							The{' '}
+							<motion.span className="font-bold text-gray-900" whileHover={{ color: "#f97316" }} transition={{ duration: 0.2 }}>
+								Viraga Foundation
+							</motion.span>{' '}
+							welcomes volunteers of all ages who are willing to dedicate their time and skills to support students and teachers. There
+							are many ways to render your service we require volunteers in the following departments:
+						</motion.p>
 
-							<div className="space-y-3 sm:space-y-4 md:space-y-5 mb-8 sm:w-1/2 sm:ml-24 sm:mb-10 md:mb-12">
-								{departments.map((dept, index) => (
+						<div className="space-y-3 sm:space-y-4 md:space-y-5 mb-8 sm:mb-10 md:mb-12">
+							{departments.map((dept, index) => (
+								<motion.div
+									key={index}
+									initial={{ opacity: 0, x: -30 }}
+									animate={inView ? { opacity: 1, x: 0 } : {}}
+									transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
+									whileHover={{ x: 10 }}
+									className="flex items-start space-x-3 sm:space-x-4 group cursor-pointer"
+								>
 									<motion.div
-										key={index}
-										initial={{ opacity: 0, x: -30 }}
-										animate={inView ? { opacity: 1, x: 0 } : {}}
-										transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
-										whileHover={{ x: 10 }}
-										className="flex items-start space-x-3 sm:space-x-4 group cursor-pointer"
+										className="mt-1.5 sm:mt-2 w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 flex-shrink-0"
+										whileHover={{ scale: 2, rotate: 180 }}
+										transition={{ type: "spring", stiffness: 300 }}
+									/>
+									<motion.p
+										className="text-base sm:text-lg md:text-xl text-gray-700 font-medium group-hover:text-orange-600 transition-colors duration-300"
+										whileHover={{ x: 5 }}
 									>
-										<motion.div
-											className="mt-1.5 sm:mt-2 w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 flex-shrink-0"
-											whileHover={{ scale: 2, rotate: 180 }}
-											transition={{ type: 'spring', stiffness: 300 }}
-										/>
-										<motion.p
-											className="text-base sm:text-lg md:text-xl text-gray-700 font-medium group-hover:text-orange-600 transition-colors duration-300"
-											whileHover={{ x: 5 }}
-										>
-											{dept}
-										</motion.p>
-									</motion.div>
-								))}
-							</div>
+										{dept}
+									</motion.p>
+								</motion.div>
+							))}
 						</div>
 
 						<motion.div
@@ -442,7 +413,7 @@ export default function Volunteer() {
 						>
 							<p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
 								You can contact our{' '}
-								<motion.span className="font-bold text-gray-900" whileHover={{ color: '#f97316' }}>
+								<motion.span className="font-bold text-gray-900" whileHover={{ color: "#f97316" }}>
 									Viraga
 								</motion.span>{' '}
 								Office or directly send us an email to{' '}
@@ -469,7 +440,7 @@ export default function Volunteer() {
 				>
 					<motion.div
 						className="bg-gradient-to-br from-white/80 to-amber-50/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-14 shadow-xl border border-gray-200/50"
-						whileHover={{ boxShadow: '0 25px 50px -12px rgba(251, 146, 60, 0.25)' }}
+						whileHover={{ boxShadow: "0 25px 50px -12px rgba(251, 146, 60, 0.25)" }}
 						transition={{ duration: 0.3 }}
 					>
 						<motion.div
@@ -489,193 +460,78 @@ export default function Volunteer() {
 
 						<div className="space-y-5 sm:space-y-6">
 							{/* Name */}
-							<motion.div
-								initial={{ opacity: 0, x: -20 }}
-								animate={inView ? { opacity: 1, x: 0 } : {}}
-								transition={{ delay: 2.1, duration: 0.5 }}
-							>
-								<label className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">
-									Full Name <span className="text-orange-500">*</span>
-								</label>
-								<input
-									type="text"
-									name="name"
-									value={formData.name}
-									onChange={handleChange}
-									placeholder="Enter your full name"
+							<motion.div initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 2.1, duration: 0.5 }}>
+								<label className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">Full Name <span className="text-orange-500">*</span></label>
+								<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your full name"
 									className={`w-full px-4 py-3 sm:py-4 rounded-xl border ${errors.name ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-white/70'} text-gray-800 placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-300 hover:border-orange-300`}
 								/>
-								{errors.name && (
-									<p className="mt-1.5 text-sm text-red-500 flex items-center gap-1">
-										<span>⚠</span> {errors.name}
-									</p>
-								)}
+								{errors.name && <p className="mt-1.5 text-sm text-red-500 flex items-center gap-1"><span>⚠</span> {errors.name}</p>}
 							</motion.div>
 
 							{/* Email */}
-							<motion.div
-								initial={{ opacity: 0, x: -20 }}
-								animate={inView ? { opacity: 1, x: 0 } : {}}
-								transition={{ delay: 2.2, duration: 0.5 }}
-							>
-								<label className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">
-									Email Address <span className="text-orange-500">*</span>
-								</label>
-								<input
-									type="email"
-									name="email"
-									value={formData.email}
-									onChange={handleChange}
-									placeholder="Enter your email address"
+							<motion.div initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 2.2, duration: 0.5 }}>
+								<label className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">Email Address <span className="text-orange-500">*</span></label>
+								<input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter your email address"
 									className={`w-full px-4 py-3 sm:py-4 rounded-xl border ${errors.email ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-white/70'} text-gray-800 placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-300 hover:border-orange-300`}
 								/>
-								{errors.email && (
-									<p className="mt-1.5 text-sm text-red-500 flex items-center gap-1">
-										<span>⚠</span> {errors.email}
-									</p>
-								)}
+								{errors.email && <p className="mt-1.5 text-sm text-red-500 flex items-center gap-1"><span>⚠</span> {errors.email}</p>}
 							</motion.div>
 
 							{/* Phone */}
-							<motion.div
-								initial={{ opacity: 0, x: -20 }}
-								animate={inView ? { opacity: 1, x: 0 } : {}}
-								transition={{ delay: 2.3, duration: 0.5 }}
-							>
-								<label className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">
-									Phone Number <span className="text-orange-500">*</span>
-								</label>
-								<input
-									type="tel"
-									name="phone"
-									value={formData.phone}
-									onChange={handleChange}
-									placeholder="Enter your phone number"
+							<motion.div initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 2.3, duration: 0.5 }}>
+								<label className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">Phone Number <span className="text-orange-500">*</span></label>
+								<input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your phone number"
 									className={`w-full px-4 py-3 sm:py-4 rounded-xl border ${errors.phone ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-white/70'} text-gray-800 placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-300 hover:border-orange-300`}
 								/>
-								{errors.phone && (
-									<p className="mt-1.5 text-sm text-red-500 flex items-center gap-1">
-										<span>⚠</span> {errors.phone}
-									</p>
-								)}
+								{errors.phone && <p className="mt-1.5 text-sm text-red-500 flex items-center gap-1"><span>⚠</span> {errors.phone}</p>}
 							</motion.div>
 
 							{/* Occupation */}
-							<motion.div
-								initial={{ opacity: 0, x: -20 }}
-								animate={inView ? { opacity: 1, x: 0 } : {}}
-								transition={{ delay: 2.4, duration: 0.5 }}
-							>
-								<label className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">
-									Occupation <span className="text-orange-500">*</span>
-								</label>
-								<input
-									type="text"
-									name="occupation"
-									value={formData.occupation}
-									onChange={handleChange}
-									placeholder="e.g. Teacher, Engineer, Student..."
+							<motion.div initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 2.4, duration: 0.5 }}>
+								<label className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">Occupation <span className="text-orange-500">*</span></label>
+								<input type="text" name="occupation" value={formData.occupation} onChange={handleChange} placeholder="e.g. Teacher, Engineer, Student..."
 									className={`w-full px-4 py-3 sm:py-4 rounded-xl border ${errors.occupation ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-white/70'} text-gray-800 placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-300 hover:border-orange-300`}
 								/>
-								{errors.occupation && (
-									<p className="mt-1.5 text-sm text-red-500 flex items-center gap-1">
-										<span>⚠</span> {errors.occupation}
-									</p>
-								)}
+								{errors.occupation && <p className="mt-1.5 text-sm text-red-500 flex items-center gap-1"><span>⚠</span> {errors.occupation}</p>}
 							</motion.div>
 
 							{/* Department */}
-							<motion.div
-								initial={{ opacity: 0, x: -20 }}
-								animate={inView ? { opacity: 1, x: 0 } : {}}
-								transition={{ delay: 2.5, duration: 0.5 }}
-							>
-								<label className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">
-									Preferred Department <span className="text-orange-500">*</span>
-								</label>
+							<motion.div initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 2.5, duration: 0.5 }}>
+								<label className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">Preferred Department <span className="text-orange-500">*</span></label>
 								<div className="relative">
-									<select
-										name="department"
-										value={formData.department}
-										onChange={handleChange}
+									<select name="department" value={formData.department} onChange={handleChange}
 										className={`w-full px-4 py-3 sm:py-4 rounded-xl border ${errors.department ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-white/70'} text-gray-800 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-300 hover:border-orange-300 appearance-none cursor-pointer`}
 									>
-										<option value="" disabled>
-											Select a department
-										</option>
-										{departments.map((dept, i) => (
-											<option key={i} value={dept}>
-												{dept}
-											</option>
-										))}
+										<option value="" disabled>Select a department</option>
+										{departments.map((dept, i) => <option key={i} value={dept}>{dept}</option>)}
 									</select>
 									<div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-										<svg
-											className="w-4 h-4 text-orange-500"
-											fill="none"
-											stroke="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												strokeWidth={2}
-												d="M19 9l-7 7-7-7"
-											/>
+										<svg className="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
 										</svg>
 									</div>
 								</div>
-								{errors.department && (
-									<p className="mt-1.5 text-sm text-red-500 flex items-center gap-1">
-										<span>⚠</span> {errors.department}
-									</p>
-								)}
+								{errors.department && <p className="mt-1.5 text-sm text-red-500 flex items-center gap-1"><span>⚠</span> {errors.department}</p>}
 							</motion.div>
 
 							{/* Submit */}
-							<motion.div
-								initial={{ opacity: 0, y: 20 }}
-								animate={inView ? { opacity: 1, y: 0 } : {}}
-								transition={{ delay: 2.6, duration: 0.5 }}
-								className="pt-2"
-							>
+							<motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 2.6, duration: 0.5 }} className="pt-2">
 								<motion.button
 									onClick={handleSubmit}
 									disabled={isSubmitting}
-									whileHover={
-										!isSubmitting
-											? { scale: 1.02, boxShadow: '0 20px 40px -12px rgba(249, 115, 22, 0.45)' }
-											: {}
-									}
+									whileHover={!isSubmitting ? { scale: 1.02, boxShadow: "0 20px 40px -12px rgba(249, 115, 22, 0.45)" } : {}}
 									whileTap={!isSubmitting ? { scale: 0.98 } : {}}
 									className={`w-full py-4 sm:py-5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold text-base sm:text-lg tracking-wide shadow-lg transition-all duration-300 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:from-orange-600 hover:to-amber-600'}`}
 								>
 									{isSubmitting ? (
 										<span className="flex items-center justify-center gap-3">
-											<svg
-												className="animate-spin h-5 w-5 text-white"
-												fill="none"
-												viewBox="0 0 24 24"
-											>
-												<circle
-													className="opacity-25"
-													cx="12"
-													cy="12"
-													r="10"
-													stroke="currentColor"
-													strokeWidth="4"
-												/>
-												<path
-													className="opacity-75"
-													fill="currentColor"
-													d="M4 12a8 8 0 018-8v8z"
-												/>
+											<svg className="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+												<circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+												<path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
 											</svg>
 											Submitting...
 										</span>
-									) : (
-										'Submit Application →'
-									)}
+									) : 'Submit Application →'}
 								</motion.button>
 							</motion.div>
 						</div>

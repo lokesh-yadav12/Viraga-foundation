@@ -119,29 +119,28 @@ const Objectives = () => {
 							}`}
 						>
 							<div className="flex flex-col items-start gap-4">
+								<div className="flex items-center gap-4 flex-row">
+									<motion.span
+										initial={{ scale: 0, rotate: -180 }}
+										whileInView={{ scale: 1, rotate: 0 }}
+										viewport={{ once: true }}
+										transition={{
+											duration: 0.6,
+											delay: index * 0.1 + 0.2,
+											type: 'spring',
+											stiffness: 200,
+										}}
+										whileHover={{
+											scale: 1.2,
+											rotate: 10,
+											transition: { duration: 0.3 },
+										}}
+										className="text-4xl"
+									>
+										{item.icon}
+									</motion.span>
 
-                <div className="flex items-center gap-4 flex-row">
-								<motion.span
-									initial={{ scale: 0, rotate: -180 }}
-									whileInView={{ scale: 1, rotate: 0 }}
-									viewport={{ once: true }}
-									transition={{
-										duration: 0.6,
-										delay: index * 0.1 + 0.2,
-										type: 'spring',
-										stiffness: 200,
-									}}
-									whileHover={{
-										scale: 1.2,
-										rotate: 10,
-										transition: { duration: 0.3 },
-									}}
-									className="text-4xl"
-								>
-									{item.icon}
-								</motion.span>
-                 
-                <motion.h3
+									<motion.h3
 										initial={{ opacity: 0, x: -20 }}
 										whileInView={{ opacity: 1, x: 0 }}
 										viewport={{ once: true }}
@@ -149,16 +148,13 @@ const Objectives = () => {
 											duration: 0.5,
 											delay: index * 0.1 + 0.3,
 										}}
-										className="text-xl font-semibold text-gray-900"
+										className="text-xl font-semibold text-amber-800"
 									>
 										{item.title}
-								</motion.h3>
-                      </div>
-
-                  
+									</motion.h3>
+								</div>
 
 								<div>
-
 									{/* <motion.h3
 										initial={{ opacity: 0, x: -20 }}
 										whileInView={{ opacity: 1, x: 0 }}
@@ -172,7 +168,6 @@ const Objectives = () => {
 										{item.title}
 									</motion.h3> */}
 
-
 									<motion.p
 										initial={{ opacity: 0, x: -20 }}
 										whileInView={{ opacity: 1, x: 0 }}
@@ -181,7 +176,7 @@ const Objectives = () => {
 											duration: 0.5,
 											delay: index * 0.1 + 0.4,
 										}}
-										className="text-sm font-medium text-orange-600 mb-2"
+										className="text-sm font-medium text-orange-800 mb-2"
 									>
 										{item.subtitle}
 									</motion.p>

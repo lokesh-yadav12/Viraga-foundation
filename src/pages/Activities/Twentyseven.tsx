@@ -11,10 +11,7 @@ const Skilldevelopment = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
-
         .sd-root {
-          font-family: 'Poppins', sans-serif;
           min-height: 100vh;
           background: #FFFFFF;
           display: flex;
@@ -83,34 +80,47 @@ const Skilldevelopment = () => {
         }
         .sd-content.in { opacity: 1; transform: translateY(0); }
 
+        /*
+          Eyebrow — FROM: font-size:10px font-weight:600 letter-spacing:3.5px
+          TO: font-size matches About text-base (16px), font-weight:600 (font-semibold), color:orange-700
+        */
         .sd-eyebrow {
           display: inline-flex;
           align-items: center;
           gap: 12px;
-          font-size: 10px;
+          font-size: 16px;
           font-weight: 600;
           letter-spacing: 3.5px;
           text-transform: uppercase;
-          color: rgba(180,147,90,0.9);
+          color: #c2410c;
           margin-bottom: 30px;
         }
         .sd-dash { width: 26px; height: 1px; background: rgba(180,147,90,0.5); }
 
+        /*
+          Title — FROM: clamp(52px, 8vw, 82px) font-weight:600 color:#1A1A1A
+          TO: matches About h1 — font-bold (700), color:amber-800 (#92400e)
+              keeping clamp for display size since it's a hero title
+        */
         .sd-title {
-          font-family: 'Poppins', sans-serif;
-          font-size: clamp(52px, 8vw, 82px);
+          font-size: clamp(48px, 8vw, 20px);
           font-weight: 600;
           line-height: 1.0;
-          color: #1A1A1A;
+          color: #92400e;
           letter-spacing: -1.5px;
           margin-bottom: 6px;
         }
+
+        /*
+          Title italic line — FROM: font-style:normal color:rgba(180,147,90,0.95)
+          TO: font-style:italic color:orange-700 (#c2410c), font-bold
+              (matches About tagline italic style)
+        */
         .sd-title-italic {
-          font-family: 'Poppins', sans-serif;
           font-size: clamp(52px, 8vw, 82px);
-          font-weight: 600;
-          font-style: normal;
-          color: rgba(180,147,90,0.95);
+          font-weight: 700;
+          font-style: italic;
+          color: #c2410c;
           letter-spacing: -1px;
           display: block;
           line-height: 1.05;
@@ -137,20 +147,36 @@ const Skilldevelopment = () => {
           transform: rotate(45deg);
         }
 
+        /*
+          Body — FROM: font-size:15px font-weight:300 color:rgba(30,30,30,0.55)
+          TO: font-size:18px (text-lg / sm:text-lg from About), font-weight:400,
+              color:#92400e (amber-900), line-height:1.9
+        */
         .sd-body {
-          font-size: 15px;
-          font-weight: 300;
-          color: rgba(30,30,30,0.55);
+          font-size: 18px;
+          font-weight: 400;
+          color: #78350f;
           line-height: 1.9;
           max-width: 520px;
           margin: 0 auto 44px;
           letter-spacing: 0.25px;
         }
+
+        /*
+          Body strong — FROM: color:rgba(20,20,20,0.85) font-weight:500
+          TO: font-weight:600 (font-semibold), color:orange-700 (#c2410c)
+              (matches About inline span font-semibold text-orange-700)
+        */
         .sd-body strong {
-          color: rgba(20,20,20,0.85);
+          color: #c2410c;
           font-weight: 500;
         }
 
+        /*
+          CTA button — FROM: font-size:11px font-weight:600 letter-spacing:3px
+          TO: font-size:16px (text-base), font-weight:700 (font-bold)
+              (matches About CTA button font-bold)
+        */
         .sd-cta {
           display: inline-flex;
           align-items: center;
@@ -159,10 +185,9 @@ const Skilldevelopment = () => {
           border: 1px solid rgba(180,147,90,0.5);
           border-radius: 3px;
           background: transparent;
-          color: rgba(140,105,50,0.95);
-          font-family: 'Poppins', sans-serif;
-          font-size: 11px;
-          font-weight: 600;
+          color: #92400e;
+          font-size: 16px;
+          font-weight: 700;
           letter-spacing: 3px;
           text-transform: uppercase;
           cursor: pointer;
@@ -178,13 +203,18 @@ const Skilldevelopment = () => {
         .sd-cta-arrow { transition: transform 0.25s; display: inline-block; }
         .sd-cta:hover .sd-cta-arrow { transform: translateX(4px); }
 
+        /*
+          Badge — FROM: font-size:10px letter-spacing:2px color:rgba(20,20,20,0.3)
+          TO: font-size:16px (text-base), color:amber-900 (#78350f)
+              (matches About body base)
+        */
         .sd-badge {
           display: inline-flex;
           align-items: center;
           gap: 9px;
-          font-size: 10px;
+          font-size: 16px;
           letter-spacing: 2px;
-          color: rgba(20,20,20,0.3);
+          color: #78350f;
           text-transform: uppercase;
         }
         .sd-pulse {
@@ -208,14 +238,22 @@ const Skilldevelopment = () => {
         <div className={`sd-content ${visible ? 'in' : ''}`}>
 
           <div className="sd-eyebrow">
-            <span className="sd-dash" />
+            {/* <span className="sd-dash" />
             Viraga Foundation
-            <span className="sd-dash" />
+            <span className="sd-dash" /> */}
+            <span
+							className="text-base font-medium px-5 text-center py-2 rounded-full border tracking-[0.6em] uppercase"
+							style={{ color: '#92400e', borderColor: '#92400e', background: '#c8973a11' }}
+						>
+							Viraga Foundation
+						</span>
+
           </div>
 
           <h1 className="sd-title">
             V F T L
-            <span className="sd-title-italic">2026-2027</span>
+            <br/>
+            <span className="sd-title-normal">2026-2027</span>
           </h1>
 
           <div className="sd-orn">
