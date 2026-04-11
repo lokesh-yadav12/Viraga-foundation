@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import image1 from '../../assets/logoup.png'
+import image1 from '../../assets/level4.png'
 import image2 from '../../assets/cele1.png'
 import image3 from '../../assets/do1.png'
 const cards = [

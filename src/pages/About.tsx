@@ -76,7 +76,7 @@ const AboutUs = () => {
 							They alone live who live for others.
 						</blockquote>
 					</div>
-					<p className="text-gray-700 text-base sm:text-lg pl-12 sm:pl-16">
+					<p className="text-gray-700 text-base sm:text-lg ">
 						Inspired by these profound words, we dedicate ourselves to uplifting society through acts of
 						kindness, education, and empowerment.
 					</p>

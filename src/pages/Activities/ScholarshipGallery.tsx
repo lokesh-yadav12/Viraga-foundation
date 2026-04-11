@@ -572,7 +572,7 @@ const EducationInitiativesGallery: React.FC = () => {
         <div className="soft-divider h-px max-w-5xl mx-auto" />
 
         {/* ════ SECTION 3 — VIBRANT FUTURES / JNV ════ */}
-        <section className="max-w-5xl mx-auto px-6 pt-14 pb-4">
+        <section className="max-w-6xl mx-auto px-6 pt-14 pb-4">
           <EventBadge label="Flagship Programme" />
 
           <h2 className="text-3xl sm:text-4xl font-bold text-amber-700 leading-tight">

@@ -62,13 +62,13 @@ const DonationsPage = () => {
 	];
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-orange-50 md:px-6 via-pink-50 to-orange-50">
+		<div className="min-h-screen bg-gradient-to-br from-orange-50  via-orange-50 to-orange-50">
 			{/* Hero Section */}
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="relative h-[70vh] sm:h-[80vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
+				className="relative h-[70vh] sm:h-[85vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
 				style={{ backgroundImage: `url(${bgpic})` }}
 			>
 				<div className="absolute inset-0 bg-black/50"></div>
