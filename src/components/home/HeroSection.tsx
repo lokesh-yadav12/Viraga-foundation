@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
       {/* ── Splash Screen ── */}
       {showSplash && (
         <div
-          className={`fixed inset-0 z-50 flex items-center justify-center  transition-opacity duration-500 ${splashFading ? 'opacity-0' : 'opacity-100'}`}
+          className={`fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/40  transition-opacity duration-500 ${splashFading ? 'opacity-0' : 'opacity-100'}`}
           onClick={closeSplash} // click outside (anywhere on backdrop) closes
         >
           {/* Image — stop click propagation so clicking image itself also closes (same as outside) */}
@@ -132,7 +132,7 @@ const HeroSection: React.FC = () => {
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-500 ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
           >
-            <div className={`w-full h-full transition-transform duration-500 ${isZooming && index === currentSlide ? 'scale-110' : 'scale-100'}`}>
+            <div className={`w-full h-full transition-transform duration-500 ${isZooming && index === currentSlide && !showSplash ? 'scale-110' : 'scale-100'}`}>
               <img src={slide.image} alt={slide.heading} className="w-full h-full object-cover" />
             </div>
             <div className="absolute inset-0 bg-black/40" />
